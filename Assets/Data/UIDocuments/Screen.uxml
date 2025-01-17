@@ -1,18 +1,18 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <engine:VisualElement name="ScreenContainer" style="flex-grow: 1; flex-direction: row;">
-        <engine:VisualElement name="GameContainer" style="flex-grow: 1; flex-basis: auto; flex-direction: column; width: 1363px;" />
+        <engine:VisualElement name="GameContainer" style="flex-grow: 1; flex-basis: auto; flex-direction: column; width: 1363px; background-image: url(&quot;project://database/Assets/Textures/Images/game_screen.jpg?fileID=2800000&amp;guid=1acf27a746ade4f428d517777956c982&amp;type=3#game_screen&quot;);" />
         <engine:VisualElement name="CounterContainer" style="flex-grow: 1; flex-basis: auto; width: 10%; height: auto; flex-wrap: wrap; flex-direction: column;">
             <engine:VisualElement name="PlayerInfoContainer" style="flex-grow: 0; height: 20%; width: auto; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
                 <engine:VisualElement name="PlayerInformation" style="flex-grow: 1; flex-direction: row;">
                     <engine:VisualElement name="Avatar" style="flex-grow: 0; width: 30%;" />
                     <engine:VisualElement style="flex-grow: 1;">
-                        <engine:Label text="Label" name="UserName" />
-                        <engine:Label text="修为" name="CultivationLabel" />
-                        <engine:Label text="生命上限" name="HealthLabel" />
+                        <engine:Label text="饭缸出门扶墙" name="UserName" style="font-size: 25px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;);" />
+                        <engine:Label text="修为： 73" name="CultivationLabel" style="font-size: 20px; -unity-font-style: bold;" />
+                        <engine:Label text="生命上限：101" name="HealthLabel" style="font-size: 20px; -unity-font-style: bold;" />
                     </engine:VisualElement>
                 </engine:VisualElement>
                 <engine:VisualElement name="TackingCardContainer" style="flex-grow: 0;">
-                    <engine:Label text="追踪中的卡牌" name="Label" />
+                    <engine:Label text="追踪中的卡牌" name="Label" style="font-size: 20px; -unity-font-style: bold;" />
                     <engine:MultiColumnListView name="CardContainer" style="flex-grow: 1;" />
                 </engine:VisualElement>
             </engine:VisualElement>
