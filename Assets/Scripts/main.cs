@@ -13,14 +13,13 @@ public class Main : MonoBehaviour
 
             Root data = JsonUtility.FromJson<Root>(jsonContent);
 
-            foreach (var player in data.players)
-            {
-                Debug.Log($"Player Username: {player.player_username}");
-                Debug.Log($"Destiny: {player.destiny}, Health: {player.health}, Cultivation: {player.cultivation}");
-
-                Debug.Log($"Opponent Username: {player.match_result.opponent_username}");
-                Debug.Log($"Opponent Destiny: {player.match_result.destiny}, Health: {player.match_result.health}");
-            }
+            // foreach (var player in data.players)
+            // {
+            //     Debug.Log($"Player Username: {player.player_username}");
+            //     Debug.Log($"Destiny: {player.destiny}, Health: {player.health}, Cultivation: {player.cultivation}");
+            //     Debug.Log($"Opponent Username: {player.match_result.opponent_username}");
+            //     Debug.Log($"Opponent Destiny: {player.match_result.destiny}, Health: {player.match_result.health}");
+            // }
         }
         else
         {
