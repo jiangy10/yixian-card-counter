@@ -7,35 +7,13 @@ public class Main : MonoBehaviour
     [SerializeField] private UIDocument uiDocument; 
     private void Start()
     {
-        string filePath = Application.dataPath + "/Data/sample.json";
-
-        if (File.Exists(filePath))
-        {
-            string jsonContent = File.ReadAllText(filePath);
-
-            Root data = JsonUtility.FromJson<Root>(jsonContent);
-
-            var root = uiDocument.rootVisualElement;
-            Debug.Log(root.Children());
-            foreach (var child in root.Children()){
-                Debug.Log(child.style);
-            }
-
-            UpdatePlayerInfo(root, null);
-
-
-            // foreach (var player in data.players)
-            // {
-            //     Debug.Log($"Player Username: {player.player_username}");
-            //     Debug.Log($"Destiny: {player.destiny}, Health: {player.health}, Cultivation: {player.cultivation}");
-            //     Debug.Log($"Opponent Username: {player.match_result.opponent_username}");
-            //     Debug.Log($"Opponent Destiny: {player.match_result.destiny}, Health: {player.match_result.health}");
-            // }
-        }
-        else
-        {
-            Debug.LogError("JSON not found: " + filePath);
-        }
+        var root = uiDocument.rootVisualElement;
+        Player tempPlayer = new Player();
+        tempPlayer.player_username = "Player1";
+        tempPlayer.cultivation = 20;
+        tempPlayer.health = 105;
+        tempPlayer.destiny = 100;
+        UIManager.UpdatePlayerInfo(root, tempPlayer);
     }
 
     private void ApplyStyleSheet(VisualElement root, string styleSheetName)
@@ -49,18 +27,6 @@ public class Main : MonoBehaviour
         }
     }
 
-    private void UpdatePlayerInfo(VisualElement root, Player player){
-        var playerInfoContainer = root.Q<VisualElement>("PlayerInfoContainer");
-        if(playerInfoContainer == null){
-            Debug.LogError("PlayerInfoContainer not found");
-            return;
-        }
-
-        var userNameLabel = playerInfoContainer.Q<Label>("UserName");
-        if (userNameLabel != null){
-            userNameLabel.text = "饭缸";
-        }
-    }
 }
 
 
