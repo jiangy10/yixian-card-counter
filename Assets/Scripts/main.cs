@@ -1,8 +1,10 @@
 using System.IO;
 using UnityEngine;
+using UnityEngine.UIElements; 
 
 public class Main : MonoBehaviour
 {
+    [SerializeField] private UIDocument uiDocument; 
     private void Start()
     {
         string filePath = Application.dataPath + "/Data/sample.json";
@@ -12,6 +14,18 @@ public class Main : MonoBehaviour
             string jsonContent = File.ReadAllText(filePath);
 
             Root data = JsonUtility.FromJson<Root>(jsonContent);
+
+            var root = uiDocument.rootVisualElement;
+            var styleSheet = Resources.Load<StyleSheet>("Assets/Data/UIDocuments/ScreenStyles.uss");
+            if (styleSheet != null){
+                root.styleSheets.Add(styleSheet);
+            }
+            else{
+                Debug.LogError("StyleSheet not found: " + "Assets/Data/UIDocuments/ScreenStyles.uss");
+            }
+            root.styleSheets.Add(styleSheet);
+
+            var playerInfo = root.Q<VisualElement>("PlayerInfoContainer");
 
             // foreach (var player in data.players)
             // {
@@ -27,6 +41,7 @@ public class Main : MonoBehaviour
         }
     }
 }
+
 
 [System.Serializable]
 
