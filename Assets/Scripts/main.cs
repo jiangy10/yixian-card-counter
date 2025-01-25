@@ -16,13 +16,13 @@ public class Main : MonoBehaviour
             Root data = JsonUtility.FromJson<Root>(jsonContent);
 
             var root = uiDocument.rootVisualElement;
+            Debug.Log(root.Children());
             foreach (var child in root.Children()){
                 Debug.Log(child.style);
             }
-            ApplyStyleSheet(root, "ScreenStyles.uss");
-            root.styleSheets.Add(styleSheet);
 
-            var playerInfo = root.Q<VisualElement>("PlayerInfoContainer");
+            UpdatePlayerInfo(root, null);
+
 
             // foreach (var player in data.players)
             // {
@@ -46,6 +46,19 @@ public class Main : MonoBehaviour
         }
         else{
             Debug.LogError("StyleSheet not found: " + "Assets/Data/UIDocuments/ScreenStyles.uss");
+        }
+    }
+
+    private void UpdatePlayerInfo(VisualElement root, Player player){
+        var playerInfoContainer = root.Q<VisualElement>("PlayerInfoContainer");
+        if(playerInfoContainer == null){
+            Debug.LogError("PlayerInfoContainer not found");
+            return;
+        }
+
+        var userNameLabel = playerInfoContainer.Q<Label>("UserName");
+        if (userNameLabel != null){
+            userNameLabel.text = "饭缸";
         }
     }
 }
