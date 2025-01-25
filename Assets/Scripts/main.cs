@@ -16,13 +16,10 @@ public class Main : MonoBehaviour
             Root data = JsonUtility.FromJson<Root>(jsonContent);
 
             var root = uiDocument.rootVisualElement;
-            var styleSheet = Resources.Load<StyleSheet>("Assets/Data/UIDocuments/ScreenStyles.uss");
-            if (styleSheet != null){
-                root.styleSheets.Add(styleSheet);
+            foreach (var child in root.Children()){
+                Debug.Log(child.style);
             }
-            else{
-                Debug.LogError("StyleSheet not found: " + "Assets/Data/UIDocuments/ScreenStyles.uss");
-            }
+            ApplyStyleSheet(root, "ScreenStyles.uss");
             root.styleSheets.Add(styleSheet);
 
             var playerInfo = root.Q<VisualElement>("PlayerInfoContainer");
@@ -38,6 +35,17 @@ public class Main : MonoBehaviour
         else
         {
             Debug.LogError("JSON not found: " + filePath);
+        }
+    }
+
+    private void ApplyStyleSheet(VisualElement root, string styleSheetName)
+    {
+        var styleSheet = Resources.Load<StyleSheet>("Assets/Data/UIDocuments/ScreenStyles.uss");
+        if (styleSheet != null){
+            root.styleSheets.Add(styleSheet);
+        }
+        else{
+            Debug.LogError("StyleSheet not found: " + "Assets/Data/UIDocuments/ScreenStyles.uss");
         }
     }
 }
