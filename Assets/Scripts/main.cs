@@ -7,24 +7,16 @@ public class Main : MonoBehaviour
     [SerializeField] private UIDocument uiDocument; 
     private void Start()
     {
-        var root = uiDocument.rootVisualElement;
         Player tempPlayer = new Player();
-        tempPlayer.player_username = "Player1";
+        tempPlayer.player_username = "饭缸出门扶墙";
         tempPlayer.cultivation = 20;
         tempPlayer.health = 105;
         tempPlayer.destiny = 100;
-        UIManager.UpdatePlayerInfo(root, tempPlayer);
-    }
 
-    private void ApplyStyleSheet(VisualElement root, string styleSheetName)
-    {
-        var styleSheet = Resources.Load<StyleSheet>("Assets/Data/UIDocuments/ScreenStyles.uss");
-        if (styleSheet != null){
-            root.styleSheets.Add(styleSheet);
-        }
-        else{
-            Debug.LogError("StyleSheet not found: " + "Assets/Data/UIDocuments/ScreenStyles.uss");
-        }
+        var root = uiDocument.rootVisualElement;
+        
+        UIManager.UpdatePlayerInfo(root, tempPlayer);
+        StyleManager.ApplyStyleSheet(root, "ScreenStyles");
     }
 
 }
