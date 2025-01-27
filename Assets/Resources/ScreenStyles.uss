@@ -1,0 +1,67 @@
+#PlayerInfoContainer {
+    flex-grow: 0;
+    height: 40%;
+    width: auto;
+}
+
+#PlayerInformation {
+    flex-grow: 0;
+    flex-direction: row;
+    background-color: rgb(61, 56, 50);
+    height: 35%;
+}
+
+#Avatar {
+    flex-grow: 0;
+    width: 30%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    background-image: url("Textures/Images/avator.jpg");
+}
+
+.PlayerInfoLabels Label{
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+}
+
+#UserNameLabel {
+    font-size: 25px;
+}
+
+#TackingCardContainer {
+    flex-grow: 1;
+    background-color: rgb(99, 96, 92);
+}
+
+#TitleLabel {
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 34, 34);
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+}
+
+#TabContainer {
+    flex-grow: 0;
+    height: 10%;
+    flex-direction: row;
+}
+
+.Tab {
+    margin-top: 5px;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-font-style: bold;
+}
