@@ -57,7 +57,7 @@
     flex-direction: row;
 }
 
-.Tab {
+#TabContainer Tab {
     margin-top: 5px;
     height: 30px;
     border-top-left-radius: 5px;
