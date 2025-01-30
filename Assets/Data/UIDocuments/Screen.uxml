@@ -13,16 +13,16 @@
                         <engine:Label name="HealthLabel" />
                     </engine:VisualElement>
                 </engine:VisualElement>
-                <engine:VisualElement name="TackingCardContainer">
+                <engine:VisualElement name="TackingCardNavContainer">
                     <engine:Label text="追踪中的卡牌" name="TitleLabel" />
-                    <engine:VisualElement name="TabContainer" style="flex-direction: row;">
+                    <engine:VisualElement name="TabContainer" >
                         <engine:Tab label="全部" focusable="false" closeable="false" />
                         <engine:Tab label="门派" focusable="false" closeable="false" />
                         <engine:Tab label="副职" focusable="false" closeable="false" />
                         <engine:Tab label="机缘" focusable="false" closeable="false" />
                     </engine:VisualElement>
                     <engine:VisualElement name="ListContainer" style="flex-grow: 1; flex-direction: row;">
-                        <engine:VisualElement name="CardList" style="flex-direction: column; padding: 10px; background-color: rgba(34, 34, 34, 0); width: 98%;">
+                        <engine:VisualElement name="TrackingCardContainer" >
                             <engine:VisualElement name="VisualElement" style="flex-direction: row; align-items: center; margin-bottom: 5px; border-left-color: rgb(247, 222, 121); border-right-color: rgb(247, 222, 121); border-top-color: rgb(247, 222, 121); border-bottom-color: rgb(247, 222, 121); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; justify-content: center; height: 60px; margin-top: 0; margin-right: 0; margin-left: 0;">
                                 <engine:Label text="Lv.2" style="color: rgb(255, 255, 255); margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
                                 <engine:VisualElement style="width: 30px; height: 30px; border-radius: 20px; background-color: rgb(255, 0, 0); margin-right: 0; background-size: 100% 100%; margin-top: 0; margin-bottom: 0; margin-left: 0; justify-content: center; align-items: center; background-image: url(&quot;project://database/Assets/Textures/Images/mei_kai.png?fileID=2800000&amp;guid=2a8ea847990e54cc0a95c40fd5172ad3&amp;type=3#mei_kai&quot;);" />

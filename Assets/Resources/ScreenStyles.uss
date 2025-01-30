@@ -35,7 +35,7 @@
     font-size: 25px;
 }
 
-#TackingCardContainer {
+#TackingCardNavContainer {
     flex-grow: 1;
     background-color: rgb(99, 96, 92);
 }
@@ -64,4 +64,11 @@
     border-top-right-radius: 5px;
     background-color: rgba(0, 0, 0, 0);
     -unity-font-style: bold;
+}
+
+#TrackingCardContainer {
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgba(34,34,34,0);
+    width: 98%;
 }

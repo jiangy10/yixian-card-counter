@@ -13,6 +13,23 @@ public class Main : MonoBehaviour
         tempPlayer.health = 105;
         tempPlayer.destiny = 100;
 
+        Card tempCard1 = new Card();
+        tempCard1.name = "梅开二度";
+        tempCard1.level = 1;
+        tempCard1.phase = 5;
+
+        Card tempCard2 = new Card();
+        tempCard2.name = "梅开二度";
+        tempCard2.level = 1;
+        tempCard2.phase = 5;
+
+        Card tempCard3 = new Card();
+        tempCard3.name = "梅开二度";
+        tempCard3.level = 1;
+        tempCard3.phase = 5;
+
+        tempPlayer.used_card = new Card[] {tempCard1, tempCard2, tempCard3};
+
         var root = uiDocument.rootVisualElement;
         
         UIManager.UpdatePlayerInfo(root, tempPlayer);
@@ -39,7 +56,7 @@ public class Player
     public int health;
     public int cultivation;
     public MatchResult match_result;
-    public UsedCard[] used_card;
+    public Card[] used_card;
 }
 
 [System.Serializable]
@@ -53,10 +70,10 @@ public class MatchResult
 }
 
 [System.Serializable]
-public class UsedCard
+public class Card
 {
     public string name;
-    public int Level;
-    public int Phase;
+    public int level;
+    public int phase;
     public string img_url;
 }

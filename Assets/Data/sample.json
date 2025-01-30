@@ -17,13 +17,13 @@
             {
                 "name": "黄雀在后",
                 "level": 1,
-                "Phase": 5,
+                "phase": 5,
                 "img_url" : ""
             },
             {
                 "name": "梅开二度",
                 "level": 2,
-                "Phase": 5,
+                "phase": 5,
                 "img_url" : ""
             },
             {
