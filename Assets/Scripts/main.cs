@@ -15,16 +15,17 @@ public class Main : MonoBehaviour
 
         Card tempCard1 = new Card();
         tempCard1.name = "梅开二度";
-        tempCard1.level = 1;
+        tempCard1.level = 2;
         tempCard1.phase = 5;
+        tempCard1.img_url = "Textures/Images/梅开二度";
 
         Card tempCard2 = new Card();
-        tempCard2.name = "梅开二度";
+        tempCard2.name = "星弈·断";
         tempCard2.level = 1;
         tempCard2.phase = 5;
 
         Card tempCard3 = new Card();
-        tempCard3.name = "梅开二度";
+        tempCard3.name = "万花迷魂阵";
         tempCard3.level = 1;
         tempCard3.phase = 5;
 
@@ -33,6 +34,7 @@ public class Main : MonoBehaviour
         var root = uiDocument.rootVisualElement;
         
         UIManager.UpdatePlayerInfo(root, tempPlayer);
+        UIManager.UpdateTackingCard(root, tempPlayer.used_card);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
     }
 

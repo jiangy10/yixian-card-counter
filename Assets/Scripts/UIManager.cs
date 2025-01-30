@@ -38,6 +38,29 @@ public static class UIManager
             Debug.LogError("TrackingCardContainer not found.");
             return;
         }
+        trackingCardContainer.Clear();
+
+        foreach (var card in cards)
+        {
+            var cardContainer = new VisualElement();
+            cardContainer.AddToClassList("card-container");
+
+            var levelLabel = new Label($"Lv.{card.level}");
+            levelLabel.AddToClassList("card-level");
+
+            var cardImage = new VisualElement();
+            cardImage.AddToClassList("card-image");
+            cardImage.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>($"Textures/Images/{card.name}"));
+
+            var nameLabel = new Label(card.name);
+            nameLabel.AddToClassList("card-name");
+
+            cardContainer.Add(levelLabel);
+            cardContainer.Add(cardImage);
+            cardContainer.Add(nameLabel);
+
+            trackingCardContainer.Add(cardContainer);
+        }
 
     }
 }
