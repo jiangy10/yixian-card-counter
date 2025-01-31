@@ -72,3 +72,12 @@
     background-color: rgba(34,34,34,0);
     width: 98%;
 }
+
+.Cards {
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 5px;
+   border-radius: 3px;
+   border-width: 3px;
+}
