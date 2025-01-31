@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2a8ea847990e54cc0a95c40fd5172ad3
+guid: 34b3975ab2368468780a963c7a22e4e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 430629133187307595
-    second: mei_kai_0
+      213: -2302478559940013084
+    second: "\u661F\u5F08\xB7\u65AD_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mei_kai_0
+      name: "\u661F\u5F08\xB7\u65AD_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4850914ae6e9f500800000000000000
-      internalID: 430629133187307595
+      spriteID: 4e392d3e2f3fb00e0800000000000000
+      internalID: -2302478559940013084
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mei_kai_0: 430629133187307595
+      "\u661F\u5F08\xB7\u65AD_0": -2302478559940013084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

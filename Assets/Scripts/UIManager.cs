@@ -1,8 +1,16 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Collections.Generic;
+
 
 public static class UIManager
 {
+    private static readonly Dictionary<int, Color> LevelColors = new Dictionary<int, Color>
+    {
+        { 4, new Color(137f / 255f, 115f / 255f, 236f / 255f) }, // rgb(137, 115, 236)
+        { 5, new Color(247f / 255f, 222f / 255f, 121f / 255f) }  // rgb(247, 222, 121)
+    };
+    
     public static void UpdatePlayerInfo(VisualElement root, Player player)
     {
         var playerInfoContainer = root.Q<VisualElement>("PlayerInfoContainer");
@@ -43,7 +51,11 @@ public static class UIManager
         foreach (var card in cards)
         {
             var cardContainer = new VisualElement();
-            cardContainer.AddToClassList("card-container");
+            cardContainer.AddToClassList("Cards");
+            cardContainer.style.borderLeftColor = new StyleColor(LevelColors[card.phase]);
+            cardContainer.style.borderRightColor = new StyleColor(LevelColors[card.phase]);
+            cardContainer.style.borderTopColor = new StyleColor(LevelColors[card.phase]);
+            cardContainer.style.borderBottomColor = new StyleColor(LevelColors[card.phase]);;
 
             var levelLabel = new Label($"Lv.{card.level}");
             levelLabel.AddToClassList("card-level");
@@ -51,6 +63,7 @@ public static class UIManager
             var cardImage = new VisualElement();
             cardImage.AddToClassList("card-image");
             cardImage.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>($"Textures/Images/{card.name}"));
+
 
             var nameLabel = new Label(card.name);
             nameLabel.AddToClassList("card-name");
