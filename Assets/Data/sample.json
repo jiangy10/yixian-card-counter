@@ -29,37 +29,37 @@
             {
                 "name": "气吞山河",
                 "level": 2,
-                "Phase": 5,
+                "phase": 5,
                 "img_url" : ""
             },
             {
                 "name": "金蝉脱壳",
                 "level": 2,
-                "Phase": 4,
+                "phase": 4,
                 "img_url" : ""
             },
             {
                 "name": "海底捞月",
                 "level": 1,
-                "Phase": 3,
+                "phase": 3,
                 "img_url" : ""
             },
             {
                 "name": "星弈·虎",
                 "level": 1,
-                "Phase": 4,
+                "phase": 4,
                 "img_url" : ""
             },
             {
                 "name": "回响阵纹",
                 "level": 1,
-                "Phase": 5,
+                "phase": 5,
                 "img_url" : ""
             },
             {
                 "name": "飞鸿踏雪",
                 "level": 1,
-                "Phase": 2,
+                "phase": 2,
                 "img_url" : ""
             }
         ]
