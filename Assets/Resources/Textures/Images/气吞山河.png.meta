@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 139e22612046e437eab3e729bea4d37a
+guid: 0e14f4d4ba68e45d0a18af32112ccb4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1948352621112675966
-    second: hai-di_0
+      213: 9215326689680695814
+    second: "\u6C14\u541E\u5C71\u6CB3_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hai-di_0
+      name: "\u6C14\u541E\u5C71\u6CB3_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 281b0692d9f06f4e0800000000000000
-      internalID: -1948352621112675966
+      spriteID: 6022893acca63ef70800000000000000
+      internalID: 9215326689680695814
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hai-di_0: -1948352621112675966
+      "\u6C14\u541E\u5C71\u6CB3_0": 9215326689680695814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

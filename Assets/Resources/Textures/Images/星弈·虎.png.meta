@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c5eb09d8ed2c34bc38605889ac19dce3
+guid: af8e17daaa96343ea8fc0023878106a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2732250588766999311
-    second: fei-hong_0
+      213: 3314003768292620239
+    second: "\u661F\u5F08\xB7\u864E_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fei-hong_0
+      name: "\u661F\u5F08\xB7\u864E_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f031fc43f67eae520800000000000000
-      internalID: 2732250588766999311
+      spriteID: fc733617ed4bdfd20800000000000000
+      internalID: 3314003768292620239
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fei-hong_0: 2732250588766999311
+      "\u661F\u5F08\xB7\u864E_0": 3314003768292620239
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

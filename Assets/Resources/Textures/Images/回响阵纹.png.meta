@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 66536f2743c6f48ab9f77023269b9ef3
+guid: 04785e550c4e74dd8ace016bd08c8d57
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4465053697896718764
-    second: jin-chan_0
+      213: -4437725306956453160
+    second: "\u56DE\u54CD\u9635\u7EB9_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jin-chan_0
+      name: "\u56DE\u54CD\u9635\u7EB9_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca1ad2e6eae07fd30800000000000000
-      internalID: 4465053697896718764
+      spriteID: 8da691c68580a62c0800000000000000
+      internalID: -4437725306956453160
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jin-chan_0: 4465053697896718764
+      "\u56DE\u54CD\u9635\u7EB9_0": -4437725306956453160
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

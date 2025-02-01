@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e84cb1c8f39e640438257a60310d9355
+guid: a3215fb9e2e874b51bd4d454578161b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7149187830008392869
-    second: hui-xiang_0
+      213: 466570692665564931
+    second: "\u91D1\u8749\u8131\u58F3_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hui-xiang_0
+      name: "\u91D1\u8749\u8131\u58F3_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ac22301474073360800000000000000
-      internalID: 7149187830008392869
+      spriteID: 30f50fea297997600800000000000000
+      internalID: 466570692665564931
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hui-xiang_0: 7149187830008392869
+      "\u91D1\u8749\u8131\u58F3_0": 466570692665564931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
