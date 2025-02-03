@@ -31,11 +31,6 @@
 }
 
 .PlayerInfoLabelContainer Label{
-    font-size: 120%;
     -unity-font-style: bold;
     color: rgb(255, 255, 255);
-}
-
-#UserNameLabel {
-    font-size: 150%;
 }
