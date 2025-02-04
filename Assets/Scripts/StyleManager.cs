@@ -50,5 +50,17 @@ public static class StyleManager
         {
             healthLabel.style.fontSize = playerInfoContainer.resolvedStyle.width * 0.05f;
         }
+        
+        var trackingCardNavContainer = root.Q<VisualElement>("TrackingCardNavContainer");
+        if (trackingCardNavContainer == null)
+        {
+            Debug.LogError("TrackingCardNavContainer not found.");
+        }else{
+            var trackingCardTitleLabel = trackingCardNavContainer.Q<VisualElement>("TrackingCardTitleLabel");
+            if (trackingCardTitleLabel != null)
+            {
+                trackingCardTitleLabel.style.fontSize = trackingCardNavContainer.resolvedStyle.width * 0.06f;
+            }
+        }
     }
 }
