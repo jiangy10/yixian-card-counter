@@ -3,12 +3,12 @@
     margion: 0;
 }
 
-#TackingCardNavContainer {
+#TrackingCardNavContainer {
     flex-grow: 1;
     background-color: rgb(99, 96, 92);
 }
 
-#TackingCardTitleLable {
+#TrackingCardTitleLabel {
     font-size: 18px;
     -unity-font-style: bold;
     color: rgb(255, 255, 255);
