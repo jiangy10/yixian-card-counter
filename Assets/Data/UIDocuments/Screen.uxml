@@ -14,9 +14,9 @@
                     </engine:VisualElement>
                 </engine:VisualElement>
                 <engine:VisualElement name="TackingCardNavContainer">
-                    <engine:Label text="追踪中的卡牌" name="TitleLabel" />
+                    <engine:Label text="追踪中的卡牌" name="TackingCardTitleLable" />
                     <engine:VisualElement name="TabContainer">
-                        <engine:Tab label="全部" focusable="false" closeable="false" />
+                        <engine:Tab label="全部" focusable="false" closeable="false" name="all"/>
                         <engine:Tab label="门派" focusable="false" closeable="false" />
                         <engine:Tab label="副职" focusable="false" closeable="false" />
                         <engine:Tab label="机缘" focusable="false" closeable="false" />

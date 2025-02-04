@@ -4,7 +4,7 @@
     background-color: rgb(99, 96, 92);
 }
 
-#TitleLabel {
+#TackingCardTitleLable {
     font-size: 18px;
     -unity-font-style: bold;
     color: rgb(255, 255, 255);
