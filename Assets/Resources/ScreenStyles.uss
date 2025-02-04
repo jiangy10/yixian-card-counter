@@ -1,3 +1,7 @@
+.SmallLabels Label{
+    padding : 0;
+    margion: 0;
+}
 
 #TackingCardNavContainer {
     flex-grow: 1;
