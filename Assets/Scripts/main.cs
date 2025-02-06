@@ -37,6 +37,7 @@ public class Main : MonoBehaviour
         UIManager.UpdateTackingCard(root, tempPlayer.used_card);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
+        StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
     }
 
 }

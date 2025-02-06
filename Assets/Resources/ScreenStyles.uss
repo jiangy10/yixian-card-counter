@@ -3,21 +3,7 @@
     margion: 0;
 }
 
-#TrackingCardNavContainer {
-    flex-grow: 1;
-    background-color: rgb(99, 96, 92);
-}
 
-#TrackingCardTitleLabel {
-    font-size: 18px;
-    -unity-font-style: bold;
-    color: rgb(255, 255, 255);
-    background-color: rgb(34, 34, 34);
-    padding-left: 8px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-right: 8px;
-}
 
 #TabContainer {
     flex-grow: 0;
