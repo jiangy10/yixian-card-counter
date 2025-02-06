@@ -9,7 +9,7 @@ public static class StyleManager
         if (styleSheet != null)
         {
             root.styleSheets.Add(styleSheet);
-            root.RegisterCallback<GeometryChangedEvent>(evt => AdjustFontSize(root));
+            root.RegisterCallback<GeometryChangedEvent>(evt => AdjustFontSize(root.Q<VisualElement>("CounterContainer")));
         }
         else
         {
@@ -28,19 +28,19 @@ public static class StyleManager
             var userNameLabel = root.Q<Label>("UserNameLabel");
             if (userNameLabel != null)
             {
-                userNameLabel.style.fontSize = playerInfoContainer.resolvedStyle.width * 0.06f;
+                userNameLabel.style.fontSize = root.resolvedStyle.width * 0.06f;
             }
 
             var cultivationLabel = root.Q<Label>("CultivationLabel");
             if (cultivationLabel != null)
             {
-                cultivationLabel.style.fontSize = playerInfoContainer.resolvedStyle.width * 0.05f;
+                cultivationLabel.style.fontSize = root.resolvedStyle.width * 0.05f;
             }
 
             var healthLabel = root.Q<Label>("HealthLabel");
             if (healthLabel != null)
             {
-                healthLabel.style.fontSize = playerInfoContainer.resolvedStyle.width * 0.05f;
+                healthLabel.style.fontSize = root.resolvedStyle.width * 0.05f;
             }
             TinyLables(playerInfoContainer);
         }
@@ -55,11 +55,25 @@ public static class StyleManager
             var trackingCardTitleLabel = trackingCardNavContainer.Q<VisualElement>("TrackingCardTitleLabel");
             if (trackingCardTitleLabel != null)
             {
-                trackingCardTitleLabel.style.fontSize = trackingCardNavContainer.resolvedStyle.width * 0.07f;
+                trackingCardTitleLabel.style.fontSize = root.resolvedStyle.width * 0.07f;
             }
 
             TinyLables(trackingCardNavContainer);
         }
+		
+		var tabContainer = root.Q<VisualElement>("TabContainer");
+		if (tabContainer == null){
+            Debug.LogError("TabContainer not found.");
+		}
+		else{
+			foreach (var tab in tabContainer.Children())
+            {
+                tab.style.width = root.resolvedStyle.width * 0.2f;
+                tab.style.height = root.resolvedStyle.width * 0.1f;
+                tab.style.marginLeft = root.resolvedStyle.width * 0.02f;
+                tab.style.fontSize = root.resolvedStyle.width * 0.07f;
+            }
+		}
         
         var trackingCardContainer = root.Q<VisualElement>("TrackingCardContainer");
         if (trackingCardContainer == null)
@@ -70,10 +84,19 @@ public static class StyleManager
         {
             trackingCardContainer.Query(className: "Card").ForEach(card =>
             {
-                card.style.borderBottomLeftRadius = trackingCardContainer.resolvedStyle.width * 0.03f;
-                card.style.borderBottomRightRadius = trackingCardContainer.resolvedStyle.width * 0.03f;
-                card.style.borderTopLeftRadius = trackingCardContainer.resolvedStyle.width * 0.03f;
-                card.style.borderTopRightRadius = trackingCardContainer.resolvedStyle.width * 0.03f;
+                card.style.borderBottomLeftRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
+                card.style.borderBottomRightRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
+                card.style.borderTopLeftRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
+                card.style.borderTopRightRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
+                card.style.borderLeftWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
+                card.style.borderRightWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
+                card.style.borderTopWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
+                card.style.borderBottomWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
+                card.style.height = trackingCardContainer.resolvedStyle.height * 0.2f;
+                card.style.width = trackingCardContainer.resolvedStyle.width * 0.9f;
+                card.Query<Label>().ForEach(label => label.style.fontSize = card.resolvedStyle.height * 0.8f);
+                card.Q<VisualElement>(className: "CardImage").style.width = card.resolvedStyle.height * 0.8f;
+                card.Q<VisualElement>(className: "CardImage").style.height = card.resolvedStyle.height * 0.8f;
             });
         }
 

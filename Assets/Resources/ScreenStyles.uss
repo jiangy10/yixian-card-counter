@@ -1,6 +1,6 @@
 .SmallLabels Label{
     padding : 0;
-    margion: 0;
+    margin: 0;
 }
 
 
@@ -14,38 +14,27 @@
 #TabContainer Tab {
     margin-top: 5px;
     height: 30px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     background-color: rgba(0, 0, 0, 0);
     -unity-font-style: bold;
 }
 
 #TrackingCardContainer {
     flex-direction: column;
-    padding: 10px;
     background-color: rgba(34,34,34,0);
-    width: 98%;
 }
 
 .Card {
    flex-direction: row;
    align-items: center;
    justify-content: center;
-   margin-bottom: 5px;
-   border-radius: 3px;
-   border-width: 3px;
 }
 
 .CardLevel {
     color: rgb(255, 255, 255);
-    font-size: 16px;
-    margin: 3px;
     padding: 0;
 }
 
 .CardImage {
-    width: 30px;
-    height: 30px;
     border-radius: 20px;
     background-size: 100% 100%;
     justify-content: center;
@@ -53,9 +42,6 @@
 }
 
 .CardName {
-    flex-grow: 1;
-    font-size: 16px;
     color: rgb(255, 255, 255);
-    margin: 3px;
     padding: 0;
 }
