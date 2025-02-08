@@ -28,19 +28,19 @@ public static class StyleManager
             var userNameLabel = root.Q<Label>("UserNameLabel");
             if (userNameLabel != null)
             {
-                userNameLabel.style.fontSize = root.resolvedStyle.width * 0.06f;
+                userNameLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
             }
 
             var cultivationLabel = root.Q<Label>("CultivationLabel");
             if (cultivationLabel != null)
             {
-                cultivationLabel.style.fontSize = root.resolvedStyle.width * 0.05f;
+                cultivationLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
             }
 
             var healthLabel = root.Q<Label>("HealthLabel");
             if (healthLabel != null)
             {
-                healthLabel.style.fontSize = root.resolvedStyle.width * 0.05f;
+                healthLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
             }
             TinyLables(playerInfoContainer);
         }
