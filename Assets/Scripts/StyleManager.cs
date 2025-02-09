@@ -29,20 +29,25 @@ public static class StyleManager
             if (userNameLabel != null)
             {
                 userNameLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
+                userNameLabel.style.paddingTop = playerInfoContainer.resolvedStyle.height * 0.01f;
+                userNameLabel.style.paddingBottom = playerInfoContainer.resolvedStyle.height * 0.01f;
             }
 
             var cultivationLabel = root.Q<Label>("CultivationLabel");
             if (cultivationLabel != null)
             {
                 cultivationLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
+                cultivationLabel.style.paddingTop = playerInfoContainer.resolvedStyle.height * 0.01f;
+                cultivationLabel.style.paddingBottom = playerInfoContainer.resolvedStyle.height * 0.01f;
             }
 
             var healthLabel = root.Q<Label>("HealthLabel");
             if (healthLabel != null)
             {
                 healthLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
+                healthLabel.style.paddingTop = playerInfoContainer.resolvedStyle.height * 0.01f;
+                healthLabel.style.paddingBottom = playerInfoContainer.resolvedStyle.height * 0.01f;
             }
-            TinyLables(playerInfoContainer);
         }
 
         
@@ -57,8 +62,6 @@ public static class StyleManager
             {
                 trackingCardTitleLabel.style.fontSize = root.resolvedStyle.width * 0.07f;
             }
-
-            TinyLables(trackingCardNavContainer);
         }
 		
 		var tabContainer = root.Q<VisualElement>("TabContainer");
@@ -102,15 +105,4 @@ public static class StyleManager
 
     }
 
-    private static void TinyLables(VisualElement root) {
-        if (root.resolvedStyle.width <= 100){
-            if (!root.ClassListContains("SmallLabels")){
-                root.AddToClassList("SmallLabels");
-            }
-        }else{
-            if (root.ClassListContains("SmallLabels")){
-                root.RemoveFromClassList("SmallLabels");
-            }
-        }
-    }
 }
