@@ -1,12 +1,21 @@
 #TabContainer {
     flex-grow: 0;
-    height: 10%;
+    height: 12%;
     flex-direction: row;
 }
 
-#TabContainer Tab {
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0);
+#TabContainer Tab > header {
+    display: none;
+}
+
+.TabContentArea {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.TabLabel {
+    color: black;
     -unity-font-style: bold;
 }
 

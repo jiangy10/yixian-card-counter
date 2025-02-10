@@ -71,10 +71,10 @@ public static class StyleManager
 		else{
 			foreach (var tab in tabContainer.Children())
             {
-                tab.style.width = root.resolvedStyle.width * 0.2f;
-                tab.style.height = root.resolvedStyle.width * 0.1f;
-                tab.style.marginLeft = root.resolvedStyle.width * 0.02f;
-                tab.style.fontSize = root.resolvedStyle.width * 0.07f;
+                tab.style.width = tabContainer.resolvedStyle.width * 0.25f;
+                tab.style.height = tabContainer.resolvedStyle.height * 0.8f;
+                tab.style.marginLeft = tabContainer.resolvedStyle.width * 0.01f;
+                tab.style.fontSize = tabContainer.resolvedStyle.height * 0.7f;
             }
 		}
         
