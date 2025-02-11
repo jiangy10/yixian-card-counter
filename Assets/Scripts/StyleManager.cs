@@ -64,19 +64,19 @@ public static class StyleManager
             }
         }
 		
-		var tabContainer = root.Q<VisualElement>("TabContainer");
-		if (tabContainer == null){
-            Debug.LogError("TabContainer not found.");
-		}
-		else{
-			foreach (var tab in tabContainer.Children())
-            {
-                tab.style.width = tabContainer.resolvedStyle.width * 0.25f;
-                tab.style.height = tabContainer.resolvedStyle.height * 0.8f;
-                tab.style.marginLeft = tabContainer.resolvedStyle.width * 0.01f;
-                tab.style.fontSize = tabContainer.resolvedStyle.height * 0.7f;
-            }
-		}
+		// var tabContainer = root.Q<VisualElement>("TabContainer");
+		// if (tabContainer == null){
+        //     Debug.LogError("TabContainer not found.");
+		// }
+		// else{
+		// 	foreach (var tab in tabContainer.Children())
+        //     {
+        //         tab.style.width = tabContainer.resolvedStyle.width * 0.25f;
+        //         tab.style.height = tabContainer.resolvedStyle.height * 0.8f;
+        //         tab.style.marginLeft = tabContainer.resolvedStyle.width * 0.01f;
+        //         tab.style.fontSize = tabContainer.resolvedStyle.height * 0.7f;
+        //     }
+		// }
 
     }
 
