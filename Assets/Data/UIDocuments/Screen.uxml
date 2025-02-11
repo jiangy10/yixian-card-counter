@@ -16,31 +16,7 @@
                 <engine:VisualElement name="TrackingCardNavContainer">
                     <engine:Label text="追踪中的卡牌" name="TrackingCardTitleLabel" />
                     <engine:TabView name="TabContainer">
-                    <!-- <engine:Tab name="all" Label="全部" focusable="false" closeable="false"/>
-                    <engine:Tab name="sect" Label="门派" focusable="false" closeable="false"/>
-                    <engine:Tab name="side" Label="副职" focusable="false" closeable="false"/>
-                    <engine:Tab name="fortune" Label="机缘" focusable="false" closeable="false"/> -->
-                        <!-- <engine:Tab name="all" focusable="false" closeable="false">
-                            <engine:VisualElement name="TabContent" class="TabContentArea">
-                                <engine:Label text="全部" class="TabLabel" />
-                            </engine:VisualElement>
-                        </engine:Tab>
-                        <engine:Tab name="sect" focusable="false" closeable="false">
-                            <engine:VisualElement name="TabContent" class="TabContentArea">
-                                <engine:Label text="门派" class="TabLabel" />
-                            </engine:VisualElement>
-                        </engine:Tab>
-                        <engine:Tab name="side" focusable="false" closeable="false">
-                            <engine:VisualElement name="TabContent" class="TabContentArea">
-                                <engine:Label text="副职" class="TabLabel" />
-                            </engine:VisualElement>
-                        </engine:Tab>
-                        <engine:Tab name="fortune" focusable="false" closeable="false">
-                            <engine:VisualElement name="TabContent" class="TabContentArea">
-                                <engine:Label text="机缘" class="TabLabel" />
-                            </engine:VisualElement>
-                        </engine:Tab> -->
-                        <engine:Tab label="全部"/>
+                        <engine:Tab name="all" label="全部"/>
                         <engine:Tab label="门派" />
                         <engine:Tab label="副职" />
                         <engine:Tab label="机缘" />
