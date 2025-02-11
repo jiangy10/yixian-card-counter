@@ -12,7 +12,7 @@
 
 #TrackingCardContainer {
     flex-direction: column;
-    padding: 10px;
+    padding: 5%;
     background-color: rgba(34,34,34,0);
     width: 98%;
 }
@@ -21,16 +21,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    border-width: 3px;
+    border-radius: 5%;
+    border-width: 1%;
+    padding: 2%;
+    margin: 2%;
+    height: 20%;
+    width: 90%;
 }
 
 .CardLevel {
     color: rgb(255, 255, 255);
-    font-size: 16px;
-    margin: 3px;
-    padding: 0;
+    font-size: 70%;
 }
 
 .CardImage {
@@ -43,9 +44,6 @@
 }
 
 .CardName {
-    flex-grow: 1;
-    font-size: 16px;
     color: rgb(255, 255, 255);
-    margin: 3px;
-    padding: 0;
+    font-size: 70%;
 }

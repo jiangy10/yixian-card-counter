@@ -77,31 +77,6 @@ public static class StyleManager
                 tab.style.fontSize = tabContainer.resolvedStyle.height * 0.7f;
             }
 		}
-        
-        var trackingCardContainer = root.Q<VisualElement>("TrackingCardContainer");
-        if (trackingCardContainer == null)
-        {
-            Debug.LogError("TrackingCardContainer not found.");
-        }
-        else
-        {
-            trackingCardContainer.Query(className: "Card").ForEach(card =>
-            {
-                card.style.borderBottomLeftRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
-                card.style.borderBottomRightRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
-                card.style.borderTopLeftRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
-                card.style.borderTopRightRadius = trackingCardContainer.resolvedStyle.width * 0.02f;
-                card.style.borderLeftWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
-                card.style.borderRightWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
-                card.style.borderTopWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
-                card.style.borderBottomWidth = trackingCardContainer.resolvedStyle.width * 0.01f;
-                card.style.height = trackingCardContainer.resolvedStyle.height * 0.2f;
-                card.style.width = trackingCardContainer.resolvedStyle.width * 0.9f;
-                card.Query<Label>().ForEach(label => label.style.fontSize = card.resolvedStyle.height * 0.8f);
-                card.Q<VisualElement>(className: "CardImage").style.width = card.resolvedStyle.height * 0.8f;
-                card.Q<VisualElement>(className: "CardImage").style.height = card.resolvedStyle.height * 0.8f;
-            });
-        }
 
     }
 
