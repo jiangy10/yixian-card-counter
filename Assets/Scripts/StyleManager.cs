@@ -63,20 +63,23 @@ public static class StyleManager
                 trackingCardTitleLabel.style.fontSize = root.resolvedStyle.width * 0.07f;
             }
         }
-		
-		// var tabContainer = root.Q<VisualElement>("TabContainer");
-		// if (tabContainer == null){
-        //     Debug.LogError("TabContainer not found.");
-		// }
-		// else{
-		// 	foreach (var tab in tabContainer.Children())
-        //     {
-        //         tab.style.width = tabContainer.resolvedStyle.width * 0.25f;
-        //         tab.style.height = tabContainer.resolvedStyle.height * 0.8f;
-        //         tab.style.marginLeft = tabContainer.resolvedStyle.width * 0.01f;
-        //         tab.style.fontSize = tabContainer.resolvedStyle.height * 0.7f;
-        //     }
-		// }
+               
+        var trackingCardContainer = root.Q<VisualElement>("TrackingCardContainer");
+        if (trackingCardContainer == null)
+        {
+            Debug.LogError("TrackingCardContainer not found.");
+        }
+        else
+        {
+            trackingCardContainer.Query(className: "Card").ForEach(card =>
+            {
+                card.Query<Label>().ForEach(label => label.style.fontSize = card.resolvedStyle.height * 0.6f);
+                card.Q<VisualElement>(className: "CardImage").style.width = card.resolvedStyle.height * 0.6f;
+                card.Q<VisualElement>(className: "CardImage").style.height = card.resolvedStyle.height * 0.6f;
+            });
+        }
+
+
 
     }
 
