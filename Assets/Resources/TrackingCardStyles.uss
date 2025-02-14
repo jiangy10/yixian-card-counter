@@ -12,7 +12,7 @@
 
 #TrackingCardContainer {
     flex-direction: column;
-    padding: 5%;
+    padding: 2%;
     display: flex;
     background-color: rgba(34,34,34,0);
     width: 98%;
