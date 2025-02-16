@@ -29,8 +29,8 @@
                     </engine:VisualElement>
                 </engine:VisualElement>
             </engine:VisualElement>
-            <engine:VisualElement name="MatchHistory" style="flex-grow: 1; height: auto;">
-                <engine:Label text="战绩" name="TitleLabel" style="font-size: 18px; -unity-font-style: bold; color: rgb(255, 255, 255); margin-left: 0; background-color: rgb(34, 34, 34); margin-top: 0; margin-right: 0; margin-bottom: 0; padding-left: 8px; padding-bottom: 8px; padding-top: 8px; padding-right: 8px;" />
+            <engine:VisualElement name="MatchHistoryContainer" style="flex-grow: 1; height: auto;">
+                <engine:Label text="战绩" name="MatchHistoryTitleLabel"/>
                 <engine:VisualElement name="MatchHistoryList" style="flex-grow: 1; background-color: rgb(98, 96, 92); flex-direction: row;">
                     <engine:VisualElement name="Match" style="flex-grow: 1;">
                         <engine:VisualElement name="Round14" style="flex-grow: 1; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px;">

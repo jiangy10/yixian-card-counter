@@ -38,6 +38,7 @@ public class Main : MonoBehaviour
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
+        StyleManager.ApplyStyleSheet(root, "MatchHistoryStyles");
     }
 
 }

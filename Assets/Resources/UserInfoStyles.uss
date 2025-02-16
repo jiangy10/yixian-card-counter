@@ -33,4 +33,5 @@
 .PlayerInfoLabelContainer Label{
     -unity-font-style: bold;
     color: rgb(255, 255, 255);
+    padding: 1% 0;
 }

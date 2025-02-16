@@ -29,24 +29,18 @@ public static class StyleManager
             if (userNameLabel != null)
             {
                 userNameLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
-                userNameLabel.style.paddingTop = playerInfoContainer.resolvedStyle.height * 0.01f;
-                userNameLabel.style.paddingBottom = playerInfoContainer.resolvedStyle.height * 0.01f;
             }
 
             var cultivationLabel = root.Q<Label>("CultivationLabel");
             if (cultivationLabel != null)
             {
                 cultivationLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
-                cultivationLabel.style.paddingTop = playerInfoContainer.resolvedStyle.height * 0.01f;
-                cultivationLabel.style.paddingBottom = playerInfoContainer.resolvedStyle.height * 0.01f;
             }
 
             var healthLabel = root.Q<Label>("HealthLabel");
             if (healthLabel != null)
             {
                 healthLabel.style.fontSize = playerInfoContainer.resolvedStyle.height * 0.05f;
-                healthLabel.style.paddingTop = playerInfoContainer.resolvedStyle.height * 0.01f;
-                healthLabel.style.paddingBottom = playerInfoContainer.resolvedStyle.height * 0.01f;
             }
         }
 
@@ -77,6 +71,20 @@ public static class StyleManager
                 card.Q<VisualElement>(className: "CardImage").style.width = card.resolvedStyle.height * 0.6f;
                 card.Q<VisualElement>(className: "CardImage").style.height = card.resolvedStyle.height * 0.6f;
             });
+        }
+
+        var matchHistoryContainer = root.Q<VisualElement>("MatchHistoryContainer");
+        if (matchHistoryContainer == null)
+        {
+            Debug.LogError("MatchHistoryContainer not found.");
+        }
+        else
+        {
+            var matchHistoryTitleLabel = matchHistoryContainer.Q<VisualElement>("MatchHistoryTitleLabel");
+            if (matchHistoryTitleLabel != null)
+            {
+                matchHistoryTitleLabel.style.fontSize = root.resolvedStyle.width * 0.07f;
+            }
         }
 
 
