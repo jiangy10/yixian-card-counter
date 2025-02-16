@@ -11,20 +11,30 @@
     padding-left: 2%;
 }
 
+#TrackingCardScrollView{
+    flex-grow: 1;
+    height: 100%;
+}
+
+#unity-content-container{
+    height: 100%;
+}
+
 #TrackingCardContainer {
     flex-direction: column;
     padding: 2%;
     display: flex;
     background-color: rgba(34,34,34,0);
     width: 98%;
+    height: 100%;
 }
 
 .Card {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    border-radius: 5%;
-    border-width: 1%;
+    border-radius: 5px;
+    border-width: 1.5px;
     padding: 2%;
     margin: 2%;
     height: 20%;
