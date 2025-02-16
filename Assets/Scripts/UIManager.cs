@@ -40,13 +40,16 @@ public static class UIManager
     }
 
     public static void UpdateTackingCard(VisualElement root, Card[] cards){
-        var trackingCardContainer = root.Q<VisualElement>("TrackingCardContainer");
-        if (trackingCardContainer == null)
+        var trackingCardScrollView = root.Q<ScrollView>("TrackingCardScrollView");
+        if (trackingCardScrollView == null)
         {
-            Debug.LogError("TrackingCardContainer not found.");
+            Debug.LogError("TrackingCardScrollView not found.");
             return;
         }
-        trackingCardContainer.Clear();
+        trackingCardScrollView.Clear();
+
+        var trackingCardContainer = new VisualElement();
+        trackingCardContainer.name = "TrackingCardContainer";
 
         foreach (var card in cards)
         {
@@ -55,7 +58,7 @@ public static class UIManager
             cardContainer.style.borderLeftColor = new StyleColor(LevelColors[card.phase]);
             cardContainer.style.borderRightColor = new StyleColor(LevelColors[card.phase]);
             cardContainer.style.borderTopColor = new StyleColor(LevelColors[card.phase]);
-            cardContainer.style.borderBottomColor = new StyleColor(LevelColors[card.phase]);;
+            cardContainer.style.borderBottomColor = new StyleColor(LevelColors[card.phase]);
 
             var levelLabel = new Label($"Lv.{card.level}");
             levelLabel.AddToClassList("CardLevel");
@@ -63,7 +66,6 @@ public static class UIManager
             var cardImage = new VisualElement();
             cardImage.AddToClassList("CardImage");
             cardImage.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>($"Textures/Images/{card.name}"));
-
 
             var nameLabel = new Label(card.name);
             nameLabel.AddToClassList("CardName");
@@ -75,5 +77,48 @@ public static class UIManager
             trackingCardContainer.Add(cardContainer);
         }
 
+        trackingCardScrollView.Add(trackingCardContainer);
     }
+       
+     public static void UpdateMatchHistory(VisualElement root, MatchHistory[] history){
+        var matchHistoryScrollView = root.Q<ScrollView>("MatchHistoryScrollView");
+        if (matchHistoryScrollView == null)
+        {
+            Debug.LogError("MatchHistoryScrollView not found.");
+            return;
+        }
+        matchHistoryScrollView.Clear();
+
+        var matchHistoryList = new VisualElement();
+        matchHistoryList.name = "MatchHistoryList";
+
+        bool recent = true;
+
+        for (int i = history.Length - 1; i >= 0; i--)
+        {
+            var match = history[i];
+
+            var matchContainer = new Foldout();
+            matchContainer.text = $"第{match.round}轮";
+            matchContainer.value = recent;
+            recent = false;
+
+            var detailContainer = new VisualElement();
+            detailContainer.AddToClassList("MatchDetail");
+
+            var statsLabel = new Label($"修为：{match.cultivation}  生命上限：{match.health}  命元：{match.destiny} {GetDestinyDiffText(match.destinyDiff)}");
+            detailContainer.Add(statsLabel);
+
+            var opponentLabel = new Label($"对手 {match.opponent}  {(match.isWin ? "胜" : "负")}");
+            opponentLabel.style.color = match.isWin ? Color.green : Color.red;
+            detailContainer.Add(opponentLabel);
+
+            matchContainer.Add(detailContainer);
+            matchHistoryList.Add(matchContainer);
+        }
+
+        matchHistoryScrollView.Add(matchHistoryList);
+    }
+
+
 }
