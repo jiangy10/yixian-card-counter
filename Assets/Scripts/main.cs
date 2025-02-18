@@ -13,23 +13,11 @@ public class Main : MonoBehaviour
         tempPlayer.health = 105;
         tempPlayer.destiny = 100;
 
-        Card tempCard1 = new Card();
-        tempCard1.name = "梅开二度";
-        tempCard1.level = 2;
-        tempCard1.phase = 5;
-        tempCard1.img_url = "Textures/Images/梅开二度";
+        Card tempCard1 = new Card("梅开二度", 2, 5);
+        Card tempCard2 = new Card("星弈·断", 1, 5);
+        Card tempCard3 = new Card("万花迷魂阵", 1, 5);
 
-        Card tempCard2 = new Card();
-        tempCard2.name = "星弈·断";
-        tempCard2.level = 1;
-        tempCard2.phase = 5;
-
-        Card tempCard3 = new Card();
-        tempCard3.name = "万花迷魂阵";
-        tempCard3.level = 1;
-        tempCard3.phase = 5;
-
-        tempPlayer.used_card = new Card[] {tempCard1, tempCard2, tempCard3};
+        tempPlayer.match_hitory.used_card = new Card[] {tempCard1, tempCard2, tempCard3};
 
         var root = uiDocument.rootVisualElement;
         
@@ -57,21 +45,31 @@ public class Player
 {
     public string player_username;
     public int destiny;
-    public int destiny_diff;
     public int health;
     public int cultivation;
-    public MatchResult match_result;
-    public Card[] used_card;
+    public MatchHistory[] match_hitory;
+
+    public Player(string player_username, int destiny, int destiny_diff, int health, int cultivation)
+    {
+        this.player_username = player_username;
+        this.destiny = destiny;
+        this.destiny_diff = destiny_diff;
+        this.health = health;
+        this.cultivation = cultivation;
+        this.match_hitory = new MatchHistory[];
+    }
 }
 
 [System.Serializable]
-public class MatchResult
+public class MatchHistory
 {
+    public int round;
     public string opponent_username;
     public int destiny;
     public int destiny_diff;
     public int health;
     public int cultivation;
+    public Card[] used_card;
 }
 
 [System.Serializable]
@@ -81,4 +79,11 @@ public class Card
     public int level;
     public int phase;
     public string img_url;
+
+    public Card(string name, int level, int phase)
+    {
+        this.name = name;
+        this.level = level;
+        this.phase = phase;
+    }
 }
