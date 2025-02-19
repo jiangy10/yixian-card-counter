@@ -1,4 +1,5 @@
 using System.IO;
+using SimpleJSON;
 using UnityEngine;
 using UnityEngine.UIElements; 
 
@@ -7,22 +8,19 @@ public class Main : MonoBehaviour
     [SerializeField] private UIDocument uiDocument; 
     private void Start()
     {
-        Player tempPlayer = new Player();
-        tempPlayer.player_username = "饭缸出门扶墙";
-        tempPlayer.cultivation = 20;
-        tempPlayer.health = 105;
-        tempPlayer.destiny = 100;
-
-        Card tempCard1 = new Card("梅开二度", 2, 5);
-        Card tempCard2 = new Card("星弈·断", 1, 5);
-        Card tempCard3 = new Card("万花迷魂阵", 1, 5);
-
-        tempPlayer.match_hitory.used_card = new Card[] {tempCard1, tempCard2, tempCard3};
+        string filePath = Path.Combine(Application.dataPath, "round14.json");
+        string json = File.ReadAllText(filePath);
+        var history = JSONNode.Parse(json);
+        Debug.Log(history["rounds"]);
+        Player tempPlayer = new Player("饭缸出门扶墙", 100, 20, 10);
+        // Player.setDestiny(history.players[0].destiny);
+        // Player.setHealth(history.players[0].health);
+        // Player.setCultivation(history.players[0].cultivation);
 
         var root = uiDocument.rootVisualElement;
         
         UIManager.UpdatePlayerInfo(root, tempPlayer);
-        UIManager.UpdateTackingCard(root, tempPlayer.used_card);
+        // UIManager.UpdateTackingCard(root, tempPlayer.used_card);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
@@ -49,14 +47,28 @@ public class Player
     public int cultivation;
     public MatchHistory[] match_hitory;
 
-    public Player(string player_username, int destiny, int destiny_diff, int health, int cultivation)
+    public Player(string player_username, int destiny, int health, int cultivation)
     {
         this.player_username = player_username;
         this.destiny = destiny;
-        this.destiny_diff = destiny_diff;
         this.health = health;
         this.cultivation = cultivation;
-        this.match_hitory = new MatchHistory[];
+        this.match_hitory = new MatchHistory[0];
+    }
+
+    public void setDestiny(int destiny)
+    {
+        this.destiny = destiny;
+    }
+
+    public void setHealth(int health)
+    {
+        this.health = health;
+    }
+
+    public void setCultivation(int cultivation)
+    {
+        this.cultivation = cultivation;
     }
 }
 
@@ -70,6 +82,16 @@ public class MatchHistory
     public int health;
     public int cultivation;
     public Card[] used_card;
+
+    public MatchHistory(int round, string opponent_username, int destiny, int destiny_diff, int health, int cultivation)
+    {
+        this.round = round;
+        this.opponent_username = opponent_username;
+        this.destiny = destiny;
+        this.destiny_diff = destiny_diff;
+        this.health = health;
+        this.cultivation = cultivation;
+    }
 }
 
 [System.Serializable]
