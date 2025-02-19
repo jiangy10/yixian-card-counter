@@ -98,23 +98,23 @@ public static class UIManager
         {
             var match = history[i];
 
-            var matchContainer = new Foldout();
-            matchContainer.text = $"第{match.round}轮";
-            matchContainer.value = recent;
-            recent = false;
+            // var matchContainer = new Foldout();
+            // matchContainer.text = $"第{match.round}轮";
+            // matchContainer.value = recent;
+            // recent = false;
 
-            var detailContainer = new VisualElement();
-            detailContainer.AddToClassList("MatchDetail");
+            // var detailContainer = new VisualElement();
+            // detailContainer.AddToClassList("MatchDetail");
 
-            var statsLabel = new Label($"修为：{match.cultivation}  生命上限：{match.health}  命元：{match.destiny} {GetDestinyDiffText(match.destinyDiff)}");
-            detailContainer.Add(statsLabel);
+            // var statsLabel = new Label($"修为：{match.cultivation}  生命上限：{match.health}  命元：{match.destiny} {GetDestinyDiffText(match.destinyDiff)}");
+            // detailContainer.Add(statsLabel);
 
-            var opponentLabel = new Label($"对手 {match.opponent}  {(match.isWin ? "胜" : "负")}");
-            opponentLabel.style.color = match.isWin ? Color.green : Color.red;
-            detailContainer.Add(opponentLabel);
+            // var opponentLabel = new Label($"对手 {match.opponent}  {(match.isWin ? "胜" : "负")}");
+            // opponentLabel.style.color = match.isWin ? Color.green : Color.red;
+            // detailContainer.Add(opponentLabel);
 
-            matchContainer.Add(detailContainer);
-            matchHistoryList.Add(matchContainer);
+            // matchContainer.Add(detailContainer);
+            // matchHistoryList.Add(matchContainer);
         }
 
         matchHistoryScrollView.Add(matchHistoryList);

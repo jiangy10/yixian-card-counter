@@ -10,12 +10,13 @@ public class Main : MonoBehaviour
     {
         string filePath = Path.Combine(Application.dataPath, "round14.json");
         string json = File.ReadAllText(filePath);
-        var history = JSONNode.Parse(json);
-        Debug.Log(history["rounds"]);
+        MatchHistoryLog matchHistoryLog = JsonUtility.FromJson<MatchHistoryLog>(json);
+
+        Debug.Log(matchHistoryLog);
+        Debug.Log(matchHistoryLog.round);
+        Debug.Log(matchHistoryLog.players);
+
         Player tempPlayer = new Player("饭缸出门扶墙", 100, 20, 10);
-        // Player.setDestiny(history.players[0].destiny);
-        // Player.setHealth(history.players[0].health);
-        // Player.setCultivation(history.players[0].cultivation);
 
         var root = uiDocument.rootVisualElement;
         
@@ -108,4 +109,23 @@ public class Card
         this.level = level;
         this.phase = phase;
     }
+}
+
+[System.Serializable]
+public class MatchHistoryPlayer
+{
+    public string player_username;
+    public int destiny;
+    public int destiny_diff;
+    public int health;
+    public int cultivation;
+    public string opponent_username;
+    public Card[] used_card;
+}
+
+[System.Serializable]
+public class MatchHistoryLog
+{
+    public int round;
+    public MatchHistoryPlayer[] players;
 }
