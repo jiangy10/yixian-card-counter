@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 public class Main : MonoBehaviour
 {
     [SerializeField] private UIDocument uiDocument; 
+    private Player player;
+
     private void Start()
     {
         string filePath = Path.Combine(Application.dataPath, "round14.json");
@@ -14,18 +16,28 @@ public class Main : MonoBehaviour
 
         Debug.Log(matchHistoryLog);
         Debug.Log(matchHistoryLog.round);
-        Debug.Log(matchHistoryLog.players);
+        Debug.Log(matchHistoryLog.players[0].destiny);
 
-        Player tempPlayer = new Player("饭缸出门扶墙", 100, 20, 10);
+        this.player = new Player("饭缸出门扶墙", 100, 20, 10);
+        this.UpdateMatchHistory(matchHistoryLog);
 
         var root = uiDocument.rootVisualElement;
         
-        UIManager.UpdatePlayerInfo(root, tempPlayer);
+        UIManager.UpdatePlayerInfo(root, this.player);
         // UIManager.UpdateTackingCard(root, tempPlayer.used_card);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
         StyleManager.ApplyStyleSheet(root, "MatchHistoryStyles");
+    }
+
+    private void UpdateMatchHistory(MatchHistoryLog matchHistoryLog){
+        int destiny = matchHistoryLog.players[0].destiny;
+        int health = matchHistoryLog.players[0].health;
+        int cultivation = matchHistoryLog.players[0].cultivation;
+        this.player.setDestiny(destiny);
+        this.player.setHealth(health);
+        this.player.setCultivation(cultivation);
     }
 
 }
