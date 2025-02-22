@@ -14,17 +14,13 @@ public class Main : MonoBehaviour
         string json = File.ReadAllText(filePath);
         MatchHistoryLog matchHistoryLog = JsonUtility.FromJson<MatchHistoryLog>(json);
 
-        Debug.Log(matchHistoryLog);
-        Debug.Log(matchHistoryLog.round);
-        Debug.Log(matchHistoryLog.players[0].destiny);
-
         this.player = new Player("饭缸出门扶墙", 100, 20, 10);
+        //listen to server
         this.UpdateMatchHistory(matchHistoryLog);
 
         var root = uiDocument.rootVisualElement;
         
         UIManager.UpdatePlayerInfo(root, this.player);
-        // UIManager.UpdateTackingCard(root, tempPlayer.used_card);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
@@ -39,6 +35,8 @@ public class Main : MonoBehaviour
         this.player.setHealth(health);
         this.player.setCultivation(cultivation);
     }
+
+    
 
 }
 
