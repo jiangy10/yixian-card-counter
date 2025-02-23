@@ -28,12 +28,17 @@ public class Main : MonoBehaviour
     }
 
     private void UpdateMatchHistory(MatchHistoryLog matchHistoryLog){
-        int destiny = matchHistoryLog.players[0].destiny;
-        int health = matchHistoryLog.players[0].health;
-        int cultivation = matchHistoryLog.players[0].cultivation;
-        this.player.setDestiny(destiny);
-        this.player.setHealth(health);
-        this.player.setCultivation(cultivation);
+        //for player in matchHistoryLog.players
+        //  update player info
+        foreach (var player in matchHistoryLog.players)
+        {
+            if (player.player_username == this.player.player_username)
+            {
+                this.player.setDestiny(player.destiny);
+                this.player.setHealth(player.health);
+                this.player.setCultivation(player.cultivation);
+            }
+        }
     }
 
     
@@ -80,6 +85,11 @@ public class Player
     public void setCultivation(int cultivation)
     {
         this.cultivation = cultivation;
+    }
+    
+    public void setMatchHistory(MatchHistory[] matchHistory)
+    {
+        this.match_hitory = matchHistory;
     }
 }
 

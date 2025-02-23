@@ -14,7 +14,9 @@
                     </engine:VisualElement>
                 </engine:VisualElement>
                 <engine:VisualElement name="TrackingCardNavContainer">
+
                     <engine:Label text="追踪中的卡牌" name="TrackingCardTitleLabel" />
+
                     <engine:TabView name="TabContainer">
                         <engine:Tab name="all" label="全部"/>
                         <engine:Tab label="门派" />
@@ -27,13 +29,18 @@
                             <engine:VisualElement name="TrackingCardContainer"/>
                         </engine:ScrollView>
                     </engine:VisualElement>
+
                 </engine:VisualElement>
+
             </engine:VisualElement>
+
             <engine:VisualElement name="MatchHistoryContainer" style="flex-grow: 1; height: auto;">
                 <engine:Label text="战绩" name="MatchHistoryTitleLabel"/>
+
                     <engine:ScrollView name="MatchHistoryScrollView" style="flex-grow: 1; height: 400px;">
                         <engine:VisualElement name="MatchHistoryList"/>
                     </engine:ScrollView>
+                    
                 <engine:VisualElement name="ManageTracking" style="flex-grow: 0; height: 7%; background-color: rgb(61, 56, 50);">
                     <engine:Label text="管理追踪卡牌" name="Label" style="margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px; align-items: center; justify-content: center; flex-grow: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 20px; color: rgb(255, 255, 255); align-self: center; align-content: auto;" />
                 </engine:VisualElement>
