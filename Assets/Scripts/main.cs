@@ -1,4 +1,5 @@
 using System.IO;
+using System.Collections.Generic;
 using SimpleJSON;
 using UnityEngine;
 using UnityEngine.UIElements; 
@@ -21,6 +22,7 @@ public class Main : MonoBehaviour
         var root = uiDocument.rootVisualElement;
         
         UIManager.UpdatePlayerInfo(root, this.player);
+        UIDocument.UpdateMatchHistory(root, this.player.match_hitory);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
@@ -28,8 +30,6 @@ public class Main : MonoBehaviour
     }
 
     private void UpdateMatchHistory(MatchHistoryLog matchHistoryLog){
-        //for player in matchHistoryLog.players
-        //  update player info
         foreach (var player in matchHistoryLog.players)
         {
             if (player.player_username == this.player.player_username)
@@ -37,6 +37,8 @@ public class Main : MonoBehaviour
                 this.player.setDestiny(player.destiny);
                 this.player.setHealth(player.health);
                 this.player.setCultivation(player.cultivation);
+
+                this.player.setMatchHistory(player);
             }
         }
     }
@@ -61,7 +63,7 @@ public class Player
     public int destiny;
     public int health;
     public int cultivation;
-    public MatchHistory[] match_hitory;
+    public SortedDictionary<int, MatchHistory> match_hitory;
 
     public Player(string player_username, int destiny, int health, int cultivation)
     {
@@ -69,7 +71,7 @@ public class Player
         this.destiny = destiny;
         this.health = health;
         this.cultivation = cultivation;
-        this.match_hitory = new MatchHistory[0];
+        this.match_hitory = new SortedDictionary<int, MatchHistory>();
     }
 
     public void setDestiny(int destiny)
@@ -87,16 +89,15 @@ public class Player
         this.cultivation = cultivation;
     }
     
-    public void setMatchHistory(MatchHistory[] matchHistory)
+    public void setMatchHistory(MatchHistoryPlayer MatchHistoryPlayer)
     {
-        this.match_hitory = matchHistory;
+        this.match_hitory.Add(MatchHistoryPlayer.round, new MatchHistory(MatchHistoryPlayer.opponent_username, MatchHistoryPlayer.destiny, MatchHistoryPlayer.destiny_diff, MatchHistoryPlayer.health, MatchHistoryPlayer.cultivation));
     }
 }
 
 [System.Serializable]
 public class MatchHistory
 {
-    public int round;
     public string opponent_username;
     public int destiny;
     public int destiny_diff;
@@ -104,14 +105,14 @@ public class MatchHistory
     public int cultivation;
     public Card[] used_card;
 
-    public MatchHistory(int round, string opponent_username, int destiny, int destiny_diff, int health, int cultivation)
+    public MatchHistory(string opponent_username, int destiny, int destiny_diff, int health, int cultivation, Card used_card)
     {
-        this.round = round;
         this.opponent_username = opponent_username;
         this.destiny = destiny;
         this.destiny_diff = destiny_diff;
         this.health = health;
         this.cultivation = cultivation;
+        this.used_card = used_card;
     }
 }
 
