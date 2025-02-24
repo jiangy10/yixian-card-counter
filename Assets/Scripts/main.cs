@@ -16,13 +16,12 @@ public class Main : MonoBehaviour
         MatchHistoryLog matchHistoryLog = JsonUtility.FromJson<MatchHistoryLog>(json);
 
         this.player = new Player("饭缸出门扶墙", 100, 20, 10);
-        //listen to server
         this.UpdateMatchHistory(matchHistoryLog);
 
         var root = uiDocument.rootVisualElement;
         
         UIManager.UpdatePlayerInfo(root, this.player);
-        UIDocument.UpdateMatchHistory(root, this.player.match_hitory);
+        UIManager.UpdateMatchHistory(root, this.player.match_hitory);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
@@ -38,7 +37,7 @@ public class Main : MonoBehaviour
                 this.player.setHealth(player.health);
                 this.player.setCultivation(player.cultivation);
 
-                this.player.setMatchHistory(player);
+                this.player.setMatchHistory(matchHistoryLog.round, player);
             }
         }
     }
@@ -89,9 +88,9 @@ public class Player
         this.cultivation = cultivation;
     }
     
-    public void setMatchHistory(MatchHistoryPlayer MatchHistoryPlayer)
+    public void setMatchHistory(int round, MatchHistoryPlayer MatchHistoryPlayer)
     {
-        this.match_hitory.Add(MatchHistoryPlayer.round, new MatchHistory(MatchHistoryPlayer.opponent_username, MatchHistoryPlayer.destiny, MatchHistoryPlayer.destiny_diff, MatchHistoryPlayer.health, MatchHistoryPlayer.cultivation));
+        this.match_hitory.Add(round, new MatchHistory(MatchHistoryPlayer.opponent_username, MatchHistoryPlayer.destiny, MatchHistoryPlayer.destiny_diff, MatchHistoryPlayer.health, MatchHistoryPlayer.cultivation, MatchHistoryPlayer.used_card));
     }
 }
 
@@ -105,7 +104,7 @@ public class MatchHistory
     public int cultivation;
     public Card[] used_card;
 
-    public MatchHistory(string opponent_username, int destiny, int destiny_diff, int health, int cultivation, Card used_card)
+    public MatchHistory(string opponent_username, int destiny, int destiny_diff, int health, int cultivation, Card[] used_card)
     {
         this.opponent_username = opponent_username;
         this.destiny = destiny;

@@ -80,8 +80,7 @@ public static class UIManager
         trackingCardScrollView.Add(trackingCardContainer);
     }
        
-     public static void UpdateMatchHistory(VisualElement root, MatchHistory[] history){
-        debug.log(history);
+    public static void UpdateMatchHistory(VisualElement root, SortedDictionary<int, MatchHistory> playerMatchHitory){
         var matchHistoryScrollView = root.Q<ScrollView>("MatchHistoryScrollView");
         if (matchHistoryScrollView == null)
         {
@@ -91,18 +90,71 @@ public static class UIManager
         matchHistoryScrollView.Clear();
 
         var matchHistoryList = new VisualElement();
-        matchHistoryList.name = "MatchHistoryList";
+        // matchHistoryList.name = "MatchHistoryList";
 
-        bool recent = true;
-
-        for (int i = history.Length - 1; i >= 0; i--)
+        foreach (var history in playerMatchHitory)
         {
-            var match = history[i];
+            Debug.Log(history.Key);
+            Debug.Log(history.Value);
+            int round = history.Key;
+            MatchHistory matchHistory = history.Value;
 
+            var matchHistoryContainer = new VisualElement();
+            matchHistoryContainer.AddToClassList("MatchHistoryContainer");
 
-        }
+            var roundLabel = new Label($"第{round}回合");
+            roundLabel.AddToClassList("RoundLabel");
+
+            var cultivationLabel = new Label($"修为：{matchHistory.cultivation}");
+            cultivationLabel.AddToClassList("CultivationLabel");
+
+            var healthLabel = new Label($"生命上限：{matchHistory.health}");
+            healthLabel.AddToClassList("HealthLabel");
+
+            var destinyLabel = new Label($"命元：{matchHistory.destiny}({-matchHistory.destiny_diff})");
+            destinyLabel.AddToClassList("DestinyLabel");
+
+            var resultLabel = new Label(matchHistory.destiny_diff == 0 ? "胜" : "负");
+            resultLabel.AddToClassList("ResultLabel");
+
+            var opponentNameLabel = new Label($"对手：{matchHistory.opponent_username}");
+            opponentNameLabel.AddToClassList("OpponentNameLabel");
+
+            matchHistoryContainer.Add(roundLabel);
+            matchHistoryContainer.Add(cultivationLabel);
+            matchHistoryContainer.Add(healthLabel);
+            matchHistoryContainer.Add(destinyLabel);
+            matchHistoryContainer.Add(resultLabel);
+            matchHistoryContainer.Add(opponentNameLabel);
+
+            foreach(var card in matchHistory.used_card){
+                var usedCardContainer = new VisualElement();
+                usedCardContainer.AddToClassList("Card");
+
+                var levelLabel = new Label($"Lv.{card.level}");
+                levelLabel.AddToClassList("CardLevel");
+
+                var cardImage = new VisualElement();
+                cardImage.AddToClassList("CardImage");
+                cardImage.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>($"Textures/Images/{card.name}"));
+
+                var nameLabel = new Label(card.name);
+                nameLabel.AddToClassList("CardName");
+
+                usedCardContainer.Add(levelLabel);
+                usedCardContainer.Add(cardImage);
+                usedCardContainer.Add(nameLabel);
+
+                matchHistoryContainer.Add(usedCardContainer);
+            }
+
+            matchHistoryList.Add(matchHistoryContainer);
+            
+        }   
 
         matchHistoryScrollView.Add(matchHistoryList);
+
+        
     }
 
 
