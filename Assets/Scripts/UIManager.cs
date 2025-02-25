@@ -80,7 +80,8 @@ public static class UIManager
         trackingCardScrollView.Add(trackingCardContainer);
     }
        
-    public static void UpdateMatchHistory(VisualElement root, SortedDictionary<int, MatchHistory> playerMatchHitory){
+    public static void UpdateMatchHistory(VisualElement root, SortedDictionary<int, MatchHistory> playerMatchHitory)
+    {
         var matchHistoryScrollView = root.Q<ScrollView>("MatchHistoryScrollView");
         if (matchHistoryScrollView == null)
         {
@@ -90,18 +91,20 @@ public static class UIManager
         matchHistoryScrollView.Clear();
 
         var matchHistoryList = new VisualElement();
-        // matchHistoryList.name = "MatchHistoryList";
+
+        bool isFirst = true;
 
         foreach (var history in playerMatchHitory)
         {
-            Debug.Log(history.Key);
-            Debug.Log(history.Value);
             int round = history.Key;
             MatchHistory matchHistory = history.Value;
 
             var matchHistoryContainer = new VisualElement();
             matchHistoryContainer.AddToClassList("MatchHistoryContainer");
 
+            var headerContainer = new VisualElement();
+            headerContainer.AddToClassList("MatchHistoryHeader");
+            
             var roundLabel = new Label($"第{round}回合");
             roundLabel.AddToClassList("RoundLabel");
 
@@ -117,17 +120,24 @@ public static class UIManager
             var resultLabel = new Label(matchHistory.destiny_diff == 0 ? "胜" : "负");
             resultLabel.AddToClassList("ResultLabel");
 
+            headerContainer.Add(roundLabel);
+            headerContainer.Add(cultivationLabel);
+            headerContainer.Add(healthLabel);
+            headerContainer.Add(destinyLabel);
+            headerContainer.Add(resultLabel);
+
+            var contentContainer = new VisualElement();
+            contentContainer.AddToClassList("MatchHistoryContent");
+            contentContainer.style.display = isFirst ? DisplayStyle.Flex : DisplayStyle.None; // 最新回合默认展开
+
             var opponentNameLabel = new Label($"对手：{matchHistory.opponent_username}");
             opponentNameLabel.AddToClassList("OpponentNameLabel");
 
-            matchHistoryContainer.Add(roundLabel);
-            matchHistoryContainer.Add(cultivationLabel);
-            matchHistoryContainer.Add(healthLabel);
-            matchHistoryContainer.Add(destinyLabel);
-            matchHistoryContainer.Add(resultLabel);
-            matchHistoryContainer.Add(opponentNameLabel);
+            var usedCardsContainer = new VisualElement();
+            usedCardsContainer.AddToClassList("UsedCardsContainer");
 
-            foreach(var card in matchHistory.used_card){
+            foreach (var card in matchHistory.used_card)
+            {
                 var usedCardContainer = new VisualElement();
                 usedCardContainer.AddToClassList("Card");
 
@@ -145,17 +155,30 @@ public static class UIManager
                 usedCardContainer.Add(cardImage);
                 usedCardContainer.Add(nameLabel);
 
-                matchHistoryContainer.Add(usedCardContainer);
+                usedCardsContainer.Add(usedCardContainer);
             }
 
+            contentContainer.Add(opponentNameLabel);
+            contentContainer.Add(usedCardsContainer);
+
+            headerContainer.RegisterCallback<ClickEvent>(evt =>
+            {
+                contentContainer.style.display = contentContainer.style.display == DisplayStyle.None
+                    ? DisplayStyle.Flex
+                    : DisplayStyle.None;
+            });
+
+            matchHistoryContainer.Add(headerContainer);
+            matchHistoryContainer.Add(contentContainer);
+
             matchHistoryList.Add(matchHistoryContainer);
-            
-        }   
+
+            isFirst = false;
+        }
 
         matchHistoryScrollView.Add(matchHistoryList);
-
-        
     }
+
 
 
 }
