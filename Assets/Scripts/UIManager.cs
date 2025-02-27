@@ -91,8 +91,7 @@ public static class UIManager
         matchHistoryScrollView.Clear();
 
         var matchHistoryList = new VisualElement();
-
-        bool isFirst = true;
+        bool unfold = true;
 
         foreach (var history in playerMatchHitory)
         {
@@ -100,38 +99,47 @@ public static class UIManager
             MatchHistory matchHistory = history.Value;
 
             var matchHistoryContainer = new VisualElement();
-            matchHistoryContainer.name = "MatchHistoryContainer";
+            matchHistoryContainer.AddToClassList("MatchHistoryContainer");
 
             var headerContainer = new VisualElement();
-            headerContainer.name = "MatchHistoryHeader";
-            
+            headerContainer.AddToClassList("MatchHistoryHeader");
+
             var roundLabel = new Label($"第{round}回合");
             roundLabel.AddToClassList("RoundLabel");
 
-            var cultivationLabel = new Label($"修为：{matchHistory.cultivation}");
-            cultivationLabel.AddToClassList("CultivationLabel");
-
-            var healthLabel = new Label($"生命上限：{matchHistory.health}");
-            healthLabel.AddToClassList("HealthLabel");
-
-            var destinyLabel = new Label($"命元：{matchHistory.destiny}({-matchHistory.destiny_diff})");
-            destinyLabel.AddToClassList("DestinyLabel");
-
             var resultLabel = new Label(matchHistory.destiny_diff == 0 ? "胜" : "负");
             resultLabel.AddToClassList("ResultLabel");
+            resultLabel.style.color = matchHistory.destiny_diff == 0 ? new Color(0f, 1f, 0f) : new Color(1f, 0f, 0f);
 
             headerContainer.Add(roundLabel);
-            // headerContainer.Add(cultivationLabel);
-            // headerContainer.Add(healthLabel);
-            // headerContainer.Add(destinyLabel);
             headerContainer.Add(resultLabel);
 
             var contentContainer = new VisualElement();
             contentContainer.AddToClassList("MatchHistoryContent");
-            contentContainer.style.display = isFirst ? DisplayStyle.Flex : DisplayStyle.None;
+            contentContainer.style.display = unfold ? DisplayStyle.Flex : DisplayStyle.None; 
+
+            var matchInfoContainer = new VisualElement();
+            matchInfoContainer.AddToClassList("MatchInfoContainer");
+
+            var cultivationLabel = new Label($"修为：{matchHistory.cultivation}");
+            cultivationLabel.AddToClassList("MatchInfoLabel");
+
+            var healthLabel = new Label($"生命上限：{matchHistory.health}");
+            healthLabel.AddToClassList("MatchInfoLabel");
+
+            var destinyLabel = new Label($"命元：{matchHistory.destiny}({-matchHistory.destiny_diff})");
+            destinyLabel.AddToClassList("MatchInfoLabel");
 
             var opponentNameLabel = new Label($"对手：{matchHistory.opponent_username}");
-            opponentNameLabel.AddToClassList("OpponentNameLabel");
+            opponentNameLabel.AddToClassList("MatchInfoLabel");
+
+            matchInfoContainer.Add(cultivationLabel);
+            matchInfoContainer.Add(healthLabel);
+            matchInfoContainer.Add(destinyLabel);
+            matchInfoContainer.Add(opponentNameLabel);
+
+            var separator = new VisualElement();
+            separator.AddToClassList("Separator");
 
             var usedCardsContainer = new VisualElement();
             usedCardsContainer.AddToClassList("UsedCardsContainer");
@@ -154,31 +162,24 @@ public static class UIManager
                 usedCardContainer.Add(levelLabel);
                 usedCardContainer.Add(cardImage);
                 usedCardContainer.Add(nameLabel);
-
                 usedCardsContainer.Add(usedCardContainer);
             }
 
-            contentContainer.Add(opponentNameLabel);
+            contentContainer.Add(matchInfoContainer);
+            contentContainer.Add(separator);
             contentContainer.Add(usedCardsContainer);
 
             headerContainer.RegisterCallback<ClickEvent>(evt =>
             {
-                contentContainer.style.display = contentContainer.style.display == DisplayStyle.None
-                    ? DisplayStyle.Flex
-                    : DisplayStyle.None;
+                bool isExpanded = contentContainer.style.display == DisplayStyle.None;
+                contentContainer.style.display = isExpanded ? DisplayStyle.Flex : DisplayStyle.None;
             });
 
             matchHistoryContainer.Add(headerContainer);
             matchHistoryContainer.Add(contentContainer);
-
             matchHistoryList.Add(matchHistoryContainer);
-
-            isFirst = false;
+            unfold = false;
+            matchHistoryScrollView.Add(matchHistoryList);
         }
-
-        matchHistoryScrollView.Add(matchHistoryList);
     }
-
-
-
 }

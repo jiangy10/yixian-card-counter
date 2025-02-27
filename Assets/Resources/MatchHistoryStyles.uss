@@ -1,25 +1,38 @@
-#MatchHistoryTitleLabel{
-    -unity-font-style: bold;
-    color: rgb(255, 255, 255);
-    background-color: rgb(34, 34, 34);
-    margin: 0;
-    padding-left: 2%;
-}
-
 .MatchHistoryContainer {
     border: 1px solid #555;
-    border-radius: 5px;
+    background-color: rgb(99, 96, 92);
     margin-bottom: 8px;
-    padding: 8px;
+    border-radius: 5px;
 }
 
-.BattleInfoContainer {
+.MatchHistoryHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
+    background-color: rgb(53, 49, 45);
+    color: white;
+    padding: 2%;
+    /* margin: 2%; */
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.MatchInfoContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.MatchInfoLabel{
+    color: white;
+}
+
+.Separator {
+    height: 1px;
+    background-color: #666;
+    margin: 8px 0;
 }
 
 .UsedCardsContainer {
