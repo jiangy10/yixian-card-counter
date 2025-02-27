@@ -38,7 +38,7 @@ public class Main : MonoBehaviour
                 this.player.setCultivation(player.cultivation);
 
                 this.player.setMatchHistory(matchHistoryLog.round, player);
-            }
+            }   
         }
     }
 

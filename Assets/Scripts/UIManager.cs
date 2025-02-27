@@ -100,10 +100,10 @@ public static class UIManager
             MatchHistory matchHistory = history.Value;
 
             var matchHistoryContainer = new VisualElement();
-            matchHistoryContainer.AddToClassList("MatchHistoryContainer");
+            matchHistoryContainer.name = "MatchHistoryContainer";
 
             var headerContainer = new VisualElement();
-            headerContainer.AddToClassList("MatchHistoryHeader");
+            headerContainer.name = "MatchHistoryHeader";
             
             var roundLabel = new Label($"第{round}回合");
             roundLabel.AddToClassList("RoundLabel");
@@ -121,14 +121,14 @@ public static class UIManager
             resultLabel.AddToClassList("ResultLabel");
 
             headerContainer.Add(roundLabel);
-            headerContainer.Add(cultivationLabel);
-            headerContainer.Add(healthLabel);
-            headerContainer.Add(destinyLabel);
+            // headerContainer.Add(cultivationLabel);
+            // headerContainer.Add(healthLabel);
+            // headerContainer.Add(destinyLabel);
             headerContainer.Add(resultLabel);
 
             var contentContainer = new VisualElement();
             contentContainer.AddToClassList("MatchHistoryContent");
-            contentContainer.style.display = isFirst ? DisplayStyle.Flex : DisplayStyle.None; // 最新回合默认展开
+            contentContainer.style.display = isFirst ? DisplayStyle.Flex : DisplayStyle.None;
 
             var opponentNameLabel = new Label($"对手：{matchHistory.opponent_username}");
             opponentNameLabel.AddToClassList("OpponentNameLabel");
