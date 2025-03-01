@@ -7,8 +7,10 @@ public static class UIManager
 {
     private static readonly Dictionary<int, Color> LevelColors = new Dictionary<int, Color>
     {
+        { 3, new Color(123f / 255f, 218f / 255f, 221f / 255f) }, // rgb(123, 218, 221)
         { 4, new Color(137f / 255f, 115f / 255f, 236f / 255f) }, // rgb(137, 115, 236)
         { 5, new Color(247f / 255f, 222f / 255f, 121f / 255f) }  // rgb(247, 222, 121)
+
     };
     
     public static void UpdatePlayerInfo(VisualElement root, Player player)
@@ -104,7 +106,7 @@ public static class UIManager
             var headerContainer = new VisualElement();
             headerContainer.AddToClassList("MatchHistoryHeader");
 
-            var roundLabel = new Label($"第{round}回合");
+            var roundLabel = new Label($"第{-round}回合");
             roundLabel.AddToClassList("RoundLabel");
 
             var resultLabel = new Label(matchHistory.destiny_diff == 0 ? "胜" : "负");
@@ -146,8 +148,12 @@ public static class UIManager
 
             foreach (var card in matchHistory.used_card)
             {
-                var usedCardContainer = new VisualElement();
-                usedCardContainer.AddToClassList("Card");
+                var cardContainer = new VisualElement();
+                cardContainer.AddToClassList("Card");
+                cardContainer.style.borderLeftColor = new StyleColor(LevelColors[card.phase]);
+                cardContainer.style.borderRightColor = new StyleColor(LevelColors[card.phase]);
+                cardContainer.style.borderTopColor = new StyleColor(LevelColors[card.phase]);
+                cardContainer.style.borderBottomColor = new StyleColor(LevelColors[card.phase]);
 
                 var levelLabel = new Label($"Lv.{card.level}");
                 levelLabel.AddToClassList("CardLevel");
@@ -159,10 +165,10 @@ public static class UIManager
                 var nameLabel = new Label(card.name);
                 nameLabel.AddToClassList("CardName");
 
-                usedCardContainer.Add(levelLabel);
-                usedCardContainer.Add(cardImage);
-                usedCardContainer.Add(nameLabel);
-                usedCardsContainer.Add(usedCardContainer);
+                cardContainer.Add(levelLabel);
+                cardContainer.Add(cardImage);
+                cardContainer.Add(nameLabel);
+                usedCardsContainer.Add(cardContainer);
             }
 
             contentContainer.Add(matchInfoContainer);

@@ -11,12 +11,14 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        string filePath = Path.Combine(Application.dataPath, "round14.json");
-        string json = File.ReadAllText(filePath);
-        MatchHistoryLog matchHistoryLog = JsonUtility.FromJson<MatchHistoryLog>(json);
+        string json_14 = File.ReadAllText(Path.Combine(Application.dataPath, "round14.json"));
+        string json_13 = File.ReadAllText(Path.Combine(Application.dataPath, "round13.json"));
+        MatchHistoryLog matchHistoryLog_14 = JsonUtility.FromJson<MatchHistoryLog>(json_14);
+        MatchHistoryLog matchHistoryLog_13 = JsonUtility.FromJson<MatchHistoryLog>(json_13);
 
         this.player = new Player("饭缸出门扶墙", 100, 20, 10);
-        this.UpdateMatchHistory(matchHistoryLog);
+        this.UpdateMatchHistory(matchHistoryLog_13);
+        this.UpdateMatchHistory(matchHistoryLog_14);
 
         var root = uiDocument.rootVisualElement;
         
@@ -37,7 +39,7 @@ public class Main : MonoBehaviour
                 this.player.setHealth(player.health);
                 this.player.setCultivation(player.cultivation);
 
-                this.player.setMatchHistory(matchHistoryLog.round, player);
+                this.player.setMatchHistory(-matchHistoryLog.round, player);
             }   
         }
     }

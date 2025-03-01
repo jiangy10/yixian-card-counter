@@ -13,7 +13,7 @@
     background-color: rgb(53, 49, 45);
     color: white;
     padding: 2%;
-    /* margin: 2%; */
+    margin: 2%;
     border-radius: 5px;
     cursor: pointer;
     
