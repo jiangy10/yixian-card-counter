@@ -1,0 +1,57 @@
+{
+    "round": 13,
+    "players": [
+      {
+        "player_username": "饭缸出门扶墙",
+        "destiny": 54,
+        "destiny_diff": 0,
+        "health": 101,
+        "cultivation": 73,
+        "opponent_username": "饭缸",
+        "used_card": [
+          {
+            "name": "黄雀在后",
+            "level": 1,
+            "phase": 5
+          },
+          {
+            "name": "梅开二度",
+            "level": 2,
+            "phase": 5
+          },
+          {
+            "name": "气吞山河",
+            "level": 2,
+            "phase": 5
+          },
+          {
+            "name": "金蝉脱壳",
+            "level": 2,
+            "phase": 4
+          },
+          {
+            "name": "海底捞月",
+            "level": 1,
+            "phase": 3
+          },
+          {
+            "name": "星弈·虎",
+            "level": 1,
+            "phase": 4
+          },
+          {
+            "name": "回响阵纹",
+            "level": 1,
+            "phase": 5
+          },
+          {
+            "name": "飞鸿踏雪",
+            "level": 1,
+            "phase": 5
+          }
+        ]
+        
+      }
+    ]
+  }
+  
