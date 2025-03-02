@@ -93,6 +93,7 @@ public static class UIManager
         matchHistoryScrollView.Clear();
 
         var matchHistoryList = new VisualElement();
+        matchHistoryList.name = "MatchHistoryList";
         bool unfold = true;
 
         foreach (var history in playerMatchHitory)

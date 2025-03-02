@@ -1,8 +1,25 @@
-.MatchHistoryContainer {
-    border: 1px solid #555;
+#MatchHistoryScroolView {
+    flex-grow: 1;
+    height: 100%;
+}
+
+#MatchHistoryList {
+    flex-direction: column;
+    display: flex;
     background-color: rgb(99, 96, 92);
+}
+
+.MatchHistoryContainer {
     margin-bottom: 8px;
     border-radius: 5px;
+}
+
+#MatchHistoryTitleLabel{
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 34, 34);
+    margin: 0;
+    padding-left: 2%;
 }
 
 .MatchHistoryHeader {
@@ -38,7 +55,6 @@
 .UsedCardsContainer {
     display: flex;
     flex-direction: column;
-    gap: 4px;
     margin-top: 8px;
 }
 
@@ -75,14 +91,4 @@
     padding: 0;
     -unity-text-align: middle-center;
     margin:0 2%;
-}
-
-.ResultLabel {
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.OpponentNameLabel {
-    font-size: 14px;
-    margin-bottom: 4px;
 }
