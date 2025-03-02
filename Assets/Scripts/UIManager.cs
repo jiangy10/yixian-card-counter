@@ -150,21 +150,21 @@ public static class UIManager
             foreach (var card in matchHistory.used_card)
             {
                 var cardContainer = new VisualElement();
-                cardContainer.AddToClassList("Card");
+                cardContainer.AddToClassList("MatchHistoryCard");
                 cardContainer.style.borderLeftColor = new StyleColor(LevelColors[card.phase]);
                 cardContainer.style.borderRightColor = new StyleColor(LevelColors[card.phase]);
                 cardContainer.style.borderTopColor = new StyleColor(LevelColors[card.phase]);
                 cardContainer.style.borderBottomColor = new StyleColor(LevelColors[card.phase]);
 
                 var levelLabel = new Label($"Lv.{card.level}");
-                levelLabel.AddToClassList("CardLevel");
+                levelLabel.AddToClassList("MatchHistoryCardLevel");
 
                 var cardImage = new VisualElement();
-                cardImage.AddToClassList("CardImage");
+                cardImage.AddToClassList("MatchHistoryCardImage");
                 cardImage.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>($"Textures/Images/{card.name}"));
 
                 var nameLabel = new Label(card.name);
-                nameLabel.AddToClassList("CardName");
+                nameLabel.AddToClassList("MatchHistoryCardName");
 
                 cardContainer.Add(levelLabel);
                 cardContainer.Add(cardImage);

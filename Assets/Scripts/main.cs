@@ -19,10 +19,14 @@ public class Main : MonoBehaviour
         this.player = new Player("饭缸出门扶墙", 100, 20, 10);
         this.UpdateMatchHistory(matchHistoryLog_13);
         this.UpdateMatchHistory(matchHistoryLog_14);
+        var temp_tracking_card = new Card[2];
+        temp_tracking_card[0] = new Card("星弈·虎", 1, 4);
+        temp_tracking_card[1] = new Card("金蝉脱壳", 2, 4);
 
         var root = uiDocument.rootVisualElement;
         
         UIManager.UpdatePlayerInfo(root, this.player);
+        UIManager.UpdateTackingCard(root, temp_tracking_card);
         UIManager.UpdateMatchHistory(root, this.player.match_hitory);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");

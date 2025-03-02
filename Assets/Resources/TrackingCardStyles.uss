@@ -37,7 +37,7 @@
     border-width: 1.5px;
     padding: 2%;
     margin: 2%;
-    height: 20%;
+    height: 16%;
     width: 98%;
 }
 

@@ -58,7 +58,7 @@
     margin-top: 8px;
 }
 
-.Card {
+.MatchHistoryCard {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -66,27 +66,27 @@
     border-width: 1.5px;
     padding: 2%;
     margin: 2%;
-    height: 20%;
+    height: 25%;
     width: 98%;
 }
 
-.CardLevel {
+.MatchHistoryCardLevel {
     color: rgb(255, 255, 255);
     padding: 0;
     -unity-text-align: middle-center;
     margin:0 2%;
 }
 
-.CardImage {
-    width: 30px;
-    height: 30px;
+.MatchHistoryCardImage {
+    width: 15px;
+    height: 15px;
     border-radius: 20px;
     background-size: 100% 100%;
     justify-content: center;
     align-items: center;
 }
 
-.CardName {
+.MatchHistoryCardName {
     color: rgb(255, 255, 255);
     padding: 0;
     -unity-text-align: middle-center;
