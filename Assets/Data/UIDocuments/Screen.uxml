@@ -25,9 +25,7 @@
                     </engine:TabView>
                     
                     <engine:VisualElement name="ListContainer" style="flex-grow: 1; flex-direction: row;">
-                        <engine:ScrollView name="TrackingCardScrollView" >
-                            <engine:VisualElement name="TrackingCardContainer"/>
-                        </engine:ScrollView>
+                        <engine:ScrollView name="TrackingCardScrollView" />
                     </engine:VisualElement>
 
                 </engine:VisualElement>

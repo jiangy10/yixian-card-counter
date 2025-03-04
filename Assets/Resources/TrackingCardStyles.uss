@@ -16,7 +16,13 @@
     height: 100%;
 }
 
+#TrackingCardScrollView {
+    /* height: 400px; */
+    overflow: auto;
+}
+
 #unity-content-container{
+    flex-direction: column;
     height: 100%;
 }
 
@@ -45,7 +51,7 @@
     color: rgb(255, 255, 255);
     padding: 0;
     -unity-text-align: middle-center;
-    margin:0 2%;
+    margin: 0 2%;
 }
 
 .CardImage {
@@ -61,5 +67,5 @@
     color: rgb(255, 255, 255);
     padding: 0;
     -unity-text-align: middle-center;
-    margin:0 2%;
+    margin: 0 2%;
 }

@@ -50,9 +50,6 @@ public static class UIManager
         }
         trackingCardScrollView.Clear();
 
-        var trackingCardContainer = new VisualElement();
-        trackingCardContainer.name = "TrackingCardContainer";
-
         foreach (var card in cards)
         {
             var cardContainer = new VisualElement();
@@ -76,10 +73,9 @@ public static class UIManager
             cardContainer.Add(cardImage);
             cardContainer.Add(nameLabel);
 
-            trackingCardContainer.Add(cardContainer);
+            trackingCardScrollView.Add(cardContainer);
         }
-
-        trackingCardScrollView.Add(trackingCardContainer);
+        trackingCardScrollView.style.height = 10 * cards.Length;
     }
        
     public static void UpdateMatchHistory(VisualElement root, SortedDictionary<int, MatchHistory> playerMatchHitory)
@@ -93,7 +89,8 @@ public static class UIManager
         matchHistoryScrollView.Clear();
 
         var matchHistoryList = new VisualElement();
-        matchHistoryList.name = "MatchHistoryList";
+        matchHistoryList.name = "MatchHistoryList";  // This element will have the overall background.
+
         bool unfold = true;
 
         foreach (var history in playerMatchHitory)
@@ -119,7 +116,7 @@ public static class UIManager
 
             var contentContainer = new VisualElement();
             contentContainer.AddToClassList("MatchHistoryContent");
-            contentContainer.style.display = unfold ? DisplayStyle.Flex : DisplayStyle.None; 
+            contentContainer.style.display = unfold ? DisplayStyle.Flex : DisplayStyle.None;
 
             var matchInfoContainer = new VisualElement();
             matchInfoContainer.AddToClassList("MatchInfoContainer");
@@ -185,8 +182,10 @@ public static class UIManager
             matchHistoryContainer.Add(headerContainer);
             matchHistoryContainer.Add(contentContainer);
             matchHistoryList.Add(matchHistoryContainer);
+
             unfold = false;
-            matchHistoryScrollView.Add(matchHistoryList);
         }
+
+        matchHistoryScrollView.Add(matchHistoryList);
     }
 }

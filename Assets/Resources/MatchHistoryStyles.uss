@@ -1,4 +1,4 @@
-#MatchHistoryScroolView {
+#MatchHistoryScrollView {
     flex-grow: 1;
     height: 100%;
 }
@@ -9,31 +9,29 @@
     background-color: rgb(99, 96, 92);
 }
 
-.MatchHistoryContainer {
-    margin-bottom: 8px;
-    border-radius: 5px;
-}
-
-#MatchHistoryTitleLabel{
-    -unity-font-style: bold;
-    color: rgb(255, 255, 255);
-    background-color: rgb(34, 34, 34);
-    margin: 0;
-    padding-left: 2%;
-}
-
 .MatchHistoryHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(53, 49, 45);
     color: white;
     padding: 2%;
     margin: 2%;
     border-radius: 5px;
     cursor: pointer;
-    
+}
+
+.MatchHistoryContainer {
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+#MatchHistoryTitleLabel {
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 34, 34);
+    margin: 0;
+    padding-left: 2%;
 }
 
 .MatchInfoContainer {
@@ -42,7 +40,7 @@
     padding: 1%;
 }
 
-.MatchInfoLabel{
+.MatchInfoLabel {
     color: white;
 }
 
@@ -74,7 +72,7 @@
     color: rgb(255, 255, 255);
     padding: 0;
     -unity-text-align: middle-center;
-    margin:0 2%;
+    margin: 0 2%;
 }
 
 .MatchHistoryCardImage {
@@ -90,5 +88,5 @@
     color: rgb(255, 255, 255);
     padding: 0;
     -unity-text-align: middle-center;
-    margin:0 2%;
+    margin: 0 2%;
 }

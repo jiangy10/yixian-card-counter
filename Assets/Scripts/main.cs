@@ -19,9 +19,16 @@ public class Main : MonoBehaviour
         this.player = new Player("饭缸出门扶墙", 100, 20, 10);
         this.UpdateMatchHistory(matchHistoryLog_13);
         this.UpdateMatchHistory(matchHistoryLog_14);
-        var temp_tracking_card = new Card[2];
+        var temp_tracking_card = new Card[8];
         temp_tracking_card[0] = new Card("星弈·虎", 1, 4);
         temp_tracking_card[1] = new Card("金蝉脱壳", 2, 4);
+        temp_tracking_card[2] = new Card("星弈·虎", 1, 4);
+        temp_tracking_card[3] = new Card("金蝉脱壳", 2, 4);
+        temp_tracking_card[4] = new Card("星弈·虎", 1, 4);
+        temp_tracking_card[5] = new Card("金蝉脱壳", 2, 4);
+        temp_tracking_card[6] = new Card("星弈·虎", 1, 4);
+        temp_tracking_card[7] = new Card("金蝉脱壳", 2, 4);
+        
 
         var root = uiDocument.rootVisualElement;
         

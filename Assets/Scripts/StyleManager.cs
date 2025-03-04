@@ -58,14 +58,14 @@ public static class StyleManager
             }
         }
                
-        var trackingCardContainer = root.Q<VisualElement>("TrackingCardContainer");
-        if (trackingCardContainer == null)
+        var trackingCardScrollView = root.Q<VisualElement>("TrackingCardScrollView");
+        if (trackingCardScrollView == null)
         {
-            Debug.LogError("TrackingCardContainer not found.");
+            Debug.LogError("trackingCardScrollView not found.");
         }
         else
         {
-            trackingCardContainer.Query(className: "Card").ForEach(card =>
+            trackingCardScrollView.Query(className: "Card").ForEach(card =>
             {
                 card.Query<Label>().ForEach(label => label.style.fontSize = card.resolvedStyle.height * 0.6f);
                 card.Q<VisualElement>(className: "CardImage").style.width = card.resolvedStyle.height * 0.6f;
