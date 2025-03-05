@@ -58,7 +58,6 @@ public static class UIManager
             cardContainer.style.borderRightColor = new StyleColor(LevelColors[card.phase]);
             cardContainer.style.borderTopColor = new StyleColor(LevelColors[card.phase]);
             cardContainer.style.borderBottomColor = new StyleColor(LevelColors[card.phase]);
-
             var levelLabel = new Label($"Lv.{card.level}");
             levelLabel.AddToClassList("CardLevel");
 
@@ -75,7 +74,6 @@ public static class UIManager
 
             trackingCardScrollView.Add(cardContainer);
         }
-        trackingCardScrollView.style.height = 10 * cards.Length;
     }
        
     public static void UpdateMatchHistory(VisualElement root, SortedDictionary<int, MatchHistory> playerMatchHitory)
