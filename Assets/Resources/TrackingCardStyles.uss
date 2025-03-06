@@ -20,7 +20,7 @@
     height: 100%;
 }
 
-.unity-scroll-view_content-container {
+.unity-scroll-view__content-container {
     height: 600px;
 }
 
