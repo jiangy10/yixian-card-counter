@@ -41,7 +41,7 @@
     border-width: 1.5px;
     padding: 2%;
     margin: 2%;
-    height: 16%;
+    height: 5%;
     width: 98%;
 }
 
@@ -66,4 +66,24 @@
     padding: 0;
     -unity-text-align: middle-center;
     margin: 0 2%;
+}
+
+#unity-dragger{
+    border-radius: 5px;
+}
+
+#unity-slider{
+    margin: 0;
+}
+
+#unity-tracker{
+    opacity: 0;
+}
+
+#unity-low-button{
+    display: none;
+}
+
+#unity-high-button{
+    display: none;
 }
