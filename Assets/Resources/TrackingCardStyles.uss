@@ -21,7 +21,9 @@
 }
 
 .unity-scroll-view__content-container {
-    height: 600px;
+    height: auto;
+    flex-grow: 0; 
+    min-height: 100%;
 }
 
 #TrackingCardContainer {
@@ -41,7 +43,8 @@
     border-width: 1.5px;
     padding: 2%;
     margin: 2%;
-    height: 5%;
+    height: 30px;
+    min-height: 30px;
     width: 98%;
 }
 
