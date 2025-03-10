@@ -13,7 +13,7 @@
                         <engine:Label name="HealthLabel" />
                     </engine:VisualElement>
                 </engine:VisualElement>
-                <engine:VisualElement name="TrackingCardNavContainer">
+                <engine:VisualElement name="TrackingCardContainer">
 
                     <engine:Label text="追踪中的卡牌" name="TrackingCardTitleLabel" />
 

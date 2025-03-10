@@ -29,7 +29,3 @@
     -unity-font-style: bold;
 }
 
-#TrackingCardContainer {
-    flex-direction: column;
-    background-color: rgba(34,34,34,0);
-}

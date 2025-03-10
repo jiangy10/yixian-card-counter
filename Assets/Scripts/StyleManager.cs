@@ -46,12 +46,12 @@ public static class StyleManager
 
         
         
-        var trackingCardNavContainer = root.Q<VisualElement>("TrackingCardNavContainer");
-        if (trackingCardNavContainer == null)
+        var trackingCardContainer = root.Q<VisualElement>("TrackingCardContainer");
+        if (trackingCardContainer == null)
         {
-            Debug.LogError("TrackingCardNavContainer not found.");
+            Debug.LogError("TrackingCardContainer not found.");
         }else{
-            var trackingCardTitleLabel = trackingCardNavContainer.Q<VisualElement>("TrackingCardTitleLabel");
+            var trackingCardTitleLabel = trackingCardContainer.Q<VisualElement>("TrackingCardTitleLabel");
             if (trackingCardTitleLabel != null)
             {
                 trackingCardTitleLabel.style.fontSize = root.resolvedStyle.width * 0.07f;
