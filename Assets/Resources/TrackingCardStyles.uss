@@ -24,6 +24,7 @@
     height: auto;
     flex-grow: 0; 
     min-height: 100%;
+    paddingRight: 3px;
 }
 
 #TrackingCardContainer {
@@ -69,6 +70,10 @@
     padding: 0;
     -unity-text-align: middle-center;
     margin: 0 2%;
+}
+
+.unity-scroller--horizontal{
+    display: none;
 }
 
 #unity-dragger{
