@@ -1,3 +1,7 @@
+#MatchHistoryContainer{
+    background-color: rgb(99, 96, 92);
+}
+
 #MatchHistoryScrollView {
     flex-grow: 1;
     height: 100%;
@@ -19,6 +23,7 @@
     margin: 2%;
     border-radius: 5px;
     cursor: pointer;
+    background-color: rgb(53, 49, 45);
 }
 
 .MatchHistoryContainer {
@@ -37,23 +42,20 @@
 .MatchInfoContainer {
     display: flex;
     flex-direction: column;
-    padding: 1%;
+    padding: 2%;
+    margin: 0 2%;
+    border-radius: 5px;
+    background-color: rgb(76, 71, 66);
 }
 
 .MatchInfoLabel {
     color: white;
 }
 
-.Separator {
-    height: 1px;
-    background-color: #666;
-    margin: 8px 0;
-}
 
 .UsedCardsContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 8px;
 }
 
 .MatchHistoryCard {

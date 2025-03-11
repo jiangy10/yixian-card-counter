@@ -136,9 +136,6 @@ public static class UIManager
             matchInfoContainer.Add(destinyLabel);
             matchInfoContainer.Add(opponentNameLabel);
 
-            var separator = new VisualElement();
-            separator.AddToClassList("Separator");
-
             var usedCardsContainer = new VisualElement();
             usedCardsContainer.AddToClassList("UsedCardsContainer");
 
