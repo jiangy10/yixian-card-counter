@@ -7,6 +7,7 @@ public static class UIManager
 {
     private static readonly Dictionary<int, Color> LevelColors = new Dictionary<int, Color>
     {
+        { 2, new Color(180f / 255f, 207f / 255f, 127f / 255f) }, // rgb(180, 207, 127)
         { 3, new Color(123f / 255f, 218f / 255f, 221f / 255f) }, // rgb(123, 218, 221)
         { 4, new Color(137f / 255f, 115f / 255f, 236f / 255f) }, // rgb(137, 115, 236)
         { 5, new Color(247f / 255f, 222f / 255f, 121f / 255f) }  // rgb(247, 222, 121)
@@ -165,7 +166,6 @@ public static class UIManager
             }
 
             contentContainer.Add(matchInfoContainer);
-            contentContainer.Add(separator);
             contentContainer.Add(usedCardsContainer);
 
             headerContainer.RegisterCallback<ClickEvent>(evt =>
