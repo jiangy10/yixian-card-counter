@@ -91,6 +91,7 @@ public static class UIManager
         matchHistoryList.name = "MatchHistoryList";  // This element will have the overall background.
 
         bool unfold = true;
+        int selectedRound = 0;
 
         foreach (var history in playerMatchHitory)
         {
@@ -115,6 +116,7 @@ public static class UIManager
 
             var contentContainer = new VisualElement();
             contentContainer.AddToClassList("MatchHistoryContent");
+            contentContainer.AddToClassList($"round{-round}");
             contentContainer.style.display = unfold ? DisplayStyle.Flex : DisplayStyle.None;
 
             var matchInfoContainer = new VisualElement();
@@ -170,14 +172,21 @@ public static class UIManager
 
             headerContainer.RegisterCallback<ClickEvent>(evt =>
             {
+                if (selectedRound != round){
+                    root.Q<VisualElement>(className: $"round{selectedRound}").style.display = DisplayStyle.None;
+                }
                 bool isExpanded = contentContainer.style.display == DisplayStyle.None;
                 contentContainer.style.display = isExpanded ? DisplayStyle.Flex : DisplayStyle.None;
+                selectedRound = -round;
             });
 
             matchHistoryContainer.Add(headerContainer);
             matchHistoryContainer.Add(contentContainer);
             matchHistoryList.Add(matchHistoryContainer);
 
+            if (unfold){
+                selectedRound = -round;
+            }
             unfold = false;
         }
 
