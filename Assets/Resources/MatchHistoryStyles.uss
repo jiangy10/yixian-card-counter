@@ -23,6 +23,7 @@
     margin: 2%;
     border-radius: 5px;
     cursor: pointer;
+    -unity-text-align: middle-center;
     background-color: rgb(53, 49, 45);
 }
 

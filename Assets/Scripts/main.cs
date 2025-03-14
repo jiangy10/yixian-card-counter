@@ -34,6 +34,7 @@ public class Main : MonoBehaviour
         UIManager.UpdatePlayerInfo(root, this.player);
         UIManager.UpdateTackingCard(root, temp_tracking_card);
         UIManager.UpdateMatchHistory(root, this.player.match_hitory);
+        UIManager.RegisterManageTrackingListener(root);
         StyleManager.ApplyStyleSheet(root, "ScreenStyles");
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");

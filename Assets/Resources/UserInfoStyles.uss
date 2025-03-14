@@ -1,6 +1,6 @@
 #PlayerInfoContainer {
     flex-grow: 0;
-    height: 40%;
+    height: 10%;
     width: auto;
 }
 
@@ -9,7 +9,7 @@
     flex-grow: 0;
     flex-direction: row;
     background-color: rgb(61, 56, 50);
-    height: 35%;
+    height: 100%;
     padding: 2%;
 }
 

@@ -192,4 +192,24 @@ public static class UIManager
 
         matchHistoryScrollView.Add(matchHistoryList);
     }
+
+    public static void RegisterManageTrackingListener(VisualElement root)
+    {
+        bool counterPage = true;
+        var manageTrackingElement = root.Q<VisualElement>("ManageTracking");
+        var manageTrackingLabel = root.Q<Label>("ManageTrackingLabel");
+        manageTrackingElement.RegisterCallback<ClickEvent>(evt =>
+        {
+            Debug.Log("ManageTracking on click");
+            if(counterPage){
+                counterPage = false;
+                root.Q<VisualElement>("CounterContainer").style.display = DisplayStyle.None;
+                manageTrackingLabel.text = "返回";
+            }else{
+                counterPage = true;
+                root.Q<VisualElement>("CounterContainer").style.display = DisplayStyle.Flex;
+                manageTrackingLabel.text = "管理追踪卡牌";
+            }
+        });
+    }
 }
