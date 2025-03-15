@@ -2,11 +2,33 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements; 
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 public class Main : MonoBehaviour
 {
     [SerializeField] private UIDocument uiDocument; 
     private Player player;
+    private Process gameProcess;
+
+    [DllImport("user32.dll")]
+    private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
+
+    [DllImport("user32.dll")]
+    private static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, 
+        int X, int Y, int cx, int cy, uint uFlags);
+
+    [DllImport("user32.dll")]
+    private static extern bool GetWindowRect(IntPtr hwnd, ref RECT rect);
+
+    [StructLayout(LayoutKind.Sequential)]
+    private struct RECT
+    {
+        public int Left;
+        public int Top;
+        public int Right;
+        public int Bottom;
+    }
 
     private void Start()
     {
@@ -39,6 +61,8 @@ public class Main : MonoBehaviour
         StyleManager.ApplyStyleSheet(root, "UserInfoStyles");
         StyleManager.ApplyStyleSheet(root, "TrackingCardStyles");
         StyleManager.ApplyStyleSheet(root, "MatchHistoryStyles");
+
+        LaunchGame();
     }
 
     private void UpdateMatchHistory(MatchHistoryLog matchHistoryLog){
@@ -55,8 +79,74 @@ public class Main : MonoBehaviour
         }
     }
 
-    
+    private void LaunchGame()
+    {
+        try
+        {
+            var root = uiDocument.rootVisualElement;
+            var gameContainer = root.Q<VisualElement>("GameContainer");
+            
+            gameProcess = new Process();
+            gameProcess.StartInfo.FileName = "path/game.exe"; //todo:replace game path
+            gameProcess.StartInfo.UseShellExecute = true;
+            gameProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            
+            gameProcess.Start();
+            gameProcess.WaitForInputIdle(10000);
+            
+            if (gameProcess.MainWindowHandle != IntPtr.Zero)
+            {
+                var unityWindow = GetUnityWindowHandle();
+                if (unityWindow != IntPtr.Zero)
+                {
+                    SetParent(gameProcess.MainWindowHandle, unityWindow);
+                    
+                    var containerRect = gameContainer.worldBound;
+                    SetWindowPos(gameProcess.MainWindowHandle, IntPtr.Zero,
+                        (int)containerRect.x, (int)containerRect.y,
+                        (int)containerRect.width, (int)containerRect.height,
+                        0x0040);
+                }
+            }
+            
+            gameProcess.EnableRaisingEvents = true;
+            gameProcess.Exited += OnGameExited;
+        }
+        catch (System.Exception e)
+        {
+            UnityEngine.Debug.LogError($"Failed to launch game: {e.Message}");
+        }
+    }
 
+    private IntPtr GetUnityWindowHandle()
+    {
+        #if UNITY_EDITOR
+            return System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle;
+        #else
+            return GetActiveWindow();
+        #endif
+    }
+
+    private void OnGameExited(object sender, System.EventArgs e)
+    {
+        UnityEngine.Debug.Log("Game exited");
+        gameProcess?.Dispose();
+        gameProcess = null;
+    }
+
+    private void OnApplicationQuit()
+    {
+        if (gameProcess != null && !gameProcess.HasExited)
+        {
+            gameProcess.CloseMainWindow();
+            gameProcess.WaitForExit(3000);
+            if (!gameProcess.HasExited)
+            {
+                gameProcess.Kill(); 
+            }
+            gameProcess.Dispose();
+        }
+    }
 }
 
 
