@@ -199,7 +199,7 @@ public static class UIManager
         var manageTrackingElement = root.Q<VisualElement>("ManageTracking");
         var manageTrackingLabel = root.Q<Label>("ManageTrackingLabel");
         manageTrackingElement.RegisterCallback<ClickEvent>(evt =>
-        {c
+        {
             if(counterPage){
                 counterPage = false;
                 root.Q<VisualElement>("ManageTrackingContainer").style.display = DisplayStyle.Flex;
