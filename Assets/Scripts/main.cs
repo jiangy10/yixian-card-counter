@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements; 
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System;
 
 public class Main : MonoBehaviour
 {
@@ -87,7 +88,7 @@ public class Main : MonoBehaviour
             var gameContainer = root.Q<VisualElement>("GameContainer");
             
             gameProcess = new Process();
-            gameProcess.StartInfo.FileName = "path/game.exe"; //todo:replace game path
+            gameProcess.StartInfo.FileName = @"D:\steam\steamapps\common\弈仙牌\YiXianPai.exe"; //todo: should find game path
             gameProcess.StartInfo.UseShellExecute = true;
             gameProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
             
