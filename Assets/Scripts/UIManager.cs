@@ -199,15 +199,16 @@ public static class UIManager
         var manageTrackingElement = root.Q<VisualElement>("ManageTracking");
         var manageTrackingLabel = root.Q<Label>("ManageTrackingLabel");
         manageTrackingElement.RegisterCallback<ClickEvent>(evt =>
-        {
-            Debug.Log("ManageTracking on click");
+        {c
             if(counterPage){
                 counterPage = false;
+                root.Q<VisualElement>("ManageTrackingContainer").style.display = DisplayStyle.Flex;
                 root.Q<VisualElement>("CounterContainer").style.display = DisplayStyle.None;
                 manageTrackingLabel.text = "返回";
             }else{
                 counterPage = true;
                 root.Q<VisualElement>("CounterContainer").style.display = DisplayStyle.Flex;
+                root.Q<VisualElement>("ManageTrackingContainer").style.display = DisplayStyle.None;
                 manageTrackingLabel.text = "管理追踪卡牌";
             }
         });
