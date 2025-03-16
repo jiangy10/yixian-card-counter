@@ -89,6 +89,7 @@ public class Main : MonoBehaviour
             
             gameProcess = new Process();
             gameProcess.StartInfo.FileName = @"D:\steam\steamapps\common\弈仙牌\YiXianPai.exe"; //todo: should find game path
+            gameProcess.StartInfo.Arguments = "-screen-fullscreen 0 -window-mode 0 -screen-width 1280 -screen-height 720";
             gameProcess.StartInfo.UseShellExecute = true;
             gameProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
             
