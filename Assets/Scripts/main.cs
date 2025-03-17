@@ -22,6 +22,21 @@ public class Main : MonoBehaviour
     [DllImport("user32.dll")]
     private static extern bool GetWindowRect(IntPtr hwnd, ref RECT rect);
 
+    [DllImport("user32.dll")]
+    private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+    [DllImport("user32.dll")]
+    private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+    [DllImport("user32.dll", SetLastError = true)]
+    private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+    private const int GWL_STYLE = -16;
+    private const int WS_POPUP = 0x800000;
+    private const int WS_VISIBLE = 0x10000000;
+    private const int WS_CAPTION = 0x00C00000;
+    private const int WS_THICKFRAME = 0x00040000;
+
     [StructLayout(LayoutKind.Sequential)]
     private struct RECT
     {
@@ -113,6 +128,7 @@ public class Main : MonoBehaviour
             
             gameProcess.EnableRaisingEvents = true;
             gameProcess.Exited += OnGameExited;
+            Debug.Log(CanEmbedWindow(gameProcess.MainWindowHandle));
         }
         catch (System.Exception e)
         {
@@ -147,6 +163,23 @@ public class Main : MonoBehaviour
                 gameProcess.Kill(); 
             }
             gameProcess.Dispose();
+        }
+    }
+
+    private bool CanEmbedWindow(IntPtr hwnd)
+    {
+        try
+        {
+            int originalStyle = GetWindowLong(hwnd, GWL_STYLE);
+            SetWindowLong(hwnd, GWL_STYLE, originalStyle | WS_CAPTION);
+            int newStyle = GetWindowLong(hwnd, GWL_STYLE);
+            SetWindowLong(hwnd, GWL_STYLE, originalStyle);
+            
+            return (newStyle != originalStyle);
+        }
+        catch
+        {
+            return false;
         }
     }
 }
