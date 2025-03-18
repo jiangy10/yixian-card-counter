@@ -9,7 +9,7 @@ function App() {
     const launchGame = async () => {
       try {
         // Launch game process
-        const gamePath = '/Applications/YiXianPai.app/Contents/MacOS/YiXianPai';
+        const gamePath = 'D:\\steam\\steamapps\\common\\弈仙牌\\YiXianPai.exe';
         const gameArgs = [
           '-screen-fullscreen', '0',
           '-window-mode', '0',
