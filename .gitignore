@@ -6,13 +6,3 @@ node_modules/
 .idea/
 
 .DS_Store
-
-Logs/
-
-Library/
-
-Packages/
-
-UserSettings/
-
-Temp/
