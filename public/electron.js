@@ -3,34 +3,28 @@ const path = require('path');
 const isDev = require('electron-is-dev');
 
 function createWindow() {
-    // 创建浏览器窗口
     const mainWindow = new BrowserWindow({
-        width: 1200,
-        height: 800,
+        width: 800,
+        height: 600,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false,
-            enableRemoteModule: true
+            contextIsolation: false
         }
     });
 
-    // 加载应用
     mainWindow.loadURL(
         isDev
             ? 'http://localhost:3000'
             : `file://${path.join(__dirname, '../build/index.html')}`
     );
 
-    // 在开发环境下打开开发者工具
     if (isDev) {
         mainWindow.webContents.openDevTools();
     }
 }
 
-// 当Electron完成初始化时创建窗口
 app.whenReady().then(createWindow);
 
-// 当所有窗口都被关闭时退出应用
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
