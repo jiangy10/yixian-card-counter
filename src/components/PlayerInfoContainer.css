@@ -1,0 +1,41 @@
+.player-info-container {
+  padding: 15px;
+  background-color: #3d3832;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.player-information {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #4a4a4a;
+}
+
+.player-info-label-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.username-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.player-info-label {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.opponent-label {
+  font-size: 14px;
+  color: #b0b0b0;
+} 

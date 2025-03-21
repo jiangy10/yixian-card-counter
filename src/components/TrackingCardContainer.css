@@ -1,0 +1,45 @@
+.tracking-card-container {
+  padding: 15px;
+  margin: 10px;
+  background-color: #3d3832;
+  border-radius: 5px;
+}
+
+.tracking-card-title {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.tab-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.tab {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #5a5a5a;
+}
+
+.tab.active {
+  background-color: #6a6a6a;
+}
+
+.list-container {
+  height: 300px;
+  overflow-y: auto;
+}
+
+.tracking-card-scroll-view {
+  min-height: 100%;
+} 

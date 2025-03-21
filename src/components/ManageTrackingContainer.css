@@ -1,0 +1,17 @@
+.manage-tracking-container {
+  margin-top: auto;
+  padding: 10px;
+}
+
+.manage-tracking {
+  background-color: #3d3832;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+}
+
+.manage-tracking-label {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+} 
