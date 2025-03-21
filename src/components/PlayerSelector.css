@@ -1,6 +1,6 @@
 .player-selector-container {
-  padding: 10px;
-  margin: 10px;
+  padding: 2px;
+  margin: 2px;
   background-color: #3d3832;
   border-radius: 5px;
 }
@@ -9,6 +9,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding: 2px;
+  justify-content: center;
 }
 
 .player-button {

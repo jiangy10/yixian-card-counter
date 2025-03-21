@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './TrackingCardContainer.css';
-import { Card, TrackingCard, TrackingCardContainerProps } from '../models/model';
+import { Card as CardType, TrackingCard, TrackingCardContainerProps } from '../models/model';
+import Card from './Card';
 
 interface Tab {
   id: string;
@@ -23,6 +24,14 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
 
   const isCardTracked = (cardName: string) => {
     return trackingCards.some(trackedCard => trackedCard.name === cardName);
+  };
+
+  const handleTrackToggle = (cardName: string) => {
+    if (isCardTracked(cardName)) {
+      onCardUntrack(cardName);
+    } else {
+      onCardTrack(cardName);
+    }
   };
 
   return (
@@ -48,22 +57,13 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
             const trackedCard = trackingCards.find(tc => tc.name === card.name);
             
             return (
-              <div key={card.name} className="card-item">
-                <div className="card-info">
-                  <div className="card-name">{card.name}</div>
-                  <div className="card-type">{card.type}</div>
-                  <div className="card-phase">Phase: {card.phase}</div>
-                  {isTracked && (
-                    <div className="card-count">Count: {trackedCard?.count}</div>
-                  )}
-                </div>
-                <button
-                  className={`track-button ${isTracked ? 'tracked' : ''}`}
-                  onClick={() => isTracked ? onCardUntrack(card.name) : onCardTrack(card.name)}
-                >
-                  {isTracked ? 'Untrack' : 'Track'}
-                </button>
-              </div>
+              <Card
+                key={card.name}
+                card={card}
+                isTracked={isTracked}
+                count={trackedCard?.count}
+                onTrackToggle={handleTrackToggle}
+              />
             );
           })}
         </div>
