@@ -1,0 +1,141 @@
+{
+  "云剑·探云": {
+    "name": "云剑·探云",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·飞刺": {
+    "name": "云剑·飞刺",
+    "phase": 1, 
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·厚土": {
+    "name": "云剑·厚土",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "轻剑": {
+    "name": "轻剑", 
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "护身灵气": {
+    "name": "护身灵气",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "灵气灌注": {
+    "name": "灵气灌注",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "巨虎灵剑": {
+    "name": "巨虎灵剑",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "震雷剑": {
+    "name": "震雷剑",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "剑劈": {
+    "name": "剑劈",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "剑挡": {
+    "name": "剑挡",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "飞牙剑": {
+    "name": "飞牙剑",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "骤风剑": {
+    "name": "骤风剑",
+    "phase": 1,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·回守": {
+    "name": "云剑·回守",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·极意": {
+    "name": "云剑·极意",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·无锋": {
+    "name": "云剑·无锋",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "化灵决": {
+    "name": "化灵决",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "引气剑": {
+    "name": "引气剑",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "巨鲸灵剑": {
+    "name": "巨鲸灵剑",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "凝意决": {
+    "name": "凝意决",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "灵犀剑阵": {
+    "name": "灵犀剑阵",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "地煞剑": {
+    "name": "地煞剑",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "形意剑": {
+    "name": "形意剑",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "狂剑·一式": {
+    "name": "狂剑·一式",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit"
+  }
+
+}
