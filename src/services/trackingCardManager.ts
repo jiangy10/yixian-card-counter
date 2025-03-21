@@ -1,15 +1,22 @@
 import { TrackingCard } from '../models/model';
-
-const TRACKING_FILE = 'tracking_cards.json';
+import { STORAGE } from '../constants';
 
 export class TrackingCardManager {
   private static instance: TrackingCardManager;
   private trackingFilePath: string;
 
   private constructor() {
-    // 在用户数据目录下创建存储文件
-    const userDataPath = (window as any).electron.getUserDataPath();
-    this.trackingFilePath = `${userDataPath}/${TRACKING_FILE}`;
+    // Check if in development environment
+    const isDev = process.env.NODE_ENV === 'development';
+    
+    if (isDev) {
+      // Use project directory file in development
+      this.trackingFilePath = STORAGE.DEV_TRACKING_FILE;
+    } else {
+      // Use user data directory in production
+      const userDataPath = (window as any).electron.getUserDataPath();
+      this.trackingFilePath = `${userDataPath}/${STORAGE.PROD_TRACKING_FILE}`;
+    }
   }
 
   public static getInstance(): TrackingCardManager {
@@ -19,42 +26,42 @@ export class TrackingCardManager {
     return TrackingCardManager.instance;
   }
 
-  // 获取存储文件路径
+  // Get storage file path
   public getStoragePath(): string {
     return this.trackingFilePath;
   }
 
-  // 保存追踪卡牌
+  // Save tracking cards
   public async saveTrackingCards(cards: TrackingCard[]): Promise<void> {
     try {
-      const data = JSON.stringify(cards, null, 2);
+      const data = JSON.stringify(cards, null, STORAGE.JSON_INDENT);
       await (window as any).electron.writeFile(this.trackingFilePath, data);
     } catch (error) {
-      console.error('保存追踪卡牌失败:', error);
+      console.error('Failed to save tracking cards:', error);
       throw error;
     }
   }
 
-  // 读取追踪卡牌
+  // Load tracking cards
   public async loadTrackingCards(): Promise<TrackingCard[]> {
     try {
       const data = await (window as any).electron.readFile(this.trackingFilePath);
       return JSON.parse(data);
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-        // 文件不存在，返回空数组
+        // Return empty array if file doesn't exist
         return [];
       }
-      console.error('读取追踪卡牌失败:', error);
+      console.error('Failed to load tracking cards:', error);
       throw error;
     }
   }
 
-  // 添加追踪卡牌
+  // Add a tracking card
   public async addTrackingCard(cardId: string): Promise<TrackingCard> {
     const cards = await this.loadTrackingCards();
     const newCard: TrackingCard = {
-      cardId,
+      name: cardId,
       count: 1,
       lastSeen: new Date().toISOString()
     };
@@ -63,21 +70,26 @@ export class TrackingCardManager {
     return newCard;
   }
 
-  // 移除追踪卡牌
-  public async removeTrackingCard(cardId: string): Promise<void> {
+  // Remove a tracking card
+  public async removeTrackingCard(cardName: string): Promise<void> {
     const cards = await this.loadTrackingCards();
-    const newCards = cards.filter(card => card.cardId !== cardId);
-    await this.saveTrackingCards(newCards);
+    const updatedCards = cards.filter(card => card.name !== cardName);
+    await this.saveTrackingCards(updatedCards);
   }
 
-  // 更新追踪卡牌计数
-  public async updateCardCount(cardId: string, count: number): Promise<void> {
+  // Update card count
+  public async updateCardCount(cardName: string): Promise<void> {
     const cards = await this.loadTrackingCards();
-    const cardIndex = cards.findIndex(card => card.cardId === cardId);
-    if (cardIndex !== -1) {
-      cards[cardIndex].count = count;
-      cards[cardIndex].lastSeen = new Date().toISOString();
-      await this.saveTrackingCards(cards);
-    }
+    const updatedCards = cards.map(card => {
+      if (card.name === cardName) {
+        return {
+          ...card,
+          count: card.count + 1,
+          lastSeen: new Date().toISOString()
+        };
+      }
+      return card;
+    });
+    await this.saveTrackingCards(updatedCards);
   }
-} 
+}
