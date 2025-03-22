@@ -1240,5 +1240,185 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan"
+  },
+  "地灵丹": {
+    "name": "地灵丹",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "培元丹": {
+    "name": "培元丹",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "小还丹": {
+    "name": "小还丹",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "锻体丹": {
+    "name": "锻体丹",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "飞云丹": {
+    "name": "飞云丹",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "驱邪丹": {
+    "name": "驱邪丹",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "还魂丹": {
+    "name": "还魂丹",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "疗伤丹": {
+    "name": "疗伤丹",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "神力丹": {
+    "name": "神力丹",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "大还丹": {
+    "name": "大还丹",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "聚灵丹": {
+    "name": "聚灵丹",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "洗髓丹": {
+    "name": "洗髓丹",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "冰灵护体丹": {
+    "name": "冰灵护体丹",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "锻体玄丹": {
+    "name": "锻体玄丹",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "悟道丹": {
+    "name": "悟道丹",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "elixirist"
+  },
+  "奔雷符": {
+    "name": "奔雷符",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "护灵符": {
+    "name": "护灵符",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "锐金符": {
+    "name": "锐金符",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "火云符": {
+    "name": "火云符",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "清心咒": {
+    "name": "清心咒",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "水气符": {
+    "name": "水气符",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "寒冰咒": {
+    "name": "寒冰咒",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "吸灵符": {
+    "name": "吸灵符",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "瘴气符": {
+    "name": "瘴气符",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "聚气咒": {
+    "name": "聚气咒",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "扰心符": {
+    "name": "扰心符",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "弱体符": {
+    "name": "弱体符",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "镇魂封元符": {
+    "name": "镇魂封元符",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "千里神行符": {
+    "name": "千里神行符",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "fuluist"
+  },
+  "万邪入体咒": {
+    "name": "万邪入体咒",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "fuluist"
   }
 }
