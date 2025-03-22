@@ -1420,5 +1420,563 @@
     "phase": 5,
     "type": "side jobs",
     "category": "fuluist"
+  },
+  "破音": {
+    "name": "破音",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "土行曲": {
+    "name": "土行曲",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "逍遥曲": {
+    "name": "逍遥曲",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "慈念曲": {
+    "name": "慈念曲",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "幻音曲": {
+    "name": "幻音曲",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "天灵曲": {
+    "name": "天灵曲",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "断肠曲": {
+    "name": "断肠曲",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "狂舞曲": {
+    "name": "狂舞曲",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "轮指连音": {
+    "name": "轮指连音",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "回春曲": {
+    "name": "回春曲",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "九煞破灵曲": {
+    "name": "九煞破灵曲",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "同心曲": {
+    "name": "同心曲",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "天音困仙曲": {
+    "name": "天音困仙曲",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "幽绪乱心曲": {
+    "name": "幽绪乱心曲",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "转弦合调": {
+    "name": "转弦合调",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "musician"
+  },
+  "调色": {
+    "name": "调色",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "练笔": {
+    "name": "练笔",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "研墨": {
+    "name": "研墨",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "笔走龙蛇": {
+    "name": "笔走龙蛇",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "画饼充饥": {
+    "name": "画饼充饥",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "画蛇添足": {
+    "name": "画蛇添足",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "挥毫泼墨": {
+    "name": "挥毫泼墨",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "灵感迸发": {
+    "name": "灵感迸发",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "以画入道": {
+    "name": "以画入道",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "触类旁通": {
+    "name": "触类旁通",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "神来之笔": {
+    "name": "神来之笔",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "纸落云烟": {
+    "name": "纸落云烟",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "运笔如飞": {
+    "name": "运笔如飞",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "画龙点睛": {
+    "name": "画龙点睛",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "妙笔生花": {
+    "name": "妙笔生花",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "泼墨": {
+    "name": "泼墨",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "painter"
+  },
+  "引雷阵": {
+    "name": "引雷阵",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "碎杀阵": {
+    "name": "碎杀阵",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "冲击阵纹": {
+    "name": "冲击阵纹",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "龟甲阵": {
+    "name": "龟甲阵",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "邪蛊阵": {
+    "name": "邪蛊阵",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "疗愈阵纹": {
+    "name": "疗愈阵纹",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "聚灵阵": {
+    "name": "聚灵阵",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "周天剑阵": {
+    "name": "周天剑阵",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "辟邪阵纹": {
+    "name": "辟邪阵纹",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "天罡聚力阵": {
+    "name": "天罡聚力阵",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "八门金锁阵": {
+    "name": "八门金锁阵",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "不动金刚阵": {
+    "name": "不动金刚阵",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "万花迷魂阵": {
+    "name": "万花迷魂阵",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "回响阵纹": {
+    "name": "回响阵纹",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "须弥阵纹": {
+    "name": "须弥阵纹",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "formation-master"
+  },
+  "归元草": {
+    "name": "归元草",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "归岩草": {
+    "name": "归岩草",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "金梭兰": {
+    "name": "金梭兰",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "火梭兰": {
+    "name": "火梭兰",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "剑枝竹": {
+    "name": "剑枝竹",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "硬枝竹": {
+    "name": "硬枝竹",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "神力草": {
+    "name": "神力草",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "失力草": {
+    "name": "失力草",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "神秘种子": {
+    "name": "神秘种子",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "叶盾花": {
+    "name": "叶盾花",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "叶刃花": {
+    "name": "叶刃花",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "愈甘菊": {
+    "name": "愈甘菊",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "清甘菊": {
+    "name": "清甘菊",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "灵植浇灌": {
+    "name": "灵植浇灌",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "向灵葵": {
+    "name": "向灵葵",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "邪灵葵": {
+    "name": "邪灵葵",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "飞枭灵芝": {
+    "name": "飞枭灵芝",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "影枭灵芝": {
+    "name": "影枭灵芝",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "穿肠紫蕨": {
+    "name": "穿肠紫蕨",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "清肠紫蕨": {
+    "name": "清肠紫蕨",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "冰封雪莲": {
+    "name": "冰封雪莲",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "冰封血莲": {
+    "name": "冰封血莲",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "玄韵道果": {
+    "name": "玄韵道果",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "魔韵道果": {
+    "name": "魔韵道果",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "空间灵田": {
+    "name": "空间灵田",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "缚仙古藤": {
+    "name": "缚仙古藤",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "噬仙古藤": {
+    "name": "噬仙古藤",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "plant-master"
+  },
+  "卜命": {
+    "name": "卜命",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "查体": {
+    "name": "查体",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天谕·守": {
+    "name": "天谕·守",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天谕·攻": {
+    "name": "天谕·攻",
+    "phase": 1,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "探灵": {
+    "name": "探灵",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "凶相": {
+    "name": "凶相",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天运·避凶": {
+    "name": "天运·避凶",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天运·趋吉": {
+    "name": "天运·趋吉",
+    "phase": 2,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "吉运初显": {
+    "name": "吉运初显",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "血光之灾": {
+    "name": "血光之灾",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天命·飞逝": {
+    "name": "天命·飞逝",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天命·重现": {
+    "name": "天命·重现",
+    "phase": 3,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "万事如意": {
+    "name": "万事如意",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "诸事不宜": {
+    "name": "诸事不宜",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天星·牵引": {
+    "name": "天星·牵引",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天星·御心": {
+    "name": "天星·御心",
+    "phase": 4,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "厄劫缠身": {
+    "name": "厄劫缠身",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "命运轮回": {
+    "name": "命运轮回",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天机·顺应": {
+      "name": "天机·顺应",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "fortune-teller"
+  },
+  "天机·逆施": {
+    "name": "天机·逆施",
+    "phase": 5,
+    "type": "side jobs",
+    "category": "fortune-teller"
   }
 }
