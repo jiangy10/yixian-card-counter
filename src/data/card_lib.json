@@ -89,8 +89,8 @@
     "type": "sect",
     "category": "cloud-spirit"
   },
-  "化灵决": {
-    "name": "化灵决",
+  "化灵诀": {
+    "name": "化灵诀",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit"
@@ -107,8 +107,8 @@
     "type": "sect",
     "category": "cloud-spirit"
   },
-  "凝意决": {
-    "name": "凝意决",
+  "凝意诀": {
+    "name": "凝意诀",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit"
@@ -136,6 +136,1109 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit"
+  },
+  "云剑·柔心": {
+    "name": "云剑·柔心",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·无妄": {
+    "name": "云剑·无妄",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·点星": {
+    "name": "云剑·点星",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·汇灵": {
+    "name": "云剑·汇灵",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云舞诀": {
+    "name": "云舞诀",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "暗鸦灵剑": {
+    "name": "暗鸦灵剑",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "破气剑": {
+    "name": "破气剑",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "巨鹏灵剑": {
+    "name": "巨鹏灵剑",
+    "phase": 3, 
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "反身剑": {
+    "name": "反身剑",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "镜花剑阵": {
+    "name": "镜花剑阵",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "三锋剑": {
+    "name": "三锋剑",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·闪风": {
+    "name": "云剑·闪风",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·月影": {
+    "name": "云剑·月影",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "聚灵心法": {
+    "name": "聚灵心法",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "百鸢灵剑诀": {
+    "name": "百鸢灵剑诀",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "白鹭灵剑": {
+    "name": "白鹭灵剑",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "巨鲲灵剑": {
+    "name": "巨鲲灵剑",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "灵感剑": {
+    "name": "灵感剑",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "流云乱剑": {
+    "name": "流云乱剑",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "水月剑阵": {
+    "name": "水月剑阵",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "狂剑·二式": {
+    "name": "狂剑·二式",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·游龙": {
+    "name": "云剑·游龙",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "云剑·凌波": {
+    "name": "云剑·凌波",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "飞灵闪影剑": {
+    "name": "飞灵闪影剑",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "万法归灵剑": {
+    "name": "万法归灵剑",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "剑意激荡": {
+    "name": "剑意激荡",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "御空剑阵": {
+    "name": "御空剑阵",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "连环剑阵": {
+    "name": "连环剑阵",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "狂剑·零式": {
+    "name": "狂剑·零式",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit"
+  },
+  "斗转星移": {
+    "name": "斗转星移",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星罗棋布": {
+    "name": "星罗棋布",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·挡": {
+    "name": "星弈·挡",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·夹": {
+    "name": "星弈·夹",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "震卦": {
+    "name": "震卦",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "坤卦": {
+    "name": "坤卦",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "巽卦": {
+    "name": "巽卦",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "掌心雷": {
+    "name": "掌心雷",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "白鹤亮翅": {
+    "name": "白鹤亮翅",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "揽雀尾": {
+    "name": "揽雀尾",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "野马分鬃": {
+    "name": "野马分鬃",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "藕断丝连": {
+    "name": "藕断丝连",
+    "phase": 1,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "飞星刺": {
+    "name": "飞星刺",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·点": {
+    "name": "星弈·点",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·立": {
+    "name": "星弈·立",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "艮卦": {
+    "name": "艮卦",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "坎卦": {
+    "name": "坎卦",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "落雷术": {
+    "name": "落雷术",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "斩草除根": {
+    "name": "斩草除根",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "金鸡独立": {
+    "name": "金鸡独立",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "静气心法": {
+    "name": "静气心法",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "落花有意": {
+    "name": "落花有意",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "气贯长虹": {
+    "name": "气贯长虹",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "众星拱月": {
+    "name": "众星拱月",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·打": {
+    "name": "星弈·打",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "兑卦": {
+    "name": "兑卦",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "白蛇吐信": {
+    "name": "白蛇吐信",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "御雷卦诀": {
+    "name": "御雷卦诀",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "两仪阵": {
+    "name": "两仪阵",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "流水无情": {
+    "name": "流水无情",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "气疗术": {
+    "name": "气疗术",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "枯木逢春": {
+    "name": "枯木逢春",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "螳螂捕蝉": {
+    "name": "螳螂捕蝉",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "海底捞月": {
+    "name": "海底捞月",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·飞": {
+    "name": "星弈·飞",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·虎": {
+    "name": "星弈·虎",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "六爻绝阵": {
+    "name": "六爻绝阵",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "离卦": {
+    "name": "离卦",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星轨推衍": {
+    "name": "星轨推衍",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "蜻蜓点水": {
+    "name": "蜻蜓点水",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "轰雷掣电": {
+    "name": "轰雷掣电",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "反震心法": {
+    "name": "反震心法",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "金蝉脱壳": {
+    "name": "金蝉脱壳",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "杯弓蛇影": {
+    "name": "杯弓蛇影",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "天元心法": {
+    "name": "天元心法",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "星弈·断": {
+    "name": "星弈·断",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "乾卦": {
+    "name": "乾卦",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "五雷轰顶": {
+    "name": "五雷轰顶",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "梅开二度": {
+    "name": "梅开二度",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "气吞山河": {
+    "name": "气吞山河",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "黄雀在后": {
+    "name": "黄雀在后",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "紫气东来": {
+    "name": "紫气东来",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
+  },
+  "木灵印": {
+    "name": "木灵印",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵·芽": {
+    "name": "木灵·芽",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵印": {
+    "name": "火灵印",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵·窜": {
+    "name": "火灵·窜",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵印": {
+    "name": "土灵印",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵·碎": {
+    "name": "土灵·碎",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵印": {
+    "name": "金灵印",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵·针": {
+    "name": "金灵·针",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵印": {
+    "name": "水灵印",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵·涛": {
+    "name": "水灵·涛",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "五行刺": {
+    "name": "五行刺",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵·复苏": {
+    "name": "木灵·复苏",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵·疏影": {
+    "name": "木灵·疏影",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵·聚炎": {
+    "name": "火灵·聚炎",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵·赤焰": {
+    "name": "火灵·赤焰",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵阵": {
+    "name": "土灵阵",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵·群山": {
+    "name": "土灵·群山",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵阵": {
+    "name": "金灵阵",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵·穿心": {
+    "name": "金灵·穿心",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵·波澜": {
+    "name": "水灵·波澜",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵·汹涌": {
+    "name": "水灵·汹涌",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "浑天印": {
+    "name": "浑天印",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵阵": {
+    "name": "木灵阵",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵·巡林": {
+    "name": "木灵·巡林",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵阵": {
+    "name": "火灵阵",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵·轰爆": {
+    "name": "火灵·轰爆",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵·扬尘": {
+    "name": "土灵·扬尘",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵·断崖": {
+    "name": "土灵·断崖",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵·蓄锐": {
+    "name": "金灵·蓄锐",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵·锋芒": {
+    "name": "金灵·锋芒",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵阵": {
+    "name": "水灵阵",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵·泉涌": {
+    "name": "水灵·泉涌",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "五行流转": {
+    "name": "五行流转",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵·暗香": {
+    "name": "木灵·暗香",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵·玫刺": {
+    "name": "木灵·玫刺",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵·瞬燃": {
+    "name": "火灵·瞬燃",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵·灼心": {
+    "name": "火灵·灼心",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵·绝壁": {
+    "name": "土灵·绝壁",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵·流沙": {
+    "name": "土灵·流沙",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵·飞梭": {
+    "name": "金灵·飞梭",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵·铁骨": {
+    "name": "金灵·铁骨",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵·腾浪": {
+    "name": "水灵·腾浪",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵·潜遁": {
+    "name": "水灵·潜遁",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "混元碎击": {
+    "name": "混元碎击",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "木灵·柳纷飞": {
+    "name": "木灵·柳纷飞",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "火灵·烈燎原": {
+    "name": "火灵·烈燎原",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "土灵·合八荒": {
+    "name": "土灵·合八荒",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "金灵·巨鼎落": {
+    "name": "金灵·巨鼎落",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "水灵·纳百川": {
+    "name": "水灵·纳百川",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "混元无极阵": {
+    "name": "混元无极阵",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "五行天髓诀": {
+    "name": "五行天髓诀",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "崩拳·戳": {
+    "name": "崩拳·戳",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·封": {
+    "name": "崩拳·封",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·弹": {
+    "name": "崩拳·弹",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "锻拳": {
+    "name": "锻拳",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "劈山掌": {
+    "name": "劈山掌",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "抱气法": {
+    "name": "抱气法",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "罗刹扑": {
+    "name": "罗刹扑",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "破空爪": {
+    "name": "破空爪",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "千斤坠": {
+    "name": "千斤坠",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "起势": {
+    "name": "起势",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "朝气蓬勃": {
+    "name": "朝气蓬勃",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "血气方刚": {
+    "name": "血气方刚",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·撼": {
+    "name": "崩拳·撼",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·缠": {
+    "name": "崩拳·缠",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·突": {
+    "name": "崩拳·突",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "锻筋": {
+    "name": "锻筋",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "探马掌": {
+    "name": "探马掌",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "风冥爪": {
+    "name": "风冥爪",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "夜鬼啸": {
+    "name": "夜鬼啸",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "自然而动": {
+    "name": "自然而动",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "势大力沉": {
+    "name": "势大力沉",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "气沉丹田": {
+    "name": "气沉丹田",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "浩然正气": {
+    "name": "浩然正气",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩天步": {
+    "name": "崩天步",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·截脉": {
+    "name": "崩拳·截脉",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·降龙": {
+    "name": "崩拳·降龙",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "锻骨": {
+    "name": "锻骨",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "荷重前行": {
+    "name": "荷重前行",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "迎风掌": {
+    "name": "迎风掌",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "饿虎扑食": {
+    "name": "饿虎扑食",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "双鬼拍门": {
+    "name": "双鬼拍门",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "气若悬河": {
+    "name": "气若悬河",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "踏破九霄": {
+    "name": "踏破九霄",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "势如破竹": {
+    "name": "势如破竹",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩灭心法": {
+    "name": "崩灭心法",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·寸劲": {
+    "name": "崩拳·寸劲",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·连崩": {
+    "name": "崩拳·连崩",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "锻髓": {
+    "name": "锻髓",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "鹤步": {
+    "name": "鹤步",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "灵玄迷踪步": {
+    "name": "灵玄迷踪步",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "冥影身法": {
+    "name": "冥影身法",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "玄手夺魂": {
+    "name": "玄手夺魂",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "冲霄破浪": {
+    "name": "冲霄破浪",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "磅礴之势": {
+    "name": "磅礴之势",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·闪击": {
+    "name": "崩拳·闪击",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "崩拳·惊触": {
+    "name": "崩拳·惊触",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "锻神开海": {
+    "name": "锻神开海",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "百杀破境掌": {
+    "name": "百杀破境掌",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "修罗吼": {
+    "name": "修罗吼",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "玄心斩魄": {
+    "name": "玄心斩魄",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "威震四方": {
+    "name": "威震四方",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
+  },
+  "天地浩荡": {
+    "name": "天地浩荡",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan"
   }
-
 }
