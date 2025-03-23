@@ -4,8 +4,9 @@ import PlayerInfoContainer from './components/PlayerInfoContainer';
 import TrackingCardContainer from './components/TrackingCardContainer';
 import ManageTrackingContainer from './components/ManageTrackingContainer';
 import sampleData from './data/sample.json';
+import cardLibData from './data/card_lib.json';
 import trackingCardsData from './data/tracking_cards.json';
-import { Player, RoundData, TrackingCard, Card } from './models/model';
+import { Player, RoundData, TrackingCard, Card, CardType } from './models/model';
 import { TrackingCardManager } from './services/trackingCardManager';
 import './App.css';
 
@@ -13,8 +14,36 @@ const App: React.FC = () => {
   const roundData = sampleData as unknown as RoundData;
   const [selectedPlayer, setSelectedPlayer] = useState<Player>(roundData.players[0]);
   const [trackingCards, setTrackingCards] = useState<TrackingCard[]>([]);
-  const cards = trackingCardsData as Card[];
+  const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const trackingCardManager = TrackingCardManager.getInstance();
+
+  // Extract all used cards from battle records and get detailed information from card_lib
+  useEffect(() => {
+    if (selectedPlayer) {
+      const usedCards = selectedPlayer.used_card;
+      const cardsWithDetails = usedCards
+        .map(usedCard => {
+          const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
+          if (cardInfo) {
+            const card: Card = {
+              ...cardInfo,
+              level: usedCard.level // Use level directly from sample.json
+            };
+            return card;
+          }
+          return null;
+        })
+        .filter((card): card is NonNullable<typeof card> => card !== null);
+
+      // Only display cards that exist in tracking_cards.json
+      const trackedCardNames = Object.keys(trackingCardsData);
+      const filteredCards = cardsWithDetails.filter(card => 
+        trackedCardNames.includes(card.name)
+      );
+
+      setDisplayCards(filteredCards);
+    }
+  }, [selectedPlayer]);
 
   // Load saved tracking cards
   useEffect(() => {
@@ -60,7 +89,7 @@ const App: React.FC = () => {
         />
         <PlayerInfoContainer player={selectedPlayer} />
         <TrackingCardContainer 
-          cards={cards}
+          cards={displayCards}
           trackingCards={trackingCards}
           onCardTrack={handleCardTrack}
           onCardUntrack={handleCardUntrack}

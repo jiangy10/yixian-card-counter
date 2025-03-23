@@ -1,14 +1,14 @@
-[
-  {
-    "name": "card1",
-    "phase": 1,
-    "type": "sect"
+{
+  "星弈·断": {
+    "name": "星弈·断",
+    "phase": 5,
+    "type": "sect",
+    "category": "heptastar"
   },
-  {
-    "name": "card2",
-    "phase": 2,
-    "type": "side jobs" 
+  "星弈·虎": {
+    "name": "星弈·虎",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar"
   }
-  
-  
-] 
+}

@@ -8,8 +8,8 @@
   border-style: solid;
   padding: 2%;
   margin: 2%;
-  height: 30px;
-  min-height: 30px;
+  height: 25px;
+  min-height: 25px;
   width: 90%;
   background-color: rgba(42, 42, 42, 0.8);
 }
@@ -18,29 +18,38 @@
   color: #ffffff;
   padding: 0;
   text-align: center;
-  margin: 0 2%;
+  font-size: 14px;
+  min-width: 35px;
 }
 
 .card-image {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 20px;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .card-name {
   color: #ffffff;
   padding: 0;
-  text-align: center;
+  text-align: left;
   margin: 0 2%;
   flex-grow: 1;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-count {
   color: #4CAF50;
   margin: 0 2%;
+  font-size: 14px;
+  min-width: 24px;
+  text-align: right;
 }
 
 .track-button {

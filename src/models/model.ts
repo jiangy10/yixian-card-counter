@@ -35,8 +35,10 @@ export enum CardRarity {
 
 export interface Card {
   name: string;
-  type: CardType;
   phase: number;
+  type: CardType;
+  category: string;
+  level: number;
 }
 
 export interface TrackingCard {

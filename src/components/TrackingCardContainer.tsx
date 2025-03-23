@@ -61,7 +61,6 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
                 key={card.name}
                 card={card}
                 isTracked={isTracked}
-                count={trackedCard?.count}
                 onTrackToggle={handleTrackToggle}
               />
             );
