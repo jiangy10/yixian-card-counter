@@ -9,10 +9,10 @@ interface Tab {
 }
 
 const tabs: Tab[] = [
-  { id: 'all', label: 'All' },
-  { id: 'sect', label: 'Sect' },
-  { id: 'subclass', label: 'Subclass' },
-  { id: 'opportunity', label: 'Opportunity' }
+  { id: 'all', label: '全部' },
+  { id: 'sect', label: '门派' },
+  { id: 'side', label: '副职' },
+  { id: 'opportunity', label: '机缘' }
 ];
 
 const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, trackingCards, onCardTrack, onCardUntrack }) => {

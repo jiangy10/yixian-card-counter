@@ -14,7 +14,7 @@ function createWindow() {
     }
   });
 
-  // 加载React应用
+  // Load React application
   if (process.env.NODE_ENV === 'development') {
     mainWindow.loadURL('http://localhost:3000');
     mainWindow.webContents.openDevTools();
@@ -37,12 +37,12 @@ app.on('activate', () => {
   }
 });
 
-// 获取用户数据目录
+// Get user data directory
 ipcMain.handle('getUserDataPath', () => {
   return app.getPath('userData');
 });
 
-// 读取文件
+// Read file
 ipcMain.handle('readFile', async (_, filePath: string) => {
   try {
     return await fs.readFile(filePath, 'utf-8');
@@ -51,7 +51,7 @@ ipcMain.handle('readFile', async (_, filePath: string) => {
   }
 });
 
-// 写入文件
+// Write file
 ipcMain.handle('writeFile', async (_, filePath: string, data: string) => {
   try {
     await fs.writeFile(filePath, data, 'utf-8');
