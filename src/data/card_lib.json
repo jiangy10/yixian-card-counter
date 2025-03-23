@@ -1978,5 +1978,521 @@
     "phase": 5,
     "type": "side jobs",
     "category": "fortune-teller"
+  },
+  "玄银甲": {
+    "name": "玄银甲",
+    "phase": 1,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "刺尖枪": {
+    "name": "刺尖枪",
+    "phase": 1,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "玉露瓶": {
+    "name": "玉露瓶",
+    "phase": 2,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "无名古剑": {
+    "name": "无名古剑",
+    "phase": 2,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "天火炼魂旗": {
+    "name": "天火炼魂旗",
+    "phase": 3,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "养魂玉莲": {
+    "name": "养魂玉莲",
+    "phase": 3,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "狼皇血晶": {
+    "name": "天雷炼魂旗",
+    "phase": 3,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "混元封神珠": {
+    "name": "混元封神珠",
+    "phase": 4,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "金元三尖枪": {
+    "name": "金元三尖枪",
+    "phase": 4,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "逍遥古琴": {
+    "name": "逍遥古琴",
+    "phase": 4,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "九冥镇魔印": {
+    "name": "九冥镇魔印",
+    "phase": 5,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "玄晶护心镜": {
+    "name": "玄晶护心镜",
+    "phase": 5,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "猎枭古弓": {
+    "name": "猎枭古弓",
+    "phase": 5,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "裂虚界元枪": {
+    "name": "裂虚界元枪",
+    "phase": 6,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "奇门锁妖塔": {
+    "name": "奇门锁妖塔",
+    "phase": 6,
+    "type": "fortune",
+    "category": "talisman"
+  },
+  "破空雕": {
+    "name": "破空雕",
+    "phase": 1,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "胖仙狸": {
+    "name": "胖仙狸",
+    "phase": 1,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "暗星蝙蝠": {
+    "name": "暗星蝙蝠",
+    "phase": 2,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "孤夜狼": {
+    "name": "孤夜狼",
+    "phase": 2,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "地玄龟": {
+    "name": "地玄龟",
+    "phase": 3,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "锦毛鼠": {
+    "name": "锦毛鼠",
+    "phase": 3,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "吞天赤眼兽": {
+    "name": "吞天赤眼兽",
+    "phase": 4,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "浴火凤凰": {
+    "name": "浴火凤凰",
+    "phase": 4,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "三尾讙": {
+    "name": "三尾讙",
+    "phase": 4,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "七彩灵鹤": {
+    "name": "七彩灵鹤",
+    "phase": 5,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "影枭兔": {
+    "name": "影枭兔",
+    "phase": 5,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "噬灵虚兽": {
+    "name": "噬灵虚兽",
+    "phase": 6,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "幽冥虚魂犬": {
+    "name": "幽冥虚魂犬",
+    "phase": 6,
+    "type": "fortune",
+    "category": "spiritual-pet"
+  },
+  "韵灵剑": {
+    "name": "韵灵剑",
+    "phase": 1,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "勤拙剑": {
+    "name": "勤拙剑",
+    "phase": 1,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "云剑·拂晓": {
+    "name": "云剑·拂晓",
+    "phase": 2,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "巨猿灵剑": {
+    "name": "巨猿灵剑",
+    "phase": 2,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "狂剑·盘龙": {
+    "name": "狂剑·盘龙",
+    "phase": 2,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "一心一剑": {
+    "name": "一心一剑",
+    "phase": 3,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "合势剑阵": {
+    "name": "合势剑阵",
+    "phase": 3,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "剑意流转": {
+    "name": "剑意流转",
+    "phase": 4,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "溟空剑阵诀": {
+    "name": "溟空剑阵诀",
+    "phase": 4,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "凌剑心法": {
+    "name": "凌剑心法",
+    "phase": 5,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "步月登云": {
+    "name": "步月登云",
+    "phase": 5,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "狂剑·双龙": {
+    "name": "狂剑·双龙",
+    "phase": 5,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "残云封天剑": {
+    "name": "残云封天剑",
+    "phase": 6,
+    "type": "fortune",
+    "category": "cloud-spirit"
+  },
+  "卦灵返生": {
+    "name": "卦灵返生",
+    "phase": 1,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "投石问路": {
+    "name": "投石问路",
+    "phase": 1,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "生机绽放": {
+    "name": "生机绽放",
+    "phase": 2,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "星衍诀": {
+    "name": "星衍诀",
+    "phase": 2,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "日月争辉": {
+    "name": "日月争辉",
+    "phase": 3,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "一掷乾坤": {
+    "name": "一掷乾坤",
+    "phase": 3,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "落花流水": {
+    "name": "落花流水",
+    "phase": 4,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "星弈·屠龙": {
+    "name": "星弈·屠龙",
+    "phase": 4,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "雷霆心法": {
+    "name": "雷霆心法",
+    "phase": 4,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "铁树开花": {
+    "name": "铁树开花",
+    "phase": 5,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "先发制人": {
+    "name": "先发制人",
+    "phase": 5,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "流星天陨": {
+    "name": "流星天陨",
+    "phase": 5,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "天命劫": {
+    "name": "天命劫",
+    "phase": 6,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "移花接木": {
+    "name": "移花接木",
+    "phase": 6,
+    "type": "fortune",
+    "category": "heptastar"
+  },
+  "木灵秘印": {
+    "name": "木灵秘印",
+    "phase": 1,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "火灵秘印": {
+    "name": "火灵秘印",
+    "phase": 1,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "土灵秘印": {
+    "name": "土灵秘印",
+    "phase": 1,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "金灵秘印": {
+    "name": "金灵秘印",
+    "phase": 1,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "水灵秘印": {
+    "name": "水灵秘印",
+    "phase": 1,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "金灵·封喉": {
+    "name": "金灵·封喉",
+    "phase": 2,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "水灵·润木": {
+    "name": "水灵·润木",
+    "phase": 2,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "火灵·窑土": {
+    "name": "火灵·窑土",
+    "phase": 2,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "木灵·藤蔓": {
+    "name": "木灵·藤蔓",
+    "phase": 3,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "金灵·凝水": {
+    "name": "金灵·凝水",
+    "phase": 3,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "五行遁术": {
+    "name": "五行遁术",
+    "phase": 3,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "土灵·撼地": {
+    "name": "土灵·撼地",
+    "phase": 4,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "木灵·燃火": {
+    "name": "木灵·燃火",
+    "phase": 4,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "土灵·韵金": {
+    "name": "土灵·韵金",
+    "phase": 4,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "火灵·焚天焱": {
+    "name": "火灵·焚天焱",
+    "phase": 5,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "水灵·海龙啸": {
+    "name": "水灵·海龙啸",
+    "phase": 5,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "五行灵爆术": {
+    "name": "五行灵爆术",
+    "phase": 6,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "五行绽放": {
+    "name": "五行绽放",
+    "phase": 6,
+    "type": "fortune",
+    "category": "five-element"
+  },
+  "气势不绝": {
+    "name": "气势不绝",
+    "phase": 1,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "死缠烂打": {
+    "name": "死缠烂打",
+    "phase": 1,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "百毒不侵": {
+    "name": "百毒不侵",
+    "phase": 2,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "醉卧逍遥": {
+    "name": "醉卧逍遥",
+    "phase": 2,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "灵草药浴": {
+    "name": "灵草药浴",
+    "phase": 3,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "破釜沉舟": {
+    "name": "破釜沉舟",
+    "phase": 3,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "力若疯魔": {
+    "name": "力若疯魔",
+    "phase": 4,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "崩拳·双影": {
+    "name": "崩拳·双影",
+    "phase": 4,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "幽冥三点手": {
+    "name": "幽冥三点手",
+    "phase": 4,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "破茧化蝶": {
+    "name": "破茧化蝶",
+    "phase": 5,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "鬼音葬魂": {
+    "name": "鬼音葬魂",
+    "phase": 5,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "无尽崩绝": {
+    "name": "无尽崩绝",
+    "phase": 6,
+    "type": "fortune",
+    "category": "duan-xuan"
+  },
+  "返璞归真": {
+    "name": "返璞归真",
+    "phase": 6,
+    "type": "fortune",
+    "category": "duan-xuan"
   }
 }
