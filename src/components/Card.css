@@ -1,38 +1,46 @@
 .card-item {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding: 12px;
-  background-color: #2a2a2a;
-  border-radius: 6px;
-  margin-bottom: 8px;
+  justify-content: flex-start;
+  border-radius: 5px;
+  border-width: 1.5px;
+  border-style: solid;
+  padding: 2%;
+  margin: 2%;
+  height: 30px;
+  min-height: 30px;
+  width: 90%;
+  background-color: rgba(42, 42, 42, 0.8);
 }
 
-.card-info {
-  flex: 1;
+.card-level {
+  color: #ffffff;
+  padding: 0;
+  text-align: center;
+  margin: 0 2%;
+}
+
+.card-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-name {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.card-type {
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 4px;
-}
-
-.card-phase {
-  font-size: 14px;
-  color: #888;
+  color: #ffffff;
+  padding: 0;
+  text-align: center;
+  margin: 0 2%;
+  flex-grow: 1;
 }
 
 .card-count {
-  font-size: 14px;
   color: #4CAF50;
-  margin-top: 4px;
+  margin: 0 2%;
 }
 
 .track-button {
@@ -43,6 +51,7 @@
   color: white;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-left: auto;
 }
 
 .track-button:hover {
