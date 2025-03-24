@@ -54,16 +54,17 @@
 
 .counter-container {
   display: flex;
-  width: 100%;
+  width: calc(100% - 40px);
   flex-direction: column;
   background-color: #2a2a2a;
   color: white;
   padding: 10px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-/* 确保body和html也是深色背景 */
 :root {
   background-color: #121212;
 }
