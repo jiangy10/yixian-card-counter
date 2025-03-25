@@ -3,6 +3,7 @@ import PlayerSelector from './components/PlayerSelector';
 import PlayerInfoContainer from './components/PlayerInfoContainer';
 import TrackingCardContainer from './components/TrackingCardContainer';
 import ManageTrackingContainer from './components/ManageTrackingContainer';
+import MatchHistoryContainer from './components/MatchHistoryContainer';
 import sampleData from './data/sample.json';
 import cardLibData from './data/card_lib.json';
 import trackingCardsData from './data/tracking_cards.json';
@@ -94,6 +95,7 @@ const App: React.FC = () => {
           onCardTrack={handleCardTrack}
           onCardUntrack={handleCardUntrack}
         />
+        <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
         <ManageTrackingContainer />
       </div>
     </div>

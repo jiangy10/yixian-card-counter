@@ -39,8 +39,12 @@
 
 .app-container {
   min-height: 100vh;
+  height: 100vh;
   background-color: #121212;
   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .game-container {
@@ -63,6 +67,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: 5px;
+  height: 100%;
 }
 
 :root {
@@ -73,4 +78,6 @@ body {
   margin: 0;
   background-color: #121212;
   color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
 }

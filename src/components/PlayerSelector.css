@@ -3,6 +3,10 @@
   margin: 10px;
   background-color: #3d3832;
   border-radius: 5px;
+  height: 10%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .player-buttons {
@@ -11,17 +15,18 @@
   gap: 8px;
   padding: 2px;
   justify-content: center;
+  width: 100%;
 }
 
 .player-button {
-  padding: 8px 16px;
+  padding: 5px;
   background-color: #4a4a4a;
   border: none;
   border-radius: 4px;
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .player-button:hover {

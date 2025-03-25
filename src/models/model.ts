@@ -12,6 +12,7 @@ export interface Player {
   cultivation: number;
   opponent_username: string;
   used_card: UsedCard[];
+  match_history: Record<number, MatchHistory>;
 }
 
 export interface RoundData {
@@ -35,16 +36,27 @@ export enum CardRarity {
 
 export interface Card {
   name: string;
-  phase: number;
-  type: CardType;
-  category: string;
   level: number;
+  phase: number;
+  type: string;
+  category: string;
 }
 
 export interface TrackingCard {
   name: string;
-  count: number;
-  lastSeen: string;
+  level: number;
+  phase: number;
+  type: string;
+  category: string;
+}
+
+export interface MatchHistory {
+  cultivation: string;
+  health: number;
+  destiny: number;
+  destiny_diff: number;
+  opponent_username: string;
+  used_card: Card[];
 }
 
 export interface GameState {
@@ -59,7 +71,7 @@ export interface PlayerSelectorProps {
 }
 
 export interface PlayerInfoContainerProps {
-  player?: Player;
+  player: Player;
 }
 
 export interface TrackingCardContainerProps {

@@ -1,22 +1,12 @@
 import { TrackingCard } from '../models/model';
-import { STORAGE } from '../constants';
 
 export class TrackingCardManager {
   private static instance: TrackingCardManager;
-  private trackingFilePath: string;
+  private cards: TrackingCard[] = [];
+  private readonly STORAGE_KEY = 'tracking_cards';
 
   private constructor() {
-    // Check if in development environment
-    const isDev = process.env.NODE_ENV === 'development';
-    
-    if (isDev) {
-      // Use project directory file in development
-      this.trackingFilePath = STORAGE.DEV_TRACKING_FILE;
-    } else {
-      // Use user data directory in production
-      const userDataPath = (window as any).electron.getUserDataPath();
-      this.trackingFilePath = `${userDataPath}/${STORAGE.PROD_TRACKING_FILE}`;
-    }
+    this.loadTrackingCards();
   }
 
   public static getInstance(): TrackingCardManager {
@@ -26,70 +16,51 @@ export class TrackingCardManager {
     return TrackingCardManager.instance;
   }
 
-  // Get storage file path
-  public getStoragePath(): string {
-    return this.trackingFilePath;
-  }
-
-  // Save tracking cards
-  public async saveTrackingCards(cards: TrackingCard[]): Promise<void> {
-    try {
-      const data = JSON.stringify(cards, null, STORAGE.JSON_INDENT);
-      await (window as any).electron.writeFile(this.trackingFilePath, data);
-    } catch (error) {
-      console.error('Failed to save tracking cards:', error);
-      throw error;
-    }
-  }
-
-  // Load tracking cards
   public async loadTrackingCards(): Promise<TrackingCard[]> {
     try {
-      const data = await (window as any).electron.readFile(this.trackingFilePath);
-      return JSON.parse(data);
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-        // Return empty array if file doesn't exist
-        return [];
+      const storedCards = localStorage.getItem(this.STORAGE_KEY);
+      if (storedCards) {
+        this.cards = JSON.parse(storedCards);
       }
-      console.error('Failed to load tracking cards:', error);
-      throw error;
+      return this.cards;
+    } catch (error) {
+      console.error('Error loading tracking cards:', error);
+      return [];
     }
   }
 
-  // Add a tracking card
+  private async saveTrackingCards(): Promise<void> {
+    try {
+      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.cards));
+    } catch (error) {
+      console.error('Error saving tracking cards:', error);
+    }
+  }
+
   public async addTrackingCard(cardId: string): Promise<TrackingCard> {
-    const cards = await this.loadTrackingCards();
-    const newCard: TrackingCard = {
-      name: cardId,
-      count: 1,
-      lastSeen: new Date().toISOString()
-    };
-    cards.push(newCard);
-    await this.saveTrackingCards(cards);
-    return newCard;
+    const existingCard = this.cards.find(card => card.name === cardId);
+    
+    if (!existingCard) {
+      const newCard: TrackingCard = {
+        name: cardId,
+        level: 1,
+        phase: 1,
+        type: 'unknown',
+        category: 'unknown'
+      };
+      this.cards.push(newCard);
+      await this.saveTrackingCards();
+    }
+    
+    return this.cards.find(card => card.name === cardId)!;
   }
 
-  // Remove a tracking card
-  public async removeTrackingCard(cardName: string): Promise<void> {
-    const cards = await this.loadTrackingCards();
-    const updatedCards = cards.filter(card => card.name !== cardName);
-    await this.saveTrackingCards(updatedCards);
+  public async removeTrackingCard(cardId: string): Promise<void> {
+    this.cards = this.cards.filter(card => card.name !== cardId);
+    await this.saveTrackingCards();
   }
 
-  // Update card count
-  public async updateCardCount(cardName: string): Promise<void> {
-    const cards = await this.loadTrackingCards();
-    const updatedCards = cards.map(card => {
-      if (card.name === cardName) {
-        return {
-          ...card,
-          count: card.count + 1,
-          lastSeen: new Date().toISOString()
-        };
-      }
-      return card;
-    });
-    await this.saveTrackingCards(updatedCards);
+  public getTrackingCards(): TrackingCard[] {
+    return [...this.cards];
   }
 }
