@@ -7,7 +7,6 @@ const PlayerInfoContainer: React.FC<PlayerInfoContainerProps> = ({ player }) => 
     return (
       <div className="player-info-container">
         <div className="player-information">
-          <div className="avatar" />
           <div className="player-info-label-container">
             <div className="username-label">请选择玩家</div>
             <div className="cultivation-label">-</div>
@@ -21,7 +20,6 @@ const PlayerInfoContainer: React.FC<PlayerInfoContainerProps> = ({ player }) => 
   return (
     <div className="player-info-container">
       <div className="player-information">
-        <div className="avatar" />
         <div className="player-info-label-container">
           <div className="username-label">{player.player_username}</div>
           <div className="player-info-label">修为: {player.cultivation}</div>

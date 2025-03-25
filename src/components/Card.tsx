@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card as CardType } from '../models/model';
+import { LEVEL_COLORS } from '../constants/colors';
 import './Card.css';
 
 interface CardProps {
@@ -7,13 +8,6 @@ interface CardProps {
   isTracked?: boolean;
   inHistory?: boolean;
 }
-
-const LEVEL_COLORS = {
-  2: 'rgb(180, 207, 127)', 
-  3: 'rgb(123, 218, 221)',
-  4: 'rgb(137, 115, 236)',
-  5: 'rgb(247, 222, 121)'
-};
 
 const Card: React.FC<CardProps> = ({ 
   card, 

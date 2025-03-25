@@ -11,16 +11,10 @@
   gap: 15px;
 }
 
-.avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #4a4a4a;
-}
-
 .player-info-label-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 5px;
 }
 
@@ -33,6 +27,7 @@
 .player-info-label {
   font-size: 14px;
   color: #ffffff;
+  margin-left: 10px;
 }
 
 .opponent-label {
