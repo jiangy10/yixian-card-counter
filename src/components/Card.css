@@ -6,7 +6,7 @@
   border-radius: 5px;
   border-width: 1.5px;
   border-style: solid;
-  padding: 2%;
+  padding: 1%;
   margin: 2%;
   height: 25px;
   min-height: 25px;
@@ -54,7 +54,7 @@
   color: #ffffff;
   padding: 0;
   text-align: left;
-  margin: 0 2%;
+  margin: 0 1%;
   flex-grow: 1;
   font-size: 14px;
   white-space: nowrap;

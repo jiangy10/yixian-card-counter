@@ -13,7 +13,8 @@ import './App.css';
 
 const App: React.FC = () => {
   const roundData = sampleData as unknown as RoundData;
-  const [selectedPlayer, setSelectedPlayer] = useState<Player>(roundData.players[0]);
+  const latestRound = Math.max(...Object.keys(roundData.rounds).map(Number));
+  const [selectedPlayer, setSelectedPlayer] = useState<Player>(roundData.rounds[latestRound].players[0]);
   const [trackingCards, setTrackingCards] = useState<TrackingCard[]>([]);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const trackingCardManager = TrackingCardManager.getInstance();
@@ -21,7 +22,7 @@ const App: React.FC = () => {
   // Create mock match_history data
   useEffect(() => {
     // Add mock match_history for each player
-    roundData.players.forEach(player => {
+    roundData.rounds[latestRound].players.forEach(player => {
       if (!player.match_history) {
         // Create mock match records using the player's current cards as historical cards
         const mockHistory: Record<number, MatchHistory> = {};
@@ -47,15 +48,20 @@ const App: React.FC = () => {
           });
         };
         
-        // Simulate round 1 match record
-        mockHistory[-1] = {
-          cultivation: player.cultivation.toString(),
-          health: player.health,
-          destiny: player.destiny,
-          destiny_diff: player.destiny_diff,
-          opponent_username: player.opponent_username,
-          used_card: convertUsedCardsToCards(player.used_card)
-        };
+        // Process all rounds
+        Object.entries(roundData.rounds).forEach(([roundNum, roundData]) => {
+          const currentPlayer = roundData.players.find(p => p.player_username === player.player_username);
+          if (currentPlayer) {
+            mockHistory[-parseInt(roundNum)] = {
+              cultivation: currentPlayer.cultivation.toString(),
+              health: currentPlayer.health,
+              destiny: currentPlayer.destiny,
+              destiny_diff: currentPlayer.destiny_diff,
+              opponent_username: currentPlayer.opponent_username,
+              used_card: convertUsedCardsToCards(currentPlayer.used_card)
+            };
+          }
+        });
         
         player.match_history = mockHistory;
       }
@@ -129,7 +135,7 @@ const App: React.FC = () => {
     <div className="app-container">
       <div className="counter-container">
         <PlayerSelector 
-          players={roundData.players} 
+          players={roundData.rounds[latestRound].players} 
           onPlayerSelect={handlePlayerSelect} 
         />
         <PlayerInfoContainer player={selectedPlayer} />

@@ -79,10 +79,12 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
       
         <div className="match-history-list">
         <div className="match-history-scroll-view">
-          {Object.entries(processedHistory).map(([round, history]) => {
+          {Object.entries(processedHistory)
+            .sort(([roundA], [roundB]) => parseInt(roundA) - parseInt(roundB))
+            .map(([round, history]) => {
             const roundNumber = parseInt(round);
             const isExpanded = selectedRound === roundNumber;
-            const isWin = history.destiny_diff === 0;
+            const isWin = history.destiny_diff >= 0;
 
             return (
               <div key={round} className="match-history-item">

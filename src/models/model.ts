@@ -16,8 +16,11 @@ export interface Player {
 }
 
 export interface RoundData {
-  round: number;
-  players: Player[];
+  rounds: {
+    [key: string]: {
+      players: Player[];
+    };
+  };
 }
 
 export enum CardType {
