@@ -15,7 +15,7 @@ const tabs: Tab[] = [
   { id: 'opportunity', label: '机缘' }
 ];
 
-const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, trackingCards, onCardTrack, onCardUntrack }) => {
+const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, trackingCards }) => {
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredCards = activeTab === 'all' 
@@ -26,17 +26,9 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
     return trackingCards.some(trackedCard => trackedCard.name === cardName);
   };
 
-  const handleTrackToggle = (cardName: string) => {
-    if (isCardTracked(cardName)) {
-      onCardUntrack(cardName);
-    } else {
-      onCardTrack(cardName);
-    }
-  };
-
   return (
     <div className="tracking-card-container">
-      <h2 className="tracking-card-title">Tracking Cards</h2>
+      <h2 className="tracking-card-title">追踪中的卡牌</h2>
       
       <div className="tab-container">
         {tabs.map(tab => (
@@ -54,14 +46,12 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
         <div className="tracking-card-scroll-view">
           {filteredCards.map(card => {
             const isTracked = isCardTracked(card.name);
-            const trackedCard = trackingCards.find(tc => tc.name === card.name);
             
             return (
               <Card
                 key={card.name}
                 card={card}
                 isTracked={isTracked}
-                onTrackToggle={handleTrackToggle}
               />
             );
           })}

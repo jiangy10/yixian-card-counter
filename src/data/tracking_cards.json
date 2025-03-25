@@ -10,5 +10,17 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar"
+  },
+  "水灵印": {
+    "name": "水灵印",
+    "phase": 1,
+    "type": "sect",
+    "category": "five-element"
+  },
+  "锻拳": {
+    "name": "锻拳",
+    "phase": 1,
+    "type": "sect",
+    "category": "duan-xuan"
   }
 }

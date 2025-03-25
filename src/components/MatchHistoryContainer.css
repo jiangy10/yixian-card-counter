@@ -17,8 +17,8 @@
 }
 
 .match-history-scroll-view {
-  flex: 1;
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: 400px;
 }
 
 .match-history-list {
@@ -32,7 +32,7 @@
 .match-history-item {
   background-color: #2a2a2a;
   border-radius: 5px;
-  overflow: hidden;
+  margin: 10px;
 }
 
 .match-history-header {
@@ -43,6 +43,7 @@
   background-color: #3d3832;
   cursor: pointer;
   transition: background-color 0.2s;
+  border-radius: 5px;
 }
 
 .match-history-header:hover {

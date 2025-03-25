@@ -14,12 +14,25 @@
   background-color: rgba(42, 42, 42, 0.8);
 }
 
+.history-card {
+  height: 20px;
+  min-height: 20px;
+  background-color: rgba(42, 42, 42, 0.95);
+  margin: 5px 2px;
+  padding: 5px;
+}
+
 .card-level {
   color: #ffffff;
   padding: 0;
   text-align: center;
   font-size: 14px;
   min-width: 35px;
+}
+
+.history-card .card-level {
+  font-size: 12px;
+  min-width: 30px;
 }
 
 .card-image {
@@ -30,6 +43,11 @@
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.history-card .card-image {
+  width: 20px;
+  height: 20px;
 }
 
 .card-name {
@@ -44,33 +62,14 @@
   text-overflow: ellipsis;
 }
 
+.history-card .card-name {
+  font-size: 12px;
+}
+
 .card-count {
   color: #4CAF50;
   margin: 0 2%;
   font-size: 14px;
   min-width: 24px;
   text-align: right;
-}
-
-.track-button {
-  padding: 6px 12px;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  margin-left: auto;
-}
-
-.track-button:hover {
-  background-color: #45a049;
-}
-
-.track-button.tracked {
-  background-color: #f44336;
-}
-
-.track-button.tracked:hover {
-  background-color: #da190b;
 } 

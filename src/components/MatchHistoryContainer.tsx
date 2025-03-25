@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { MatchHistory } from '../models/model';
+import React, { useState, useEffect } from 'react';
+import { MatchHistory, Card as CardType, UsedCard } from '../models/model';
 import Card from './Card';
+import cardLibData from '../data/card_lib.json';
 import './MatchHistoryContainer.css';
 
 interface MatchHistoryContainerProps {
@@ -9,6 +10,47 @@ interface MatchHistoryContainerProps {
 
 const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHistory }) => {
   const [selectedRound, setSelectedRound] = useState<number | null>(null);
+  const [processedHistory, setProcessedHistory] = useState<Record<number, MatchHistory & { processedCards: CardType[] }>>({});
+
+  useEffect(() => {
+    if (matchHistory) {
+      const processed: Record<number, MatchHistory & { processedCards: CardType[] }> = {};
+      
+      Object.entries(matchHistory).forEach(([round, history]) => {
+        const roundNumber = parseInt(round);
+        
+        const processedCards = history.used_card.map(usedCard => {
+          const cardInfo = (cardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name];
+          if (cardInfo) {
+            const card: CardType = {
+              ...cardInfo,
+              level: usedCard.level
+            };
+            return card;
+          }
+
+          return {
+            name: usedCard.name,
+            level: usedCard.level,
+            phase: 2,
+            type: 'unknown',
+            category: 'unknown'
+          } as CardType;
+        });
+        
+        processed[roundNumber] = {
+          ...history,
+          processedCards
+        };
+      });
+      
+      setProcessedHistory(processed);
+      
+      if (Object.keys(processed).length > 0 && selectedRound === null) {
+        setSelectedRound(parseInt(Object.keys(processed)[0]));
+      }
+    }
+  }, [matchHistory]);
 
   const handleRoundClick = (round: number) => {
     setSelectedRound(selectedRound === round ? null : round);
@@ -34,9 +76,10 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
   return (
     <div className="match-history-container">
       <h2 className="match-history-title">战绩</h2>
-      <div className="match-history-scroll-view">
+      
         <div className="match-history-list">
-          {Object.entries(matchHistory).map(([round, history]) => {
+        <div className="match-history-scroll-view">
+          {Object.entries(processedHistory).map(([round, history]) => {
             const roundNumber = parseInt(round);
             const isExpanded = selectedRound === roundNumber;
             const isWin = history.destiny_diff === 0;
@@ -63,12 +106,11 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
                     </div>
                     
                     <div className="used-cards-container">
-                      {history.used_card.map((card, index) => (
+                      {history.processedCards.map((card, index) => (
                         <Card
                           key={`${card.name}-${index}`}
                           card={card}
-                          isTracked={false}
-                          onTrackToggle={() => {}}
+                          inHistory={true}
                         />
                       ))}
                     </div>

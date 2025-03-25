@@ -7,7 +7,7 @@ import MatchHistoryContainer from './components/MatchHistoryContainer';
 import sampleData from './data/sample.json';
 import cardLibData from './data/card_lib.json';
 import trackingCardsData from './data/tracking_cards.json';
-import { Player, RoundData, TrackingCard, Card, CardType } from './models/model';
+import { Player, RoundData, TrackingCard, Card, CardType, MatchHistory, UsedCard } from './models/model';
 import { TrackingCardManager } from './services/trackingCardManager';
 import './App.css';
 
@@ -17,6 +17,50 @@ const App: React.FC = () => {
   const [trackingCards, setTrackingCards] = useState<TrackingCard[]>([]);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const trackingCardManager = TrackingCardManager.getInstance();
+
+  // Create mock match_history data
+  useEffect(() => {
+    // Add mock match_history for each player
+    roundData.players.forEach(player => {
+      if (!player.match_history) {
+        // Create mock match records using the player's current cards as historical cards
+        const mockHistory: Record<number, MatchHistory> = {};
+
+        // Convert UsedCard to Card
+        const convertUsedCardsToCards = (usedCards: UsedCard[]): Card[] => {
+          return usedCards.map(usedCard => {
+            const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
+            if (cardInfo) {
+              return {
+                ...cardInfo,
+                level: usedCard.level
+              };
+            }
+            // Default card when card_lib.json does not have the card
+            return {
+              name: usedCard.name,
+              level: usedCard.level,
+              phase: usedCard.phase || 0,
+              type: 'unknown',
+              category: 'unknown'
+            };
+          });
+        };
+        
+        // Simulate round 1 match record
+        mockHistory[-1] = {
+          cultivation: player.cultivation.toString(),
+          health: player.health,
+          destiny: player.destiny,
+          destiny_diff: player.destiny_diff,
+          opponent_username: player.opponent_username,
+          used_card: convertUsedCardsToCards(player.used_card)
+        };
+        
+        player.match_history = mockHistory;
+      }
+    });
+  }, []);
 
   // Extract all used cards from battle records and get detailed information from card_lib
   useEffect(() => {
@@ -92,8 +136,6 @@ const App: React.FC = () => {
         <TrackingCardContainer 
           cards={displayCards}
           trackingCards={trackingCards}
-          onCardTrack={handleCardTrack}
-          onCardUntrack={handleCardUntrack}
         />
         <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
         <ManageTrackingContainer />

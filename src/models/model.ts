@@ -77,8 +77,6 @@ export interface PlayerInfoContainerProps {
 export interface TrackingCardContainerProps {
   cards: Card[];
   trackingCards: TrackingCard[];
-  onCardTrack: (cardName: string) => void;
-  onCardUntrack: (cardName: string) => void;
 }
 
 export interface ManageTrackingContainerProps {
