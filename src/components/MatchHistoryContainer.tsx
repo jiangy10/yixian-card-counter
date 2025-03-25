@@ -103,7 +103,7 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
                     <div className="match-info-container">
                       <div className="match-info-label">修为：{history.cultivation}</div>
                       <div className="match-info-label">生命上限：{history.health}</div>
-                      <div className="match-info-label">命元：{history.destiny}({-history.destiny_diff})</div>
+                      <div className="match-info-label">命元：{history.destiny}({history.destiny_diff})</div>
                       <div className="match-info-label">对手：{history.opponent_username}</div>
                     </div>
                     
