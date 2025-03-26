@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({
       <div 
         className="card-image"
         style={{
-          backgroundImage: `url(/images/${imageType}/${card.category}/${card.name}.png)`
+          backgroundImage: `url(/images/${imageType}/${card.category}/${card.phase}/${card.name}.png)`
         }}
       />
       <div className="card-name">{card.name}</div>
