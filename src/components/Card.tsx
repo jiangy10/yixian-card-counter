@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
         borderColor: borderColor
       }}
     >
-      <div className="card-level">Lv.{card.level}</div> 
+      {card.level > 0 && <div className="card-level">Lv.{card.level}</div>}
       <div 
         className="card-image"
         style={{

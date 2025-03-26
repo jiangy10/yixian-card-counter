@@ -1,12 +1,16 @@
 import React from 'react';
 import './ManageTrackingContainer.css';
 
-const ManageTrackingContainer: React.FC = () => {
+interface ManageTrackingContainerProps {
+  onManageClick: () => void;
+}
+
+const ManageTrackingContainer: React.FC<ManageTrackingContainerProps> = ({ onManageClick }) => {
   return (
     <div className="manage-tracking-container">
-      <div className="manage-tracking">
-        <span className="manage-tracking-label">管理追踪卡牌</span>
-      </div>
+      <button className="manage-tracking-button" onClick={onManageClick}>
+        管理追踪卡牌
+      </button>
     </div>
   );
 };

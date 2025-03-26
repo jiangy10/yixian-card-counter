@@ -1,6 +1,9 @@
 .manage-tracking-container {
-  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
+  margin-top: 10px;
 }
 
 .manage-tracking {
@@ -14,4 +17,20 @@
   color: #ffffff;
   font-size: 20px;
   font-weight: 500;
+}
+
+.manage-tracking-button {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(42, 42, 42, 0.8);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.manage-tracking-button:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+  border-color: rgba(255, 255, 255, 0.4);
 } 

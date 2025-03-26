@@ -4,6 +4,7 @@ import PlayerInfoContainer from './components/PlayerInfoContainer';
 import TrackingCardContainer from './components/TrackingCardContainer';
 import ManageTrackingContainer from './components/ManageTrackingContainer';
 import MatchHistoryContainer from './components/MatchHistoryContainer';
+import CardLibraryContainer from './components/CardLibraryContainer';
 import sampleData from './data/sample.json';
 import cardLibData from './data/card_lib.json';
 import trackingCardsData from './data/tracking_cards.json';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   const [selectedPlayer, setSelectedPlayer] = useState<Player>(roundData.rounds[latestRound].players[0]);
   const [trackingCards, setTrackingCards] = useState<TrackingCard[]>([]);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
+  const [isManaging, setIsManaging] = useState(false);
   const trackingCardManager = TrackingCardManager.getInstance();
 
   // Create mock match_history data
@@ -131,20 +133,30 @@ const App: React.FC = () => {
     }
   };
 
+  const handleManageClick = () => {
+    setIsManaging(!isManaging);
+  };
+
   return (
     <div className="app-container">
       <div className="counter-container">
-        <PlayerSelector 
-          players={roundData.rounds[latestRound].players} 
-          onPlayerSelect={handlePlayerSelect} 
-        />
-        <PlayerInfoContainer player={selectedPlayer} />
-        <TrackingCardContainer 
-          cards={displayCards}
-          trackingCards={trackingCards}
-        />
-        <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
-        <ManageTrackingContainer />
+        {!isManaging ? (
+          <>
+            <PlayerSelector 
+              players={roundData.rounds[latestRound].players} 
+              onPlayerSelect={handlePlayerSelect} 
+            />
+            <PlayerInfoContainer player={selectedPlayer} />
+            <TrackingCardContainer 
+              cards={displayCards}
+              trackingCards={trackingCards}
+            />
+            <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
+          </>
+        ) : (
+          <CardLibraryContainer />
+        )}
+        <ManageTrackingContainer onManageClick={handleManageClick} />
       </div>
     </div>
   );
