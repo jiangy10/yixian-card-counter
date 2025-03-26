@@ -11,7 +11,7 @@ interface Tab {
 const tabs: Tab[] = [
   { id: 'all', label: '全部' },
   { id: 'sect', label: '门派' },
-  { id: 'side', label: '副职' },
+  { id: 'side-jobs', label: '副职' },
   { id: 'opportunity', label: '机缘' }
 ];
 
@@ -20,7 +20,12 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
 
   const filteredCards = activeTab === 'all' 
     ? cards 
-    : cards.filter(card => card.type.toLowerCase() === activeTab);
+    : cards.filter(card => {
+        if (activeTab === 'side-jobs') {
+          return card.type === 'side job';
+        }
+        return card.type.toLowerCase() === activeTab;
+      });
 
   const isCardTracked = (cardName: string) => {
     return trackingCards.some(trackedCard => trackedCard.name === cardName);

@@ -17,6 +17,7 @@ const Card: React.FC<CardProps> = ({
   const borderColor = LEVEL_COLORS[card.phase as keyof typeof LEVEL_COLORS] || '#ffffff';
   
   const cardClass = inHistory ? 'card-item history-card' : 'card-item';
+  const imageType = card.type === 'side job' ? 'side-jobs' : card.type.replace(/\s+/g, '_');
 
   return (
     <div 
@@ -29,7 +30,7 @@ const Card: React.FC<CardProps> = ({
       <div 
         className="card-image"
         style={{
-          backgroundImage: `url(/images/${card.type}/${card.category}/${card.name}.png)`
+          backgroundImage: `url(/images/${imageType}/${card.category}/${card.name}.png)`
         }}
       />
       <div className="card-name">{card.name}</div>
