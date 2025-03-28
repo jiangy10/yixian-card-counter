@@ -124,6 +124,7 @@ const CardLibraryContainer: React.FC = () => {
               key={card.name}
               card={card}
               inHistory={false}
+              showRecommend={true}
             />
           ))}
         </div>

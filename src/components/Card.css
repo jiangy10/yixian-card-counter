@@ -12,6 +12,7 @@
   min-height: 25px;
   width: 90%;
   background-color: rgba(42, 42, 42, 0.8);
+  position: relative;
 }
 
 .history-card {
@@ -72,4 +73,15 @@
   font-size: 14px;
   min-width: 24px;
   text-align: right;
+}
+
+.card-recommend {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
 } 

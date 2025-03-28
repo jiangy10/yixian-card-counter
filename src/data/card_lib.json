@@ -207,7 +207,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": true
   },
   "巨鹏灵剑": {
     "name": "巨鹏灵剑",
@@ -613,7 +613,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": true
   },
   "六爻绝阵": {
     "name": "六爻绝阵",
@@ -655,7 +655,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": true
   },
   "金蝉脱壳": {
     "name": "金蝉脱壳",
@@ -683,7 +683,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": true
   },
   "乾卦": {
     "name": "乾卦",
@@ -1012,7 +1012,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": true
   },
   "水灵·腾浪": {
     "name": "水灵·腾浪",
@@ -1026,7 +1026,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": true
   },
   "混元碎击": {
     "name": "混元碎击",
@@ -1278,7 +1278,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": true
   },
   "迎风掌": {
     "name": "迎风掌",
@@ -1488,7 +1488,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": true
   },
   "还魂丹": {
     "name": "还魂丹",
@@ -1537,7 +1537,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": true
   },
   "锻体玄丹": {
     "name": "锻体玄丹",
@@ -1607,7 +1607,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": true
   },
   "瘴气符": {
     "name": "瘴气符",
@@ -1656,7 +1656,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": true
   },
   "破音": {
     "name": "破音",
@@ -1747,7 +1747,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": true
   },
   "幽绪乱心曲": {
     "name": "幽绪乱心曲",
@@ -1863,13 +1863,6 @@
   },
   "妙笔生花": {
     "name": "妙笔生花",
-    "phase": 5,
-    "type": "side-jobs",
-    "category": "painter",
-    "recommend": false
-  },
-  "泼墨": {
-    "name": "泼墨",
     "phase": 5,
     "type": "side-jobs",
     "category": "painter",
@@ -2090,7 +2083,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": true
   },
   "飞枭灵芝": {
     "name": "飞枭灵芝",
@@ -2125,7 +2118,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": true
   },
   "冰封血莲": {
     "name": "冰封血莲",
@@ -2160,14 +2153,14 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": true
   },
   "噬仙古藤": {
     "name": "噬仙古藤",
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": true
   },
   "卜命": {
     "name": "卜命",
@@ -2286,7 +2279,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": true
   },
   "命运轮回": {
     "name": "命运轮回",
@@ -2398,7 +2391,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": true
   },
   "裂虚界元枪": {
     "name": "裂虚界元枪",
@@ -2454,7 +2447,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": true
   },
   "吞天赤眼兽": {
     "name": "吞天赤眼兽",
@@ -2496,7 +2489,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": true
   },
   "幽冥虚魂犬": {
     "name": "幽冥虚魂犬",

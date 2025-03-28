@@ -7,12 +7,14 @@ interface CardProps {
   card: CardType;
   isTracked?: boolean;
   inHistory?: boolean;
+  showRecommend?: boolean;
 }
 
 const Card: React.FC<CardProps> = ({ 
   card, 
   isTracked = false, 
-  inHistory = false
+  inHistory = false,
+  showRecommend = false
 }) => {
   const borderColor = LEVEL_COLORS[card.phase as keyof typeof LEVEL_COLORS] || '#ffffff';
   
@@ -23,7 +25,8 @@ const Card: React.FC<CardProps> = ({
     <div 
       className={cardClass}
       style={{
-        borderColor: borderColor
+        borderColor: borderColor,
+        position: 'relative'
       }}
     >
       {card.level > 0 && <div className="card-level">Lv.{card.level}</div>}
@@ -34,6 +37,7 @@ const Card: React.FC<CardProps> = ({
         }}
       />
       <div className="card-name">{card.name}</div>
+      {showRecommend && card.recommend && <div className="card-recommend">推荐</div>}
     </div>
   );
 };
