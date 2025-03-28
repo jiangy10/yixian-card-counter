@@ -34,7 +34,8 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
             level: usedCard.level,
             phase: 2,
             type: 'unknown',
-            category: 'unknown'
+            category: 'unknown',
+            recommend: false
           } as CardType;
         });
         

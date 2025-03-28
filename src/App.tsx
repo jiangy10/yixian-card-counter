@@ -45,7 +45,8 @@ const App: React.FC = () => {
               level: usedCard.level,
               phase: usedCard.phase || 0,
               type: 'unknown',
-              category: 'unknown'
+              category: 'unknown',
+              recommend: false
             };
           });
         };

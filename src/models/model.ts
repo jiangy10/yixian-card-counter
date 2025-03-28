@@ -43,6 +43,7 @@ export interface Card {
   phase: number;
   type: string;
   category: string;
+  recommend: boolean;
 }
 
 export interface TrackingCard {
@@ -51,6 +52,7 @@ export interface TrackingCard {
   phase: number;
   type: string;
   category: string;
+  recommend: boolean;
 }
 
 export interface MatchHistory {

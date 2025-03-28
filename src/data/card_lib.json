@@ -258,8 +258,8 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "百鸢灵剑诀": {
-    "name": "百鸢灵剑诀",
+  "百鸟灵剑诀": {
+    "name": "百鸟灵剑诀",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
@@ -2911,3 +2911,4 @@
     "category": "duan-xuan",
     "recommend": false
   }
+}

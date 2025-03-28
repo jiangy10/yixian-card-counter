@@ -46,7 +46,8 @@ export class TrackingCardManager {
         level: 1,
         phase: 1,
         type: 'unknown',
-        category: 'unknown'
+        category: 'unknown',
+        recommend: false
       };
       this.cards.push(newCard);
       await this.saveTrackingCards();
