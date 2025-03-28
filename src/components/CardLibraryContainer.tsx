@@ -47,6 +47,15 @@ const phaseFilters: Tab[] = [
   { id: '2', label: '筑基' },
   { id: '3', label: '金丹' },
   { id: '4', label: '元婴' },
+  { id: '5', label: '化神' }
+];
+
+const fortunePhaseFilters: Tab[] = [
+  { id: 'all', label: '全部' },
+  { id: '1', label: '炼气' },
+  { id: '2', label: '筑基' },
+  { id: '3', label: '金丹' },
+  { id: '4', label: '元婴' },
   { id: '5', label: '化神' },
   { id: '6', label: '返虚' }
 ];
@@ -105,7 +114,7 @@ const CardLibraryContainer: React.FC = () => {
         </div>
 
         <div className="filter-group">
-          {phaseFilters.map(filter => (
+          {(activeType === 'fortune' ? fortunePhaseFilters : phaseFilters).map(filter => (
             <button
               key={filter.id}
               className={`filter-button ${activePhase === filter.id ? 'active' : ''}`}
@@ -119,14 +128,35 @@ const CardLibraryContainer: React.FC = () => {
 
       <div className="cards-container">
         <div className="cards-grid">
-          {cards.map(card => (
-            <Card
-              key={card.name}
-              card={card}
-              inHistory={false}
-              showRecommend={true}
-            />
-          ))}
+          {activePhase === 'all' ? (
+            [1, 2, 3, 4, 5, ...(activeType === 'fortune' ? [6] : [])].map(phase => {
+              const phaseCards = cards.filter(card => card.phase === phase);
+              if (phaseCards.length === 0) return null;
+              
+              return (
+                <React.Fragment key={phase}>
+                  <div className="phase-divider" />
+                  {phaseCards.map(card => (
+                    <Card
+                      key={card.name}
+                      card={card}
+                      inHistory={false}
+                      showRecommend={true}
+                    />
+                  ))}
+                </React.Fragment>
+              );
+            })
+          ) : (
+            cards.map(card => (
+              <Card
+                key={card.name}
+                card={card}
+                inHistory={false}
+                showRecommend={true}
+              />
+            ))
+          )}
         </div>
       </div>
     </div>
