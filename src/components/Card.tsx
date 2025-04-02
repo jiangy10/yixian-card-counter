@@ -21,6 +21,10 @@ const Card: React.FC<CardProps> = ({
   const cardClass = inHistory ? 'card-item history-card' : 'card-item';
   const imageType = card.type === 'side job' ? 'side-jobs' : card.type.replace(/\s+/g, '_');
 
+  const handleTrackingClick = () => {
+    console.log(`card ${card.name} isTracking:`, card.isTracking);
+  };
+
   return (
     <div 
       className={cardClass}
@@ -38,6 +42,22 @@ const Card: React.FC<CardProps> = ({
       />
       <div className="card-name">{card.name}</div>
       {showRecommend && card.recommend && <div className="card-recommend">推荐</div>}
+      <button 
+        onClick={handleTrackingClick}
+        style={{
+          position: 'absolute',
+          right: '5px',
+          top: '5px',
+          padding: '4px 8px',
+          backgroundColor: '#4a4a4a',
+          color: 'white',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer'
+        }}
+      >
+        追踪
+      </button>
     </div>
   );
 };

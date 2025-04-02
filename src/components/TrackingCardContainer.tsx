@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './TrackingCardContainer.css';
 import { Card as CardType, TrackingCard, TrackingCardContainerProps } from '../models/model';
 import Card from './Card';
+import trackingCardsData from '../data/tracking_cards.json';
 
 interface Tab {
   id: string;
@@ -31,6 +32,12 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
     return trackingCards.some(trackedCard => trackedCard.name === cardName);
   };
 
+  const trackedCardNames = Object.keys(trackingCardsData);
+  const cardsWithTracking = filteredCards.map(card => ({
+    ...card,
+    isTracking: trackedCardNames.includes(card.name)
+  }));
+
   return (
     <div className="tracking-card-container">
       <h2 className="tracking-card-title">追踪中的卡牌</h2>
@@ -49,7 +56,7 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
 
       <div className="list-container">
         <div className="tracking-card-scroll-view">
-          {filteredCards.map(card => {
+          {cardsWithTracking.map(card => {
             const isTracked = isCardTracked(card.name);
             
             return (

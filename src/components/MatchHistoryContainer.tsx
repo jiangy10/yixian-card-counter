@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MatchHistory, Card as CardType, UsedCard } from '../models/model';
 import Card from './Card';
 import cardLibData from '../data/card_lib.json';
+import trackingCardsData from '../data/tracking_cards.json';
 import './MatchHistoryContainer.css';
 
 interface MatchHistoryContainerProps {
@@ -15,6 +16,7 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
   useEffect(() => {
     if (matchHistory) {
       const processed: Record<number, MatchHistory & { processedCards: CardType[] }> = {};
+      const trackedCardNames = Object.keys(trackingCardsData);
       
       Object.entries(matchHistory).forEach(([round, history]) => {
         const roundNumber = parseInt(round);
@@ -24,7 +26,8 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
           if (cardInfo) {
             const card: CardType = {
               ...cardInfo,
-              level: usedCard.level
+              level: usedCard.level,
+              isTracking: trackedCardNames.includes(usedCard.name)
             };
             return card;
           }
@@ -35,7 +38,8 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
             phase: 2,
             type: 'unknown',
             category: 'unknown',
-            recommend: false
+            recommend: false,
+            isTracking: trackedCardNames.includes(usedCard.name)
           } as CardType;
         });
         

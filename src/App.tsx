@@ -89,11 +89,14 @@ const App: React.FC = () => {
         })
         .filter((card): card is NonNullable<typeof card> => card !== null);
 
-      // Only display cards that exist in tracking_cards.json
+      // filter cards with tracking cards
       const trackedCardNames = Object.keys(trackingCardsData);
       const filteredCards = cardsWithDetails.filter(card => 
         trackedCardNames.includes(card.name)
-      );
+      ).map(card => ({
+        ...card,
+        isTracking: true
+      }));
 
       setDisplayCards(filteredCards);
     }

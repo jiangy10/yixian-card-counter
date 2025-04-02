@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Card as CardType } from '../models/model';
 import Card from './Card';
 import cardLibData from '../data/card_lib.json';
+import trackingCardsData from '../data/tracking_cards.json';
 import './CardLibraryContainer.css';
 
 interface Tab {
@@ -67,6 +68,8 @@ const CardLibraryContainer: React.FC = () => {
 
   const cards = useMemo(() => {
     const allCards: CardType[] = [];
+    const trackedCardNames = Object.keys(trackingCardsData);
+    
     Object.entries(cardLibData).forEach(([name, card]) => {
       if (
         (activeType === 'side-jobs' ? card.type === 'side-jobs' : card.type === activeType) &&
@@ -76,7 +79,8 @@ const CardLibraryContainer: React.FC = () => {
         allCards.push({
           ...card,
           name,
-          level: 0
+          level: 0,
+          isTracking: trackedCardNames.includes(name)
         });
       }
     });

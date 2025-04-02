@@ -44,6 +44,7 @@ export interface Card {
   type: string;
   category: string;
   recommend: boolean;
+  isTracking?: boolean;
 }
 
 export interface TrackingCard {
