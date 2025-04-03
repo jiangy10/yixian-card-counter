@@ -23,8 +23,9 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredCards = activeTab === 'all' 
-    ? cards 
+    ? cards.filter(card => card.isTracking)
     : cards.filter(card => {
+        if (!card.isTracking) return false;
         if (activeTab === 'side-jobs') {
           return card.type === 'side job';
         }

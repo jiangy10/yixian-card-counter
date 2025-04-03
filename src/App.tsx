@@ -88,15 +88,13 @@ const App: React.FC = () => {
         const trackingCards = await loadTrackingCards();
         const trackedCardNames = Object.keys(trackingCards);
 
-        // Filter cards and set tracking status
-        const filteredCards = cardsWithDetails.filter(card => 
-          trackedCardNames.includes(card.name)
-        ).map(card => ({
+        // Set tracking status for all cards
+        const cardsWithTracking = cardsWithDetails.map(card => ({
           ...card,
-          isTracking: true
+          isTracking: trackedCardNames.includes(card.name)
         }));
 
-        setDisplayCards(filteredCards);
+        setDisplayCards(cardsWithTracking);
       }
     };
 
