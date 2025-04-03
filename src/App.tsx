@@ -7,13 +7,43 @@ import MatchHistoryContainer from './components/MatchHistoryContainer';
 import CardLibraryContainer from './components/CardLibraryContainer';
 import sampleData from './data/sample.json';
 import cardLibData from './data/card_lib.json';
-import { Player, RoundData, TrackingCard, Card, CardType, MatchHistory, UsedCard } from './models/model';
+import { Player, RoundData, TrackingCard, Card, CardType, MatchHistory } from './models/model';
 import './App.css';
 
 const App: React.FC = () => {
   const roundData = sampleData as unknown as RoundData;
   const latestRound = Math.max(...Object.keys(roundData.rounds).map(Number));
-  const [selectedPlayer, setSelectedPlayer] = useState<Player>(roundData.rounds[latestRound].players[0]);
+  const [selectedPlayer, setSelectedPlayer] = useState<Player>(() => {
+    // construct match_history
+    const player = roundData.rounds[latestRound].players[0];
+    const matchHistory: Record<number, MatchHistory> = {};
+    
+    // iterate all rounds, find the player's match history
+    Object.entries(roundData.rounds).forEach(([roundNumber, round]) => {
+      const playerInRound = round.players.find(p => p.player_username === player.player_username);
+      if (playerInRound) {
+        matchHistory[parseInt(roundNumber)] = {
+          cultivation: playerInRound.cultivation.toString(),
+          health: playerInRound.health,
+          destiny: playerInRound.destiny,
+          destiny_diff: playerInRound.destiny_diff,
+          opponent_username: playerInRound.opponent_username,
+          used_card: playerInRound.used_card.map(card => ({
+            ...card,
+            phase: 2,
+            type: 'unknown',
+            category: 'unknown',
+            recommend: false
+          }))
+        };
+      }
+    });
+
+    return {
+      ...player,
+      match_history: matchHistory
+    };
+  });
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const [isManaging, setIsManaging] = useState(false);
   // Load tracking card data from the game directory
@@ -74,7 +104,33 @@ const App: React.FC = () => {
   }, [selectedPlayer]);
 
   const handlePlayerSelect = (player: Player) => {
-    setSelectedPlayer(player);
+    // 为新选择的玩家构建match_history
+    const matchHistory: Record<number, MatchHistory> = {};
+    
+    Object.entries(roundData.rounds).forEach(([roundNumber, round]) => {
+      const playerInRound = round.players.find(p => p.player_username === player.player_username);
+      if (playerInRound) {
+        matchHistory[parseInt(roundNumber)] = {
+          cultivation: playerInRound.cultivation.toString(),
+          health: playerInRound.health,
+          destiny: playerInRound.destiny,
+          destiny_diff: playerInRound.destiny_diff,
+          opponent_username: playerInRound.opponent_username,
+          used_card: playerInRound.used_card.map(card => ({
+            ...card,
+            phase: 2,
+            type: 'unknown',
+            category: 'unknown',
+            recommend: false
+          }))
+        };
+      }
+    });
+
+    setSelectedPlayer({
+      ...player,
+      match_history: matchHistory
+    });
   };
 
   const handleManageClick = () => {

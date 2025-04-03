@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { MatchHistory, Card as CardType, UsedCard } from '../models/model';
 import Card from './Card';
 import cardLibData from '../data/card_lib.json';
-import trackingCardsData from '../data/tracking_cards.json';
 import './MatchHistoryContainer.css';
 
 interface MatchHistoryContainerProps {
@@ -14,47 +13,65 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
   const [processedHistory, setProcessedHistory] = useState<Record<number, MatchHistory & { processedCards: CardType[] }>>({});
 
   useEffect(() => {
-    if (matchHistory) {
-      const processed: Record<number, MatchHistory & { processedCards: CardType[] }> = {};
-      const trackedCardNames = Object.keys(trackingCardsData);
-      
-      Object.entries(matchHistory).forEach(([round, history]) => {
-        const roundNumber = parseInt(round);
-        
-        const processedCards = history.used_card.map(usedCard => {
-          const cardInfo = (cardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name];
-          if (cardInfo) {
-            const card: CardType = {
-              ...cardInfo,
-              level: usedCard.level,
-              isTracking: trackedCardNames.includes(usedCard.name)
-            };
-            return card;
-          }
+    const processHistory = async () => {
+      if (!matchHistory) return;
 
-          return {
-            name: usedCard.name,
-            level: usedCard.level,
-            phase: 2,
-            type: 'unknown',
-            category: 'unknown',
-            recommend: false,
-            isTracking: trackedCardNames.includes(usedCard.name)
-          } as CardType;
+      try {
+        // load tracking_cards.json from the game directory
+        let trackingCards = {};
+        if (typeof window.electron !== 'undefined') {
+          const gamePath = await window.electron.ipcRenderer.invoke('getUserDataPath');
+          const trackingFilePath = `${gamePath}/tracking_cards.json`;
+          const content = await window.electron.ipcRenderer.invoke('readFile', trackingFilePath);
+          trackingCards = JSON.parse(content);
+        }
+        
+        const trackedCardNames = Object.keys(trackingCards);
+        const processed: Record<number, MatchHistory & { processedCards: CardType[] }> = {};
+        
+        Object.entries(matchHistory).forEach(([round, history]) => {
+          const roundNumber = parseInt(round);
+          
+          const processedCards = history.used_card.map(usedCard => {
+            const cardInfo = (cardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name];
+            if (cardInfo) {
+              const card: CardType = {
+                ...cardInfo,
+                level: usedCard.level,
+                isTracking: trackedCardNames.includes(usedCard.name)
+              };
+              return card;
+            }
+
+            return {
+              name: usedCard.name,
+              level: usedCard.level,
+              phase: 2,
+              type: 'unknown',
+              category: 'unknown',
+              recommend: false,
+              isTracking: trackedCardNames.includes(usedCard.name)
+            } as CardType;
+          });
+          
+          processed[roundNumber] = {
+            ...history,
+            processedCards
+          };
         });
         
-        processed[roundNumber] = {
-          ...history,
-          processedCards
-        };
-      });
-      
-      setProcessedHistory(processed);
-      
-      if (Object.keys(processed).length > 0 && selectedRound === null) {
-        setSelectedRound(parseInt(Object.keys(processed)[0]));
+        setProcessedHistory(processed);
+        
+        if (Object.keys(processed).length > 0 && selectedRound === null) {
+          const latestRound = Math.max(...Object.keys(processed).map(Number));
+          setSelectedRound(latestRound);
+        }
+      } catch (error) {
+        console.error('Error processing match history:', error);
       }
-    }
+    };
+
+    processHistory();
   }, [matchHistory]);
 
   const handleRoundClick = (round: number) => {
@@ -85,7 +102,7 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
         <div className="match-history-list">
         <div className="match-history-scroll-view">
           {Object.entries(processedHistory)
-            .sort(([roundA], [roundB]) => parseInt(roundA) - parseInt(roundB))
+            .sort(([roundA], [roundB]) => parseInt(roundB) - parseInt(roundA))
             .map(([round, history]) => {
             const roundNumber = parseInt(round);
             const isExpanded = selectedRound === roundNumber;
@@ -97,7 +114,7 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
                   className="match-history-header"
                   onClick={() => handleRoundClick(roundNumber)}
                 >
-                  <span className="round-label">第{-roundNumber}回合</span>
+                  <span className="round-label">第{roundNumber}回合</span>
                   <span className={`result-label ${isWin ? 'win' : 'lose'}`}>
                     {isWin ? '胜' : '负'}
                   </span>
