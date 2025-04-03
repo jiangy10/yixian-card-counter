@@ -146,14 +146,14 @@ const Card: React.FC<CardProps> = ({
       />
       <div style={{ display: 'flex', alignItems: 'center', flex: 'auto', margin: '5px' }}>
         <div className="card-name">{card.name}</div>
-        {showRecommend && card.recommend && <span style={recommendStyle}>Recommended</span>}
+        {showRecommend && card.recommend && <span style={recommendStyle}>推荐</span>}
       </div>
       <button 
         onClick={handleTrackingClick}
         style={buttonStyle}
         disabled={isUpdating}
       >
-        {isUpdating ? 'Updating...' : (isTracking ? 'Tracking' : 'Track')}
+        {isUpdating ? 'Updating...' : (isTracking ? '追踪中' : '追踪')}
       </button>
     </div>
   );
