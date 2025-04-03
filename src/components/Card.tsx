@@ -25,6 +25,23 @@ const Card: React.FC<CardProps> = ({
     console.log(`card ${card.name} isTracking:`, card.isTracking);
   };
 
+  const buttonStyle = {
+    backgroundColor: 'transparent',
+    color: card.isTracking ? '#3498db' : '#2ecc71',
+    border: `1.5px solid ${card.isTracking ? '#3498db' : '#2ecc71'}`,
+    borderRadius: '5px',
+    cursor: 'pointer',
+    fontSize: '12px',
+    transition: 'all 0.3s ease',
+  };
+
+  const recommendStyle = {
+    color: '#4CAF50',
+    fontWeight: 'bold',
+    fontSize: '12px',
+    marginLeft: '8px'
+  };
+
   return (
     <div 
       className={cardClass}
@@ -40,24 +57,17 @@ const Card: React.FC<CardProps> = ({
           backgroundImage: `url(/images/${imageType}/${card.category}/${card.phase}/${card.name}.png)`
         }}
       />
-      <div className="card-name">{card.name}</div>
-      {showRecommend && card.recommend && <div className="card-recommend">推荐</div>}
+      <div style={{ display: 'flex', alignItems: 'center',flex: 'auto', margin: '5px' }}>
+        <div className="card-name">{card.name}</div>
+        {showRecommend && card.recommend && <span style={recommendStyle}>推荐</span>}
+      </div>
       <button 
         onClick={handleTrackingClick}
-        style={{
-          position: 'absolute',
-          right: '5px',
-          top: '5px',
-          padding: '4px 8px',
-          backgroundColor: '#4a4a4a',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer'
-        }}
+        style={buttonStyle}
       >
-        追踪
+        {card.isTracking ? '追踪中' : '追踪'}
       </button>
+      
     </div>
   );
 };
