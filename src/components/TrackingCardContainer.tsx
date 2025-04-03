@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import './TrackingCardContainer.css';
-import { Card as CardType, TrackingCard, TrackingCardContainerProps } from '../models/model';
+import { Card as CardType } from '../models/model';
 import Card from './Card';
-import trackingCardsData from '../data/tracking_cards.json';
 
 interface Tab {
   id: string;
   label: string;
+}
+
+interface TrackingCardContainerProps {
+  cards: CardType[];
 }
 
 const tabs: Tab[] = [
@@ -16,7 +19,7 @@ const tabs: Tab[] = [
   { id: 'opportunity', label: '机缘' }
 ];
 
-const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, trackingCards }) => {
+const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) => {
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredCards = activeTab === 'all' 
@@ -27,16 +30,6 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
         }
         return card.type.toLowerCase() === activeTab;
       });
-
-  const isCardTracked = (cardName: string) => {
-    return trackingCards.some(trackedCard => trackedCard.name === cardName);
-  };
-
-  const trackedCardNames = Object.keys(trackingCardsData);
-  const cardsWithTracking = filteredCards.map(card => ({
-    ...card,
-    isTracking: trackedCardNames.includes(card.name)
-  }));
 
   return (
     <div className="tracking-card-container">
@@ -56,17 +49,12 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, tr
 
       <div className="list-container">
         <div className="tracking-card-scroll-view">
-          {cardsWithTracking.map(card => {
-            const isTracked = isCardTracked(card.name);
-            
-            return (
-              <Card
-                key={card.name}
-                card={card}
-                isTracked={isTracked}
-              />
-            );
-          })}
+          {filteredCards.map(card => (
+            <Card
+              key={card.name}
+              card={card}
+            />
+          ))}
         </div>
       </div>
     </div>
