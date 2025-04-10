@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './TrackingCardContainer.css';
 import { Card as CardType } from '../models/model';
 import Card from './Card';
+import { useTracking } from '../contexts/TrackingContext';
 
 interface Tab {
   id: string;
@@ -10,7 +11,6 @@ interface Tab {
 
 interface TrackingCardContainerProps {
   cards: CardType[];
-  onTrackingUpdate: () => Promise<void>;
 }
 
 const tabs: Tab[] = [
@@ -20,13 +20,14 @@ const tabs: Tab[] = [
   { id: 'opportunity', label: '机缘' }
 ];
 
-const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, onTrackingUpdate }) => {
+const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) => {
   const [activeTab, setActiveTab] = useState('all');
+  const { trackedCards } = useTracking();
 
   const filteredCards = activeTab === 'all' 
-    ? cards.filter(card => card.isTracking)
+    ? cards.filter(card => trackedCards[card.name])
     : cards.filter(card => {
-        if (!card.isTracking) return false;
+        if (!trackedCards[card.name]) return false;
         if (activeTab === 'side-jobs') {
           return card.type === 'side job';
         }
@@ -55,7 +56,6 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, on
             <Card
               key={card.name}
               card={card}
-              onTrackingUpdate={onTrackingUpdate}
             />
           ))}
         </div>

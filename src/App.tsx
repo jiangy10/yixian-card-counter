@@ -5,6 +5,7 @@ import TrackingCardContainer from './components/TrackingCardContainer';
 import ManageTrackingContainer from './components/ManageTrackingContainer';
 import MatchHistoryContainer from './components/MatchHistoryContainer';
 import CardLibraryContainer from './components/CardLibraryContainer';
+import { TrackingProvider } from './contexts/TrackingContext';
 import sampleData from './data/sample.json';
 import cardLibData from './data/card_lib.json';
 import { Player, RoundData, TrackingCard, Card, CardType, MatchHistory } from './models/model';
@@ -14,11 +15,9 @@ const App: React.FC = () => {
   const roundData = sampleData as unknown as RoundData;
   const latestRound = Math.max(...Object.keys(roundData.rounds).map(Number));
   const [selectedPlayer, setSelectedPlayer] = useState<Player>(() => {
-    // construct match_history
     const player = roundData.rounds[latestRound].players[0];
     const matchHistory: Record<number, MatchHistory> = {};
     
-    // iterate all rounds, find the player's match history
     Object.entries(roundData.rounds).forEach(([roundNumber, round]) => {
       const playerInRound = round.players.find(p => p.player_username === player.player_username);
       if (playerInRound) {
@@ -46,27 +45,8 @@ const App: React.FC = () => {
   });
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const [isManaging, setIsManaging] = useState(false);
-  // Load tracking card data from the game directory
-  const loadTrackingCards = async () => {
-    if (typeof window.electron === 'undefined') {
-      console.error('Not running in Electron environment');
-      return;
-    }
 
-    try {
-      const gamePath = await window.electron.ipcRenderer.invoke('getUserDataPath');
-      const trackingFilePath = `${gamePath}/tracking_cards.json`;
-      const content = await window.electron.ipcRenderer.invoke('readFile', trackingFilePath);
-      const trackingCards = JSON.parse(content);
-      return trackingCards;
-    } catch (error) {
-      console.error('Failed to load tracking card data:', error);
-      return {};
-    }
-  };
-
-  // Update displayed cards
-  const updateDisplayCards = async () => {
+  useEffect(() => {
     if (selectedPlayer) {
       const usedCards = selectedPlayer.used_card;
       const cardsWithDetails = usedCards
@@ -83,22 +63,8 @@ const App: React.FC = () => {
         })
         .filter((card): card is NonNullable<typeof card> => card !== null);
 
-      // Load tracking card data
-      const trackingCards = await loadTrackingCards();
-      const trackedCardNames = Object.keys(trackingCards);
-
-      // Set tracking status for all cards
-      const cardsWithTracking = cardsWithDetails.map(card => ({
-        ...card,
-        isTracking: trackedCardNames.includes(card.name)
-      }));
-
-      setDisplayCards(cardsWithTracking);
+      setDisplayCards(cardsWithDetails);
     }
-  };
-
-  useEffect(() => {
-    updateDisplayCards();
   }, [selectedPlayer]);
 
   const handlePlayerSelect = (player: Player) => {
@@ -135,30 +101,26 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="app-container">
-      <div className="counter-container">
-        {!isManaging ? (
-          <>
-            <PlayerSelector 
-              players={roundData.rounds[latestRound].players} 
-              onPlayerSelect={handlePlayerSelect} 
-            />
-            <PlayerInfoContainer player={selectedPlayer} />
-            <TrackingCardContainer 
-              cards={displayCards}
-              onTrackingUpdate={updateDisplayCards}
-            />
-            <MatchHistoryContainer 
-              matchHistory={selectedPlayer?.match_history} 
-              onTrackingUpdate={updateDisplayCards}
-            />
-          </>
-        ) : (
-          <CardLibraryContainer />
-        )}
-        <ManageTrackingContainer onManageClick={handleManageClick} />
+    <TrackingProvider>
+      <div className="app-container">
+        <div className="counter-container">
+          {!isManaging ? (
+            <>
+              <PlayerSelector 
+                players={roundData.rounds[latestRound].players} 
+                onPlayerSelect={handlePlayerSelect} 
+              />
+              <PlayerInfoContainer player={selectedPlayer} />
+              <TrackingCardContainer cards={displayCards} />
+              <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
+            </>
+          ) : (
+            <CardLibraryContainer />
+          )}
+          <ManageTrackingContainer onManageClick={handleManageClick} />
+        </div>
       </div>
-    </div>
+    </TrackingProvider>
   );
 };
 

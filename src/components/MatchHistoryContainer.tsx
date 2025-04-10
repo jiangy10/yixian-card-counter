@@ -6,10 +6,9 @@ import './MatchHistoryContainer.css';
 
 interface MatchHistoryContainerProps {
   matchHistory: Record<number, MatchHistory> | undefined;
-  onTrackingUpdate: () => Promise<void>;
 }
 
-const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHistory, onTrackingUpdate }) => {
+const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHistory }) => {
   const [selectedRound, setSelectedRound] = useState<number | null>(null);
   const [processedHistory, setProcessedHistory] = useState<Record<number, MatchHistory & { processedCards: CardType[] }>>({});
 
@@ -18,16 +17,6 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
       if (!matchHistory) return;
 
       try {
-        // load tracking_cards.json from the game directory
-        let trackingCards = {};
-        if (typeof window.electron !== 'undefined') {
-          const gamePath = await window.electron.ipcRenderer.invoke('getUserDataPath');
-          const trackingFilePath = `${gamePath}/tracking_cards.json`;
-          const content = await window.electron.ipcRenderer.invoke('readFile', trackingFilePath);
-          trackingCards = JSON.parse(content);
-        }
-        
-        const trackedCardNames = Object.keys(trackingCards);
         const processed: Record<number, MatchHistory & { processedCards: CardType[] }> = {};
         
         Object.entries(matchHistory).forEach(([round, history]) => {
@@ -38,8 +27,7 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
             if (cardInfo) {
               const card: CardType = {
                 ...cardInfo,
-                level: usedCard.level,
-                isTracking: trackedCardNames.includes(usedCard.name)
+                level: usedCard.level
               };
               return card;
             }
@@ -50,8 +38,7 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
               phase: 2,
               type: 'unknown',
               category: 'unknown',
-              recommend: false,
-              isTracking: trackedCardNames.includes(usedCard.name)
+              recommend: false
             } as CardType;
           });
           
@@ -136,7 +123,6 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
                           key={`${card.name}-${index}`}
                           card={card}
                           inHistory={true}
-                          onTrackingUpdate={onTrackingUpdate}
                         />
                       ))}
                     </div>
