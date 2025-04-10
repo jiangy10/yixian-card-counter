@@ -10,6 +10,7 @@ interface Tab {
 
 interface TrackingCardContainerProps {
   cards: CardType[];
+  onTrackingUpdate: () => Promise<void>;
 }
 
 const tabs: Tab[] = [
@@ -19,7 +20,7 @@ const tabs: Tab[] = [
   { id: 'opportunity', label: '机缘' }
 ];
 
-const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) => {
+const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards, onTrackingUpdate }) => {
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredCards = activeTab === 'all' 
@@ -54,6 +55,7 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
             <Card
               key={card.name}
               card={card}
+              onTrackingUpdate={onTrackingUpdate}
             />
           ))}
         </div>

@@ -6,9 +6,10 @@ import './MatchHistoryContainer.css';
 
 interface MatchHistoryContainerProps {
   matchHistory: Record<number, MatchHistory> | undefined;
+  onTrackingUpdate: () => Promise<void>;
 }
 
-const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHistory }) => {
+const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHistory, onTrackingUpdate }) => {
   const [selectedRound, setSelectedRound] = useState<number | null>(null);
   const [processedHistory, setProcessedHistory] = useState<Record<number, MatchHistory & { processedCards: CardType[] }>>({});
 
@@ -135,6 +136,7 @@ const MatchHistoryContainer: React.FC<MatchHistoryContainerProps> = ({ matchHist
                           key={`${card.name}-${index}`}
                           card={card}
                           inHistory={true}
+                          onTrackingUpdate={onTrackingUpdate}
                         />
                       ))}
                     </div>

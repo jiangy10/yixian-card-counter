@@ -8,6 +8,7 @@ interface CardProps {
   isTracked?: boolean;
   inHistory?: boolean;
   showRecommend?: boolean;
+  onTrackingUpdate?: () => Promise<void>;
 }
 
 interface TrackingCard {
@@ -23,7 +24,8 @@ const Card: React.FC<CardProps> = ({
   card, 
   isTracked = false, 
   inHistory = false,
-  showRecommend = false
+  showRecommend = false,
+  onTrackingUpdate
 }) => {
   const [isTracking, setIsTracking] = useState(card.isTracking || false);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -101,6 +103,8 @@ const Card: React.FC<CardProps> = ({
         // Update state
         setIsTracking(newTrackingState);
         card.isTracking = newTrackingState;
+        // Call onTrackingUpdate if provided
+        onTrackingUpdate?.();
       } catch (error) {
         console.error('Failed to update tracking card:', error);
       }

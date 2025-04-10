@@ -66,43 +66,42 @@ const App: React.FC = () => {
   };
 
   // Update displayed cards
+  const updateDisplayCards = async () => {
+    if (selectedPlayer) {
+      const usedCards = selectedPlayer.used_card;
+      const cardsWithDetails = usedCards
+        .map(usedCard => {
+          const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
+          if (cardInfo) {
+            const card: Card = {
+              ...cardInfo,
+              level: usedCard.level
+            };
+            return card;
+          }
+          return null;
+        })
+        .filter((card): card is NonNullable<typeof card> => card !== null);
+
+      // Load tracking card data
+      const trackingCards = await loadTrackingCards();
+      const trackedCardNames = Object.keys(trackingCards);
+
+      // Set tracking status for all cards
+      const cardsWithTracking = cardsWithDetails.map(card => ({
+        ...card,
+        isTracking: trackedCardNames.includes(card.name)
+      }));
+
+      setDisplayCards(cardsWithTracking);
+    }
+  };
+
   useEffect(() => {
-    const updateDisplayCards = async () => {
-      if (selectedPlayer) {
-        const usedCards = selectedPlayer.used_card;
-        const cardsWithDetails = usedCards
-          .map(usedCard => {
-            const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
-            if (cardInfo) {
-              const card: Card = {
-                ...cardInfo,
-                level: usedCard.level
-              };
-              return card;
-            }
-            return null;
-          })
-          .filter((card): card is NonNullable<typeof card> => card !== null);
-
-        // Load tracking card data
-        const trackingCards = await loadTrackingCards();
-        const trackedCardNames = Object.keys(trackingCards);
-
-        // Set tracking status for all cards
-        const cardsWithTracking = cardsWithDetails.map(card => ({
-          ...card,
-          isTracking: trackedCardNames.includes(card.name)
-        }));
-
-        setDisplayCards(cardsWithTracking);
-      }
-    };
-
     updateDisplayCards();
   }, [selectedPlayer]);
 
   const handlePlayerSelect = (player: Player) => {
-    // 为新选择的玩家构建match_history
     const matchHistory: Record<number, MatchHistory> = {};
     
     Object.entries(roundData.rounds).forEach(([roundNumber, round]) => {
@@ -147,8 +146,12 @@ const App: React.FC = () => {
             <PlayerInfoContainer player={selectedPlayer} />
             <TrackingCardContainer 
               cards={displayCards}
+              onTrackingUpdate={updateDisplayCards}
             />
-            <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
+            <MatchHistoryContainer 
+              matchHistory={selectedPlayer?.match_history} 
+              onTrackingUpdate={updateDisplayCards}
+            />
           </>
         ) : (
           <CardLibraryContainer />
