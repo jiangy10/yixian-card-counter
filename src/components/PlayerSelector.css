@@ -3,7 +3,7 @@
   margin: 10px;
   background-color: #3d3832;
   border-radius: 5px;
-  height: 10%;
+  height: auto;
   min-height: 40px;
   display: flex;
   align-items: center;
