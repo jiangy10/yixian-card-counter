@@ -1,30 +1,24 @@
 import React from 'react';
+import { Player } from '../models/model';
+import { usePlayer } from '../contexts/PlayerContext';
 import './PlayerInfoContainer.css';
-import { Player, PlayerInfoContainerProps } from '../models/model';
+
+interface PlayerInfoContainerProps {
+  player: Player;
+}
 
 const PlayerInfoContainer: React.FC<PlayerInfoContainerProps> = ({ player }) => {
-  if (!player) {
-    return (
-      <div className="player-info-container">
-        <div className="player-information">
-          <div className="player-info-label-container">
-            <div className="username-label">请选择玩家</div>
-            <div className="cultivation-label">-</div>
-            <div className="health-label">生命上限: -</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const { sideJobs } = usePlayer();
 
   return (
     <div className="player-info-container">
       <div className="player-information">
         <div className="player-info-label-container">
-          <div className="username-label">{player.player_username}</div>
-          <div className="player-info-label">修为: {player.cultivation}</div>
-          <div className="player-info-label">生命上限: {player.health}</div>
-          <div className="player-info-label">命元: {player.destiny}</div>
+          <span className="username-label">{player.player_username}</span>
+          <span className="player-info-label">修为：{player.cultivation}</span>
+          <span className="player-info-label">生命上限：{player.health}</span>
+          <span className="player-info-label">命元：{player.destiny}</span>
+          <span className="player-info-label">副职：{sideJobs && sideJobs.length > 0 ? sideJobs.join('、') : '未知'}</span>
         </div>
       </div>
     </div>

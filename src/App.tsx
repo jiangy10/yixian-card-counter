@@ -6,6 +6,7 @@ import ManageTrackingContainer from './components/ManageTrackingContainer';
 import MatchHistoryContainer from './components/MatchHistoryContainer';
 import CardLibraryContainer from './components/CardLibraryContainer';
 import { TrackingProvider } from './contexts/TrackingContext';
+import { PlayerProvider } from './contexts/PlayerContext';
 import sampleData from './data/sample.json';
 import cardLibData from './data/card_lib.json';
 import { Player, RoundData, TrackingCard, Card, CardType, MatchHistory } from './models/model';
@@ -101,26 +102,28 @@ const App: React.FC = () => {
   };
 
   return (
-    <TrackingProvider>
-      <div className="app-container">
-        <div className="counter-container">
-          {!isManaging ? (
-            <>
-              <PlayerSelector 
-                players={roundData.rounds[latestRound].players} 
-                onPlayerSelect={handlePlayerSelect} 
-              />
-              <PlayerInfoContainer player={selectedPlayer} />
-              <TrackingCardContainer cards={displayCards} />
-              <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
-            </>
-          ) : (
-            <CardLibraryContainer />
-          )}
-          <ManageTrackingContainer onManageClick={handleManageClick} />
+    <PlayerProvider>
+      <TrackingProvider>
+        <div className="app-container">
+          <div className="counter-container">
+            {!isManaging ? (
+              <>
+                <PlayerSelector 
+                  players={roundData.rounds[latestRound].players} 
+                  onPlayerSelect={handlePlayerSelect} 
+                />
+                <PlayerInfoContainer player={selectedPlayer} />
+                <TrackingCardContainer cards={displayCards} />
+                <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
+              </>
+            ) : (
+              <CardLibraryContainer />
+            )}
+            <ManageTrackingContainer onManageClick={handleManageClick} />
+          </div>
         </div>
-      </div>
-    </TrackingProvider>
+      </TrackingProvider>
+    </PlayerProvider>
   );
 };
 

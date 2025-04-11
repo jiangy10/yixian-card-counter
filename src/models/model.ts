@@ -13,6 +13,7 @@ export interface Player {
   opponent_username: string;
   used_card: UsedCard[];
   match_history: Record<number, MatchHistory>;
+  side_jobs?: string[];
 }
 
 export interface RoundData {

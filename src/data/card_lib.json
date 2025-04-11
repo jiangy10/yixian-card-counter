@@ -1628,14 +1628,14 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": true
   },
   "弱体符": {
     "name": "弱体符",
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": true
   },
   "镇魂封元符": {
     "name": "镇魂封元符",
@@ -1733,7 +1733,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": true
   },
   "同心曲": {
     "name": "同心曲",
@@ -1957,7 +1957,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": true
   },
   "回响阵纹": {
     "name": "回响阵纹",

@@ -5,29 +5,37 @@
   margin: 10px;
 }
 
+.player-info-title {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
 .player-information {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .player-info-label-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .username-label {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .player-info-label {
   font-size: 14px;
   color: #ffffff;
-  margin-left: 10px;
+  white-space: nowrap;
 }
 
 .opponent-label {
