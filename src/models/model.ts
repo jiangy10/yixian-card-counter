@@ -14,6 +14,7 @@ export interface Player {
   used_card: UsedCard[];
   match_history: Record<number, MatchHistory>;
   side_jobs?: string[];
+  physique?: string;
 }
 
 export interface RoundData {

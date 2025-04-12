@@ -60,6 +60,7 @@
           "destiny_diff": -3,
           "health": 42,
           "cultivation": 5,
+          "physique": 1,
           "opponent_username": "阿布拉德",
           "used_card": [
             {
