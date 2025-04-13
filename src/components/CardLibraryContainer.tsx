@@ -13,7 +13,8 @@ interface Tab {
 const typeFilters: Tab[] = [
   { id: 'sect', label: '门派' },
   { id: 'side-jobs', label: '副职' },
-  { id: 'fortune', label: '机缘' }
+  { id: 'fortune', label: '机缘' },
+  { id: 'personal', label: '个人' }
 ];
 
 const categoryFilters = {
@@ -39,7 +40,37 @@ const categoryFilters = {
     { id: 'heptastar', label: '七星阁秘术' },
     { id: 'five-element', label: '五行道盟秘术' },
     { id: 'duan-xuan', label: '锻玄宗秘术' }
+  ],
+  personal: [
+    { id: 'cloud-spirit', label: '云灵剑宗' },
+    { id: 'heptastar', label: '七星阁' },
+    { id: 'five-element', label: '五行道盟' },
+    { id: 'duan-xuan', label: '锻玄宗' }
   ]
+};
+
+const personalSectMap: Record<string, string> = {
+  'MuYifeng': 'cloud-spirit',
+  'YanXue': 'cloud-spirit',
+  'LongYao': 'cloud-spirit',
+  'LinXiaoyue': 'cloud-spirit',
+  'LuJianxin': 'cloud-spirit',
+  'LiChengyun': 'cloud-spirit',
+  'TanShuyan': 'heptastar',
+  'YanChen': 'heptastar',
+  'YaoLing': 'heptastar',
+  'JiangXiming': 'heptastar',
+  'WuCe': 'heptastar',
+  'WuXingzhi': 'five-element',
+  'DuLingyuan': 'five-element',
+  'HuaQinrui': 'five-element',
+  'MuHu': 'five-element',
+  'NanGongSheng': 'five-element',
+  'XiaoBu': 'duan-xuan',
+  'TuKui': 'duan-xuan',
+  'YeMingming': 'duan-xuan',
+  'JiFangSheng': 'duan-xuan',
+  'LiMan': 'duan-xuan'
 };
 
 const phaseFilters: Tab[] = [
@@ -61,6 +92,30 @@ const fortunePhaseFilters: Tab[] = [
   { id: '6', label: '返虚' }
 ];
 
+const characterInfo: Record<string, { name: string; avatar: string }> = {
+  'MuYifeng': { name: '牧逸风', avatar: '/images/avatars/牧逸风.png' },
+  'YanXue': { name: '炎雪', avatar: '/images/avatars/炎雪.png' },
+  'LongYao': { name: '龙瑶', avatar: '/images/avatars/龙瑶.png' },
+  'LinXiaoyue': { name: '林小月', avatar: '/images/avatars/林小月.png' },
+  'LuJianxin': { name: '陆剑心', avatar: '/images/avatars/陆剑心.png' },
+  'LiChengyun': { name: '黎承云', avatar: '/images/avatars/黎承云.png' },
+  'TanShuyan': { name: '谭舒雁', avatar: '/images/avatars/谭舒雁.png' },
+  'YanChen': { name: '炎尘', avatar: '/images/avatars/炎尘.png' },
+  'YaoLing': { name: '曜灵', avatar: '/images/avatars/曜灵.png' },
+  'JiangXiming': { name: '姜袭明', avatar: '/images/avatars/姜袭明.png' },
+  'WuCe': { name: '吴策', avatar: '/images/avatars/吴策.png' },
+  'WuXingzhi': { name: '吾行之', avatar: '/images/avatars/吾行之.png' },
+  'DuLingyuan': { name: '杜伶鸳', avatar: '/images/avatars/杜伶鸳.png' },
+  'HuaQinrui': { name: '花沁蕊', avatar: '/images/avatars/花沁蕊.png' },
+  'MuHu': { name: '慕虎', avatar: '/images/avatars/慕虎.png' },
+  'NanGongSheng': { name: '南宫生', avatar: '/images/avatars/南宫生.png' },
+  'XiaoBu': { name: '小布', avatar: '/images/avatars/小布.png' },
+  'TuKui': { name: '屠馗', avatar: '/images/avatars/屠馗.png' },
+  'YeMingming': { name: '叶冥冥', avatar: '/images/avatars/叶冥冥.png' },
+  'JiFangSheng': { name: '姬方生', avatar: '/images/avatars/姬方生.png' },
+  'LiMan': { name: '李㵘', avatar: '/images/avatars/李㵘.png' }
+};
+
 const CardLibraryContainer: React.FC = () => {
   const [activeType, setActiveType] = useState<string>('sect');
   const [activeCategory, setActiveCategory] = useState<string>('cloud-spirit');
@@ -71,7 +126,16 @@ const CardLibraryContainer: React.FC = () => {
     const trackedCardNames = Object.keys(trackingCardsData);
     
     Object.entries(cardLibData).forEach(([name, card]) => {
-      if (
+      if (activeType === 'personal') {
+        if (card.type === 'personal' && personalSectMap[card.category] === activeCategory) {
+          allCards.push({
+            ...card,
+            name,
+            level: 0,
+            isTracking: trackedCardNames.includes(name)
+          });
+        }
+      } else if (
         (activeType === 'side-jobs' ? card.type === 'side-jobs' : card.type === activeType) &&
         card.category === activeCategory &&
         (activePhase === 'all' || card.phase.toString() === activePhase)
@@ -117,22 +181,58 @@ const CardLibraryContainer: React.FC = () => {
           ))}
         </div>
 
-        <div className="filter-group">
-          {(activeType === 'fortune' ? fortunePhaseFilters : phaseFilters).map(filter => (
-            <button
-              key={filter.id}
-              className={`filter-button ${activePhase === filter.id ? 'active' : ''}`}
-              onClick={() => setActivePhase(filter.id)}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
+        {activeType !== 'personal' && (
+          <div className="filter-group">
+            {(activeType === 'fortune' ? fortunePhaseFilters : phaseFilters).map(filter => (
+              <button
+                key={filter.id}
+                className={`filter-button ${activePhase === filter.id ? 'active' : ''}`}
+                onClick={() => setActivePhase(filter.id)}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="cards-container">
         <div className="cards-grid">
-          {activePhase === 'all' ? (
+          {activeType === 'personal' ? (
+            Object.entries(
+              cards.reduce((groups: Record<string, CardType[]>, card) => {
+                const characterName = card.category;
+                if (!groups[characterName]) {
+                  groups[characterName] = [];
+                }
+                groups[characterName].push(card);
+                return groups;
+              }, {})
+            ).map(([characterName, characterCards]) => (
+              <React.Fragment key={characterName}>
+                <div className="phase-divider">
+                  <div className="character-header">
+                    <img 
+                      src={characterInfo[characterName]?.avatar || '/avatars/default.jpg'} 
+                      alt={characterInfo[characterName]?.name || characterName}
+                      className="character-avatar"
+                    />
+                    <span className="character-name">
+                      {characterInfo[characterName]?.name || characterName}
+                    </span>
+                  </div>
+                </div>
+                {characterCards.map(card => (
+                  <Card
+                    key={card.name}
+                    card={card}
+                    inHistory={false}
+                    showRecommend={true}
+                  />
+                ))}
+              </React.Fragment>
+            ))
+          ) : activePhase === 'all' ? (
             [1, 2, 3, 4, 5, ...(activeType === 'fortune' ? [6] : [])].map(phase => {
               const phaseCards = cards.filter(card => card.phase === phase);
               if (phaseCards.length === 0) return null;

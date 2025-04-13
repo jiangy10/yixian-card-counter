@@ -3,7 +3,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
@@ -60,8 +59,36 @@
 .phase-divider {
   grid-column: 1 / -1;
   width: 100%;
+  position: relative;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 10px 0;
+  margin: 20px 0 40px 0;
   box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.character-header {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 4px 12px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.character-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.character-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
 }

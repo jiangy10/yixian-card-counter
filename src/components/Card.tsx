@@ -71,7 +71,7 @@ const Card: React.FC<CardProps> = ({
       <div 
         className="card-image"
         style={{
-          backgroundImage: `url(/images/${imageType}/${card.category}/${card.phase}/${card.name}.png)`
+          backgroundImage: `url(/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}.png)`
         }}
       />
       <div style={{ display: 'flex', alignItems: 'center', flex: 'auto', margin: '5px' }}>
