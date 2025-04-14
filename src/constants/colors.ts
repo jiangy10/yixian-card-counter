@@ -3,7 +3,8 @@ export const LEVEL_COLORS = {
   2: 'rgb(180, 207, 127)',
   3: 'rgb(123, 218, 221)',
   4: 'rgb(137, 115, 236)',
-  5: 'rgb(247, 222, 121)'
+  5: 'rgb(247, 222, 121)',
+  6: 'rgb(195, 60, 80)'
 } as const;
 
 export const THEME_COLORS = {

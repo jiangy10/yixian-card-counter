@@ -2345,7 +2345,7 @@
     "recommend": false
   },
   "狼皇血晶": {
-    "name": "天雷炼魂旗",
+    "name": "狼皇血晶",
     "phase": 3,
     "type": "fortune",
     "category": "talisman",
@@ -2584,6 +2584,13 @@
   },
   "残云封天剑": {
     "name": "残云封天剑",
+    "phase": 6,
+    "type": "fortune",
+    "category": "cloud-spirit",
+    "recommend": false
+  },
+  "秘剑·灵云": {
+    "name": "秘剑·灵云",
     "phase": 6,
     "type": "fortune",
     "category": "cloud-spirit",
