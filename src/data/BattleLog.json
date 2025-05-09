@@ -1,0 +1,376 @@
+338
+{
+  "round": 1,
+  "players": [
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u5434\u7B56",
+      "life": 100,
+      "lifeDelta": -4,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.5",
+      "usedCards": [
+        { "name": "\u7B97\u65E0\u9057\u7B56", "level": 1, "rarity": 0 },
+        { "name": "\u638C\u5FC3\u96F7", "level": 1, "rarity": 0 },
+        { "name": "\u661F\u5F08\u2022\u6321", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u5357\u5BAB\u751F",
+      "life": 100,
+      "lifeDelta": -4,
+      "maxHp": 38,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u706B\u7075\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u91D1\u7075\u2022\u9488", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.5",
+      "character": "\u9F99\u7476",
+      "life": 100,
+      "lifeDelta": 0,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u4E91\u5251\u2022\u539A\u571F", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u4FEE\u4ED9\u8005\u5B50\u96F6\u4E59",
+      "character": "\u7267\u9038\u98CE",
+      "life": 100,
+      "lifeDelta": 0,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u4E91\u5251\u2022\u63A2\u4E91", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u9707\u96F7\u5251", "level": 1, "rarity": 1 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u708E\u96EA",
+      "life": 100,
+      "lifeDelta": -3,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.5",
+      "usedCards": [
+        { "name": "\u4E91\u5251\u2022\u63A2\u4E91", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u5251\u5288", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u59DC\u88AD\u660E",
+      "life": 100,
+      "lifeDelta": -5,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u4FEE\u4ED9\u8005\u5B50\u96F6\u4E59",
+      "usedCards": [
+        { "name": "\u85D5\u65AD\u4E1D\u8FDE", "level": 1, "rarity": 0 },
+        { "name": "\u666E\u901A\u653B\u51FB", "level": 1, "rarity": 0 },
+        { "name": "\u666E\u901A\u653B\u51FB", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.5",
+      "character": "\u5357\u5BAB\u751F",
+      "life": 100,
+      "lifeDelta": 0,
+      "maxHp": 38,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u6C34\u7075\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u6728\u7075\u2022\u82BD", "level": 1, "rarity": 0 },
+        { "name": "\u6728\u7075\u2022\u82BD", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u82B1\u6C81\u854A",
+      "life": 100,
+      "lifeDelta": 1,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u571F\u7075\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u571F\u7075\u2022\u788E", "level": 1, "rarity": 0 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 0 }
+      ]
+    }
+  ]
+},
+{
+  "round": 2,
+  "players": [
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u5434\u7B56",
+      "life": 96,
+      "lifeDelta": -7,
+      "maxHp": 42,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u7B97\u65E0\u9057\u7B56", "level": 1, "rarity": 0 },
+        { "name": "\u7814\u58A8", "level": 1, "rarity": 0 },
+        { "name": "\u63FD\u96C0\u5C3E", "level": 1, "rarity": 1 },
+        { "name": "\u638C\u5FC3\u96F7", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u5357\u5BAB\u751F",
+      "life": 96,
+      "lifeDelta": 0,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u4FEE\u4ED9\u8005\u5B50\u96F6\u4E59",
+      "usedCards": [
+        { "name": "\u706B\u7075\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u706B\u7075\u2022\u7A9C", "level": 1, "rarity": 0 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u571F\u7075\u5370", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.5",
+      "character": "\u9F99\u7476",
+      "life": 100,
+      "lifeDelta": -14,
+      "maxHp": 42,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.5",
+      "usedCards": [
+        { "name": "\u4E91\u5251\u2022\u63A2\u4E91", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u539A\u571F", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u4FEE\u4ED9\u8005\u5B50\u96F6\u4E59",
+      "character": "\u7267\u9038\u98CE",
+      "life": 100,
+      "lifeDelta": -5,
+      "maxHp": 42,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u4E91\u5251\u2022\u63A2\u4E91", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u9707\u96F7\u5251", "level": 1, "rarity": 1 },
+        { "name": "\u666E\u901A\u653B\u51FB", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u708E\u96EA",
+      "life": 97,
+      "lifeDelta": -7,
+      "maxHp": 42,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u4E91\u5251\u2022\u63A2\u4E91", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u8F7B\u5251", "level": 1, "rarity": 0 },
+        { "name": "\u5DE8\u864E\u7075\u5251", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u59DC\u88AD\u660E",
+      "life": 95,
+      "lifeDelta": 0,
+      "maxHp": 42,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u85D5\u65AD\u4E1D\u8FDE", "level": 1, "rarity": 0 },
+        { "name": "\u661F\u7F57\u68CB\u5E03", "level": 1, "rarity": 0 },
+        { "name": "\u661F\u5F08\u2022\u5939", "level": 1, "rarity": 1 },
+        { "name": "\u767D\u9E64\u4EAE\u7FC5", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.5",
+      "character": "\u5357\u5BAB\u751F",
+      "life": 100,
+      "lifeDelta": -4,
+      "maxHp": 40,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.5",
+      "usedCards": [
+        { "name": "\u6C34\u7075\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u6728\u7075\u2022\u82BD", "level": 1, "rarity": 1 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u571F\u7075\u5370", "level": 1, "rarity": 1 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u82B1\u6C81\u854A",
+      "life": 101,
+      "lifeDelta": 1,
+      "maxHp": 42,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u571F\u7075\u5370", "level": 1, "rarity": 1 },
+        { "name": "\u5730\u7075\u4E39", "level": 1, "rarity": 0 },
+        { "name": "\u571F\u7075\u2022\u788E", "level": 1, "rarity": 0 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 1 }
+      ]
+    }
+  ]
+},
+{
+  "round": 3,
+  "players": [
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u5434\u7B56",
+      "life": 89,
+      "lifeDelta": 0,
+      "maxHp": 44,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u9707\u5366", "level": 1, "rarity": 1 },
+        { "name": "\u7B97\u65E0\u9057\u7B56", "level": 1, "rarity": 0 },
+        { "name": "\u661F\u5F08\u2022\u5939", "level": 1, "rarity": 0 },
+        { "name": "\u7814\u58A8", "level": 1, "rarity": 1 },
+        { "name": "\u63FD\u96C0\u5C3E", "level": 1, "rarity": 1 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u5357\u5BAB\u751F",
+      "life": 96,
+      "lifeDelta": -4,
+      "maxHp": 45,
+      "level": 2,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u91D1\u7075\u79D8\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 1 },
+        { "name": "\u6C34\u7075\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u706B\u7075\u2022\u7A9C", "level": 1, "rarity": 0 },
+        { "name": "\u706B\u7075\u2022\u7A9C", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.5",
+      "character": "\u9F99\u7476",
+      "life": 86,
+      "lifeDelta": -8,
+      "maxHp": 49,
+      "level": 2,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u9AA4\u98CE\u5251", "level": 1, "rarity": 1 },
+        { "name": "\u4E91\u5251\u2022\u63A2\u4E91", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u539A\u571F", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u4FEE\u4ED9\u8005\u5B50\u96F6\u4E59",
+      "character": "\u7267\u9038\u98CE",
+      "life": 95,
+      "lifeDelta": -7,
+      "maxHp": 44,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u4E91\u5251\u2022\u63A2\u4E91", "level": 1, "rarity": 0 },
+        { "name": "\u4E91\u5251\u2022\u98DE\u523A", "level": 1, "rarity": 0 },
+        { "name": "\u9707\u96F7\u5251", "level": 1, "rarity": 1 },
+        { "name": "\u9AA4\u98CE\u5251", "level": 1, "rarity": 0 },
+        { "name": "\u9AA4\u98CE\u5251", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u708E\u96EA",
+      "life": 90,
+      "lifeDelta": 0,
+      "maxHp": 49,
+      "level": 2,
+      "opponentUsername": "\u4FEE\u4ED9\u8005\u5B50\u96F6\u4E59",
+      "usedCards": [
+        { "name": "\u8F7B\u5251", "level": 1, "rarity": 0 },
+        { "name": "\u5251\u5288", "level": 1, "rarity": 1 },
+        { "name": "\u98DE\u7259\u5251", "level": 1, "rarity": 0 },
+        { "name": "\u62A4\u8EAB\u7075\u6C14", "level": 1, "rarity": 0 },
+        { "name": "\u5DE8\u864E\u7075\u5251", "level": 1, "rarity": 0 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u59DC\u88AD\u660E",
+      "life": 95,
+      "lifeDelta": 10,
+      "maxHp": 44,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.5",
+      "usedCards": [
+        { "name": "\u661F\u7F57\u68CB\u5E03", "level": 1, "rarity": 1 },
+        { "name": "\u85D5\u65AD\u4E1D\u8FDE", "level": 1, "rarity": 1 },
+        { "name": "\u661F\u5F08\u2022\u5939", "level": 1, "rarity": 1 },
+        { "name": "\u767D\u9E64\u4EAE\u7FC5", "level": 1, "rarity": 0 },
+        { "name": "\u63FD\u96C0\u5C3E", "level": 1, "rarity": 1 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.5",
+      "character": "\u5357\u5BAB\u751F",
+      "life": 96,
+      "lifeDelta": -6,
+      "maxHp": 42,
+      "level": 1,
+      "opponentUsername": "\u5080\u5121 Lv.4",
+      "usedCards": [
+        { "name": "\u6C34\u7075\u5370", "level": 1, "rarity": 0 },
+        { "name": "\u6728\u7075\u2022\u82BD", "level": 1, "rarity": 1 },
+        { "name": "\u706B\u7075\u2022\u7A9C", "level": 1, "rarity": 1 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 1 },
+        { "name": "\u571F\u7075\u5370", "level": 1, "rarity": 1 }
+      ]
+    },
+    {
+      "username": "\u5080\u5121 Lv.4",
+      "character": "\u82B1\u6C81\u854A",
+      "life": 102,
+      "lifeDelta": 4,
+      "maxHp": 49,
+      "level": 2,
+      "opponentUsername": "\u5080\u5121 Lv.5",
+      "usedCards": [
+        { "name": "\u6728\u7075\u2022\u6843\u82B1\u5370", "level": 2, "rarity": 0 },
+        { "name": "\u706B\u7075\u2022\u7A9C", "level": 1, "rarity": 0 },
+        { "name": "\u571F\u7075\u2022\u788E", "level": 1, "rarity": 0 },
+        { "name": "\u91D1\u7075\u2022\u9488", "level": 1, "rarity": 0 },
+        { "name": "\u4E94\u884C\u523A", "level": 1, "rarity": 1 }
+      ]
+    }
+  ]
+}
