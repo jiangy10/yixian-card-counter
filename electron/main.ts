@@ -2,6 +2,7 @@ import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs/promises';
 import * as isDev from 'electron-is-dev';
+import './battleLogConverter';
 
 const GAME_PATH = '/Users/xuan/Library/Application Support/Steam/steamapps/common/YiXianPai';
 
@@ -11,9 +12,7 @@ let mainWindow: BrowserWindow | null = null;
 async function ensureDirectoryExists(dirPath: string) {
   try {
     await fs.access(dirPath);
-    console.log('Directory already exists:', dirPath);
   } catch {
-    console.log('Creating directory:', dirPath);
     await fs.mkdir(dirPath, { recursive: true });
   }
 }
@@ -24,19 +23,14 @@ async function initTrackingCardsFile() {
   
   try {
     await fs.access(filePath);
-    console.log('Tracking cards file already exists:', filePath);
     const content = await fs.readFile(filePath, 'utf-8');
-    console.log('Current tracking cards content:', content);
   } catch {
-    console.log('Creating tracking cards file:', filePath);
     await fs.writeFile(filePath, '{}', 'utf-8');
   }
 }
 
 function createWindow() {
-  // Get the absolute path of the preload script
   const preloadPath = path.join(__dirname, 'preload.js');
-  console.log('Preload script path:', preloadPath);
 
   mainWindow = new BrowserWindow({
     width: 800,
@@ -77,6 +71,7 @@ app.whenReady().then(async () => {
   await ensureDirectoryExists(GAME_PATH);
   await initTrackingCardsFile();
   createWindow();
+  require('./battleLogConverter');
 });
 
 app.on('window-all-closed', () => {
