@@ -88,15 +88,12 @@ ipcMain.handle('getUserDataPath', () => {
 
 // Read file
 ipcMain.handle('readFile', async (_, filePath: string) => {
-  console.log('Attempting to read file:', filePath);
   try {
     await ensureDirectoryExists(path.dirname(filePath));
     const content = await fs.readFile(filePath, 'utf-8');
-    console.log('File content:', content);
     return content;
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      console.log('File does not exist, returning empty object');
       return '{}';
     }
     console.error('Failed to read file:', error);
@@ -106,15 +103,12 @@ ipcMain.handle('readFile', async (_, filePath: string) => {
 
 // Write file
 ipcMain.handle('writeFile', async (_, filePath: string, data: string) => {
-  console.log('Attempting to write file:', filePath);
-  console.log('Data to write:', data);
   try {
     await ensureDirectoryExists(path.dirname(filePath));
     await fs.writeFile(filePath, data, 'utf-8');
     
     // Verify write
     const content = await fs.readFile(filePath, 'utf-8');
-    console.log('Verification of written content:', content);
     
     return true;
   } catch (error) {
