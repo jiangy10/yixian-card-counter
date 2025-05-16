@@ -27,9 +27,9 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
 
     try {
-      const gamePath = await window.electron.ipcRenderer.invoke('getUserDataPath');
+      const gamePath = await window.electron.getUserDataPath();
       const trackingFilePath = `${gamePath}/tracking_cards.json`;
-      const content = await window.electron.ipcRenderer.invoke('readFile', trackingFilePath);
+      const content = await window.electron.readFile(trackingFilePath);
       return JSON.parse(content);
     } catch (error) {
       console.error('Failed to load tracking card data:', error);
@@ -54,7 +54,7 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
 
     try {
-      const gamePath = await window.electron.ipcRenderer.invoke('getUserDataPath');
+      const gamePath = await window.electron.getUserDataPath();
       const trackingFilePath = `${gamePath}/tracking_cards.json`;
       const trackingCards = await loadTrackingCards();
 
@@ -67,7 +67,7 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         delete trackingCards[cardName];
       }
 
-      await window.electron.ipcRenderer.invoke('writeFile', trackingFilePath, JSON.stringify(trackingCards, null, 2));
+      await window.electron.writeFile(trackingFilePath, JSON.stringify(trackingCards, null, 2));
       await refreshTracking();
     } catch (error) {
       console.error('Error updating tracking card:', error);

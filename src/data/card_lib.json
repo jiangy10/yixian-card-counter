@@ -1,20 +1,20 @@
 {
-  "云剑·探云": {
-    "name": "云剑·探云",
+  "云剑•探云": {
+    "name": "云剑•探云",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·飞刺": {
-    "name": "云剑·飞刺",
+  "云剑•飞刺": {
+    "name": "云剑•飞刺",
     "phase": 1, 
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·厚土": {
-    "name": "云剑·厚土",
+  "云剑•厚土": {
+    "name": "云剑•厚土",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
@@ -83,22 +83,22 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·回守": {
-    "name": "云剑·回守",
+  "云剑•回守": {
+    "name": "云剑•回守",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·极意": {
-    "name": "云剑·极意",
+  "云剑•极意": {
+    "name": "云剑•极意",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·无锋": {
-    "name": "云剑·无锋",
+  "云剑•无锋": {
+    "name": "云剑•无锋",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
@@ -153,36 +153,36 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "狂剑·一式": {
-    "name": "狂剑·一式",
+  "狂剑•一式": {
+    "name": "狂剑•一式",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·柔心": {
-    "name": "云剑·柔心",
+  "云剑•柔心": {
+    "name": "云剑•柔心",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·无妄": {
-    "name": "云剑·无妄",
+  "云剑•无妄": {
+    "name": "云剑•无妄",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·点星": {
-    "name": "云剑·点星",
+  "云剑•点星": {
+    "name": "云剑•点星",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·汇灵": {
-    "name": "云剑·汇灵",
+  "云剑•汇灵": {
+    "name": "云剑•汇灵",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
@@ -237,15 +237,15 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·闪风": {
-    "name": "云剑·闪风",
+  "云剑•闪风": {
+    "name": "云剑•闪风",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·月影": {
-    "name": "云剑·月影",
+  "云剑•月影": {
+    "name": "云剑•月影",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
@@ -300,22 +300,22 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "狂剑·二式": {
-    "name": "狂剑·二式",
+  "狂剑•二式": {
+    "name": "狂剑•二式",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·游龙": {
-    "name": "云剑·游龙",
+  "云剑•游龙": {
+    "name": "云剑•游龙",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·凌波": {
-    "name": "云剑·凌波",
+  "云剑•凌波": {
+    "name": "云剑•凌波",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
@@ -356,8 +356,8 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "狂剑·零式": {
-    "name": "狂剑·零式",
+  "狂剑•零式": {
+    "name": "狂剑•零式",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
@@ -377,15 +377,15 @@
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·挡": {
-    "name": "星弈·挡",
+  "星弈•挡": {
+    "name": "星弈•挡",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·夹": {
-    "name": "星弈·夹",
+  "星弈•夹": {
+    "name": "星弈•夹",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
@@ -454,15 +454,15 @@
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·点": {
-    "name": "星弈·点",
+  "星弈•点": {
+    "name": "星弈•点",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·立": {
-    "name": "星弈·立",
+  "星弈•立": {
+    "name": "星弈•立",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
@@ -531,8 +531,8 @@
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·打": {
-    "name": "星弈·打",
+  "星弈•打": {
+    "name": "星弈•打",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
@@ -601,15 +601,15 @@
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·飞": {
-    "name": "星弈·飞",
+  "星弈•飞": {
+    "name": "星弈•飞",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·虎": {
-    "name": "星弈·虎",
+  "星弈•虎": {
+    "name": "星弈•虎",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
@@ -678,8 +678,8 @@
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·断": {
-    "name": "星弈·断",
+  "星弈•断": {
+    "name": "星弈•断",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
@@ -734,8 +734,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "木灵·芽": {
-    "name": "木灵·芽",
+  "木灵•芽": {
+    "name": "木灵•芽",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
@@ -748,8 +748,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "火灵·窜": {
-    "name": "火灵·窜",
+  "火灵•窜": {
+    "name": "火灵•窜",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
@@ -762,8 +762,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "土灵·碎": {
-    "name": "土灵·碎",
+  "土灵•碎": {
+    "name": "土灵•碎",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
@@ -776,8 +776,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "金灵·针": {
-    "name": "金灵·针",
+  "金灵•针": {
+    "name": "金灵•针",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
@@ -790,8 +790,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "水灵·涛": {
-    "name": "水灵·涛",
+  "水灵•涛": {
+    "name": "水灵•涛",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
@@ -804,29 +804,29 @@
     "category": "five-element",
     "recommend": false
   },
-  "木灵·复苏": {
-    "name": "木灵·复苏",
+  "木灵•复苏": {
+    "name": "木灵•复苏",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "木灵·疏影": {
-    "name": "木灵·疏影",
+  "木灵•疏影": {
+    "name": "木灵•疏影",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "火灵·聚炎": {
-    "name": "火灵·聚炎",
+  "火灵•聚炎": {
+    "name": "火灵•聚炎",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "火灵·赤焰": {
-    "name": "火灵·赤焰",
+  "火灵•赤焰": {
+    "name": "火灵•赤焰",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
@@ -839,8 +839,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "土灵·群山": {
-    "name": "土灵·群山",
+  "土灵•群山": {
+    "name": "土灵•群山",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
@@ -853,22 +853,22 @@
     "category": "five-element",
     "recommend": false
   },
-  "金灵·穿心": {
-    "name": "金灵·穿心",
+  "金灵•穿心": {
+    "name": "金灵•穿心",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "水灵·波澜": {
-    "name": "水灵·波澜",
+  "水灵•波澜": {
+    "name": "水灵•波澜",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "水灵·汹涌": {
-    "name": "水灵·汹涌",
+  "水灵•汹涌": {
+    "name": "水灵•汹涌",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
@@ -888,8 +888,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "木灵·巡林": {
-    "name": "木灵·巡林",
+  "木灵•巡林": {
+    "name": "木灵•巡林",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
@@ -902,36 +902,36 @@
     "category": "five-element",
     "recommend": false
   },
-  "火灵·轰爆": {
-    "name": "火灵·轰爆",
+  "火灵•轰爆": {
+    "name": "火灵•轰爆",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "土灵·扬尘": {
-    "name": "土灵·扬尘",
+  "土灵•扬尘": {
+    "name": "土灵•扬尘",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "土灵·断崖": {
-    "name": "土灵·断崖",
+  "土灵•断崖": {
+    "name": "土灵•断崖",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "金灵·蓄锐": {
-    "name": "金灵·蓄锐",
+  "金灵•蓄锐": {
+    "name": "金灵•蓄锐",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "金灵·锋芒": {
-    "name": "金灵·锋芒",
+  "金灵•锋芒": {
+    "name": "金灵•锋芒",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
@@ -944,8 +944,8 @@
     "category": "five-element",
     "recommend": false
   },
-  "水灵·泉涌": {
-    "name": "水灵·泉涌",
+  "水灵•泉涌": {
+    "name": "水灵•泉涌",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
@@ -958,71 +958,71 @@
     "category": "five-element",
     "recommend": false
   },
-  "木灵·暗香": {
-    "name": "木灵·暗香",
+  "木灵•暗香": {
+    "name": "木灵•暗香",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "木灵·玫刺": {
-    "name": "木灵·玫刺",
+  "木灵•玫刺": {
+    "name": "木灵•玫刺",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "火灵·瞬燃": {
-    "name": "火灵·瞬燃",
+  "火灵•瞬燃": {
+    "name": "火灵•瞬燃",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "火灵·灼心": {
-    "name": "火灵·灼心",
+  "火灵•灼心": {
+    "name": "火灵•灼心",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "土灵·绝壁": {
-    "name": "土灵·绝壁",
+  "土灵•绝壁": {
+    "name": "土灵•绝壁",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "土灵·流沙": {
-    "name": "土灵·流沙",
+  "土灵•流沙": {
+    "name": "土灵•流沙",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "金灵·飞梭": {
-    "name": "金灵·飞梭",
+  "金灵•飞梭": {
+    "name": "金灵•飞梭",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "金灵·铁骨": {
-    "name": "金灵·铁骨",
+  "金灵•铁骨": {
+    "name": "金灵•铁骨",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": true
   },
-  "水灵·腾浪": {
-    "name": "水灵·腾浪",
+  "水灵•腾浪": {
+    "name": "水灵•腾浪",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "水灵·潜遁": {
-    "name": "水灵·潜遁",
+  "水灵•潜遁": {
+    "name": "水灵•潜遁",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
@@ -1035,36 +1035,36 @@
     "category": "five-element",
     "recommend": false
   },
-  "木灵·柳纷飞": {
-    "name": "木灵·柳纷飞",
+  "木灵•柳纷飞": {
+    "name": "木灵•柳纷飞",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "火灵·烈燎原": {
-    "name": "火灵·烈燎原",
+  "火灵•烈燎原": {
+    "name": "火灵•烈燎原",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "土灵·合八荒": {
-    "name": "土灵·合八荒",
+  "土灵•合八荒": {
+    "name": "土灵•合八荒",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "金灵·巨鼎落": {
-    "name": "金灵·巨鼎落",
+  "金灵•巨鼎落": {
+    "name": "金灵•巨鼎落",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
     "recommend": false
   },
-  "水灵·纳百川": {
-    "name": "水灵·纳百川",
+  "水灵•纳百川": {
+    "name": "水灵•纳百川",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
@@ -1084,22 +1084,22 @@
     "category": "five-element",
     "recommend": false
   },
-  "崩拳·戳": {
-    "name": "崩拳·戳",
+  "崩拳•戳": {
+    "name": "崩拳•戳",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·封": {
-    "name": "崩拳·封",
+  "崩拳•封": {
+    "name": "崩拳•封",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·弹": {
-    "name": "崩拳·弹",
+  "崩拳•弹": {
+    "name": "崩拳•弹",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
@@ -1168,22 +1168,22 @@
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·撼": {
-    "name": "崩拳·撼",
+  "崩拳•撼": {
+    "name": "崩拳•撼",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·缠": {
-    "name": "崩拳·缠",
+  "崩拳•缠": {
+    "name": "崩拳•缠",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·突": {
-    "name": "崩拳·突",
+  "崩拳•突": {
+    "name": "崩拳•突",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
@@ -1252,15 +1252,15 @@
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·截脉": {
-    "name": "崩拳·截脉",
+  "崩拳•截脉": {
+    "name": "崩拳•截脉",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·降龙": {
-    "name": "崩拳·降龙",
+  "崩拳•降龙": {
+    "name": "崩拳•降龙",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
@@ -1329,15 +1329,15 @@
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·寸劲": {
-    "name": "崩拳·寸劲",
+  "崩拳•寸劲": {
+    "name": "崩拳•寸劲",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·连崩": {
-    "name": "崩拳·连崩",
+  "崩拳•连崩": {
+    "name": "崩拳•连崩",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
@@ -1392,15 +1392,15 @@
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·闪击": {
-    "name": "崩拳·闪击",
+  "崩拳•闪击": {
+    "name": "崩拳•闪击",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·惊触": {
-    "name": "崩拳·惊触",
+  "崩拳•惊触": {
+    "name": "崩拳•惊触",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
@@ -2176,15 +2176,15 @@
     "category": "fortune-teller",
     "recommend": false
   },
-  "天谕·守": {
-    "name": "天谕·守",
+  "天谕•守": {
+    "name": "天谕•守",
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
     "recommend": false
   },
-  "天谕·攻": {
-    "name": "天谕·攻",
+  "天谕•攻": {
+    "name": "天谕•攻",
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
@@ -2204,15 +2204,15 @@
     "category": "fortune-teller",
     "recommend": false
   },
-  "天运·避凶": {
-    "name": "天运·避凶",
+  "天运•避凶": {
+    "name": "天运•避凶",
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
     "recommend": false
   },
-  "天运·趋吉": {
-    "name": "天运·趋吉",
+  "天运•趋吉": {
+    "name": "天运•趋吉",
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
@@ -2232,15 +2232,15 @@
     "category": "fortune-teller",
     "recommend": false
   },
-  "天命·飞逝": {
-    "name": "天命·飞逝",
+  "天命•飞逝": {
+    "name": "天命•飞逝",
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
     "recommend": false
   },
-  "天命·重现": {
-    "name": "天命·重现",
+  "天命•重现": {
+    "name": "天命•重现",
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
@@ -2260,15 +2260,15 @@
     "category": "fortune-teller",
     "recommend": false
   },
-  "天星·牵引": {
-    "name": "天星·牵引",
+  "天星•牵引": {
+    "name": "天星•牵引",
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
     "recommend": false
   },
-  "天星·御心": {
-    "name": "天星·御心",
+  "天星•御心": {
+    "name": "天星•御心",
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
@@ -2288,15 +2288,15 @@
     "category": "fortune-teller",
     "recommend": false
   },
-  "天机·顺应": {
-    "name": "天机·顺应",
+  "天机•顺应": {
+    "name": "天机•顺应",
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
     "recommend": false
   },
-  "天机·逆施": {
-    "name": "天机·逆施",
+  "天机•逆施": {
+    "name": "天机•逆施",
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
@@ -2512,8 +2512,8 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "云剑·拂晓": {
-    "name": "云剑·拂晓",
+  "云剑•拂晓": {
+    "name": "云剑•拂晓",
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
@@ -2526,8 +2526,8 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "狂剑·盘龙": {
-    "name": "狂剑·盘龙",
+  "狂剑•盘龙": {
+    "name": "狂剑•盘龙",
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
@@ -2575,8 +2575,8 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "狂剑·双龙": {
-    "name": "狂剑·双龙",
+  "狂剑•双龙": {
+    "name": "狂剑•双龙",
     "phase": 5,
     "type": "fortune",
     "category": "cloud-spirit",
@@ -2589,8 +2589,8 @@
     "category": "cloud-spirit",
     "recommend": false
   },
-  "秘剑·灵云": {
-    "name": "秘剑·灵云",
+  "秘剑•灵云": {
+    "name": "秘剑•灵云",
     "phase": 6,
     "type": "fortune",
     "category": "cloud-spirit",
@@ -2645,8 +2645,8 @@
     "category": "heptastar",
     "recommend": false
   },
-  "星弈·屠龙": {
-    "name": "星弈·屠龙",
+  "星弈•屠龙": {
+    "name": "星弈•屠龙",
     "phase": 4,
     "type": "fortune",
     "category": "heptastar",
@@ -2729,36 +2729,36 @@
     "category": "five-element",
     "recommend": false
   },
-  "金灵·封喉": {
-    "name": "金灵·封喉",
+  "金灵•封喉": {
+    "name": "金灵•封喉",
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "水灵·润木": {
-    "name": "水灵·润木",
+  "水灵•润木": {
+    "name": "水灵•润木",
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "火灵·窑土": {
-    "name": "火灵·窑土",
+  "火灵•窑土": {
+    "name": "火灵•窑土",
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "木灵·藤蔓": {
-    "name": "木灵·藤蔓",
+  "木灵•藤蔓": {
+    "name": "木灵•藤蔓",
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "金灵·凝水": {
-    "name": "金灵·凝水",
+  "金灵•凝水": {
+    "name": "金灵•凝水",
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
@@ -2771,36 +2771,36 @@
     "category": "five-element",
     "recommend": false
   },
-  "土灵·撼地": {
-    "name": "土灵·撼地",
+  "土灵•撼地": {
+    "name": "土灵•撼地",
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "木灵·燃火": {
-    "name": "木灵·燃火",
+  "木灵•燃火": {
+    "name": "木灵•燃火",
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "土灵·韵金": {
-    "name": "土灵·韵金",
+  "土灵•韵金": {
+    "name": "土灵•韵金",
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "火灵·焚天焱": {
-    "name": "火灵·焚天焱",
+  "火灵•焚天焱": {
+    "name": "火灵•焚天焱",
     "phase": 5,
     "type": "fortune",
     "category": "five-element",
     "recommend": false
   },
-  "水灵·海龙啸": {
-    "name": "水灵·海龙啸",
+  "水灵•海龙啸": {
+    "name": "水灵•海龙啸",
     "phase": 5,
     "type": "fortune",
     "category": "five-element",
@@ -2869,8 +2869,8 @@
     "category": "duan-xuan",
     "recommend": false
   },
-  "崩拳·双影": {
-    "name": "崩拳·双影",
+  "崩拳•双影": {
+    "name": "崩拳•双影",
     "phase": 4,
     "type": "fortune",
     "category": "duan-xuan",
@@ -2918,22 +2918,22 @@
     "category": "MuYifeng",
     "recommend": false
   },
-  "云剑·崩雪":{
-    "name": "云剑·崩雪",
+  "云剑•崩雪":{
+    "name": "云剑•崩雪",
     "phase": 4,
     "type": "personal",
     "category": "YanXue",
     "recommend": false
   },
-  "狂剑·炎舞":{
-    "name": "狂剑·炎舞",
+  "狂剑•炎舞":{
+    "name": "狂剑•炎舞",
     "phase": 5,
     "type": "personal",
     "category": "YanXue",
     "recommend": false
   },
-  "云剑·唤雨":{
-    "name": "云剑·唤雨",
+  "云剑•唤雨":{
+    "name": "云剑•唤雨",
     "phase": 4,
     "type": "personal",
     "category": "LongYao",
@@ -2953,8 +2953,8 @@
     "category": "LinXiaoyue",
     "recommend": false
   },
-  "云剑·飞砂":{
-    "name": "云剑·飞砂",
+  "云剑•飞砂":{
+    "name": "云剑•飞砂",
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
@@ -2981,8 +2981,8 @@
     "category": "LinXiaoyue",
     "recommend": false
   },
-  "云剑·猫爪":{
-    "name": "云剑·猫爪",
+  "云剑•猫爪":{
+    "name": "云剑•猫爪",
     "phase": 2,
     "type": "personal",
     "category": "LinXiaoyue",
@@ -3100,15 +3100,15 @@
     "category": "DuLingyuan",
     "recommend": false
   },
-  "木灵·桃花印":{
-    "name": "木灵·桃花印",
+  "木灵•桃花印":{
+    "name": "木灵•桃花印",
     "phase": 2,
     "type": "personal",
     "category": "HuaQinrui",
     "recommend": false
   },
-  "水灵·春雨":{
-    "name": "水灵·春雨",
+  "水灵•春雨":{
+    "name": "水灵•春雨",
     "phase": 4,
     "type": "personal",
     "category": "HuaQinrui",
@@ -3121,15 +3121,15 @@
     "category": "MuHu",
     "recommend": false
   },
-  "金灵·刚劲":{
-    "name": "金灵·刚劲",
+  "金灵•刚劲":{
+    "name": "金灵•刚劲",
     "phase": 4,
     "type": "personal",
     "category": "MuHu",
     "recommend": false
   },
-  "土灵·山崩":{
-    "name": "土灵·山崩",
+  "土灵•山崩":{
+    "name": "土灵•山崩",
     "phase": 5,
     "type": "personal",
     "category": "MuHu",
@@ -3156,8 +3156,8 @@
     "category": "YeMingming",
     "recommend": false
   },
-  "崩拳·冥夜":{
-    "name": "崩拳·冥夜",
+  "崩拳•冥夜":{
+    "name": "崩拳•冥夜",
     "phase": 4,
     "type": "personal",
     "category": "YeMingming",

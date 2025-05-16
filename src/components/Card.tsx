@@ -67,7 +67,7 @@ const Card: React.FC<CardProps> = ({
         position: 'relative'
       }}
     >
-      {card.level > 0 && <div className="card-level">Lv.{card.level}</div>}
+      {card.level > -1 && <div className="card-level">Lv.{card.level + 1}</div>}
       <div 
         className="card-image"
         style={{

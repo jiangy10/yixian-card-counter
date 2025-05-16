@@ -51,11 +51,6 @@ function createWindow() {
     mainWindow.loadFile(path.join(__dirname, '..', 'index.html'));
   }
 
-  // For debugging whether the preload script is loaded correctly
-  mainWindow.webContents.on('did-finish-load', () => {
-    console.log('Window loaded, preload script should be activated');
-  });
-
   // Add error handling
   mainWindow.webContents.on('did-fail-load', (_, errorCode, errorDescription) => {
     console.error('Load failed:', errorCode, errorDescription);
@@ -88,7 +83,6 @@ app.on('activate', () => {
 
 // Get game directory path
 ipcMain.handle('getUserDataPath', () => {
-  console.log('Returning game directory:', GAME_PATH);
   return GAME_PATH;
 });
 

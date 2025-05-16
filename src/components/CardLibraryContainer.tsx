@@ -131,7 +131,7 @@ const CardLibraryContainer: React.FC = () => {
           allCards.push({
             ...card,
             name,
-            level: 0,
+            level: -1,
             isTracking: trackedCardNames.includes(name)
           });
         }
@@ -143,7 +143,7 @@ const CardLibraryContainer: React.FC = () => {
         allCards.push({
           ...card,
           name,
-          level: 0,
+          level: -1,
           isTracking: trackedCardNames.includes(name)
         });
       }
