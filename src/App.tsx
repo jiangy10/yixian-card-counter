@@ -10,6 +10,7 @@ import { PlayerProvider } from './contexts/PlayerContext';
 import cardLibData from './data/card_lib.json';
 import { Player, RoundData, TrackingCard, Card, CardType, MatchHistory } from './models/model';
 import './App.css';
+import { copyFileSync } from 'fs';
 
 declare global {
   interface Window {
@@ -38,7 +39,6 @@ const App: React.FC = () => {
         const data = JSON.parse(battleLogContent) as RoundData;
         setRoundData(data);
 
-        // 设置初始选中玩家
         const latestRound = Math.max(...Object.keys(data.rounds).map(Number));
         const initialPlayer = data.rounds[latestRound].players[0];
         const matchHistory: Record<number, MatchHistory> = {};
@@ -74,7 +74,6 @@ const App: React.FC = () => {
 
     loadBattleLog();
     
-    // 设置定时器每秒刷新一次数据
     const timer = setInterval(loadBattleLog, 1000);
     return () => clearInterval(timer);
   }, []);
