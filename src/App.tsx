@@ -21,6 +21,7 @@ declare global {
       ipcRenderer: {
         invoke: (channel: string, ...args: any[]) => Promise<any>;
       };
+      onBattleLogUpdated: (callback: () => void) => void;
     };
   }
 }
@@ -104,8 +105,10 @@ const App: React.FC = () => {
     };
 
     loadBattleLog();
-    const timer = setInterval(loadBattleLog, 1000);
-    return () => clearInterval(timer);
+    const removeListener = window.electron.onBattleLogUpdated(() => {
+      loadBattleLog();
+    });
+    return () => {};
   }, [selectedPlayer]);
 
   useEffect(() => {

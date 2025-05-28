@@ -95,6 +95,18 @@ try {
     const battleLogContent = fs.readFileSync(battleLogPath, 'utf-8');
     const sampleData = convertBattleLogToSample(battleLogContent);
     fs.writeFileSync(convertedBattleLogPath, JSON.stringify(sampleData, null, 2));
+    // notify main process battle log update
+    if (typeof process.send === 'function') {
+      process.send({ type: 'battle-log-updated' });
+    } else {
+      try {
+        const { BrowserWindow } = require('electron');
+        const win = BrowserWindow.getAllWindows && BrowserWindow.getAllWindows()[0];
+        if (win && win.webContents) {
+          win.webContents.send('battle-log-updated');
+        }
+      } catch (e) {}
+    }
   }
 } catch (error) {
   console.error('Error processing battle log on startup:', error);
@@ -114,6 +126,19 @@ watcher.on('change', async (filePath) => {
     const battleLogContent = fs.readFileSync(filePath, 'utf-8');
     const sampleData = convertBattleLogToSample(battleLogContent);
     fs.writeFileSync(convertedBattleLogPath, JSON.stringify(sampleData, null, 2));
+
+    // notify main process battle log update
+    if (typeof process.send === 'function') {
+      process.send({ type: 'battle-log-updated' });
+    } else {
+      try {
+        const { BrowserWindow } = require('electron');
+        const win = BrowserWindow.getAllWindows && BrowserWindow.getAllWindows()[0];
+        if (win && win.webContents) {
+          win.webContents.send('battle-log-updated');
+        }
+      } catch (e) {}
+    }
   } catch (error) {
     console.error('Error processing battle log:', error);
     setTimeout(() => {

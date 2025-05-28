@@ -121,4 +121,11 @@ ipcMain.handle('writeFile', async (_, filePath: string, data: string) => {
     console.error('Failed to write file:', error);
     throw error;
   }
+});
+
+// listen battle log update event
+process.on && process.on('message', (msg: any) => {
+  if (msg && msg.type === 'battle-log-updated' && mainWindow) {
+    mainWindow.webContents.send('battle-log-updated');
+  }
 }); 
