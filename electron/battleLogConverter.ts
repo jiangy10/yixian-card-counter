@@ -56,18 +56,12 @@ interface SampleData {
 }
 
 function convertBattleLogToSample(battleLogContent: string): SampleData {
-  const lines = battleLogContent.split('\n');
-  const jsonText = lines.slice(1).join('\n').trim();
+  const lines = battleLogContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+  // ignore first line
+  const jsonLines = lines.slice(1);
   let roundsArr: BattleLogRound[] = [];
   try {
-    if (jsonText) {
-      let text = jsonText;
-      if (!jsonText.startsWith('[')) {
-        text = `[${jsonText.replace(/},\s*{/g, '}|{').replace(/\|/g, ',')}]`;
-      }
-      const parsed = JSON.parse(text);
-      roundsArr = Array.isArray(parsed) ? parsed : [parsed];
-    }
+    roundsArr = jsonLines.map(line => JSON.parse(line));
     const sampleData: SampleData = { rounds: {} };
     roundsArr.sort((a, b) => b.round - a.round);
     roundsArr.forEach((round) => {
