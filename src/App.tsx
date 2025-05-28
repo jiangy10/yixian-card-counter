@@ -40,43 +40,73 @@ const App: React.FC = () => {
         setRoundData(data);
 
         const latestRound = Math.max(...Object.keys(data.rounds).map(Number));
-        const initialPlayer = data.rounds[latestRound].players[0];
-        const matchHistory: Record<number, MatchHistory> = {};
-        
-        Object.entries(data.rounds).forEach(([roundNumber, round]) => {
-          const playerInRound = round.players.find(p => p.player_username === initialPlayer.player_username);
-          if (playerInRound) {
-            matchHistory[parseInt(roundNumber)] = {
-              cultivation: playerInRound.cultivation.toString(),
-              health: playerInRound.health,
-              destiny: playerInRound.destiny,
-              destiny_diff: playerInRound.destiny_diff,
-              opponent_username: playerInRound.opponent_username,
-              used_card: playerInRound.used_card.map(card => ({
-                ...card,
-                phase: 2,
-                type: 'unknown',
-                category: 'unknown',
-                recommend: false
-              }))
-            };
+        if (!selectedPlayer) {
+          const initialPlayer = data.rounds[latestRound].players[0];
+          const matchHistory: Record<number, MatchHistory> = {};
+          Object.entries(data.rounds).forEach(([roundNumber, round]) => {
+            const playerInRound = round.players.find(p => p.player_username === initialPlayer.player_username);
+            if (playerInRound) {
+              matchHistory[parseInt(roundNumber)] = {
+                cultivation: playerInRound.cultivation.toString(),
+                health: playerInRound.health,
+                destiny: playerInRound.destiny,
+                destiny_diff: playerInRound.destiny_diff,
+                opponent_username: playerInRound.opponent_username,
+                used_card: playerInRound.used_card.map(card => ({
+                  ...card,
+                  phase: 2,
+                  type: 'unknown',
+                  category: 'unknown',
+                  recommend: false
+                }))
+              };
+            }
+          });
+          setSelectedPlayer({
+            ...initialPlayer,
+            match_history: matchHistory
+          });
+        } else {
+          const playerStillExists = data.rounds[latestRound].players.some(
+            p => p.player_username === selectedPlayer.player_username
+          );
+          if (!playerStillExists) {
+            const initialPlayer = data.rounds[latestRound].players[0];
+            const matchHistory: Record<number, MatchHistory> = {};
+            Object.entries(data.rounds).forEach(([roundNumber, round]) => {
+              const playerInRound = round.players.find(p => p.player_username === initialPlayer.player_username);
+              if (playerInRound) {
+                matchHistory[parseInt(roundNumber)] = {
+                  cultivation: playerInRound.cultivation.toString(),
+                  health: playerInRound.health,
+                  destiny: playerInRound.destiny,
+                  destiny_diff: playerInRound.destiny_diff,
+                  opponent_username: playerInRound.opponent_username,
+                  used_card: playerInRound.used_card.map(card => ({
+                    ...card,
+                    phase: 2,
+                    type: 'unknown',
+                    category: 'unknown',
+                    recommend: false
+                  }))
+                };
+              }
+            });
+            setSelectedPlayer({
+              ...initialPlayer,
+              match_history: matchHistory
+            });
           }
-        });
-
-        setSelectedPlayer({
-          ...initialPlayer,
-          match_history: matchHistory
-        });
+        }
       } catch (error) {
         console.error('Error loading battle log:', error);
       }
     };
 
     loadBattleLog();
-    
     const timer = setInterval(loadBattleLog, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [selectedPlayer]);
 
   useEffect(() => {
     if (selectedPlayer) {
