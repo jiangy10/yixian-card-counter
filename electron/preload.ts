@@ -13,7 +13,11 @@ try {
     getUserDataPath: () => ipcRenderer.invoke('getUserDataPath'),
     readFile: (path: string) => ipcRenderer.invoke('readFile', path),
     writeFile: (path: string, data: string) => ipcRenderer.invoke('writeFile', path, data),
-    isElectron: true
+    isElectron: true,
+    onBattleLogUpdated: (callback: () => void) => {
+      ipcRenderer.on('battle-log-updated', callback);
+      return () => ipcRenderer.removeListener('battle-log-updated', callback);
+    }
   });
 } catch (error) {
   console.error('Failed to expose Electron APIs:', error);

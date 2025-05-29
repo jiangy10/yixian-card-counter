@@ -2,6 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import { watch } from 'chokidar';
 
+const GAME_PATH = path.join(
+  process.env.USERPROFILE || '',
+  'AppData',
+  'LocalLow',
+  'DarkSunStudio',
+  'YiXianPai'
+);
+
 interface BattleLogCard {
   name: string;
   level: number;
@@ -48,32 +56,15 @@ interface SampleData {
 }
 
 function convertBattleLogToSample(battleLogContent: string): SampleData {
-  const lines = battleLogContent.split('\n');
-  const remainingLines = lines.slice(1);
-  
+  const lines = battleLogContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+  // ignore first line
+  const jsonLines = lines.slice(1);
+  let roundsArr: BattleLogRound[] = [];
   try {
-    const rounds: BattleLogRound[] = [];
-    
-    for (const line of remainingLines) {
-      if (line.trim() === '') continue;
-      
-      try {
-        const roundData = JSON.parse(line) as BattleLogRound;
-        if (roundData.round && Array.isArray(roundData.players)) {
-          rounds.push(roundData);
-        }
-      } catch {
-        continue;
-      }
-    }
-
-    const sampleData: SampleData = {
-      rounds: {}
-    };
-
-    rounds.sort((a, b) => b.round - a.round);
-
-    rounds.forEach((round) => {
+    roundsArr = jsonLines.map(line => JSON.parse(line));
+    const sampleData: SampleData = { rounds: {} };
+    roundsArr.sort((a, b) => b.round - a.round);
+    roundsArr.forEach((round) => {
       sampleData.rounds[round.round.toString()] = {
         players: round.players.map((player) => ({
           player_username: player.username,
@@ -89,17 +80,37 @@ function convertBattleLogToSample(battleLogContent: string): SampleData {
         }))
       };
     });
-
     return sampleData;
   } catch (error) {
     console.error('Error converting battle log:', error);
-    throw error;
+    return { rounds: {} };
   }
 }
 
-const steamPath = path.join(process.env.HOME || '', 'Library/Application Support/Steam/steamapps/common/YiXianPai');
-const battleLogPath = path.join(steamPath, 'BattleLog.json');
-const convertedBattleLogPath = path.join(steamPath, 'ConvertedBattleLog.json');
+const battleLogPath = path.join(GAME_PATH, 'BattleLog.json');
+const convertedBattleLogPath = path.join(GAME_PATH, 'ConvertedBattleLog.json');
+
+try {
+  if (fs.existsSync(battleLogPath)) {
+    const battleLogContent = fs.readFileSync(battleLogPath, 'utf-8');
+    const sampleData = convertBattleLogToSample(battleLogContent);
+    fs.writeFileSync(convertedBattleLogPath, JSON.stringify(sampleData, null, 2));
+    // notify main process battle log update
+    if (typeof process.send === 'function') {
+      process.send({ type: 'battle-log-updated' });
+    } else {
+      try {
+        const { BrowserWindow } = require('electron');
+        const win = BrowserWindow.getAllWindows && BrowserWindow.getAllWindows()[0];
+        if (win && win.webContents) {
+          win.webContents.send('battle-log-updated');
+        }
+      } catch (e) {}
+    }
+  }
+} catch (error) {
+  console.error('Error processing battle log on startup:', error);
+}
 
 const watcher = watch(battleLogPath, {
   persistent: true,
@@ -112,11 +123,22 @@ const watcher = watch(battleLogPath, {
 watcher.on('change', async (filePath) => {
   try {
     await new Promise(resolve => setTimeout(resolve, 100));
-    
     const battleLogContent = fs.readFileSync(filePath, 'utf-8');
     const sampleData = convertBattleLogToSample(battleLogContent);
-    
     fs.writeFileSync(convertedBattleLogPath, JSON.stringify(sampleData, null, 2));
+
+    // notify main process battle log update
+    if (typeof process.send === 'function') {
+      process.send({ type: 'battle-log-updated' });
+    } else {
+      try {
+        const { BrowserWindow } = require('electron');
+        const win = BrowserWindow.getAllWindows && BrowserWindow.getAllWindows()[0];
+        if (win && win.webContents) {
+          win.webContents.send('battle-log-updated');
+        }
+      } catch (e) {}
+    }
   } catch (error) {
     console.error('Error processing battle log:', error);
     setTimeout(() => {

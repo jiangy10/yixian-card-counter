@@ -4,7 +4,13 @@ import * as fs from 'fs/promises';
 import * as isDev from 'electron-is-dev';
 import './battleLogConverter';
 
-const GAME_PATH = '/Users/xuan/Library/Application Support/Steam/steamapps/common/YiXianPai';
+const GAME_PATH = path.join(
+  process.env.USERPROFILE || '',
+  'AppData',
+  'LocalLow',
+  'DarkSunStudio',
+  'YiXianPai'
+);
 
 let mainWindow: BrowserWindow | null = null;
 
@@ -114,5 +120,12 @@ ipcMain.handle('writeFile', async (_, filePath: string, data: string) => {
   } catch (error) {
     console.error('Failed to write file:', error);
     throw error;
+  }
+});
+
+// listen battle log update event
+process.on && process.on('message', (msg: any) => {
+  if (msg && msg.type === 'battle-log-updated' && mainWindow) {
+    mainWindow.webContents.send('battle-log-updated');
   }
 }); 
