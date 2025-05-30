@@ -28,6 +28,7 @@ const Card: React.FC<CardProps> = ({
   const borderColor = LEVEL_COLORS[card.phase as keyof typeof LEVEL_COLORS] || '#ffffff';
   const cardClass = inHistory ? 'card-item history-card' : 'card-item';
   const imageType = card.type === 'side job' ? 'side-jobs' : card.type.replace(/\s+/g, '_');
+  const isNormalAttack = card.name === '普通攻击';
 
   const handleTrackingClick = async () => {
     if (isUpdating) return;
@@ -71,7 +72,9 @@ const Card: React.FC<CardProps> = ({
       <div 
         className="card-image"
         style={{
-          backgroundImage: `url(/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}.png)`
+          backgroundImage: isNormalAttack
+            ? `url(/images/普通攻击.png)`
+            : `url(/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}.png)`
         }}
       />
       <div style={{ display: 'flex', alignItems: 'center', flex: 'auto', margin: '5px' }}>

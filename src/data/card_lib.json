@@ -1,4 +1,11 @@
 {
+  "普通攻击": {
+    "name": "普通攻击",
+    "phase": 1,
+    "type": "",
+    "category": "",
+    "recommend": false
+  },
   "云剑•探云": {
     "name": "云剑•探云",
     "phase": 1,
