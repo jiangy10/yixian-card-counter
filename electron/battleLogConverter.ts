@@ -55,10 +55,13 @@ interface SampleData {
   };
 }
 
-function convertBattleLogToSample(battleLogContent: string): SampleData {
+function convertBattleLogToSample(battleLogContent: string): SampleData | { rounds: null, status: string } {
   const lines = battleLogContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
   // ignore first line
   const jsonLines = lines.slice(1);
+  if (jsonLines.length === 0) {
+    return { rounds: null, status: "waiting" };
+  }
   let roundsArr: BattleLogRound[] = [];
   try {
     roundsArr = jsonLines.map(line => JSON.parse(line));
