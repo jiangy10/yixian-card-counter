@@ -90,59 +90,29 @@ function convertBattleLogToSample(battleLogContent: string): SampleData {
 const battleLogPath = path.join(GAME_PATH, 'BattleLog.json');
 const convertedBattleLogPath = path.join(GAME_PATH, 'ConvertedBattleLog.json');
 
-try {
-  if (fs.existsSync(battleLogPath)) {
-    const battleLogContent = fs.readFileSync(battleLogPath, 'utf-8');
-    const sampleData = convertBattleLogToSample(battleLogContent);
-    fs.writeFileSync(convertedBattleLogPath, JSON.stringify(sampleData, null, 2));
-    // notify main process battle log update
-    if (typeof process.send === 'function') {
-      process.send({ type: 'battle-log-updated' });
-    } else {
-      try {
-        const { BrowserWindow } = require('electron');
-        const win = BrowserWindow.getAllWindows && BrowserWindow.getAllWindows()[0];
-        if (win && win.webContents) {
-          win.webContents.send('battle-log-updated');
-        }
-      } catch (e) {}
-    }
-  }
-} catch (error) {
-  console.error('Error processing battle log on startup:', error);
-}
-
-const watcher = watch(battleLogPath, {
-  persistent: true,
-  awaitWriteFinish: {
-    stabilityThreshold: 2000,
-    pollInterval: 100
-  }
-});
-
-watcher.on('change', async (filePath) => {
+function processBattleLog() {
   try {
-    await new Promise(resolve => setTimeout(resolve, 100));
-    const battleLogContent = fs.readFileSync(filePath, 'utf-8');
-    const sampleData = convertBattleLogToSample(battleLogContent);
-    fs.writeFileSync(convertedBattleLogPath, JSON.stringify(sampleData, null, 2));
+    if (fs.existsSync(battleLogPath)) {
+      const battleLogContent = fs.readFileSync(battleLogPath, 'utf-8');
+      const sampleData = convertBattleLogToSample(battleLogContent);
+      fs.writeFileSync(convertedBattleLogPath, JSON.stringify(sampleData, null, 2));
 
-    // notify main process battle log update
-    if (typeof process.send === 'function') {
-      process.send({ type: 'battle-log-updated' });
-    } else {
-      try {
-        const { BrowserWindow } = require('electron');
-        const win = BrowserWindow.getAllWindows && BrowserWindow.getAllWindows()[0];
-        if (win && win.webContents) {
-          win.webContents.send('battle-log-updated');
-        }
-      } catch (e) {}
+      if (typeof process.send === 'function') {
+        process.send({ type: 'battle-log-updated' });
+      } else {
+        try {
+          const { BrowserWindow } = require('electron');
+          const win = BrowserWindow.getAllWindows && BrowserWindow.getAllWindows()[0];
+          if (win && win.webContents) {
+            win.webContents.send('battle-log-updated');
+          }
+        } catch (e) {}
+      }
     }
   } catch (error) {
     console.error('Error processing battle log:', error);
-    setTimeout(() => {
-      watcher.emit('change', filePath);
-    }, 1000);
   }
-}); 
+}
+
+processBattleLog();
+setInterval(processBattleLog, 1000); 
