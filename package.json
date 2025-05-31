@@ -30,12 +30,28 @@
   },
   "build": {
     "appId": "com.yixian.cardcounter",
+    "productName": "Yixian Card Counter",
     "files": [
       "build/**/*",
       "node_modules/**/*"
     ],
     "directories": {
       "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
     }
   },
   "eslintConfig": {
