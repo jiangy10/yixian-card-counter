@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PlayerSelector from './components/PlayerSelector';
 import PlayerInfoContainer from './components/PlayerInfoContainer';
 import TrackingCardContainer from './components/TrackingCardContainer';
@@ -30,6 +30,11 @@ const App: React.FC = () => {
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const [isManaging, setIsManaging] = useState(false);
+  const selectedPlayerRef = useRef<Player | null>(null);
+
+  useEffect(() => {
+    selectedPlayerRef.current = selectedPlayer;
+  }, [selectedPlayer]);
 
   useEffect(() => {
     const loadBattleLog = async () => {
@@ -45,7 +50,7 @@ const App: React.FC = () => {
         setRoundData(data);
 
         const latestRound = Math.max(...Object.keys(data.rounds).map(Number));
-        if (!selectedPlayer) {
+        if (!selectedPlayerRef.current) {
           const initialPlayer = data.rounds[latestRound].players[0];
           const matchHistory: Record<number, MatchHistory> = {};
           Object.entries(data.rounds).forEach(([roundNumber, round]) => {
@@ -73,7 +78,7 @@ const App: React.FC = () => {
           });
         } else {
           const playerStillExists = data.rounds[latestRound].players.some(
-            (p: Player) => p.player_username === selectedPlayer.player_username
+            (p: Player) => p.player_username === selectedPlayerRef.current!.player_username
           );
           if (!playerStillExists) {
             const initialPlayer = data.rounds[latestRound].players[0];
@@ -101,6 +106,38 @@ const App: React.FC = () => {
               ...initialPlayer,
               match_history: matchHistory
             });
+          } else {
+            const updatedMatchHistory: Record<number, MatchHistory> = {};
+            Object.entries(data.rounds).forEach(([roundNumber, round]) => {
+              const playerInRound = (round as { players: Player[] }).players.find((p: Player) => p.player_username === selectedPlayerRef.current!.player_username);
+              if (playerInRound) {
+                updatedMatchHistory[parseInt(roundNumber)] = {
+                  cultivation: playerInRound.cultivation.toString(),
+                  health: playerInRound.health,
+                  destiny: playerInRound.destiny,
+                  destiny_diff: playerInRound.destiny_diff,
+                  opponent_username: playerInRound.opponent_username,
+                  used_card: playerInRound.used_card.map((card: any) => ({
+                    ...card,
+                    phase: 2,
+                    type: 'unknown',
+                    category: 'unknown',
+                    recommend: false
+                  }))
+                };
+              }
+            });
+            
+            const currentPlayerInLatestRound = data.rounds[latestRound].players.find(
+              (p: Player) => p.player_username === selectedPlayerRef.current!.player_username
+            );
+            
+            if (currentPlayerInLatestRound) {
+              setSelectedPlayer({
+                ...currentPlayerInLatestRound,
+                match_history: updatedMatchHistory
+              });
+            }
           }
         }
       } catch (error) {
@@ -109,8 +146,11 @@ const App: React.FC = () => {
     };
 
     loadBattleLog();
-    return () => {};
-  }, [selectedPlayer]);
+    const removeListener = window.electron.onBattleLogUpdated(() => {
+      loadBattleLog();
+    });
+    return removeListener;
+  }, []);
 
   useEffect(() => {
     if (selectedPlayer) {
