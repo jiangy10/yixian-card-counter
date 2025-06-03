@@ -4,6 +4,8 @@
   "private": true,
   "main": "build/electron/main.js",
   "homepage": "./",
+  "author": "Cookie",
+  "description": "A card counting module for YixianPai.",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -18,11 +20,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "yixian-card-counter": "file:"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "tsc -p electron/tsconfig.json && concurrently \"cross-env BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "start": "electron-forge start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -30,8 +31,8 @@
     "electron:build": "npm run build && tsc -p electron/tsconfig.json && electron-builder",
     "electron:start": "tsc -p electron/tsconfig.json && electron .",
     "electron:forge-start": "npm run build && tsc -p electron/tsconfig.json && electron-forge start",
-    "package": "npm run build && tsc -p electron/tsconfig.json && cross-env NODE_OPTIONS=\"--max-old-space-size=8192\" electron-forge package",
-    "make": "npm run build && tsc -p electron/tsconfig.json && cross-env NODE_OPTIONS=\"--max-old-space-size=8192\" electron-forge make",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
     "forge:start": "npm run build && tsc -p electron/tsconfig.json && electron-forge start"
   },
   "build": {

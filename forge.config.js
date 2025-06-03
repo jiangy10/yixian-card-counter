@@ -4,31 +4,12 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
-    name: 'Yixian Card Counter',
-    executableName: 'yixian-card-counter',
-    appBundleId: 'com.yixian.cardcounter',
-    out: 'out',
-    icon: './assets/icon',
-    ignore: [
-      /^\/src\//,
-      /^\/electron\/.*\.ts$/,
-      /^\/electron\/tsconfig\.json$/,
-      /^\/public\//,
-      /\.gitignore/,
-      /\.git/
-    ],
-    prune: true
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {
-        name: 'yixian-card-counter',
-        setupExe: 'YixianCardCounterSetup.exe',
-        setupIcon: './assets/icon.ico',
-        loadingGif: './assets/loading.gif'
-      },
+      config: {},
     },
     {
       name: '@electron-forge/maker-zip',
@@ -36,20 +17,11 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {
-        options: {
-          maintainer: 'Yixian Card Counter',
-          homepage: 'https://github.com/yourusername/yixian-card-counter'
-        }
-      },
+      config: {},
     },
     {
       name: '@electron-forge/maker-rpm',
-      config: {
-        options: {
-          homepage: 'https://github.com/yourusername/yixian-card-counter'
-        }
-      },
+      config: {},
     },
   ],
   plugins: [
