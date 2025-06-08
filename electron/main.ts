@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs/promises';
-import * as isDev from 'electron-is-dev';
+import isDev from 'electron-is-dev';
 import './battleLogConverter';
 
 const GAME_PATH = path.join(
@@ -54,7 +54,8 @@ function createWindow() {
     mainWindow.loadURL('http://localhost:3000');
     mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadFile(path.join(__dirname, '..', 'index.html'));
+    const indexPath = path.join(__dirname, '..', 'index.html');
+    mainWindow.loadFile(indexPath);
   }
 
   // Add error handling
