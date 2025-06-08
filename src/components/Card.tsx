@@ -73,8 +73,8 @@ const Card: React.FC<CardProps> = ({
         className="card-image"
         style={{
           backgroundImage: isNormalAttack
-            ? `url(/images/普通攻击.png)`
-            : `url(/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}.png)`
+            ? `url(${process.env.PUBLIC_URL}/images/普通攻击.png)`
+            : `url(${process.env.PUBLIC_URL}/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}.png)`
         }}
       />
       <div style={{ display: 'flex', alignItems: 'center', flex: 'auto', margin: '5px' }}>
