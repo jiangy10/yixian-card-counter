@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PlayerSelector from './components/PlayerSelector';
 import PlayerInfoContainer from './components/PlayerInfoContainer';
 import TrackingCardContainer from './components/TrackingCardContainer';
@@ -31,6 +31,41 @@ const App: React.FC = () => {
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const [isManaging, setIsManaging] = useState(false);
   const selectedPlayerRef = useRef<Player | null>(null);
+  
+  const [trackingHeight, setTrackingHeight] = useState<number>(300);
+  const isDraggingRef = useRef<boolean>(false);
+  const startYRef = useRef<number>(0);
+  const startHeightRef = useRef<number>(0);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    isDraggingRef.current = true;
+    startYRef.current = e.clientY;
+    startHeightRef.current = trackingHeight;
+    document.body.style.cursor = 'row-resize';
+    document.body.style.userSelect = 'none';
+  }, [trackingHeight]);
+
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    if (!isDraggingRef.current) return;
+    const deltaY = e.clientY - startYRef.current;
+    const newHeight = Math.max(100, Math.min(800, startHeightRef.current + deltaY));
+    setTrackingHeight(newHeight);
+  }, []);
+
+  const handleMouseUp = useCallback(() => {
+    isDraggingRef.current = false;
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [handleMouseMove, handleMouseUp]);
 
   useEffect(() => {
     selectedPlayerRef.current = selectedPlayer;
@@ -226,8 +261,18 @@ const App: React.FC = () => {
                   onPlayerSelect={handlePlayerSelect} 
                 />
                 <PlayerInfoContainer player={selectedPlayer} />
-                <TrackingCardContainer cards={displayCards} />
-                <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
+                <div className="container-wrapper">
+                  <div className="tracking-container" style={{ height: trackingHeight }}>
+                    <TrackingCardContainer cards={displayCards} />
+                  </div>
+                  <div 
+                    className="resizer"
+                    onMouseDown={handleMouseDown}
+                  />
+                  <div className="history-container">
+                    <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
+                  </div>
+                </div>
               </>
             ) : (
               <CardLibraryContainer />
