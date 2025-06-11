@@ -4,13 +4,17 @@ import * as fs from 'fs/promises';
 import isDev from 'electron-is-dev';
 import './battleLogConverter';
 
-const GAME_PATH = path.join(
-  process.env.USERPROFILE || '',
-  'AppData',
-  'LocalLow',
-  'DarkSunStudio',
-  'YiXianPai'
-);
+const GAME_PATH = process.env.mac
+  ? path.join(
+      '/Users/xuan/Library/Application Support/Steam/steamapps/common/YiXianPai'
+    )
+  : path.join(
+      process.env.USERPROFILE || '',
+      'AppData',
+      'LocalLow',
+      'DarkSunStudio',
+      'YiXianPai'
+    );
 
 let mainWindow: BrowserWindow | null = null;
 
