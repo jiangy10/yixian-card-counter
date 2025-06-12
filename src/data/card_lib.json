@@ -3218,5 +3218,19 @@
     "type": "personal",
     "category": "LiMan",
     "recommend": false
+  },
+  "天降甘霖":{
+    "name": "天降甘霖",
+    "phase": 3,
+    "type": "personal",
+    "category": "QiWangyou",
+    "recommend": false
+  },
+  "忘忧":{
+    "name": "忘忧",
+    "phase": 5,
+    "type": "personal",
+    "category": "QiWangyou",
+    "recommend": false
   }
 }
