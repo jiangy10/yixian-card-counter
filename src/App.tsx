@@ -32,7 +32,7 @@ const App: React.FC = () => {
   const [isManaging, setIsManaging] = useState(false);
   const selectedPlayerRef = useRef<Player | null>(null);
   
-  const [trackingHeight, setTrackingHeight] = useState<number>(300);
+  const [trackingHeight, setTrackingHeight] = useState<number>(200);
   const isDraggingRef = useRef<boolean>(false);
   const startYRef = useRef<number>(0);
   const startHeightRef = useRef<number>(0);
@@ -48,7 +48,7 @@ const App: React.FC = () => {
   const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!isDraggingRef.current) return;
     const deltaY = e.clientY - startYRef.current;
-    const newHeight = Math.max(100, Math.min(800, startHeightRef.current + deltaY));
+    const newHeight = Math.max(250, Math.min(800, startHeightRef.current + deltaY));
     setTrackingHeight(newHeight);
   }, []);
 
