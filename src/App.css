@@ -67,7 +67,8 @@
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: 5px;
-  height: 100%;
+  height: calc(100vh - 40px);
+  overflow: hidden;
 }
 
 :root {
