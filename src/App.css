@@ -93,11 +93,13 @@ body {
   flex: 1 1 auto;
   overflow: hidden;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .history-container {
   flex: 1 1 auto;
-  overflow: hidden;
+  overflow-y: auto;
   min-height: 0;
 }
 
