@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Card as CardType, TrackingCard } from '../models/model';
+import React, { useState } from 'react';
+import { Card as CardType } from '../models/model';
 import { LEVEL_COLORS } from '../constants/colors';
 import { useTracking } from '../contexts/TrackingContext';
 import './Card.css';
@@ -9,10 +9,6 @@ interface CardProps {
   isTracked?: boolean;
   inHistory?: boolean;
   showRecommend?: boolean;
-}
-
-interface TrackingCards {
-  [key: string]: TrackingCard;
 }
 
 const Card: React.FC<CardProps> = ({ 
