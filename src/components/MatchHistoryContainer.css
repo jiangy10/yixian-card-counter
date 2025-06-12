@@ -94,19 +94,19 @@
   gap: 8px;
 }
 
-.match-history-list::-webkit-scrollbar {
+.match-history-scroll-view::-webkit-scrollbar {
   width: 8px;
 }
 
-.match-history-list::-webkit-scrollbar-track {
+.match-history-scroll-view::-webkit-scrollbar-track {
   background: #1a1a1a;
 }
 
-.match-history-list::-webkit-scrollbar-thumb {
+.match-history-scroll-view::-webkit-scrollbar-thumb {
   background: #4a4a4a;
   border-radius: 4px;
 }
 
-.match-history-list::-webkit-scrollbar-thumb:hover {
+.match-history-scroll-view::-webkit-scrollbar-thumb:hover {
   background: #5a5a5a;
 } 

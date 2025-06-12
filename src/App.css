@@ -91,13 +91,13 @@ body {
 
 .tracking-container {
   flex: 1 1 auto;
-  overflow-y: auto;
+  overflow: hidden;
   min-height: 0;
 }
 
 .history-container {
   flex: 1 1 auto;
-  overflow-y: auto;
+  overflow: hidden;
   min-height: 0;
 }
 

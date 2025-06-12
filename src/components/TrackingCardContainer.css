@@ -49,7 +49,9 @@
 }
 
 .tracking-card-scroll-view {
+  flex: 1;
   overflow-y: auto;
+  min-height: 0;
 }
 
 /* 滚动条样式 */
