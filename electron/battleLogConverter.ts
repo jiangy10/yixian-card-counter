@@ -4,7 +4,8 @@ import { watch } from 'chokidar';
 
 const GAME_PATH = process.env.mac
   ? path.join(
-      '/Users/xuan/Library/Application Support/Steam/steamapps/common/YiXianPai'
+      process.env.HOME || '',
+      'Library/Application Support/com.darksun.yixianpai'
     )
   : path.join(
       process.env.USERPROFILE || '',
