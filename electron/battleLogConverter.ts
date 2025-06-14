@@ -27,6 +27,7 @@ interface BattleLogPlayer {
   life: number;
   lifeDelta: number;
   maxHp: number;
+  exp: number;
   level: number;
   opponentUsername: string;
   usedCards: BattleLogCard[];
@@ -76,10 +77,11 @@ function convertBattleLogToSample(battleLogContent: string): SampleData | { roun
       sampleData.rounds[round.round.toString()] = {
         players: round.players.map((player) => ({
           player_username: player.username,
+          character: player.character,
           destiny: player.life,
           destiny_diff: player.lifeDelta,
           health: player.maxHp,
-          cultivation: player.level,
+          cultivation: player.exp,
           opponent_username: player.opponentUsername,
           used_card: player.usedCards.map((card) => ({
             name: card.name,
