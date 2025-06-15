@@ -24,9 +24,25 @@
   font-weight: 500;
 }
 
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.header-stats {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+
 .result-label {
   font-size: 16px;
   font-weight: bold;
+  min-width: 32px;
+  text-align: right;
 }
 
 .result-label.win {

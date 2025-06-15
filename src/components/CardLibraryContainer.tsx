@@ -94,28 +94,28 @@ const fortunePhaseFilters: Tab[] = [
 ];
 
 const characterInfo: Record<string, { name: string; avatar: string }> = {
-  'MuYifeng': { name: '牧逸风', avatar: '/images/avatars/牧逸风.png' },
-  'YanXue': { name: '炎雪', avatar: '/images/avatars/炎雪.png' },
-  'LongYao': { name: '龙瑶', avatar: '/images/avatars/龙瑶.png' },
-  'LinXiaoyue': { name: '林小月', avatar: '/images/avatars/林小月.png' },
-  'LuJianxin': { name: '陆剑心', avatar: '/images/avatars/陆剑心.png' },
-  'LiChengyun': { name: '黎承云', avatar: '/images/avatars/黎承云.png' },
-  'TanShuyan': { name: '谭舒雁', avatar: '/images/avatars/谭舒雁.png' },
-  'YanChen': { name: '炎尘', avatar: '/images/avatars/炎尘.png' },
-  'YaoLing': { name: '曜灵', avatar: '/images/avatars/曜灵.png' },
-  'JiangXiming': { name: '姜袭明', avatar: '/images/avatars/姜袭明.png' },
-  'WuCe': { name: '吴策', avatar: '/images/avatars/吴策.png' },
-  'WuXingzhi': { name: '吾行之', avatar: '/images/avatars/吾行之.png' },
-  'DuLingyuan': { name: '杜伶鸳', avatar: '/images/avatars/杜伶鸳.png' },
-  'HuaQinrui': { name: '花沁蕊', avatar: '/images/avatars/花沁蕊.png' },
-  'MuHu': { name: '慕虎', avatar: '/images/avatars/慕虎.png' },
-  'NanGongSheng': { name: '南宫生', avatar: '/images/avatars/南宫生.png' },
-  'XiaoBu': { name: '小布', avatar: '/images/avatars/小布.png' },
-  'TuKui': { name: '屠馗', avatar: '/images/avatars/屠馗.png' },
-  'YeMingming': { name: '叶冥冥', avatar: '/images/avatars/叶冥冥.png' },
-  'JiFangSheng': { name: '姬方生', avatar: '/images/avatars/姬方生.png' },
-  'LiMan': { name: '李㵘', avatar: '/images/avatars/李㵘.png' },
-  'QiWangyou': { name: '祁忘忧', avatar: '/images/avatars/祁忘忧.png' }
+  'MuYifeng': { name: '牧逸风', avatar: `${process.env.PUBLIC_URL}/images/avatars/牧逸风.png` },
+  'YanXue': { name: '炎雪', avatar: `${process.env.PUBLIC_URL}/images/avatars/炎雪.png` },
+  'LongYao': { name: '龙瑶', avatar: `${process.env.PUBLIC_URL}/images/avatars/龙瑶.png` },
+  'LinXiaoyue': { name: '林小月', avatar: `${process.env.PUBLIC_URL}/images/avatars/林小月.png` },
+  'LuJianxin': { name: '陆剑心', avatar: `${process.env.PUBLIC_URL}/images/avatars/陆剑心.png` },
+  'LiChengyun': { name: '黎承云', avatar: `${process.env.PUBLIC_URL}/images/avatars/黎承云.png` },
+  'TanShuyan': { name: '谭舒雁', avatar: `${process.env.PUBLIC_URL}/images/avatars/谭舒雁.png` },
+  'YanChen': { name: '炎尘', avatar: `${process.env.PUBLIC_URL}/images/avatars/炎尘.png` },
+  'YaoLing': { name: '曜灵', avatar: `${process.env.PUBLIC_URL}/images/avatars/曜灵.png` },
+  'JiangXiming': { name: '姜袭明', avatar: `${process.env.PUBLIC_URL}/images/avatars/姜袭明.png` },
+  'WuCe': { name: '吴策', avatar: `${process.env.PUBLIC_URL}/images/avatars/吴策.png` },
+  'WuXingzhi': { name: '吾行之', avatar: `${process.env.PUBLIC_URL}/images/avatars/吾行之.png` },
+  'DuLingyuan': { name: '杜伶鸳', avatar: `${process.env.PUBLIC_URL}/images/avatars/杜伶鸳.png` },
+  'HuaQinrui': { name: '花沁蕊', avatar: `${process.env.PUBLIC_URL}/images/avatars/花沁蕊.png` },
+  'MuHu': { name: '慕虎', avatar: `${process.env.PUBLIC_URL}/images/avatars/慕虎.png` },
+  'NanGongSheng': { name: '南宫生', avatar: `${process.env.PUBLIC_URL}/images/avatars/南宫生.png` },
+  'XiaoBu': { name: '小布', avatar: `${process.env.PUBLIC_URL}/images/avatars/小布.png` },
+  'TuKui': { name: '屠馗', avatar: `${process.env.PUBLIC_URL}/images/avatars/屠馗.png` },
+  'YeMingming': { name: '叶冥冥', avatar: `${process.env.PUBLIC_URL}/images/avatars/叶冥冥.png` },
+  'JiFangSheng': { name: '姬方生', avatar: `${process.env.PUBLIC_URL}/images/avatars/姬方生.png` },
+  'LiMan': { name: '李㵘', avatar: `${process.env.PUBLIC_URL}/images/avatars/李㵘.png` },
+  'QiWangyou': { name: '祁忘忧', avatar: `${process.env.PUBLIC_URL}/images/avatars/祁忘忧.png` }
 };
 
 const CardLibraryContainer: React.FC = () => {
@@ -215,7 +215,7 @@ const CardLibraryContainer: React.FC = () => {
                 <div className="phase-divider">
                   <div className="character-header">
                     <img 
-                      src={characterInfo[characterName]?.avatar || '/avatars/default.jpg'} 
+                      src={characterInfo[characterName]?.avatar || `${process.env.PUBLIC_URL}/images/avatars/default.jpg`} 
                       alt={characterInfo[characterName]?.name || characterName}
                       className="character-avatar"
                     />
