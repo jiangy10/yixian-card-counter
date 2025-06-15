@@ -6,6 +6,7 @@ export interface UsedCard {
 
 export interface Player {
   player_username: string;
+  character: string;
   destiny: number;
   destiny_diff: number;
   health: number;
