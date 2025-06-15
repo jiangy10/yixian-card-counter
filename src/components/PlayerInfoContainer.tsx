@@ -13,7 +13,7 @@ const PlayerInfoContainer: React.FC<PlayerInfoContainerProps> = ({ player }) => 
     <div className="player-info-container">
       <div className="player-information">
         <div className="player-info-label-container">
-          <img src={`/images/avatars/${player.character}.png`} alt={player.character} className="character-avatar"/>
+          <img src={`${process.env.PUBLIC_URL}/images/avatars/${player.character}.png`} alt={player.character} className="character-avatar"/>
           <span className="username-label">{player.player_username}</span>
           <span className="player-info-label">修为：{player.cultivation}</span>
           <span className="player-info-label">生命上限：{player.health}</span>
