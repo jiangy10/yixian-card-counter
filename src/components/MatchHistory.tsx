@@ -25,7 +25,15 @@ const MatchHistory: React.FC<MatchHistoryItemProps> = ({
         className="match-history-header"
         onClick={() => onRoundClick(roundNumber)}
       >
-        <span className="round-label">第{roundNumber}回合</span>
+        <div className="header-info">
+          <span className="round-label">第{roundNumber}回合</span>
+          <div className="header-stats">
+            <span>修为 {history.cultivation}</span>
+            <span>生命 {history.health}</span>
+            <span>命元 {history.destiny}({history.destiny_diff})</span>
+            <span>对手 {history.opponent_username}</span>
+          </div>
+        </div>
         <span className={`result-label ${isWin ? 'win' : 'lose'}`}>
           {isWin ? '胜' : '负'}
         </span>
@@ -33,13 +41,6 @@ const MatchHistory: React.FC<MatchHistoryItemProps> = ({
       
       {isExpanded && (
         <div className="match-history-content">
-          <div className="match-info-container">
-            <div className="match-info-label">修为：{history.cultivation}</div>
-            <div className="match-info-label">生命上限：{history.health}</div>
-            <div className="match-info-label">命元：{history.destiny}({history.destiny_diff})</div>
-            <div className="match-info-label">对手：{history.opponent_username}</div>
-          </div>
-          
           <div className="used-cards-container">
             {history.processedCards.map((card, index) => (
               <Card
