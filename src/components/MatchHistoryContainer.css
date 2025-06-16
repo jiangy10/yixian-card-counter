@@ -90,8 +90,7 @@
 
 .used-cards-container {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
 }
 
 .match-history-scroll-view::-webkit-scrollbar {

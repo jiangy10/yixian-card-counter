@@ -1,0 +1,24 @@
+.match-history-card {
+  width: 10%;
+  height: 100px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: none;
+  background: transparent;
+}
+
+.card-name {
+  font-size: 14px;
+  text-align: center;
+  word-break: break-word;
+} 

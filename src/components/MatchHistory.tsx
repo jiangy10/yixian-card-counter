@@ -1,6 +1,6 @@
 import React from 'react';
 import { MatchHistory as MatchHistoryType, Card as CardType } from '../models/model';
-import Card from './Card';
+import MatchHistoryCard from './MatchHistoryCard';
 import './MatchHistory.css';
 
 interface MatchHistoryItemProps {
@@ -43,10 +43,9 @@ const MatchHistory: React.FC<MatchHistoryItemProps> = ({
         <div className="match-history-content">
           <div className="used-cards-container">
             {history.processedCards.map((card, index) => (
-              <Card
+              <MatchHistoryCard
                 key={`${card.name}-${index}`}
                 card={card}
-                inHistory={true}
               />
             ))}
           </div>
