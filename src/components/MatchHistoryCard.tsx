@@ -18,7 +18,7 @@ const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
       <img 
         src={imageSrc}
         alt={card.name}
-        className="card-image"
+        className="match-history-card-image"
       />
     </div>
   );
