@@ -1,18 +1,19 @@
 .match-history-card {
   width: 10%;
-  height: 100px;
   margin: 4px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: transparent;
   overflow: hidden;
 }
 
 .match-history-card-image {
   width: 100%;
-  height: 100%;
+  height: 100px;
   object-fit: contain;
   border: none;
   background: transparent;
+  margin-bottom: 8px;
 }
