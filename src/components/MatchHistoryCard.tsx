@@ -15,7 +15,7 @@ const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
   const imageType = card.type === 'side job' ? 'side-jobs' : card.type.replace(/\s+/g, '_');
   const isNormalAttack = card.name === '普通攻击';
   const imageSrc = isNormalAttack
-    ? `${process.env.PUBLIC_URL}/images/普通攻击.png`
+    ? `${process.env.PUBLIC_URL}/images/普通攻击1.png`
     : `${process.env.PUBLIC_URL}/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}${card.level + 1}.png`;
 
   const handleTrackingClick = async () => {
