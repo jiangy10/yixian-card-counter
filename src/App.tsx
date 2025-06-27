@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import PlayerSelector from './components/PlayerSelector';
-import PlayerInfoContainer from './components/PlayerInfoContainer';
-import TrackingCardContainer from './components/TrackingCardContainer';
+import MatchRecord from './components/MatchRecord';
 import ManageTrackingContainer from './components/ManageTrackingContainer';
-import MatchHistoryContainer from './components/MatchHistoryContainer';
 import CardLibraryContainer from './components/CardLibraryContainer';
 import { TrackingProvider } from './contexts/TrackingContext';
 import { PlayerProvider } from './contexts/PlayerContext';
@@ -255,25 +252,14 @@ const App: React.FC = () => {
         <div className="app-container">
           <div className="counter-container">
             {!isManaging ? (
-              <>
-                <PlayerSelector 
-                  players={roundData.rounds[latestRound].players} 
-                  onPlayerSelect={handlePlayerSelect} 
-                />
-                <PlayerInfoContainer player={selectedPlayer} />
-                <div className="container-wrapper">
-                  <div className="tracking-container" style={{ height: trackingHeight }}>
-                    <TrackingCardContainer cards={displayCards} />
-                  </div>
-                  <div 
-                    className="resizer"
-                    onMouseDown={handleMouseDown}
-                  />
-                  <div className="history-container">
-                    <MatchHistoryContainer matchHistory={selectedPlayer?.match_history} />
-                  </div>
-                </div>
-              </>
+              <MatchRecord
+                players={roundData.rounds[latestRound].players}
+                selectedPlayer={selectedPlayer}
+                displayCards={displayCards}
+                trackingHeight={trackingHeight}
+                onPlayerSelect={handlePlayerSelect}
+                onMouseDown={handleMouseDown}
+              />
             ) : (
               <CardLibraryContainer />
             )}
