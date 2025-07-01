@@ -29,7 +29,7 @@ const App: React.FC = () => {
   const [roundData, setRoundData] = useState<RoundData | null>(null);
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
-  const [activeTab, setActiveTab] = useState<string>('deck');
+  const [activeTab, setActiveTab] = useState<string>('match-record');
   const selectedPlayerRef = useRef<Player | null>(null);
   
   const [trackingHeight, setTrackingHeight] = useState<number>(200);
