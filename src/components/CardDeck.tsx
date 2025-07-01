@@ -54,17 +54,13 @@ const CardDeck: React.FC = () => {
     }
 
     setActivePhases(prev => {
-      // 如果已经选中了'all'，清除它
       const withoutAll = prev.filter(p => p !== 'all');
       
-      // 如果当前phase已经被选中，则移除它
       if (withoutAll.includes(phaseId)) {
         const result = withoutAll.filter(p => p !== phaseId);
-        // 如果移除后没有选中任何phase，则选中'all'
         return result.length === 0 ? ['all'] : result;
       }
       
-      // 否则添加当前phase
       return [...withoutAll, phaseId];
     });
   };
@@ -77,6 +73,27 @@ const CardDeck: React.FC = () => {
       (activePhases.includes('all') || activePhases.includes(card.phase.toString()))
     );
   }, [remainingCards, activeSect, activeSideJob, activePhases]);
+
+  const renderCardsByPhase = (phases: number[]) => {
+    return phases.map(phase => {
+      const phaseCards = filteredCards.filter(card => card.phase === phase);
+      if (phaseCards.length === 0) return null;
+      
+      return (
+        <React.Fragment key={phase}>
+          <div className="phase-divider" />
+          {phaseCards.map(card => (
+            <Card
+              key={`${card.name}-${card.level}`}
+              card={card}
+              inHistory={false}
+              showRecommend={true}
+            />
+          ))}
+        </React.Fragment>
+      );
+    });
+  };
 
   if (!remainingCards || remainingCards.length === 0) {
     return (
@@ -137,33 +154,13 @@ const CardDeck: React.FC = () => {
       <div className="cards-container">
         <div className="card-deck-grid">
           {activePhases.includes('all') ? (
-            [1, 2, 3, 4, 5].map(phase => {
-              const phaseCards = filteredCards.filter(card => card.phase === phase);
-              if (phaseCards.length === 0) return null;
-              
-              return (
-                <React.Fragment key={phase}>
-                  <div className="phase-divider" />
-                  {phaseCards.map(card => (
-                    <Card
-                      key={`${card.name}-${card.level}`}
-                      card={card}
-                      inHistory={false}
-                      showRecommend={true}
-                    />
-                  ))}
-                </React.Fragment>
-              );
-            })
+            renderCardsByPhase([1, 2, 3, 4, 5])
           ) : (
-            filteredCards.map(card => (
-              <Card
-                key={`${card.name}-${card.level}`}
-                card={card}
-                inHistory={false}
-                showRecommend={true}
-              />
-            ))
+            renderCardsByPhase(
+              activePhases
+                .map(phase => parseInt(phase))
+                .sort((a, b) => a - b)
+            )
           )}
         </div>
       </div>
