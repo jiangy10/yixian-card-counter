@@ -10,26 +10,48 @@
 }
 
 .card-deck-title {
-  margin: 0 0 20px 0;
-  color: #ffffff;
-  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
 }
 
 .card-deck-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 10px;
-  overflow-y: auto;
-  flex: 1;
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .card-deck-empty {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  color: #666;
   font-size: 16px;
-  opacity: 0.6;
+}
+
+.card-deck-tabs {
+  margin-bottom: 20px;
+}
+
+.tab-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-button:hover {
+  background-color: #f5f5f5;
+}
+
+.tab-button.active {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.phase-divider {
+  grid-column: 1 / -1;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
 } 
