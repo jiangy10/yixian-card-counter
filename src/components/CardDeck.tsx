@@ -89,7 +89,7 @@ const CardDeck: React.FC = () => {
               inHistory={false}
               tail={
                 <div className="card-tail">
-                  <TrackButton card={card} />
+                  <div>{card.phase === 5 ? 6 : 8 }</div>
                 </div>
               }
             />
