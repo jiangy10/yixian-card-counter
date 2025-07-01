@@ -1,12 +1,16 @@
 import React, { useState, useMemo } from 'react';
 import { usePlayer } from '../contexts/PlayerContext';
-import { Card as CardType } from '../models/model';
+import { Card as CardType, CardOperationLog } from '../models/model';
 import Card, { TrackButton, RecommendLabel } from './Card';
 import './CardDeck.css';
 
 interface Tab {
   id: string;
   label: string;
+}
+
+interface CardDeckProps {
+  cardOperationLog: CardOperationLog;
 }
 
 const sectTabs: Tab[] = [
@@ -35,7 +39,7 @@ const phaseTabs: Tab[] = [
   { id: '5', label: '化神' }
 ];
 
-const CardDeck: React.FC = () => {
+const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const { remainingCards } = usePlayer();
   const [activeSect, setActiveSect] = useState<string>('cloud-spirit');
   const [activeSideJob, setActiveSideJob] = useState<string>('elixirist');
@@ -89,7 +93,7 @@ const CardDeck: React.FC = () => {
               inHistory={false}
               tail={
                 <div className="card-tail">
-                  <div>{card.phase === 5 ? 6 : 8 }</div>
+                  <div>{Math.max(0, (card.phase === 5 ? 6 : 8) - (cardOperationLog.cards[card.name]?.count || 0))}</div>
                 </div>
               }
             />

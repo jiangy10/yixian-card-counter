@@ -7,7 +7,7 @@ import CardManager from './components/CardManager';
 import { TrackingProvider } from './contexts/TrackingContext';
 import { PlayerProvider } from './contexts/PlayerContext';
 import cardLibData from './data/card_lib.json';
-import { Player, RoundData, Card, MatchHistory } from './models/model';
+import { Player, RoundData, Card, MatchHistory, CardOperationLog, CardCount } from './models/model';
 import './App.css';
 
 declare global {
@@ -20,6 +20,7 @@ declare global {
         invoke: (channel: string, ...args: any[]) => Promise<any>;
       };
       onBattleLogUpdated: (callback: () => void) => void;
+      onCardOperationLogUpdated: (callback: () => void) => void;
     };
   }
 }
@@ -28,13 +29,15 @@ const App: React.FC = () => {
   const [roundData, setRoundData] = useState<RoundData | null>(null);
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
-  const [activeTab, setActiveTab] = useState('match-record');
+  const [activeTab, setActiveTab] = useState<string>('deck');
   const selectedPlayerRef = useRef<Player | null>(null);
   
   const [trackingHeight, setTrackingHeight] = useState<number>(200);
   const isDraggingRef = useRef<boolean>(false);
   const startYRef = useRef<number>(0);
   const startHeightRef = useRef<number>(0);
+
+  const [cardOperationLog, setCardOperationLog] = useState<CardOperationLog>({ cards: {} });
 
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
     isDraggingRef.current = true;
@@ -186,6 +189,27 @@ const App: React.FC = () => {
     return removeListener;
   }, []);
 
+  useEffect(() => {
+    const loadCardOperationLog = async () => {
+      try {
+        if (window.electron) {
+          const gamePath = await window.electron.getUserDataPath();
+          const logPath = `${gamePath}/ConvertedCardOperationLog.json`;
+          const content = await window.electron.readFile(logPath);
+          setCardOperationLog(JSON.parse(content));
+        }
+      } catch (error) {
+        console.error('Error loading card operation log:', error);
+      }
+    };
+
+    loadCardOperationLog();
+
+    if (window.electron?.onCardOperationLogUpdated) {
+      window.electron.onCardOperationLogUpdated(loadCardOperationLog);
+    }
+  }, []);
+
   const handlePlayerSelect = (player: Player) => {
     if (!roundData) return;
 
@@ -219,6 +243,7 @@ const App: React.FC = () => {
 
   const renderContent = () => {
     switch (activeTab) {
+
       case 'match-record':
         return (
           <MatchRecord
@@ -229,11 +254,13 @@ const App: React.FC = () => {
             onPlayerSelect={handlePlayerSelect}
             onMouseDown={handleMouseDown}
           />
-        );
+        );  
       case 'card-library':
         return <CardLibraryContainer />;
       case 'card-deck':
-        return <CardDeck />;
+        return (
+          <CardDeck cardOperationLog={cardOperationLog} />
+        );
       default:
         return null;
     }
