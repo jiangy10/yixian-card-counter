@@ -70,4 +70,9 @@
 .multi-select-label input[type="checkbox"] {
   margin: 0;
   cursor: pointer;
+}
+
+.cards-container {
+  flex: 1;
+  overflow-y: auto;
 } 

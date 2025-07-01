@@ -134,36 +134,38 @@ const CardDeck: React.FC = () => {
         </div>
       </div>
 
-      <div className="card-deck-grid">
-        {activePhases.includes('all') ? (
-          [1, 2, 3, 4, 5].map(phase => {
-            const phaseCards = filteredCards.filter(card => card.phase === phase);
-            if (phaseCards.length === 0) return null;
-            
-            return (
-              <React.Fragment key={phase}>
-                <div className="phase-divider" />
-                {phaseCards.map(card => (
-                  <Card
-                    key={`${card.name}-${card.level}`}
-                    card={card}
-                    inHistory={false}
-                    showRecommend={true}
-                  />
-                ))}
-              </React.Fragment>
-            );
-          })
-        ) : (
-          filteredCards.map(card => (
-            <Card
-              key={`${card.name}-${card.level}`}
-              card={card}
-              inHistory={false}
-              showRecommend={true}
-            />
-          ))
-        )}
+      <div className="cards-container">
+        <div className="card-deck-grid">
+          {activePhases.includes('all') ? (
+            [1, 2, 3, 4, 5].map(phase => {
+              const phaseCards = filteredCards.filter(card => card.phase === phase);
+              if (phaseCards.length === 0) return null;
+              
+              return (
+                <React.Fragment key={phase}>
+                  <div className="phase-divider" />
+                  {phaseCards.map(card => (
+                    <Card
+                      key={`${card.name}-${card.level}`}
+                      card={card}
+                      inHistory={false}
+                      showRecommend={true}
+                    />
+                  ))}
+                </React.Fragment>
+              );
+            })
+          ) : (
+            filteredCards.map(card => (
+              <Card
+                key={`${card.name}-${card.level}`}
+                card={card}
+                inHistory={false}
+                showRecommend={true}
+              />
+            ))
+          )}
+        </div>
       </div>
     </div>
   );
