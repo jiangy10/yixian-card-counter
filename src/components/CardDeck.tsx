@@ -39,16 +39,44 @@ const CardDeck: React.FC = () => {
   const { remainingCards } = usePlayer();
   const [activeSect, setActiveSect] = useState<string>('cloud-spirit');
   const [activeSideJob, setActiveSideJob] = useState<string>('elixirist');
-  const [activePhase, setActivePhase] = useState<string>('all');
+  const [activePhases, setActivePhases] = useState<string[]>(['all']);
+  const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
+
+  const handlePhaseClick = (phaseId: string) => {
+    if (phaseId === 'all') {
+      setActivePhases(['all']);
+      return;
+    }
+
+    if (!isPhaseMultiSelect) {
+      setActivePhases([phaseId]);
+      return;
+    }
+
+    setActivePhases(prev => {
+      // 如果已经选中了'all'，清除它
+      const withoutAll = prev.filter(p => p !== 'all');
+      
+      // 如果当前phase已经被选中，则移除它
+      if (withoutAll.includes(phaseId)) {
+        const result = withoutAll.filter(p => p !== phaseId);
+        // 如果移除后没有选中任何phase，则选中'all'
+        return result.length === 0 ? ['all'] : result;
+      }
+      
+      // 否则添加当前phase
+      return [...withoutAll, phaseId];
+    });
+  };
 
   const filteredCards = useMemo(() => {
     if (!remainingCards) return [];
     return remainingCards.filter(card => 
       ((card.type === 'sect' && card.category === activeSect) ||
       (card.type === 'side-jobs' && card.category === activeSideJob)) &&
-      (activePhase === 'all' || card.phase.toString() === activePhase)
+      (activePhases.includes('all') || activePhases.includes(card.phase.toString()))
     );
-  }, [remainingCards, activeSect, activeSideJob, activePhase]);
+  }, [remainingCards, activeSect, activeSideJob, activePhases]);
 
   if (!remainingCards || remainingCards.length === 0) {
     return (
@@ -89,17 +117,25 @@ const CardDeck: React.FC = () => {
           {phaseTabs.map(tab => (
             <button
               key={tab.id}
-              className={`filter-button ${activePhase === tab.id ? 'active' : ''}`}
-              onClick={() => setActivePhase(tab.id)}
+              className={`filter-button ${activePhases.includes(tab.id) ? 'active' : ''}`}
+              onClick={() => handlePhaseClick(tab.id)}
             >
               {tab.label}
             </button>
           ))}
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={isPhaseMultiSelect}
+              onChange={(e) => setIsPhaseMultiSelect(e.target.checked)}
+            />
+            多选
+          </label>
         </div>
       </div>
 
       <div className="card-deck-grid">
-        {activePhase === 'all' ? (
+        {activePhases.includes('all') ? (
           [1, 2, 3, 4, 5].map(phase => {
             const phaseCards = filteredCards.filter(card => card.phase === phase);
             if (phaseCards.length === 0) return null;
