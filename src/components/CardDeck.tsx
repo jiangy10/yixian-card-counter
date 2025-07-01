@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { usePlayer } from '../contexts/PlayerContext';
 import { Card as CardType } from '../models/model';
-import Card from './Card';
+import Card, { TrackButton, RecommendLabel } from './Card';
 import './CardDeck.css';
 
 interface Tab {
@@ -87,7 +87,11 @@ const CardDeck: React.FC = () => {
               key={`${card.name}-${card.level}`}
               card={card}
               inHistory={false}
-              showRecommend={true}
+              tail={
+                <div className="card-tail">
+                  <TrackButton card={card} />
+                </div>
+              }
             />
           ))}
         </React.Fragment>
