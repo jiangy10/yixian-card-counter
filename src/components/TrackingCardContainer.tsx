@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './TrackingCardContainer.css';
 import { Card as CardType } from '../models/model';
-import Card from './Card';
+import Card, { TrackButton, RecommendLabel } from './Card';
 import { useTracking } from '../contexts/TrackingContext';
 
 interface Tab {
@@ -56,6 +56,13 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
             <Card
               key={card.name}
               card={card}
+              inHistory={false}
+              tail={
+                <div className="card-tail">
+                  {card.recommend && <RecommendLabel />}
+                  <TrackButton card={card} />
+                </div>
+              }
             />
           ))}
         </div>

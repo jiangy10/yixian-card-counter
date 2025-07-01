@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import MatchRecord from './components/MatchRecord';
-import ManageTrackingContainer from './components/ManageTrackingContainer';
+import MenuTabContainer from './components/MenuTabContainer';
 import CardLibraryContainer from './components/CardLibraryContainer';
+import CardDeck from './components/CardDeck';
+import CardManager from './components/CardManager';
 import { TrackingProvider } from './contexts/TrackingContext';
 import { PlayerProvider } from './contexts/PlayerContext';
 import cardLibData from './data/card_lib.json';
@@ -26,7 +28,7 @@ const App: React.FC = () => {
   const [roundData, setRoundData] = useState<RoundData | null>(null);
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
-  const [isManaging, setIsManaging] = useState(false);
+  const [activeTab, setActiveTab] = useState('match-record');
   const selectedPlayerRef = useRef<Player | null>(null);
   
   const [trackingHeight, setTrackingHeight] = useState<number>(200);
@@ -184,27 +186,6 @@ const App: React.FC = () => {
     return removeListener;
   }, []);
 
-  useEffect(() => {
-    if (selectedPlayer) {
-      const usedCards = selectedPlayer.used_card;
-      const cardsWithDetails = usedCards
-        .map(usedCard => {
-          const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
-          if (cardInfo) {
-            const card: Card = {
-              ...cardInfo,
-              level: usedCard.level
-            };
-            return card;
-          }
-          return null;
-        })
-        .filter((card): card is NonNullable<typeof card> => card !== null);
-
-      setDisplayCards(cardsWithDetails);
-    }
-  }, [selectedPlayer]);
-
   const handlePlayerSelect = (player: Player) => {
     if (!roundData) return;
 
@@ -236,8 +217,26 @@ const App: React.FC = () => {
     });
   };
 
-  const handleManageClick = () => {
-    setIsManaging(!isManaging);
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'match-record':
+        return (
+          <MatchRecord
+            players={roundData!.rounds[latestRound].players}
+            selectedPlayer={selectedPlayer!}
+            displayCards={displayCards}
+            trackingHeight={trackingHeight}
+            onPlayerSelect={handlePlayerSelect}
+            onMouseDown={handleMouseDown}
+          />
+        );
+      case 'card-library':
+        return <CardLibraryContainer />;
+      case 'card-deck':
+        return <CardDeck />;
+      default:
+        return null;
+    }
   };
 
   if (!roundData || !selectedPlayer) {
@@ -251,19 +250,15 @@ const App: React.FC = () => {
       <TrackingProvider>
         <div className="app-container">
           <div className="counter-container">
-            {!isManaging ? (
-              <MatchRecord
-                players={roundData.rounds[latestRound].players}
-                selectedPlayer={selectedPlayer}
-                displayCards={displayCards}
-                trackingHeight={trackingHeight}
-                onPlayerSelect={handlePlayerSelect}
-                onMouseDown={handleMouseDown}
-              />
-            ) : (
-              <CardLibraryContainer />
-            )}
-            <ManageTrackingContainer onManageClick={handleManageClick} />
+            <CardManager
+              selectedPlayer={selectedPlayer}
+              onDisplayCardsUpdate={setDisplayCards}
+            />
+            {renderContent()}
+            <MenuTabContainer
+              activeTab={activeTab}
+              onTabChange={setActiveTab}
+            />
           </div>
         </div>
       </TrackingProvider>

@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState } from 'react';
+import { Card } from '../models/model';
 
 const SIDE_JOB_NAMES: Record<string, string> = {
   'elixirist': '炼丹师',
@@ -11,37 +12,56 @@ const SIDE_JOB_NAMES: Record<string, string> = {
 };
 
 interface PlayerContextType {
-  sideJobs: string[] | undefined;
-  updateSideJobs: (newSideJobs: string[]) => void;
+  sideJobs: string[];
+  remainingCards: Card[];
+  updateSideJobs: (jobs: string[]) => void;
   resetSideJobs: () => void;
+  updateRemainingCards: (cards: Card[]) => void;
+  resetRemainingCards: () => void;
 }
 
 const PlayerContext = createContext<PlayerContextType | undefined>(undefined);
 
-export const usePlayer = () => {
-  const context = useContext(PlayerContext);
-  if (!context) {
-    throw new Error('usePlayer must be used within a PlayerProvider');
-  }
-  return context;
-};
-
 export const PlayerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [sideJobs, setSideJobs] = useState<string[] | undefined>(undefined);
+  const [sideJobs, setSideJobs] = useState<string[]>([]);
+  const [remainingCards, setRemainingCards] = useState<Card[]>([]);
 
-  const updateSideJobs = useCallback((newSideJobs: string[]) => {
-    // Convert category names to display names
-    const displayNames = newSideJobs.map(job => SIDE_JOB_NAMES[job] || job);
-    setSideJobs(displayNames);
-  }, []);
+  const updateSideJobs = (jobs: string[]) => {
+    setSideJobs(jobs);
+  };
 
-  const resetSideJobs = useCallback(() => {
-    setSideJobs(undefined);
-  }, []);
+  const resetSideJobs = () => {
+    setSideJobs([]);
+  };
+
+  const updateRemainingCards = (cards: Card[]) => {
+    setRemainingCards(cards);
+  };
+
+  const resetRemainingCards = () => {
+    setRemainingCards([]);
+  };
 
   return (
-    <PlayerContext.Provider value={{ sideJobs, updateSideJobs, resetSideJobs }}>
+    <PlayerContext.Provider
+      value={{
+        sideJobs,
+        remainingCards,
+        updateSideJobs,
+        resetSideJobs,
+        updateRemainingCards,
+        resetRemainingCards,
+      }}
+    >
       {children}
     </PlayerContext.Provider>
   );
+};
+
+export const usePlayer = () => {
+  const context = useContext(PlayerContext);
+  if (context === undefined) {
+    throw new Error('usePlayer must be used within a PlayerProvider');
+  }
+  return context;
 }; 

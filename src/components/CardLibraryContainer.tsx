@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Card as CardType } from '../models/model';
-import Card from './Card';
+import Card, { TrackButton, RecommendLabel } from './Card';
 import cardLibData from '../data/card_lib.json';
 import trackingCardsData from '../data/tracking_cards.json';
 import './CardLibraryContainer.css';
@@ -229,7 +229,12 @@ const CardLibraryContainer: React.FC = () => {
                     key={card.name}
                     card={card}
                     inHistory={false}
-                    showRecommend={true}
+                    tail={
+                      <div className="card-tail">
+                        {card.recommend && <RecommendLabel />}
+                        <TrackButton card={card} />
+                      </div>
+                    }
                   />
                 ))}
               </React.Fragment>
@@ -247,7 +252,12 @@ const CardLibraryContainer: React.FC = () => {
                       key={card.name}
                       card={card}
                       inHistory={false}
-                      showRecommend={true}
+                      tail={
+                        <div className="card-tail">
+                          {card.recommend && <RecommendLabel />}
+                          <TrackButton card={card} />
+                        </div>
+                      }
                     />
                   ))}
                 </React.Fragment>
@@ -259,7 +269,12 @@ const CardLibraryContainer: React.FC = () => {
                 key={card.name}
                 card={card}
                 inHistory={false}
-                showRecommend={true}
+                tail={
+                  <div className="card-tail">
+                    {card.recommend && <RecommendLabel />}
+                    <TrackButton card={card} />
+                  </div>
+                }
               />
             ))
           )}

@@ -84,4 +84,26 @@
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 12px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.card-name {
+  flex: 1;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-tail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 } 
