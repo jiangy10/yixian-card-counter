@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useCallback } from 'react';
 import { Card } from '../models/model';
 
 const SIDE_JOB_NAMES: Record<string, string> = {
@@ -26,21 +26,21 @@ export const PlayerProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [sideJobs, setSideJobs] = useState<string[]>([]);
   const [remainingCards, setRemainingCards] = useState<Card[]>([]);
 
-  const updateSideJobs = (jobs: string[]) => {
+  const updateSideJobs = useCallback((jobs: string[]) => {
     setSideJobs(jobs);
-  };
+  }, []);
 
-  const resetSideJobs = () => {
+  const resetSideJobs = useCallback(() => {
     setSideJobs([]);
-  };
+  }, []);
 
-  const updateRemainingCards = (cards: Card[]) => {
+  const updateRemainingCards = useCallback((cards: Card[]) => {
     setRemainingCards(cards);
-  };
+  }, []);
 
-  const resetRemainingCards = () => {
+  const resetRemainingCards = useCallback(() => {
     setRemainingCards([]);
-  };
+  }, []);
 
   return (
     <PlayerContext.Provider

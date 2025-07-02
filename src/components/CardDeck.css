@@ -76,3 +76,20 @@
   flex: 1;
   overflow-y: auto;
 } 
+
+.cards-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+}
+
+.cards-container::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}

@@ -1,12 +1,16 @@
 import React, { useState, useMemo } from 'react';
-import { usePlayer } from '../contexts/PlayerContext';
-import { Card as CardType } from '../models/model';
-import Card, { TrackButton, RecommendLabel } from './Card';
+import { Card as CardType, CardOperationLog } from '../models/model';
+import Card from './Card';
 import './CardDeck.css';
+import cardLibData from '../data/card_lib.json';
 
 interface Tab {
   id: string;
   label: string;
+}
+
+interface CardDeckProps {
+  cardOperationLog: CardOperationLog;
 }
 
 const sectTabs: Tab[] = [
@@ -35,8 +39,7 @@ const phaseTabs: Tab[] = [
   { id: '5', label: '化神' }
 ];
 
-const CardDeck: React.FC = () => {
-  const { remainingCards } = usePlayer();
+const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const [activeSect, setActiveSect] = useState<string>('cloud-spirit');
   const [activeSideJob, setActiveSideJob] = useState<string>('elixirist');
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
@@ -66,13 +69,18 @@ const CardDeck: React.FC = () => {
   };
 
   const filteredCards = useMemo(() => {
-    if (!remainingCards) return [];
-    return remainingCards.filter(card => 
+    const allCards = Object.entries(cardLibData).map(([name, card]) => ({
+      ...card,
+      name,
+      level: -1
+    }));
+
+    return allCards.filter(card => 
       ((card.type === 'sect' && card.category === activeSect) ||
       (card.type === 'side-jobs' && card.category === activeSideJob)) &&
       (activePhases.includes('all') || activePhases.includes(card.phase.toString()))
     );
-  }, [remainingCards, activeSect, activeSideJob, activePhases]);
+  }, [activeSect, activeSideJob, activePhases]);
 
   const renderCardsByPhase = (phases: number[]) => {
     return phases.map(phase => {
@@ -89,7 +97,7 @@ const CardDeck: React.FC = () => {
               inHistory={false}
               tail={
                 <div className="card-tail">
-                  <div>{card.phase === 5 ? 6 : 8 }</div>
+                  <div>{Math.max(0, (card.phase === 5 ? 6 : 8) - (cardOperationLog.cards[card.name]?.count || 0))}</div>
                 </div>
               }
             />
@@ -98,16 +106,6 @@ const CardDeck: React.FC = () => {
       );
     });
   };
-
-  if (!remainingCards || remainingCards.length === 0) {
-    return (
-      <div className="card-deck-container">
-        <div className="card-deck-empty">
-          暂无剩余牌库信息
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="card-deck-container">

@@ -1,8 +1,9 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs/promises';
-import isDev from 'electron-is-dev';
+import * as isDev from 'electron-is-dev';
 import './battleLogConverter';
+import './cardOperationLogConverter';
 
 const GAME_PATH = process.env.mac
   ? path.join(
@@ -133,5 +134,29 @@ ipcMain.handle('writeFile', async (_, filePath: string, data: string) => {
 process.on && process.on('message', (msg: any) => {
   if (msg && msg.type === 'battle-log-updated' && mainWindow) {
     mainWindow.webContents.send('battle-log-updated');
+  }
+});
+
+// 添加IPC处理程序
+ipcMain.handle('get-user-data-path', () => {
+  return GAME_PATH;
+});
+
+ipcMain.handle('read-file', async (_, filePath) => {
+  try {
+    const content = await fs.readFile(filePath, 'utf-8');
+    return content;
+  } catch (error) {
+    console.error('Error reading file:', error);
+    throw error;
+  }
+});
+
+ipcMain.handle('write-file', async (_, filePath, data) => {
+  try {
+    await fs.writeFile(filePath, data, 'utf-8');
+  } catch (error) {
+    console.error('Error writing file:', error);
+    throw error;
   }
 }); 

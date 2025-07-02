@@ -91,3 +91,14 @@ export interface TrackingCardContainerProps {
 export interface ManageTrackingContainerProps {
   onManageClick: () => void;
 }
+
+export interface CardCount {
+  count: number;
+}
+
+export interface CardOperationLog {
+  cards: {
+    [cardName: string]: CardCount;
+  };
+  status?: string;
+}
