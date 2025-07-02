@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Card, Player } from '../models/model';
 import { usePlayer } from '../contexts/PlayerContext';
 import cardLibData from '../data/card_lib.json';
@@ -10,6 +10,10 @@ interface CardManagerProps {
 
 const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCardsUpdate }) => {
   const { updateRemainingCards } = usePlayer();
+
+  const memoizedUpdateRemainingCards = useCallback((cards: Card[]) => {
+    updateRemainingCards(cards);
+  }, [updateRemainingCards]);
 
   useEffect(() => {
     if (selectedPlayer) {
@@ -41,9 +45,9 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
       const remainingCards = allCards.filter(card => !usedCardNames.has(card.name));
 
       // Update remaining cards in context
-      updateRemainingCards(remainingCards);
+      memoizedUpdateRemainingCards(remainingCards);
     }
-  }, [selectedPlayer, onDisplayCardsUpdate, updateRemainingCards]);
+  }, [selectedPlayer, onDisplayCardsUpdate, memoizedUpdateRemainingCards]);
 
   return null;
 };
