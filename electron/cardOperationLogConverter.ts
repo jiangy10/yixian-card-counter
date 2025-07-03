@@ -55,11 +55,15 @@ function convertOperationLogToSample(logContent: string): ConvertedData | { card
 
     operations.forEach((op) => {
       if (op.operation === 0) {
-        if (op.dstCard.name) {
-          if (!cardCounts[op.dstCard.name]) {
-            cardCounts[op.dstCard.name] = { count: 0 };
-          }
-          cardCounts[op.dstCard.name].count += 1;
+        if (op.cards) {
+          op.cards.forEach(card => {
+            if (card.name) {
+              if (!cardCounts[card.name]) {
+                cardCounts[card.name] = { count: 0 };
+              }
+              cardCounts[card.name].count += 1;
+            }
+          });
         }
       }
       

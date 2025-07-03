@@ -27,10 +27,10 @@ declare global {
 
 const App: React.FC = () => {
   const [roundData, setRoundData] = useState<RoundData | null>(null);
-  const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
+  const [selectedPlayer, setSelectedPlayer] = useState<Player | undefined>(undefined);
   const [displayCards, setDisplayCards] = useState<Card[]>([]);
   const [activeTab, setActiveTab] = useState<string>('match-record');
-  const selectedPlayerRef = useRef<Player | null>(null);
+  const selectedPlayerRef = useRef<Player | undefined>(undefined);
   
   const [trackingHeight, setTrackingHeight] = useState<number>(200);
   const isDraggingRef = useRef<boolean>(false);
@@ -81,7 +81,7 @@ const App: React.FC = () => {
         const data = JSON.parse(battleLogContent);
         if (data.status === 'waiting') {
           setRoundData(null);
-          setSelectedPlayer(null);
+          setSelectedPlayer(undefined);
           return;
         }
         setRoundData(data);
@@ -243,12 +243,11 @@ const App: React.FC = () => {
 
   const renderContent = () => {
     switch (activeTab) {
-
       case 'match-record':
         return (
           <MatchRecord
-            players={roundData!.rounds[latestRound].players}
-            selectedPlayer={selectedPlayer!}
+            players={roundData?.rounds[latestRound]?.players}
+            selectedPlayer={selectedPlayer}
             displayCards={displayCards}
             trackingHeight={trackingHeight}
             onPlayerSelect={handlePlayerSelect}
@@ -266,22 +265,20 @@ const App: React.FC = () => {
     }
   };
 
-  if (!roundData || !selectedPlayer) {
-    return <div>等待对战数据中...</div>;
-  }
-
-  const latestRound = Math.max(...Object.keys(roundData.rounds).map(Number));
+  const latestRound = roundData ? Math.max(...Object.keys(roundData.rounds).map(Number)) : 0;
 
   return (
     <PlayerProvider>
       <TrackingProvider>
         <div className="app-container">
           <div className="counter-container">
-            <CardManager
-              selectedPlayer={selectedPlayer}
-              onDisplayCardsUpdate={setDisplayCards}
-            />
-            {renderContent()}
+            <div className="content-area">
+              <CardManager
+                selectedPlayer={selectedPlayer}
+                onDisplayCardsUpdate={setDisplayCards}
+              />
+              {renderContent()}
+            </div>
             <MenuTabContainer
               activeTab={activeTab}
               onTabChange={setActiveTab}

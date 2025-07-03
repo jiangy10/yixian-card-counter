@@ -69,6 +69,46 @@
   border-radius: 5px;
   height: calc(100vh - 40px);
   overflow: hidden;
+  position: relative;
+}
+
+.content-area {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.menu-tab-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2a2a2a;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-top: 1px solid #3a3a3a;
+}
+
+.menu-tab-button {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-tab-button:hover {
+  background-color: #4a4a4a;
+}
+
+.menu-tab-button.active {
+  background-color: #5a5a5a;
 }
 
 :root {

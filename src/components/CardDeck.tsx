@@ -1,13 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import { Card as CardType, CardOperationLog } from '../models/model';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Card as CardType, CardOperationLog, Tab, CardLib } from '../models/model';
 import Card from './Card';
 import './CardDeck.css';
 import cardLibData from '../data/card_lib.json';
-
-interface Tab {
-  id: string;
-  label: string;
-}
 
 interface CardDeckProps {
   cardOperationLog: CardOperationLog;
@@ -40,10 +35,41 @@ const phaseTabs: Tab[] = [
 ];
 
 const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
-  const [activeSect, setActiveSect] = useState<string>('cloud-spirit');
-  const [activeSideJob, setActiveSideJob] = useState<string>('elixirist');
+  const initialTabs = useMemo(() => {
+    const cardEntries = Object.entries(cardOperationLog.cards);
+    if (cardEntries.length === 0) {
+      return { sect: 'cloud-spirit', sideJob: 'elixirist' };
+    }
+
+    const sectCounts: Record<string, number> = {};
+    const sideJobCounts: Record<string, number> = {};
+
+    cardEntries.forEach(([cardName, cardCount]) => {
+      const cardInfo = (cardLibData as Record<string, CardLib>)[cardName];
+      if (!cardInfo) return;
+
+      if (cardInfo.type === 'sect') {
+        sectCounts[cardInfo.category] = (sectCounts[cardInfo.category] || 0) + cardCount.count;
+      } else if (cardInfo.type === 'side-jobs') {
+        sideJobCounts[cardInfo.category] = (sideJobCounts[cardInfo.category] || 0) + cardCount.count;
+      }
+    });
+
+    return {
+      sect: Object.keys(sectCounts).length > 0
+        ? Object.entries(sectCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0]
+        : 'cloud-spirit',
+      sideJob: Object.keys(sideJobCounts).length > 0
+        ? Object.entries(sideJobCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0]
+        : 'elixirist'
+    };
+  }, []);
+
+  const [activeSect, setActiveSect] = useState<string>(initialTabs.sect);
+  const [activeSideJob, setActiveSideJob] = useState<string>(initialTabs.sideJob);
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
+  const [hideEmptyCards, setHideEmptyCards] = useState<boolean>(false);
 
   const handlePhaseClick = (phaseId: string) => {
     if (phaseId === 'all') {
@@ -80,28 +106,44 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
       (card.type === 'side-jobs' && card.category === activeSideJob)) &&
       (activePhases.includes('all') || activePhases.includes(card.phase.toString()))
     );
-  }, [activeSect, activeSideJob, activePhases]);
+  }, [activeSect, activeSideJob, activePhases, hideEmptyCards]);
+
+  const calculateRemainingCount = (cardName: string, phase: number): number => {
+    const maxCount = cardName === '锻体丹' || cardName === '还魂丹' || cardName === '锻体玄丹' 
+      ? 4 
+      : (phase === 5 ? 6 : 8);
+    return Math.max(0, maxCount - (cardOperationLog.cards[cardName]?.count || 0));
+  };
 
   const renderCardsByPhase = (phases: number[]) => {
     return phases.map(phase => {
-      const phaseCards = filteredCards.filter(card => card.phase === phase);
+      const phaseCards = filteredCards.filter(card => {
+        const remainingCount = calculateRemainingCount(card.name, card.phase);
+        return card.phase === phase && (!hideEmptyCards || remainingCount > 0);
+      });
+      
       if (phaseCards.length === 0) return null;
       
       return (
         <React.Fragment key={phase}>
           <div className="phase-divider" />
-          {phaseCards.map(card => (
-            <Card
-              key={`${card.name}-${card.level}`}
-              card={card}
-              inHistory={false}
-              tail={
-                <div className="card-tail">
-                  <div>{Math.max(0, (card.phase === 5 ? 6 : 8) - (cardOperationLog.cards[card.name]?.count || 0))}</div>
-                </div>
-              }
-            />
-          ))}
+          {phaseCards.map(card => {
+            const remainingCount = calculateRemainingCount(card.name, card.phase);
+            return (
+              <Card
+                key={`${card.name}-${card.level}`}
+                card={card}
+                inHistory={false}
+                tail={
+                  <div className="card-tail">
+                    <div>
+                      {remainingCount}
+                    </div>
+                  </div>
+                }
+              />
+            );
+          })}
         </React.Fragment>
       );
     });
@@ -149,6 +191,14 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               onChange={(e) => setIsPhaseMultiSelect(e.target.checked)}
             />
             多选
+          </label>
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={hideEmptyCards}
+              onChange={(e) => setHideEmptyCards(e.target.checked)}
+            />
+            隐藏数量为0的卡牌
           </label>
         </div>
       </div>
