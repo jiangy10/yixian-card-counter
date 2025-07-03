@@ -35,43 +35,40 @@ const phaseTabs: Tab[] = [
 ];
 
 const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
-  const [activeSect, setActiveSect] = useState<string>('cloud-spirit');
-  const [activeSideJob, setActiveSideJob] = useState<string>('elixirist');
+  const initialTabs = useMemo(() => {
+    const cardEntries = Object.entries(cardOperationLog.cards);
+    if (cardEntries.length === 0) {
+      return { sect: 'cloud-spirit', sideJob: 'elixirist' };
+    }
+
+    const sectCounts: Record<string, number> = {};
+    const sideJobCounts: Record<string, number> = {};
+
+    cardEntries.forEach(([cardName, cardCount]) => {
+      const cardInfo = (cardLibData as Record<string, CardLib>)[cardName];
+      if (!cardInfo) return;
+
+      if (cardInfo.type === 'sect') {
+        sectCounts[cardInfo.category] = (sectCounts[cardInfo.category] || 0) + cardCount.count;
+      } else if (cardInfo.type === 'side-jobs') {
+        sideJobCounts[cardInfo.category] = (sideJobCounts[cardInfo.category] || 0) + cardCount.count;
+      }
+    });
+
+    return {
+      sect: Object.keys(sectCounts).length > 0
+        ? Object.entries(sectCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0]
+        : 'cloud-spirit',
+      sideJob: Object.keys(sideJobCounts).length > 0
+        ? Object.entries(sideJobCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0]
+        : 'elixirist'
+    };
+  }, []);
+
+  const [activeSect, setActiveSect] = useState<string>(initialTabs.sect);
+  const [activeSideJob, setActiveSideJob] = useState<string>(initialTabs.sideJob);
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
-
-useEffect(() => {
-  // Initialize sect and side job
-  const cardEntries = Object.entries(cardOperationLog.cards);
-  if (cardEntries.length === 0) return;
-
-  // Find the most used sect
-  const sectCounts: Record<string, number> = {};
-  const sideJobCounts: Record<string, number> = {};
-
-  cardEntries.forEach(([cardName, cardCount]) => {
-    const cardInfo = (cardLibData as Record<string, CardLib>)[cardName];
-    if (!cardInfo) return;
-
-    if (cardInfo.type === 'sect') {
-      sectCounts[cardInfo.category] = (sectCounts[cardInfo.category] || 0) + cardCount.count;
-    } else if (cardInfo.type === 'side-jobs') {
-      sideJobCounts[cardInfo.category] = (sideJobCounts[cardInfo.category] || 0) + cardCount.count;
-    }
-  });
-
-  // Set the most used sect
-  if (Object.keys(sectCounts).length > 0) {
-    const mostUsedSect = Object.entries(sectCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0];
-    setActiveSect(mostUsedSect);
-  }
-
-  // Set the most used side job
-  if (Object.keys(sideJobCounts).length > 0) {
-    const mostUsedSideJob = Object.entries(sideJobCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0];
-    setActiveSideJob(mostUsedSideJob);
-  }
-}, [cardOperationLog]);
 
   const handlePhaseClick = (phaseId: string) => {
     if (phaseId === 'all') {
