@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { watch } from 'chokidar';
 
-const GAME_PATH = process.env.mac
+const GAME_PATH = process.platform === 'darwin'
   ? path.join(
       process.env.HOME || '',
       'Library/Application Support/com.darksun.yixianpai'
