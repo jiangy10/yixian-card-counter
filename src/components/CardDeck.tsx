@@ -97,7 +97,13 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               inHistory={false}
               tail={
                 <div className="card-tail">
-                  <div>{Math.max(0, (card.phase === 5 ? 6 : 8) - (cardOperationLog.cards[card.name]?.count || 0))}</div>
+                  <div>
+                    {Math.max(
+                      0,
+                      (card.name === '锻体丹' || card.name === '还魂丹' || card.name === '锻体玄丹' ? 4 : (card.phase === 5 ? 6 : 8)) - 
+                      (cardOperationLog.cards[card.name]?.count || 0)
+                    )}
+                  </div>
                 </div>
               }
             />
