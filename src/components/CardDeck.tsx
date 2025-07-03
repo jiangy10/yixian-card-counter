@@ -108,14 +108,17 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
     );
   }, [activeSect, activeSideJob, activePhases, hideEmptyCards]);
 
+  const calculateRemainingCount = (cardName: string, phase: number): number => {
+    const maxCount = cardName === '锻体丹' || cardName === '还魂丹' || cardName === '锻体玄丹' 
+      ? 4 
+      : (phase === 5 ? 6 : 8);
+    return Math.max(0, maxCount - (cardOperationLog.cards[cardName]?.count || 0));
+  };
+
   const renderCardsByPhase = (phases: number[]) => {
     return phases.map(phase => {
       const phaseCards = filteredCards.filter(card => {
-        const remainingCount = Math.max(
-          0,
-          (card.name === '锻体丹' || card.name === '还魂丹' || card.name === '锻体玄丹' ? 4 : (card.phase === 5 ? 6 : 8)) - 
-          (cardOperationLog.cards[card.name]?.count || 0)
-        );
+        const remainingCount = calculateRemainingCount(card.name, card.phase);
         return card.phase === phase && (!hideEmptyCards || remainingCount > 0);
       });
       
@@ -125,11 +128,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
         <React.Fragment key={phase}>
           <div className="phase-divider" />
           {phaseCards.map(card => {
-            const remainingCount = Math.max(
-              0,
-              (card.name === '锻体丹' || card.name === '还魂丹' || card.name === '锻体玄丹' ? 4 : (card.phase === 5 ? 6 : 8)) - 
-              (cardOperationLog.cards[card.name]?.count || 0)
-            );
+            const remainingCount = calculateRemainingCount(card.name, card.phase);
             return (
               <Card
                 key={`${card.name}-${card.level}`}
