@@ -4,6 +4,18 @@ export interface UsedCard {
   phase: number;
 }
 
+export interface Tab {
+  id: string;
+  label: string;
+}
+
+export interface CardLib {
+  type: string;
+  category: string;
+  phase: number;
+  recommend: boolean;
+}
+
 export interface Player {
   player_username: string;
   character: string;

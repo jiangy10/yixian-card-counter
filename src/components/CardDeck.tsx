@@ -1,13 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import { Card as CardType, CardOperationLog } from '../models/model';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Card as CardType, CardOperationLog, Tab, CardLib } from '../models/model';
 import Card from './Card';
 import './CardDeck.css';
 import cardLibData from '../data/card_lib.json';
-
-interface Tab {
-  id: string;
-  label: string;
-}
 
 interface CardDeckProps {
   cardOperationLog: CardOperationLog;
@@ -44,6 +39,39 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const [activeSideJob, setActiveSideJob] = useState<string>('elixirist');
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
+
+useEffect(() => {
+  // Initialize sect and side job
+  const cardEntries = Object.entries(cardOperationLog.cards);
+  if (cardEntries.length === 0) return;
+
+  // Find the most used sect
+  const sectCounts: Record<string, number> = {};
+  const sideJobCounts: Record<string, number> = {};
+
+  cardEntries.forEach(([cardName, cardCount]) => {
+    const cardInfo = (cardLibData as Record<string, CardLib>)[cardName];
+    if (!cardInfo) return;
+
+    if (cardInfo.type === 'sect') {
+      sectCounts[cardInfo.category] = (sectCounts[cardInfo.category] || 0) + cardCount.count;
+    } else if (cardInfo.type === 'side-jobs') {
+      sideJobCounts[cardInfo.category] = (sideJobCounts[cardInfo.category] || 0) + cardCount.count;
+    }
+  });
+
+  // Set the most used sect
+  if (Object.keys(sectCounts).length > 0) {
+    const mostUsedSect = Object.entries(sectCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0];
+    setActiveSect(mostUsedSect);
+  }
+
+  // Set the most used side job
+  if (Object.keys(sideJobCounts).length > 0) {
+    const mostUsedSideJob = Object.entries(sideJobCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0];
+    setActiveSideJob(mostUsedSideJob);
+  }
+}, [cardOperationLog]);
 
   const handlePhaseClick = (phaseId: string) => {
     if (phaseId === 'all') {
