@@ -69,6 +69,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const [activeSideJob, setActiveSideJob] = useState<string>(initialTabs.sideJob);
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
+  const [hideEmptyCards, setHideEmptyCards] = useState<boolean>(false);
 
   const handlePhaseClick = (phaseId: string) => {
     if (phaseId === 'all') {
@@ -105,34 +106,45 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
       (card.type === 'side-jobs' && card.category === activeSideJob)) &&
       (activePhases.includes('all') || activePhases.includes(card.phase.toString()))
     );
-  }, [activeSect, activeSideJob, activePhases]);
+  }, [activeSect, activeSideJob, activePhases, hideEmptyCards]);
 
   const renderCardsByPhase = (phases: number[]) => {
     return phases.map(phase => {
-      const phaseCards = filteredCards.filter(card => card.phase === phase);
+      const phaseCards = filteredCards.filter(card => {
+        const remainingCount = Math.max(
+          0,
+          (card.name === '锻体丹' || card.name === '还魂丹' || card.name === '锻体玄丹' ? 4 : (card.phase === 5 ? 6 : 8)) - 
+          (cardOperationLog.cards[card.name]?.count || 0)
+        );
+        return card.phase === phase && (!hideEmptyCards || remainingCount > 0);
+      });
+      
       if (phaseCards.length === 0) return null;
       
       return (
         <React.Fragment key={phase}>
           <div className="phase-divider" />
-          {phaseCards.map(card => (
-            <Card
-              key={`${card.name}-${card.level}`}
-              card={card}
-              inHistory={false}
-              tail={
-                <div className="card-tail">
-                  <div>
-                    {Math.max(
-                      0,
-                      (card.name === '锻体丹' || card.name === '还魂丹' || card.name === '锻体玄丹' ? 4 : (card.phase === 5 ? 6 : 8)) - 
-                      (cardOperationLog.cards[card.name]?.count || 0)
-                    )}
+          {phaseCards.map(card => {
+            const remainingCount = Math.max(
+              0,
+              (card.name === '锻体丹' || card.name === '还魂丹' || card.name === '锻体玄丹' ? 4 : (card.phase === 5 ? 6 : 8)) - 
+              (cardOperationLog.cards[card.name]?.count || 0)
+            );
+            return (
+              <Card
+                key={`${card.name}-${card.level}`}
+                card={card}
+                inHistory={false}
+                tail={
+                  <div className="card-tail">
+                    <div>
+                      {remainingCount}
+                    </div>
                   </div>
-                </div>
-              }
-            />
-          ))}
+                }
+              />
+            );
+          })}
         </React.Fragment>
       );
     });
@@ -180,6 +192,14 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               onChange={(e) => setIsPhaseMultiSelect(e.target.checked)}
             />
             多选
+          </label>
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={hideEmptyCards}
+              onChange={(e) => setHideEmptyCards(e.target.checked)}
+            />
+            隐藏数量为0的卡牌
           </label>
         </div>
       </div>
