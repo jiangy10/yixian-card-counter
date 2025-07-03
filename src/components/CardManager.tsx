@@ -4,7 +4,7 @@ import { usePlayer } from '../contexts/PlayerContext';
 import cardLibData from '../data/card_lib.json';
 
 interface CardManagerProps {
-  selectedPlayer: Player | null;
+  selectedPlayer: Player | undefined;
   onDisplayCardsUpdate: (cards: Card[]) => void;
 }
 
