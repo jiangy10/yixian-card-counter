@@ -4,7 +4,7 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: './public/favicon.ico'
+    icon: process.platform === 'darwin' ? './public/favicon.icns' : './public/favicon.ico'
   },
   rebuildConfig: {},
   makers: [
