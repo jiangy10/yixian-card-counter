@@ -4,8 +4,9 @@ import * as fs from 'fs/promises';
 import isDev from 'electron-is-dev';
 import './battleLogConverter';
 import './cardOperationLogConverter';
+import { fork } from 'child_process';
 
-const GAME_PATH = process.env.mac
+const GAME_PATH = process.platform === 'darwin'
   ? path.join(
       process.env.HOME || '',
       'Library/Application Support/com.darksun.yixianpai'
