@@ -1,10 +1,9 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, Menu } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs/promises';
 import isDev from 'electron-is-dev';
 import './battleLogConverter';
 import './cardOperationLogConverter';
-import { fork } from 'child_process';
 
 const GAME_PATH = process.platform === 'darwin'
   ? path.join(
@@ -48,6 +47,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -55,6 +55,8 @@ function createWindow() {
       sandbox: false
     }
   });
+
+  Menu.setApplicationMenu(null);
 
   // Load React application
   if (isDev) {
