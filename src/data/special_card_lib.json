@@ -1,0 +1,52 @@
+{
+    "幻•暗鸦灵剑": {
+        "name": "幻•暗鸦灵剑",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    },
+    "幻•轻剑":{
+        "name": "幻•轻剑",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+
+    },
+    "幻•引气剑": {
+        "name": "幻•引气剑",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    },
+    "幻•飞牙剑": {
+        "name": "幻•飞牙剑",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    },
+    "幻•云剑探云": {
+        "name": "幻•云剑探云",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    },
+    "幻•云剑无锋": {
+        "name": "幻•云剑无锋",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    },
+    "幻•灵犀剑阵": {
+        "name": "幻•灵犀剑阵",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    }
+}
