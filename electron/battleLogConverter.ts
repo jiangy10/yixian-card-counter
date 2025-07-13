@@ -2,11 +2,29 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { watch } from 'chokidar';
 
-const GAME_PATH = process.platform === 'darwin'
-  ? path.join(
+const findMacGamePath = () => {
+  const paths = [
+    path.join(
       process.env.HOME || '',
       'Library/Application Support/com.darksun.yixianpai'
+    ),
+    path.join(
+      process.env.HOME || '',
+      'Library/Containers/com.darksun.yixianpai/Data/Library/Application Support/com.darksun.yixianpai'
     )
+  ];
+
+  for (const p of paths) {
+    if (fs.existsSync(path.join(p, 'BattleLog.json'))) {
+      return p;
+    }
+  }
+
+  return paths[0];
+};
+
+const GAME_PATH = process.platform === 'darwin'
+  ? findMacGamePath()
   : path.join(
       process.env.USERPROFILE || '',
       'AppData',
