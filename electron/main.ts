@@ -4,19 +4,9 @@ import * as fs from 'fs/promises';
 import isDev from 'electron-is-dev';
 import './battleLogConverter';
 import './cardOperationLogConverter';
+import { getGamePath } from './utils';
 
-const GAME_PATH = process.platform === 'darwin'
-  ? path.join(
-      process.env.HOME || '',
-      'Library/Application Support/com.darksun.yixianpai'
-    )
-  : path.join(
-      process.env.USERPROFILE || '',
-      'AppData',
-      'LocalLow',
-      'DarkSunStudio',
-      'YiXianPai'
-    );
+const GAME_PATH = getGamePath();
 
 let mainWindow: BrowserWindow | null = null;
 
