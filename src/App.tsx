@@ -77,7 +77,8 @@ const App: React.FC = () => {
     const loadBattleLog = async () => {
       try {
         const gamePath = await window.electron.getUserDataPath();
-        const battleLogContent = await window.electron.readFile(`${gamePath}/ConvertedBattleLog.json`);
+        const battleLogPath = `${gamePath}/ConvertedBattleLog.json`;
+        const battleLogContent = await window.electron.readFile(battleLogPath);
         const data = JSON.parse(battleLogContent);
         if (data.status === 'waiting') {
           setRoundData(null);

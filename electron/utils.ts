@@ -2,32 +2,30 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export const findMacGamePath = () => {
-  const searchBattleLog = (dir: string): string | null => {
+  const checkPath = (basePath: string): string | null => {
     try {
-      const files = fs.readdirSync(dir);
-      for (const file of files) {
-        const fullPath = path.join(dir, file);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && file.includes('com.darksun.yixianpai')) {
-          if (fs.existsSync(path.join(fullPath, 'BattleLog.json'))) {
-            return fullPath;
-          }
-        }
+      if (fs.existsSync(path.join(basePath, 'BattleLog.json'))) {
+        return basePath;
       }
-    } catch (error) {
-      console.error('Error searching for BattleLog.json:', error);
+      const deepPath = path.join(basePath, 'Data', 'Library', 'Application Support', 'com.darksun.yixianpai');
+      if (fs.existsSync(path.join(deepPath, 'BattleLog.json'))) {
+        return deepPath;
+      }
+    } catch (error: any) {
+      if (error?.code !== 'EPERM' && error?.code !== 'ENAMETOOLONG') {
+        console.error('Error checking path:', error);
+      }
     }
     return null;
   };
 
-  const searchPaths = [
-    path.join(process.env.HOME || '', 'Library'),
-    path.join(process.env.HOME || '', 'Library/Containers'),
+  const possiblePaths = [
+    path.join(process.env.HOME || '', 'Library/Containers/com.darksun.yixianpai'),
+    path.join(process.env.HOME || '', 'Library/Application Support/com.darksun.yixianpai')
   ];
 
-  for (const searchPath of searchPaths) {
-    const result = searchBattleLog(searchPath);
+  for (const possiblePath of possiblePaths) {
+    const result = checkPath(possiblePath);
     if (result) {
       return result;
     }
