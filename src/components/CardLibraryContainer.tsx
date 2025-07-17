@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Card as CardType } from '../models/model';
 import Card, { TrackButton, RecommendLabel } from './Card';
 import cardLibData from '../data/card_lib.json';
+import specialCardLibData from '../data/special_card_lib.json';
 import trackingCardsData from '../data/tracking_cards.json';
 import './CardLibraryContainer.css';
 
@@ -127,9 +128,22 @@ const CardLibraryContainer: React.FC = () => {
     const allCards: CardType[] = [];
     const trackedCardNames = Object.keys(trackingCardsData);
     
-    Object.entries(cardLibData).forEach(([name, card]) => {
-      if (activeType === 'personal') {
-        if (card.type === 'personal' && personalSectMap[card.category] === activeCategory) {
+    const processCardLibrary = (libData: Record<string, any>) => {
+      Object.entries(libData).forEach(([name, card]) => {
+        if (activeType === 'personal') {
+          if (card.type === 'personal' && personalSectMap[card.category] === activeCategory) {
+            allCards.push({
+              ...card,
+              name,
+              level: -1,
+              isTracking: trackedCardNames.includes(name)
+            });
+          }
+        } else if (
+          (activeType === 'side-jobs' ? card.type === 'side-jobs' : card.type === activeType) &&
+          card.category === activeCategory &&
+          (activePhase === 'all' || card.phase.toString() === activePhase)
+        ) {
           allCards.push({
             ...card,
             name,
@@ -137,19 +151,12 @@ const CardLibraryContainer: React.FC = () => {
             isTracking: trackedCardNames.includes(name)
           });
         }
-      } else if (
-        (activeType === 'side-jobs' ? card.type === 'side-jobs' : card.type === activeType) &&
-        card.category === activeCategory &&
-        (activePhase === 'all' || card.phase.toString() === activePhase)
-      ) {
-        allCards.push({
-          ...card,
-          name,
-          level: -1,
-          isTracking: trackedCardNames.includes(name)
-        });
-      }
-    });
+      });
+    };
+
+    processCardLibrary(cardLibData);
+    processCardLibrary(specialCardLibData);
+    
     return allCards;
   }, [activeType, activeCategory, activePhase]);
 
