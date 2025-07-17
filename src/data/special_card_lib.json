@@ -90,5 +90,54 @@
         "type": "seasonal",
         "category": "cloud-spirit",
         "recommend": false
+    },
+    "幻•火灵聚炎": {
+        "name": "幻•火灵聚炎",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
+    "幻•木灵复苏": {
+        "name": "幻•木灵复苏",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
+    "幻•金灵针": {
+        "name": "幻•金灵针",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
+    "幻•水灵波澜": {
+        "name": "幻•水灵波澜",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
+    "幻•五行流转": {
+        "name": "幻•五行流转",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
+    "幻•土灵群山": {
+        "name": "幻•土灵群山",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
+    "幻•混天印": {
+        "name": "幻•混天印",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
     }
 }

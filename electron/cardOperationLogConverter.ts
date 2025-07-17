@@ -1,18 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { getGamePath } from './utils';
 
-const GAME_PATH = process.platform === 'darwin'
-  ? path.join(
-      process.env.HOME || '',
-      'Library/Application Support/com.darksun.yixianpai'
-    )
-  : path.join(
-      process.env.USERPROFILE || '',
-      'AppData',
-      'LocalLow',
-      'DarkSunStudio',
-      'YiXianPai'
-    );
+const GAME_PATH = getGamePath();
 
 interface Card {
   name: string | null;
