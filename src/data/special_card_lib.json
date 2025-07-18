@@ -84,7 +84,21 @@
         "category": "heptastar",
         "recommend": false
     },
-    "幻•飞星刺": {
+    "幻•落花有意": {
+        "name": "幻•落花有意",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "heptastar",
+        "recommend": false
+    },
+    "幻•两仪阵": {
+        "name": "幻•两仪阵",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "heptastar",
+        "recommend": false
+    },
+    "幻•飞星刺": {  
         "name": "幻•飞星刺",
         "phase": 4,
         "type": "seasonal",
