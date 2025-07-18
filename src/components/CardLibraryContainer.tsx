@@ -62,6 +62,7 @@ const personalSectMap: Record<string, string> = {
   'YaoLing': 'heptastar',
   'JiangXiming': 'heptastar',
   'WuCe': 'heptastar',
+  'FengXu': 'heptastar',
   'WuXingzhi': 'five-element',
   'DuLingyuan': 'five-element',
   'HuaQinrui': 'five-element',
@@ -116,7 +117,8 @@ const characterInfo: Record<string, { name: string; avatar: string }> = {
   'YeMingming': { name: '叶冥冥', avatar: `${process.env.PUBLIC_URL}/images/avatars/叶冥冥.png` },
   'JiFangSheng': { name: '姬方生', avatar: `${process.env.PUBLIC_URL}/images/avatars/姬方生.png` },
   'LiMan': { name: '李㵘', avatar: `${process.env.PUBLIC_URL}/images/avatars/李㵘.png` },
-  'QiWangyou': { name: '祁忘忧', avatar: `${process.env.PUBLIC_URL}/images/avatars/祁忘忧.png` }
+  'QiWangyou': { name: '祁忘忧', avatar: `${process.env.PUBLIC_URL}/images/avatars/祁忘忧.png` },
+  'FengXu': { name: '风绪', avatar: `${process.env.PUBLIC_URL}/images/avatars/风绪.png` }
 };
 
 const CardLibraryContainer: React.FC = () => {
