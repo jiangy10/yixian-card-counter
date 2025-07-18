@@ -18,25 +18,64 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
 
   useEffect(() => {
     if (selectedPlayer) {
-      const usedCards = selectedPlayer.used_card;
-      const cardsWithDetails = usedCards
+      // get all used cards
+      const allUsedCards: {name: string, level: number}[] = [];
+      const cardNameSet = new Set<string>();
+      
+      selectedPlayer.used_card.forEach(card => {
+        const cardKey = `${card.name}-${card.level}`;
+        if (!cardNameSet.has(cardKey)) {
+          allUsedCards.push(card);
+          cardNameSet.add(cardKey);
+        }
+      });
+      
+      if (selectedPlayer.match_history) {
+        Object.values(selectedPlayer.match_history).forEach(history => {
+          history.used_card.forEach(card => {
+            const cardKey = `${card.name}-${card.level}`;
+            if (!cardNameSet.has(cardKey)) {
+              allUsedCards.push({name: card.name, level: card.level});
+              cardNameSet.add(cardKey);
+            }
+          });
+        });
+      }
+
+      const cardsWithDetails = allUsedCards
         .map(usedCard => {
           const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name] ||
                          (specialCardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
           if (cardInfo) {
+            let type = cardInfo.type;
+            if (type === 'side-jobs') {
+              type = 'side job';
+            } else if (type === 'fortune') {
+              type = 'opportunity';
+            }
+            
             const card: Card = {
               ...cardInfo,
-              level: usedCard.level
+              name: usedCard.name,
+              level: usedCard.level,
+              type: type
             };
             return card;
           }
-          return null;
-        })
-        .filter((card): card is NonNullable<typeof card> => card !== null);
+          
+          return {
+            name: usedCard.name,
+            level: usedCard.level,
+            phase: 1,
+            type: 'unknown',
+            category: 'unknown',
+            recommend: false
+          } as Card;
+        });
 
       onDisplayCardsUpdate(cardsWithDetails);
 
-      // Calculate remaining cards
+      // calculate remaining cards
       const allCards = [
         ...Object.entries(cardLibData),
         ...Object.entries(specialCardLibData)
@@ -46,10 +85,9 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
         level: -1
       }));
 
-      const usedCardNames = new Set(usedCards.map(card => card.name));
+      const usedCardNames = new Set(allUsedCards.map(card => card.name));
       const remainingCards = allCards.filter(card => !usedCardNames.has(card.name));
 
-      // Update remaining cards in context
       memoizedUpdateRemainingCards(remainingCards);
     }
   }, [selectedPlayer, onDisplayCardsUpdate, memoizedUpdateRemainingCards]);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import './TrackingCardContainer.css';
 import { Card as CardType } from '../models/model';
 import Card, { TrackButton, RecommendLabel } from './Card';
@@ -24,15 +24,38 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
   const [activeTab, setActiveTab] = useState('all');
   const { trackedCards } = useTracking();
 
-  const filteredCards = activeTab === 'all' 
-    ? cards.filter(card => trackedCards[card.name])
-    : cards.filter(card => {
-        if (!trackedCards[card.name]) return false;
-        if (activeTab === 'side-jobs') {
-          return card.type === 'side job';
-        }
-        return card.type.toLowerCase() === activeTab;
-      });
+  const trackedFilteredCards = useMemo(() => {
+    const tracked = cards.filter(card => trackedCards[card.name]);
+    
+    const cardGroups = tracked.reduce<Record<string, CardType>>((groups, card) => {
+      if (!groups[card.name] || groups[card.name].level < card.level) {
+        groups[card.name] = card;
+      }
+      return groups;
+    }, {});
+
+    return Object.values(cardGroups);
+  }, [cards, trackedCards]);
+
+  const filteredCards = useMemo(() => {
+    if (activeTab === 'all') {
+      return trackedFilteredCards;
+    }
+
+    return trackedFilteredCards.filter(card => {
+      const cardType = card.type.toLowerCase();
+      switch (activeTab) {
+        case 'side-jobs':
+          return cardType === 'side job' || cardType === 'side-jobs';
+        case 'opportunity':
+          return cardType === 'opportunity' || cardType === 'fortune';
+        case 'sect':
+          return cardType === 'sect';
+        default:
+          return false;
+      }
+    });
+  }, [activeTab, trackedFilteredCards]);
 
   return (
     <div className="tracking-card-container">
