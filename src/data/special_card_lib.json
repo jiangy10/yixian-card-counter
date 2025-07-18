@@ -112,6 +112,13 @@
         "category": "five-element",
         "recommend": false
     },
+    "幻•土灵阵": {
+        "name": "幻•土灵阵",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
     "幻•水灵波澜": {
         "name": "幻•水灵波澜",
         "phase": 5,
@@ -135,6 +142,13 @@
     },
     "幻•浑天印": {
         "name": "幻•浑天印",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "five-element",
+        "recommend": false
+    },
+    "幻•金灵印": {
+        "name": "幻•金灵印",
         "phase": 5,
         "type": "seasonal",
         "category": "five-element",
