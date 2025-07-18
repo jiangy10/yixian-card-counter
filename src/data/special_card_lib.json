@@ -188,5 +188,19 @@
         "type": "seasonal",
         "category": "duan-xuan",
         "recommend": false
+    },
+    "幻•浩然正气": {
+        "name": "幻•浩然正气",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
+    },
+    "幻•崩拳缠": {
+        "name": "幻•崩拳缠",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
     }
 }
