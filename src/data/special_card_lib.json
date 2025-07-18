@@ -49,6 +49,20 @@
         "category": "cloud-spirit",
         "recommend": false
     },
+    "幻•云舞诀": {
+        "name": "幻•云舞诀",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    },
+    "幻•狂剑盘龙": {
+        "name": "幻•狂剑盘龙",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "recommend": false
+    },
     "幻•斩草除根": {
         "name": "幻•斩草除根",
         "phase": 4,
