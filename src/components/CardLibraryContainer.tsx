@@ -3,7 +3,7 @@ import { Card as CardType } from '../models/model';
 import Card, { TrackButton, RecommendLabel } from './Card';
 import cardLibData from '../data/card_lib.json';
 import specialCardLibData from '../data/special_card_lib.json';
-import trackingCardsData from '../data/tracking_cards.json';
+import { useTracking } from '../contexts/TrackingContext';
 import './CardLibraryContainer.css';
 
 interface Tab {
@@ -125,10 +125,10 @@ const CardLibraryContainer: React.FC = () => {
   const [activeType, setActiveType] = useState<string>('sect');
   const [activeCategory, setActiveCategory] = useState<string>('cloud-spirit');
   const [activePhase, setActivePhase] = useState<string>('all');
+  const { trackedCards } = useTracking();
 
   const cards = useMemo(() => {
     const allCards: CardType[] = [];
-    const trackedCardNames = Object.keys(trackingCardsData);
     
     const processCardLibrary = (libData: Record<string, any>) => {
       Object.entries(libData).forEach(([name, card]) => {
@@ -138,7 +138,7 @@ const CardLibraryContainer: React.FC = () => {
               ...card,
               name,
               level: -1,
-              isTracking: trackedCardNames.includes(name)
+              isTracking: trackedCards[name] || false
             });
           }
         } else if (
@@ -150,7 +150,7 @@ const CardLibraryContainer: React.FC = () => {
             ...card,
             name,
             level: -1,
-            isTracking: trackedCardNames.includes(name)
+            isTracking: trackedCards[name] || false
           });
         }
       });
@@ -160,7 +160,7 @@ const CardLibraryContainer: React.FC = () => {
     processCardLibrary(specialCardLibData);
     
     return allCards;
-  }, [activeType, activeCategory, activePhase]);
+  }, [activeType, activeCategory, activePhase, trackedCards]);
 
   return (
     <div className="card-library-container">
