@@ -3,6 +3,7 @@ import { Card as CardType, CardOperationLog, Tab, CardLib } from '../models/mode
 import Card from './Card';
 import './CardDeck.css';
 import cardLibData from '../data/card_lib.json';
+import specialCardLibData from '../data/special_card_lib.json';
 
 interface CardDeckProps {
   cardOperationLog: CardOperationLog;
@@ -45,7 +46,8 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
     const sideJobCounts: Record<string, number> = {};
 
     cardEntries.forEach(([cardName, cardCount]) => {
-      const cardInfo = (cardLibData as Record<string, CardLib>)[cardName];
+      const cardInfo = (cardLibData as Record<string, CardLib>)[cardName] ||
+                      (specialCardLibData as Record<string, CardLib>)[cardName];
       if (!cardInfo) return;
 
       if (cardInfo.type === 'sect') {
@@ -95,7 +97,10 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   };
 
   const filteredCards = useMemo(() => {
-    const allCards = Object.entries(cardLibData).map(([name, card]) => ({
+    const allCards = [
+      ...Object.entries(cardLibData),
+      ...Object.entries(specialCardLibData)
+    ].map(([name, card]) => ({
       ...card,
       name,
       level: -1

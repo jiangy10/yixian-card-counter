@@ -3232,5 +3232,33 @@
     "type": "personal",
     "category": "QiWangyou",
     "recommend": false
+  },
+  "阴符玉简":{
+    "name": "阴符玉简",
+    "phase": 2,
+    "type": "personal",
+    "category": "FengXu",
+    "recommend": false
+  },
+  "孤虚金书":{
+    "name": "孤虚金书",
+    "phase": 5,
+    "type": "personal",
+    "category": "FengXu",
+    "recommend": false
+  },
+  "背孤":{
+    "name": "背孤",
+    "phase": 5,
+    "type": "personal",
+    "category": "FengXu",
+    "recommend": false
+  },
+  "击虚":{
+    "name": "击虚",
+    "phase": 5,
+    "type": "personal",
+    "category": "FengXu",
+    "recommend": false
   }
 }

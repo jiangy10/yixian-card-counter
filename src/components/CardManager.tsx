@@ -2,6 +2,7 @@ import React, { useEffect, useCallback } from 'react';
 import { Card, Player } from '../models/model';
 import { usePlayer } from '../contexts/PlayerContext';
 import cardLibData from '../data/card_lib.json';
+import specialCardLibData from '../data/special_card_lib.json';
 
 interface CardManagerProps {
   selectedPlayer: Player | undefined;
@@ -20,7 +21,8 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
       const usedCards = selectedPlayer.used_card;
       const cardsWithDetails = usedCards
         .map(usedCard => {
-          const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
+          const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name] ||
+                         (specialCardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
           if (cardInfo) {
             const card: Card = {
               ...cardInfo,
@@ -35,7 +37,10 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
       onDisplayCardsUpdate(cardsWithDetails);
 
       // Calculate remaining cards
-      const allCards = Object.entries(cardLibData).map(([name, card]) => ({
+      const allCards = [
+        ...Object.entries(cardLibData),
+        ...Object.entries(specialCardLibData)
+      ].map(([name, card]) => ({
         ...card,
         name,
         level: -1

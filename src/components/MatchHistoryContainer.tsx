@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { MatchHistory, Card as CardType, UsedCard } from '../models/model';
 import Card from './Card';
 import cardLibData from '../data/card_lib.json';
+import specialCardLibData from '../data/special_card_lib.json';
 import { usePlayer } from '../contexts/PlayerContext';
 import MatchHistoryItem from './MatchHistory';
 import './MatchHistoryContainer.css';
@@ -15,7 +16,8 @@ const processCards = (history: MatchHistory) => {
   const detectedSideJobs = new Set<string>();
   
   const processedCards = history.used_card.map(usedCard => {
-    const cardInfo = (cardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name];
+    const cardInfo = (cardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name] || 
+                    (specialCardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name];
     if (cardInfo) {
       const card: CardType = {
         ...cardInfo,
