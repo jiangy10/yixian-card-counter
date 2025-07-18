@@ -139,5 +139,54 @@
         "type": "seasonal",
         "category": "five-element",
         "recommend": false
+    },
+    "幻•血气方刚": {
+        "name": "幻•血气方刚",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
+    },
+    "幻•锻骨": {
+        "name": "幻•锻骨",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
+    },
+    "幻•气沉丹田": {
+        "name": "幻•气沉丹田",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
+    },
+    "幻•岿然不动": {
+        "name": "幻•岿然不动",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
+    },
+    "幻•双鬼拍门": {
+        "name": "幻•双鬼拍门",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
+    },
+    "幻•罗刹扑": {
+        "name": "幻•罗刹扑",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
+    },
+    "幻•崩拳戳": {
+        "name": "幻•崩拳戳",
+        "phase": 5,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "recommend": false
     }
 }
