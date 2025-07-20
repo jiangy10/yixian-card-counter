@@ -4,3261 +4,3726 @@
     "phase": 1,
     "type": "",
     "category": "",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•探云": {
     "name": "云剑•探云",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•飞刺": {
     "name": "云剑•飞刺",
     "phase": 1, 
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•厚土": {
     "name": "云剑•厚土",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "轻剑": {
     "name": "轻剑", 
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "护身灵气": {
     "name": "护身灵气",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵气灌注": {
     "name": "灵气灌注",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "巨虎灵剑": {
     "name": "巨虎灵剑",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "震雷剑": {
     "name": "震雷剑",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "剑劈": {
     "name": "剑劈",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "剑挡": {
     "name": "剑挡",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "飞牙剑": {
     "name": "飞牙剑",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "骤风剑": {
     "name": "骤风剑",
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•回守": {
     "name": "云剑•回守",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•极意": {
     "name": "云剑•极意",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•无锋": {
     "name": "云剑•无锋",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "化灵诀": {
     "name": "化灵诀",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "引气剑": {
     "name": "引气剑",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "巨鲸灵剑": {
     "name": "巨鲸灵剑",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "凝意诀": {
     "name": "凝意诀",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵犀剑阵": {
     "name": "灵犀剑阵",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "地煞剑": {
     "name": "地煞剑",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "形意剑": {
     "name": "形意剑",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂剑•一式": {
     "name": "狂剑•一式",
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•柔心": {
     "name": "云剑•柔心",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•无妄": {
     "name": "云剑•无妄",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•点星": {
     "name": "云剑•点星",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•汇灵": {
     "name": "云剑•汇灵",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云舞诀": {
     "name": "云舞诀",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "暗鸦灵剑": {
     "name": "暗鸦灵剑",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "破气剑": {
     "name": "破气剑",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "巨鹏灵剑": {
     "name": "巨鹏灵剑",
     "phase": 3, 
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "反身剑": {
     "name": "反身剑",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "镜花剑阵": {
     "name": "镜花剑阵",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "三峰剑": {
     "name": "三峰剑",
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•闪风": {
     "name": "云剑•闪风",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•月影": {
     "name": "云剑•月影",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "聚灵心法": {
     "name": "聚灵心法",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "百鸟灵剑诀": {
     "name": "百鸟灵剑诀",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "白鹭灵剑": {
     "name": "白鹭灵剑",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "巨鲲灵剑": {
     "name": "巨鲲灵剑",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵感剑": {
     "name": "灵感剑",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "流云乱剑": {
     "name": "流云乱剑",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水月剑阵": {
     "name": "水月剑阵",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂剑•二式": {
     "name": "狂剑•二式",
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•游龙": {
     "name": "云剑•游龙",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•凌波": {
     "name": "云剑•凌波",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "飞灵闪影剑": {
     "name": "飞灵闪影剑",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "万法归灵剑": {
     "name": "万法归灵剑",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "剑意激荡": {
     "name": "剑意激荡",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "御空剑阵": {
     "name": "御空剑阵",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "连环剑阵": {
     "name": "连环剑阵",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂剑•零式": {
     "name": "狂剑•零式",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "斗转星移": {
     "name": "斗转星移",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星罗棋布": {
     "name": "星罗棋布",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•挡": {
     "name": "星弈•挡",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•夹": {
     "name": "星弈•夹",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "震卦": {
     "name": "震卦",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "坤卦": {
     "name": "坤卦",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "巽卦": {
     "name": "巽卦",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "掌心雷": {
     "name": "掌心雷",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "白鹤亮翅": {
     "name": "白鹤亮翅",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "揽雀尾": {
     "name": "揽雀尾",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "野马分鬃": {
     "name": "野马分鬃",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "藕断丝连": {
     "name": "藕断丝连",
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "飞星刺": {
     "name": "飞星刺",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•点": {
     "name": "星弈•点",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•立": {
     "name": "星弈•立",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "艮卦": {
     "name": "艮卦",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "坎卦": {
     "name": "坎卦",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "落雷术": {
     "name": "落雷术",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "斩草除根": {
     "name": "斩草除根",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金鸡独立": {
     "name": "金鸡独立",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "静气心法": {
     "name": "静气心法",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "落花有意": {
     "name": "落花有意",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "气贯长虹": {
     "name": "气贯长虹",
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "众星拱月": {
     "name": "众星拱月",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•打": {
     "name": "星弈•打",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "兑卦": {
     "name": "兑卦",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "白蛇吐信": {
     "name": "白蛇吐信",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "御雷卦诀": {
     "name": "御雷卦诀",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "两仪阵": {
     "name": "两仪阵",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "流水无情": {
     "name": "流水无情",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "气疗术": {
     "name": "气疗术",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "枯木逢春": {
     "name": "枯木逢春",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "螳螂捕蝉": {
     "name": "螳螂捕蝉",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "海底捞月": {
     "name": "海底捞月",
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•飞": {
     "name": "星弈•飞",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•虎": {
     "name": "星弈•虎",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "六爻绝阵": {
     "name": "六爻绝阵",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "离卦": {
     "name": "离卦",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星轨推衍": {
     "name": "星轨推衍",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "蜻蜓点水": {
     "name": "蜻蜓点水",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "轰雷掣电": {
     "name": "轰雷掣电",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "反震心法": {
     "name": "反震心法",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "金蝉脱壳": {
     "name": "金蝉脱壳",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "杯弓蛇影": {
     "name": "杯弓蛇影",
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天元心法": {
     "name": "天元心法",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•断": {
     "name": "星弈•断",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "乾卦": {
     "name": "乾卦",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五雷轰顶": {
     "name": "五雷轰顶",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "梅开二度": {
     "name": "梅开二度",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "气吞山河": {
     "name": "气吞山河",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "黄雀在后": {
     "name": "黄雀在后",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "紫气东来": {
     "name": "紫气东来",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵印": {
     "name": "木灵印",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•芽": {
     "name": "木灵•芽",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵印": {
     "name": "火灵印",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•窜": {
     "name": "火灵•窜",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵印": {
     "name": "土灵印",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•碎": {
     "name": "土灵•碎",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵印": {
     "name": "金灵印",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•针": {
     "name": "金灵•针",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵印": {
     "name": "水灵印",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•涛": {
     "name": "水灵•涛",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五行刺": {
     "name": "五行刺",
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•复苏": {
     "name": "木灵•复苏",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•疏影": {
     "name": "木灵•疏影",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•聚炎": {
     "name": "火灵•聚炎",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•赤焰": {
     "name": "火灵•赤焰",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵阵": {
     "name": "土灵阵",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•群山": {
     "name": "土灵•群山",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵阵": {
     "name": "金灵阵",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•穿心": {
     "name": "金灵•穿心",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•波澜": {
     "name": "水灵•波澜",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•汹涌": {
     "name": "水灵•汹涌",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "浑天印": {
     "name": "浑天印",
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵阵": {
     "name": "木灵阵",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•巡林": {
     "name": "木灵•巡林",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵阵": {
     "name": "火灵阵",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•轰爆": {
     "name": "火灵•轰爆",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•扬尘": {
     "name": "土灵•扬尘",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•断崖": {
     "name": "土灵•断崖",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•蓄锐": {
     "name": "金灵•蓄锐",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•锋芒": {
     "name": "金灵•锋芒",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵阵": {
     "name": "水灵阵",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•泉涌": {
     "name": "水灵•泉涌",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五行流转": {
     "name": "五行流转",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•暗香": {
     "name": "木灵•暗香",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•玫刺": {
     "name": "木灵•玫刺",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•瞬燃": {
     "name": "火灵•瞬燃",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•灼心": {
     "name": "火灵•灼心",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•绝壁": {
     "name": "土灵•绝壁",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•流沙": {
     "name": "土灵•流沙",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•飞梭": {
     "name": "金灵•飞梭",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•铁骨": {
     "name": "金灵•铁骨",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "水灵•腾浪": {
     "name": "水灵•腾浪",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•潜遁": {
     "name": "水灵•潜遁",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "混元碎击": {
     "name": "混元碎击",
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•柳纷飞": {
     "name": "木灵•柳纷飞",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•烈燎原": {
     "name": "火灵•烈燎原",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•合八荒": {
     "name": "土灵•合八荒",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•巨鼎落": {
     "name": "金灵•巨鼎落",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•纳百川": {
     "name": "水灵•纳百川",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "混元无极阵": {
     "name": "混元无极阵",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五行天髓诀": {
     "name": "五行天髓诀",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•戳": {
     "name": "崩拳•戳",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•封": {
     "name": "崩拳•封",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•弹": {
     "name": "崩拳•弹",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锻拳": {
     "name": "锻拳",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "劈山掌": {
     "name": "劈山掌",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "抱气法": {
     "name": "抱气法",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "罗刹扑": {
     "name": "罗刹扑",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "破空爪": {
     "name": "破空爪",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "千斤坠": {
     "name": "千斤坠",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "起势": {
     "name": "起势",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "朝气蓬勃": {
     "name": "朝气蓬勃",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "血气方刚": {
     "name": "血气方刚",
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•撼": {
     "name": "崩拳•撼",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•缠": {
     "name": "崩拳•缠",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•突": {
     "name": "崩拳•突",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锻筋": {
     "name": "锻筋",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "探马掌": {
     "name": "探马掌",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "风冥爪": {
     "name": "风冥爪",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "夜鬼啸": {
     "name": "夜鬼啸",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "岿然不动": {
     "name": "岿然不动",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "势大力沉": {
     "name": "势大力沉",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "气沉丹田": {
     "name": "气沉丹田",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "浩然正气": {
     "name": "浩然正气",
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩天步": {
     "name": "崩天步",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•截脉": {
     "name": "崩拳•截脉",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•降龙": {
     "name": "崩拳•降龙",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锻骨": {
     "name": "锻骨",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "荷重前行": {
     "name": "荷重前行",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "迎风掌": {
     "name": "迎风掌",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "饿虎扑食": {
     "name": "饿虎扑食",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "双鬼拍门": {
     "name": "双鬼拍门",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "气若悬河": {
     "name": "气若悬河",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "踏破九霄": {
     "name": "踏破九霄",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "势如破竹": {
     "name": "势如破竹",
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩灭心法": {
     "name": "崩灭心法",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•寸劲": {
     "name": "崩拳•寸劲",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•连崩": {
     "name": "崩拳•连崩",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锻髓": {
     "name": "锻髓",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "鹤步": {
     "name": "鹤步",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵玄迷踪步": {
     "name": "灵玄迷踪步",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "冥影身法": {
     "name": "冥影身法",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "玄手夺魂": {
     "name": "玄手夺魂",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "冲霄破浪": {
     "name": "冲霄破浪",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "磅礴之势": {
     "name": "磅礴之势",
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•闪击": {
     "name": "崩拳•闪击",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•惊触": {
     "name": "崩拳•惊触",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锻神开海": {
     "name": "锻神开海",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "百杀破境掌": {
     "name": "百杀破境掌",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "修罗吼": {
     "name": "修罗吼",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "玄心斩魄": {
     "name": "玄心斩魄",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "威震四方": {
     "name": "威震四方",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天地浩荡": {
     "name": "天地浩荡",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "地灵丹": {
     "name": "地灵丹",
     "phase": 1,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "培元丹": {
     "name": "培元丹",
     "phase": 1,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "小还丹": {
     "name": "小还丹",
     "phase": 1,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锻体丹": {
     "name": "锻体丹",
     "phase": 2,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "飞云丹": {
     "name": "飞云丹",
     "phase": 2,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "驱邪丹": {
     "name": "驱邪丹",
     "phase": 2,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "还魂丹": {
     "name": "还魂丹",
     "phase": 3,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "疗伤丹": {
     "name": "疗伤丹",
     "phase": 3,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "神力丹": {
     "name": "神力丹",
     "phase": 3,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "大还丹": {
     "name": "大还丹",
     "phase": 4,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "聚灵丹": {
     "name": "聚灵丹",
     "phase": 4,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "洗髓丹": {
     "name": "洗髓丹",
     "phase": 4,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "冰灵护体丹": {
     "name": "冰灵护体丹",
     "phase": 5,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "锻体玄丹": {
     "name": "锻体玄丹",
     "phase": 5,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "悟道丹": {
     "name": "悟道丹",
     "phase": 5,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "奔雷符": {
     "name": "奔雷符",
     "phase": 1,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "护灵符": {
     "name": "护灵符",
     "phase": 1,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锐金符": {
     "name": "锐金符",
     "phase": 1,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火云符": {
     "name": "火云符",
     "phase": 2,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "清心咒": {
     "name": "清心咒",
     "phase": 2,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水气符": {
     "name": "水气符",
     "phase": 2,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "寒冰咒": {
     "name": "寒冰咒",
     "phase": 3,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "吸灵符": {
     "name": "吸灵符",
     "phase": 3,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "瘴气符": {
     "name": "瘴气符",
     "phase": 3,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "聚气咒": {
     "name": "聚气咒",
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "扰心符": {
     "name": "扰心符",
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "弱体符": {
     "name": "弱体符",
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "镇魂封元符": {
     "name": "镇魂封元符",
     "phase": 5,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "千里神行符": {
     "name": "千里神行符",
     "phase": 5,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "万邪入体咒": {
     "name": "万邪入体咒",
     "phase": 5,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "破音": {
     "name": "破音",
     "phase": 1,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土行曲": {
     "name": "土行曲",
     "phase": 1,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "逍遥曲": {
     "name": "逍遥曲",
     "phase": 1,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "慈念曲": {
     "name": "慈念曲",
     "phase": 2,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "幻音曲": {
     "name": "幻音曲",
     "phase": 2,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天灵曲": {
     "name": "天灵曲",
     "phase": 2,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "断肠曲": {
     "name": "断肠曲",
     "phase": 3,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂舞曲": {
     "name": "狂舞曲",
     "phase": 3,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "轮指连音": {
     "name": "轮指连音",
     "phase": 3,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "回春曲": {
     "name": "回春曲",
     "phase": 4,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "九煞破灵曲": {
     "name": "九煞破灵曲",
     "phase": 4,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "同心曲": {
     "name": "同心曲",
     "phase": 4,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天音困仙曲": {
     "name": "天音困仙曲",
     "phase": 5,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "幽绪乱心曲": {
     "name": "幽绪乱心曲",
     "phase": 5,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "转弦合调": {
     "name": "转弦合调",
     "phase": 5,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "调色": {
     "name": "调色",
     "phase": 1,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "练笔": {
     "name": "练笔",
     "phase": 1,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "研墨": {
     "name": "研墨",
     "phase": 1,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "笔走龙蛇": {
     "name": "笔走龙蛇",
     "phase": 2,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "画饼充饥": {
     "name": "画饼充饥",
     "phase": 2,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "画蛇添足": {
     "name": "画蛇添足",
     "phase": 2,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "挥毫泼墨": {
     "name": "挥毫泼墨",
     "phase": 3,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵感迸发": {
     "name": "灵感迸发",
     "phase": 3,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "以画入道": {
     "name": "以画入道",
     "phase": 3,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "触类旁通": {
     "name": "触类旁通",
     "phase": 4,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "神来之笔": {
     "name": "神来之笔",
     "phase": 4,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "纸落云烟": {
     "name": "纸落云烟",
     "phase": 4,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "运笔如飞": {
     "name": "运笔如飞",
     "phase": 5,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "画龙点睛": {
     "name": "画龙点睛",
     "phase": 5,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "妙笔生花": {
     "name": "妙笔生花",
     "phase": 5,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "引雷阵": {
     "name": "引雷阵",
     "phase": 1,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "碎杀阵": {
     "name": "碎杀阵",
     "phase": 1,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "冲击阵纹": {
     "name": "冲击阵纹",
     "phase": 1,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "龟甲阵": {
     "name": "龟甲阵",
     "phase": 2,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "邪蛊阵": {
     "name": "邪蛊阵",
     "phase": 2,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "疗愈阵纹": {
     "name": "疗愈阵纹",
     "phase": 2,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "聚灵阵": {
     "name": "聚灵阵",
     "phase": 3,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "周天剑阵": {
     "name": "周天剑阵",
     "phase": 3,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "辟邪阵纹": {
     "name": "辟邪阵纹",
     "phase": 3,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天罡聚力阵": {
     "name": "天罡聚力阵",
     "phase": 4,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "八门金锁阵": {
     "name": "八门金锁阵",
     "phase": 4,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "不动金刚阵": {
     "name": "不动金刚阵",
     "phase": 4,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "万花迷魂阵": {
     "name": "万花迷魂阵",
     "phase": 5,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "回响阵纹": {
     "name": "回响阵纹",
     "phase": 5,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "须弥阵纹": {
     "name": "须弥阵纹",
     "phase": 5,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "归元草": {
     "name": "归元草",
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "归岩草": {
     "name": "归岩草",
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金梭兰": {
     "name": "金梭兰",
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火梭兰": {
     "name": "火梭兰",
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "剑枝竹": {
     "name": "剑枝竹",
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "硬枝竹": {
     "name": "硬枝竹",
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "神力草": {
     "name": "神力草",
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "失力草": {
     "name": "失力草",
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "神秘种子": {
     "name": "神秘种子",
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "叶盾花": {
     "name": "叶盾花",
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "叶刃花": {
     "name": "叶刃花",
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "愈甘菊": {
     "name": "愈甘菊",
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "清甘菊": {
     "name": "清甘菊",
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵植浇灌": {
     "name": "灵植浇灌",
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "向灵葵": {
     "name": "向灵葵",
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "邪灵葵": {
     "name": "邪灵葵",
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "飞枭灵芝": {
     "name": "飞枭灵芝",
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "影枭灵芝": {
     "name": "影枭灵芝",
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "穿肠紫蕨": {
     "name": "穿肠紫蕨",
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "清肠紫蕨": {
     "name": "清肠紫蕨",
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "冰封雪莲": {
     "name": "冰封雪莲",
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "冰封血莲": {
     "name": "冰封血莲",
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "玄韵道果": {
     "name": "玄韵道果",
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "魔韵道果": {
     "name": "魔韵道果",
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "空间灵田": {
     "name": "空间灵田",
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "缚仙古藤": {
     "name": "缚仙古藤",
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "噬仙古藤": {
     "name": "噬仙古藤",
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "卜命": {
     "name": "卜命",
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "察体": {
     "name": "察体",
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天谕•守": {
     "name": "天谕•守",
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天谕•攻": {
     "name": "天谕•攻",
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "探灵": {
     "name": "探灵",
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "凶相": {
     "name": "凶相",
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天运•避凶": {
     "name": "天运•避凶",
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天运•趋吉": {
     "name": "天运•趋吉",
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "吉运初显": {
     "name": "吉运初显",
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "血光之灾": {
     "name": "血光之灾",
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天命•飞逝": {
     "name": "天命•飞逝",
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天命•重现": {
     "name": "天命•重现",
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "万事如意": {
     "name": "万事如意",
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "诸事不宜": {
     "name": "诸事不宜",
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天星•牵引": {
     "name": "天星•牵引",
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天星•御心": {
     "name": "天星•御心",
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "厄劫缠身": {
     "name": "厄劫缠身",
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "命运轮回": {
     "name": "命运轮回",
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天机•顺应": {
     "name": "天机•顺应",
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天机•逆施": {
     "name": "天机•逆施",
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "玄银甲": {
     "name": "玄银甲",
     "phase": 1,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "刺尖枪": {
     "name": "刺尖枪",
     "phase": 1,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "玉露瓶": {
     "name": "玉露瓶",
     "phase": 2,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "无名古剑": {
     "name": "无名古剑",
     "phase": 2,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天火炼魂旗": {
     "name": "天火炼魂旗",
     "phase": 3,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "养魂玉莲": {
     "name": "养魂玉莲",
     "phase": 3,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狼皇血晶": {
     "name": "狼皇血晶",
     "phase": 3,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "混元封神珠": {
     "name": "混元封神珠",
     "phase": 4,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金元三尖枪": {
     "name": "金元三尖枪",
     "phase": 4,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "逍遥古琴": {
     "name": "逍遥古琴",
     "phase": 4,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "九冥镇魔印": {
     "name": "九冥镇魔印",
     "phase": 5,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "玄晶护心镜": {
     "name": "玄晶护心镜",
     "phase": 5,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "猎枭古弓": {
     "name": "猎枭古弓",
     "phase": 5,
     "type": "fortune",
     "category": "talisman",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "裂虚界元枪": {
     "name": "裂虚界元枪",
     "phase": 6,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "奇门锁妖塔": {
     "name": "奇门锁妖塔",
     "phase": 6,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "破空雕": {
     "name": "破空雕",
     "phase": 1,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "胖仙狸": {
     "name": "胖仙狸",
     "phase": 1,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "暗星蝙蝠": {
     "name": "暗星蝙蝠",
     "phase": 2,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "孤夜狼": {
     "name": "孤夜狼",
     "phase": 2,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "地玄龟": {
     "name": "地玄龟",
     "phase": 3,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锦毛鼠": {
     "name": "锦毛鼠",
     "phase": 3,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "吞天赤眼兽": {
     "name": "吞天赤眼兽",
     "phase": 4,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "浴火凤凰": {
     "name": "浴火凤凰",
     "phase": 4,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "三尾讙": {
     "name": "三尾讙",
     "phase": 4,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "七彩灵鹤": {
     "name": "七彩灵鹤",
     "phase": 5,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "影枭兔": {
     "name": "影枭兔",
     "phase": 5,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "噬灵虚兽": {
     "name": "噬灵虚兽",
     "phase": 6,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "幽冥虚魂犬": {
     "name": "幽冥虚魂犬",
     "phase": 6,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "韵灵剑": {
     "name": "韵灵剑",
     "phase": 1,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "勤拙剑": {
     "name": "勤拙剑",
     "phase": 1,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•拂晓": {
     "name": "云剑•拂晓",
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "巨猿灵剑": {
     "name": "巨猿灵剑",
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂剑•盘龙": {
     "name": "狂剑•盘龙",
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "一心一剑": {
     "name": "一心一剑",
     "phase": 3,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "合势剑阵": {
     "name": "合势剑阵",
     "phase": 3,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "剑意流转": {
     "name": "剑意流转",
     "phase": 4,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "溟空剑阵诀": {
     "name": "溟空剑阵诀",
     "phase": 4,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "凌剑心法": {
     "name": "凌剑心法",
     "phase": 5,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "步月登云": {
     "name": "步月登云",
     "phase": 5,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂剑•双龙": {
     "name": "狂剑•双龙",
     "phase": 5,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "残云封天剑": {
     "name": "残云封天剑",
     "phase": 6,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "秘剑•灵云": {
     "name": "秘剑•灵云",
     "phase": 6,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "卦灵返生": {
     "name": "卦灵返生",
     "phase": 1,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "投石问路": {
     "name": "投石问路",
     "phase": 1,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "生机绽放": {
     "name": "生机绽放",
     "phase": 2,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星衍诀": {
     "name": "星衍诀",
     "phase": 2,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "日月争辉": {
     "name": "日月争辉",
     "phase": 3,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "一掷乾坤": {
     "name": "一掷乾坤",
     "phase": 3,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "落花流水": {
     "name": "落花流水",
     "phase": 4,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星弈•屠龙": {
     "name": "星弈•屠龙",
     "phase": 4,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "雷霆心法": {
     "name": "雷霆心法",
     "phase": 4,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "铁树开花": {
     "name": "铁树开花",
     "phase": 5,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "先发制人": {
     "name": "先发制人",
     "phase": 5,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "流星天陨": {
     "name": "流星天陨",
     "phase": 5,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天命劫": {
     "name": "天命劫",
     "phase": 6,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "移花接木": {
     "name": "移花接木",
     "phase": 6,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵秘印": {
     "name": "木灵秘印",
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵秘印": {
     "name": "火灵秘印",
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵秘印": {
     "name": "土灵秘印",
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵秘印": {
     "name": "金灵秘印",
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵秘印": {
     "name": "水灵秘印",
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•封喉": {
     "name": "金灵•封喉",
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•润木": {
     "name": "水灵•润木",
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•窑土": {
     "name": "火灵•窑土",
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•藤蔓": {
     "name": "木灵•藤蔓",
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•凝水": {
     "name": "金灵•凝水",
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五行遁术": {
     "name": "五行遁术",
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•撼地": {
     "name": "土灵•撼地",
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•燃火": {
     "name": "木灵•燃火",
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•韵金": {
     "name": "土灵•韵金",
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "火灵•焚天焱": {
     "name": "火灵•焚天焱",
     "phase": 5,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•海龙啸": {
     "name": "水灵•海龙啸",
     "phase": 5,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五行灵爆术": {
     "name": "五行灵爆术",
     "phase": 6,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五行绽放": {
     "name": "五行绽放",
     "phase": 6,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "气势不绝": {
     "name": "气势不绝",
     "phase": 1,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "死缠烂打": {
     "name": "死缠烂打",
     "phase": 1,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "百毒不侵": {
     "name": "百毒不侵",
     "phase": 2,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "醉卧逍遥": {
     "name": "醉卧逍遥",
     "phase": 2,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵草药浴": {
     "name": "灵草药浴",
     "phase": 3,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "破釜沉舟": {
     "name": "破釜沉舟",
     "phase": 3,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "力若疯魔": {
     "name": "力若疯魔",
     "phase": 4,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•双影": {
     "name": "崩拳•双影",
     "phase": 4,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "幽冥三点手": {
     "name": "幽冥三点手",
     "phase": 4,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "破茧化蝶": {
     "name": "破茧化蝶",
     "phase": 5,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "鬼音葬魂": {
     "name": "鬼音葬魂",
     "phase": 5,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "无尽崩绝": {
     "name": "无尽崩绝",
     "phase": 6,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "返璞归真": {
     "name": "返璞归真",
     "phase": 6,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云泉道茶":{
     "name": "云泉道茶",
     "phase": 5,
     "type": "personal",
     "category": "MuYifeng",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•崩雪":{
     "name": "云剑•崩雪",
     "phase": 4,
     "type": "personal",
     "category": "YanXue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂剑•炎舞":{
     "name": "狂剑•炎舞",
     "phase": 5,
     "type": "personal",
     "category": "YanXue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•唤雨":{
     "name": "云剑•唤雨",
     "phase": 4,
     "type": "personal",
     "category": "LongYao",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "九霄玲珑镯":{
     "name": "九霄玲珑镯",
     "phase": 5,
     "type": "personal",
     "category": "LongYao",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "小鱼干":{
     "name": "小鱼干",
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•飞砂":{
     "name": "云剑•飞砂",
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": true
+    "recommend": true,
+    "deck-recommend": false
   },
   "猫薄荷":{
     "name": "猫薄荷",
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "逗猫棒":{
     "name": "逗猫棒",
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "青铜猫":{
     "name": "青铜猫",
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "云剑•猫爪":{
     "name": "云剑•猫爪",
     "phase": 2,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灵猫乱剑":{
     "name": "灵猫乱剑",
     "phase": 4,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "澄心剑胚":{
     "name": "澄心剑胚",
     "phase": 1,
     "type": "personal",
     "category": "LuJianxin",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "曳影剑阵":{
     "name": "曳影剑阵",
     "phase": 5,
     "type": "personal",
     "category": "LiChengyun",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "飞鸿踏雪":{
     "name": "飞鸿踏雪",
     "phase": 2,
     "type": "personal",
     "category": "TanShuyan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "无极卦盘":{
     "name": "无极卦盘",
     "phase": 3,
     "type": "personal",
     "category": "YanChen",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "瓮中捉鳖":{
     "name": "瓮中捉鳖",
     "phase": 4,
     "type": "personal",
     "category": "YanChen",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "狂雷电闪":{
     "name": "狂雷电闪",
     "phase": 5,
     "type": "personal",
     "category": "YanChen",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "灯焰飞舞":{
     "name": "灯焰飞舞",
     "phase": 3,
     "type": "personal",
     "category": "YaoLing",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "旋灯占卦":{
     "name": "旋灯占卦",
     "phase": 4,
     "type": "personal",
     "category": "YaoLing",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星爆术":{
     "name": "星爆术",
     "phase": 3,
     "type": "personal",
     "category": "JiangXiming",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "七星定魂":{
     "name": "七星定魂",
     "phase": 4,
     "type": "personal",
     "category": "JiangXiming",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "算无遗策":{
     "name": "算无遗策",
     "phase": 1,
     "type": "personal",
     "category": "WuCe",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "星月折扇":{
     "name": "星月折扇",
     "phase": 5,
     "type": "personal",
     "category": "WuCe",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "悠然葫芦":{
     "name": "悠然葫芦",
     "phase": 3,
     "type": "personal",
     "category": "WuXingzhi",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "五行传承":{
     "name": "五行传承",
     "phase": 5,
     "type": "personal",
     "category": "WuXingzhi",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "双鸳逆克":{
     "name": "双鸳逆克",
     "phase": 4,
     "type": "personal",
     "category": "DuLingyuan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "木灵•桃花印":{
     "name": "木灵•桃花印",
     "phase": 2,
     "type": "personal",
     "category": "HuaQinrui",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "水灵•春雨":{
     "name": "水灵•春雨",
     "phase": 4,
     "type": "personal",
     "category": "HuaQinrui",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锟铻金环":{
     "name": "锟铻金环",
     "phase": 3,
     "type": "personal",
     "category": "MuHu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "金灵•刚劲":{
     "name": "金灵•刚劲",
     "phase": 4,
     "type": "personal",
     "category": "MuHu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "土灵•山崩":{
     "name": "土灵•山崩",
     "phase": 5,
     "type": "personal",
     "category": "MuHu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "锻体不息":{
     "name": "锻体不息",
     "phase": 2,
     "type": "personal",
     "category": "XiaoBu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "盛气凌人":{
     "name": "盛气凌人",
     "phase": 2,
     "type": "personal",
     "category": "TuKui",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "疯魔":{
     "name": "疯魔",
     "phase": 3,
     "type": "personal",
     "category": "YeMingming",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "崩拳•冥夜":{
     "name": "崩拳•冥夜",
     "phase": 4,
     "type": "personal",
     "category": "YeMingming",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "冥月蟾光":{
     "name": "冥月蟾光",
     "phase": 5,
     "type": "personal",
     "category": "YeMingming",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "冥心入玄":{
     "name": "冥心入玄",
     "phase": 4,
     "type": "personal",
     "category": "JiFangsheng",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "万玄破魔掌":{
     "name": "万玄破魔掌",
     "phase": 5,
     "type": "personal",
     "category": "JiFangsheng",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "双节棍":{
     "name": "双节棍",
     "phase": 1,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "拆招":{
     "name": "拆招",
     "phase": 2,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "转势":{
     "name": "转势",
     "phase": 4,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "赤金盘龙棍":{
     "name": "赤金盘龙棍",
     "phase": 5,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "天降甘霖":{
     "name": "天降甘霖",
     "phase": 3,
     "type": "personal",
     "category": "QiWangyou",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "忘忧":{
     "name": "忘忧",
     "phase": 5,
     "type": "personal",
     "category": "QiWangyou",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "阴符玉简":{
     "name": "阴符玉简",
     "phase": 2,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "孤虚金书":{
     "name": "孤虚金书",
     "phase": 5,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "背孤":{
     "name": "背孤",
     "phase": 5,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   },
   "击虚":{
     "name": "击虚",
     "phase": 5,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false
+    "recommend": false,
+    "deck-recommend": false
   }
-}
