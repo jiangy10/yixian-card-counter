@@ -11,6 +11,11 @@ interface Tab {
   label: string;
 }
 
+const trackingFilters: Tab[] = [
+  { id: 'match', label: '对局' },
+  { id: 'deck', label: '牌库' }
+];
+
 const typeFilters: Tab[] = [
   { id: 'sect', label: '门派' },
   { id: 'side-jobs', label: '副职' },
@@ -125,6 +130,7 @@ const CardLibraryContainer: React.FC = () => {
   const [activeType, setActiveType] = useState<string>('sect');
   const [activeCategory, setActiveCategory] = useState<string>('cloud-spirit');
   const [activePhase, setActivePhase] = useState<string>('all');
+  const [activeTracking, setActiveTracking] = useState<string>('match');
   const { trackedCards } = useTracking();
 
   const cards = useMemo(() => {
@@ -165,6 +171,18 @@ const CardLibraryContainer: React.FC = () => {
   return (
     <div className="card-library-container">
       <div className="filters-container">
+        <div className="filter-group">
+          {trackingFilters.map(filter => (
+            <button
+              key={filter.id}
+              className={`filter-button ${activeTracking === filter.id ? 'active' : ''}`}
+              onClick={() => setActiveTracking(filter.id)}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+
         <div className="filter-group">
           {typeFilters.map(filter => (
             <button
