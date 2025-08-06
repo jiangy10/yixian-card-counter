@@ -28,7 +28,7 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
     try {
       const gamePath = await window.electron.getUserDataPath();
-      const trackingFilePath = `${gamePath}/tracking_cards.json`;
+      const trackingFilePath = `${gamePath}/match_tracking_cards.json`;
       const content = await window.electron.readFile(trackingFilePath);
       return JSON.parse(content);
     } catch (error) {
@@ -55,7 +55,7 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
     try {
       const gamePath = await window.electron.getUserDataPath();
-      const trackingFilePath = `${gamePath}/tracking_cards.json`;
+      const trackingFilePath = `${gamePath}/match_tracking_cards.json`;
       const trackingCards = await loadTrackingCards();
 
       if (isTracking) {

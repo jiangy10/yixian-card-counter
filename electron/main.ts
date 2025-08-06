@@ -21,7 +21,7 @@ async function ensureDirectoryExists(dirPath: string) {
 
 // Initialize tracking cards file
 async function initTrackingCardsFile() {
-  const filePath = path.join(GAME_PATH, 'tracking_cards.json');
+  const filePath = path.join(GAME_PATH, 'match_tracking_cards.json');
   
   try {
     await fs.access(filePath);
