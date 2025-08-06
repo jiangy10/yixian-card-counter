@@ -83,6 +83,13 @@
         "category": "heptastar",
         "recommend": false
     },
+    "幻•星罗棋布": {
+        "name": "幻•星罗棋布",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "heptastar",
+        "recommend": false
+    },
     "幻•斗转星移": {
         "name": "幻•斗转星移",
         "phase": 5,
@@ -113,7 +120,7 @@
     },
     "幻•飞星刺": {  
         "name": "幻•飞星刺",
-        "phase": 4,
+        "phase": 5,
         "type": "seasonal",
         "category": "heptastar",
         "recommend": false
@@ -127,7 +134,7 @@
     },
     "幻•木灵复苏": {
         "name": "幻•木灵复苏",
-        "phase": 5,
+        "phase": 4,
         "type": "seasonal",
         "category": "five-element",
         "recommend": false
