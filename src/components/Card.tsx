@@ -49,14 +49,14 @@ const Card: React.FC<CardProps> = ({
 
 export const TrackButton: React.FC<{ card: CardType }> = ({ card }) => {
   const { trackedCards, updateTracking } = useTracking();
-  const isTracking = trackedCards[card.name] || false;
+  const isTracking_match = trackedCards[card.name] || false;
   const [isUpdating, setIsUpdating] = useState(false);
 
   const handleTrackingClick = async () => {
     if (isUpdating) return;
     setIsUpdating(true);
     try {
-      await updateTracking(card.name, !isTracking);
+      await updateTracking(card.name, !isTracking_match);
     } catch (error) {
       console.error('Error updating tracking card:', error);
     } finally {
@@ -66,8 +66,8 @@ export const TrackButton: React.FC<{ card: CardType }> = ({ card }) => {
 
   const buttonStyle = {
     backgroundColor: 'transparent',
-    color: isTracking ? '#3498db' : '#2ecc71',
-    border: `1.5px solid ${isTracking ? '#3498db' : '#2ecc71'}`,
+    color: isTracking_match ? '#3498db' : '#2ecc71',
+    border: `1.5px solid ${isTracking_match ? '#3498db' : '#2ecc71'}`,
     borderRadius: '5px',
     cursor: isUpdating ? 'wait' : 'pointer',
     fontSize: '12px',
@@ -81,7 +81,7 @@ export const TrackButton: React.FC<{ card: CardType }> = ({ card }) => {
       style={buttonStyle}
       disabled={isUpdating}
     >
-      {isUpdating ? 'Updating...' : (isTracking ? '追踪中' : '追踪')}
+      {isUpdating ? 'Updating...' : (isTracking_match ? '追踪中' : '追踪')}
     </button>
   );
 };

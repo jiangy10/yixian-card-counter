@@ -59,7 +59,8 @@ export interface Card {
   type: string;
   category: string;
   recommend: boolean;
-  isTracking?: boolean;
+  isTracking_match?: boolean;
+  isTracking_deck?: boolean;
 }
 
 export interface TrackingCard {

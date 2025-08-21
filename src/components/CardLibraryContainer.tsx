@@ -144,7 +144,7 @@ const CardLibraryContainer: React.FC = () => {
               ...card,
               name,
               level: -1,
-              isTracking: trackedCards[name] || false
+              isTracking_match: trackedCards[name] || false
             });
           }
         } else if (
@@ -156,7 +156,7 @@ const CardLibraryContainer: React.FC = () => {
             ...card,
             name,
             level: -1,
-            isTracking: trackedCards[name] || false
+            isTracking_match: trackedCards[name] || false
           });
         }
       });

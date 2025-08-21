@@ -3,7 +3,7 @@ import { Card } from '../models/model';
 
 interface TrackingContextType {
   trackedCards: Record<string, boolean>;
-  updateTracking: (cardName: string, isTracking: boolean) => Promise<void>;
+  updateTracking: (cardName: string, isTracking_match: boolean) => Promise<void>;
   refreshTracking: () => Promise<void>;
 }
 
@@ -47,7 +47,7 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setTrackedCards(newTrackedCards);
   }, []);
 
-  const updateTracking = useCallback(async (cardName: string, isTracking: boolean) => {
+  const updateTracking = useCallback(async (cardName: string, isTracking_match: boolean) => {
     if (typeof window.electron === 'undefined') {
       console.error('Not running in Electron environment');
       return;
@@ -58,7 +58,7 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       const trackingFilePath = `${gamePath}/match_tracking_cards.json`;
       const trackingCards = await loadTrackingCards();
 
-      if (isTracking) {
+      if (isTracking_match) {
         trackingCards[cardName] = {
           name: cardName,
           tracking: true
