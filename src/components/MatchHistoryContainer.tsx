@@ -36,7 +36,7 @@ const processCards = (history: MatchHistory) => {
       phase: 2,
       type: 'unknown',
       category: 'unknown',
-      recommend: false
+      "match-recommend": false
     } as CardType;
   });
 

@@ -105,7 +105,7 @@ const App: React.FC = () => {
                   phase: 2,
                   type: 'unknown',
                   category: 'unknown',
-                  recommend: false
+                  "match-recommend": false
                 }))
               };
             }
@@ -135,7 +135,7 @@ const App: React.FC = () => {
                     phase: 2,
                     type: 'unknown',
                     category: 'unknown',
-                    recommend: false
+                    "match-recommend": false
                   }))
                 };
               }
@@ -160,7 +160,7 @@ const App: React.FC = () => {
                     phase: 2,
                     type: 'unknown',
                     category: 'unknown',
-                    recommend: false
+                    "match-recommend": false
                   }))
                 };
               }
@@ -230,7 +230,7 @@ const App: React.FC = () => {
             phase: 2,
             type: 'unknown',
             category: 'unknown',
-            recommend: false
+            "match-recommend": false
           }))
         };
       }

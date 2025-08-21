@@ -82,7 +82,7 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
               inHistory={false}
               tail={
                 <div className="card-tail">
-                  {card.recommend && <RecommendLabel />}
+                  {card["match-recommend"] && <RecommendLabel />}
                   <TrackButton card={card} />
                 </div>
               }

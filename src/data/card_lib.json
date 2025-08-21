@@ -4,7 +4,7 @@
     "phase": 1,
     "type": "",
     "category": "",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•探云": {
@@ -12,7 +12,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•飞刺": {
@@ -20,7 +20,7 @@
     "phase": 1, 
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•厚土": {
@@ -28,7 +28,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "轻剑": {
@@ -36,7 +36,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "护身灵气": {
@@ -44,7 +44,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵气灌注": {
@@ -52,7 +52,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "巨虎灵剑": {
@@ -60,7 +60,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "震雷剑": {
@@ -68,7 +68,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "剑劈": {
@@ -76,7 +76,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "剑挡": {
@@ -84,7 +84,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "飞牙剑": {
@@ -92,7 +92,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "骤风剑": {
@@ -100,7 +100,7 @@
     "phase": 1,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•回守": {
@@ -108,7 +108,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•极意": {
@@ -116,7 +116,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•无锋": {
@@ -124,7 +124,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "化灵诀": {
@@ -132,7 +132,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "引气剑": {
@@ -140,7 +140,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "巨鲸灵剑": {
@@ -148,7 +148,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "凝意诀": {
@@ -156,7 +156,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵犀剑阵": {
@@ -164,7 +164,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "地煞剑": {
@@ -172,7 +172,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "形意剑": {
@@ -180,7 +180,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂剑•一式": {
@@ -188,7 +188,7 @@
     "phase": 2,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•柔心": {
@@ -196,7 +196,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•无妄": {
@@ -204,7 +204,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•点星": {
@@ -212,7 +212,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•汇灵": {
@@ -220,7 +220,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云舞诀": {
@@ -228,7 +228,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "暗鸦灵剑": {
@@ -236,7 +236,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "破气剑": {
@@ -244,7 +244,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "巨鹏灵剑": {
@@ -252,7 +252,7 @@
     "phase": 3, 
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "反身剑": {
@@ -260,7 +260,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "镜花剑阵": {
@@ -268,7 +268,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "三峰剑": {
@@ -276,7 +276,7 @@
     "phase": 3,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•闪风": {
@@ -284,7 +284,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•月影": {
@@ -292,7 +292,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "聚灵心法": {
@@ -300,7 +300,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "百鸟灵剑诀": {
@@ -308,7 +308,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "白鹭灵剑": {
@@ -316,7 +316,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "巨鲲灵剑": {
@@ -324,7 +324,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵感剑": {
@@ -332,7 +332,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "流云乱剑": {
@@ -340,7 +340,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水月剑阵": {
@@ -348,7 +348,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂剑•二式": {
@@ -356,7 +356,7 @@
     "phase": 4,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•游龙": {
@@ -364,7 +364,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•凌波": {
@@ -372,7 +372,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "飞灵闪影剑": {
@@ -380,7 +380,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "万法归灵剑": {
@@ -388,7 +388,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "剑意激荡": {
@@ -396,7 +396,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "御空剑阵": {
@@ -404,7 +404,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "连环剑阵": {
@@ -412,7 +412,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂剑•零式": {
@@ -420,7 +420,7 @@
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "斗转星移": {
@@ -428,7 +428,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星罗棋布": {
@@ -436,7 +436,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•挡": {
@@ -444,7 +444,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•夹": {
@@ -452,7 +452,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "震卦": {
@@ -460,7 +460,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "坤卦": {
@@ -468,7 +468,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "巽卦": {
@@ -476,7 +476,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "掌心雷": {
@@ -484,7 +484,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "白鹤亮翅": {
@@ -492,7 +492,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "揽雀尾": {
@@ -500,7 +500,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "野马分鬃": {
@@ -508,7 +508,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "藕断丝连": {
@@ -516,7 +516,7 @@
     "phase": 1,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "飞星刺": {
@@ -524,7 +524,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•点": {
@@ -532,7 +532,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•立": {
@@ -540,7 +540,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "艮卦": {
@@ -548,7 +548,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "坎卦": {
@@ -556,7 +556,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "落雷术": {
@@ -564,7 +564,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "斩草除根": {
@@ -572,7 +572,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金鸡独立": {
@@ -580,7 +580,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "静气心法": {
@@ -588,7 +588,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "落花有意": {
@@ -596,7 +596,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "气贯长虹": {
@@ -604,7 +604,7 @@
     "phase": 2,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "众星拱月": {
@@ -612,7 +612,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•打": {
@@ -620,7 +620,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "兑卦": {
@@ -628,7 +628,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "白蛇吐信": {
@@ -636,7 +636,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "御雷卦诀": {
@@ -644,7 +644,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "两仪阵": {
@@ -652,7 +652,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "流水无情": {
@@ -660,7 +660,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "气疗术": {
@@ -668,7 +668,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "枯木逢春": {
@@ -676,7 +676,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "螳螂捕蝉": {
@@ -684,7 +684,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "海底捞月": {
@@ -692,7 +692,7 @@
     "phase": 3,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•飞": {
@@ -700,7 +700,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•虎": {
@@ -708,7 +708,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "六爻绝阵": {
@@ -716,7 +716,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "离卦": {
@@ -724,7 +724,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星轨推衍": {
@@ -732,7 +732,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "蜻蜓点水": {
@@ -740,7 +740,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "轰雷掣电": {
@@ -748,7 +748,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "反震心法": {
@@ -756,7 +756,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "金蝉脱壳": {
@@ -764,7 +764,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "杯弓蛇影": {
@@ -772,7 +772,7 @@
     "phase": 4,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天元心法": {
@@ -780,7 +780,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•断": {
@@ -788,7 +788,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "乾卦": {
@@ -796,7 +796,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五雷轰顶": {
@@ -804,7 +804,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "梅开二度": {
@@ -812,7 +812,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "气吞山河": {
@@ -820,7 +820,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "黄雀在后": {
@@ -828,7 +828,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "紫气东来": {
@@ -836,7 +836,7 @@
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵印": {
@@ -844,7 +844,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•芽": {
@@ -852,7 +852,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵印": {
@@ -860,7 +860,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•窜": {
@@ -868,7 +868,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵印": {
@@ -876,7 +876,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•碎": {
@@ -884,7 +884,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵印": {
@@ -892,7 +892,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•针": {
@@ -900,7 +900,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵印": {
@@ -908,7 +908,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•涛": {
@@ -916,7 +916,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五行刺": {
@@ -924,7 +924,7 @@
     "phase": 1,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•复苏": {
@@ -932,7 +932,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•疏影": {
@@ -940,7 +940,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•聚炎": {
@@ -948,7 +948,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•赤焰": {
@@ -956,7 +956,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵阵": {
@@ -964,7 +964,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•群山": {
@@ -972,7 +972,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵阵": {
@@ -980,7 +980,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•穿心": {
@@ -988,7 +988,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•波澜": {
@@ -996,7 +996,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•汹涌": {
@@ -1004,7 +1004,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "浑天印": {
@@ -1012,7 +1012,7 @@
     "phase": 2,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵阵": {
@@ -1020,7 +1020,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•巡林": {
@@ -1028,7 +1028,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵阵": {
@@ -1036,7 +1036,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•轰爆": {
@@ -1044,7 +1044,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•扬尘": {
@@ -1052,7 +1052,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•断崖": {
@@ -1060,7 +1060,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•蓄锐": {
@@ -1068,7 +1068,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•锋芒": {
@@ -1076,7 +1076,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵阵": {
@@ -1084,7 +1084,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•泉涌": {
@@ -1092,7 +1092,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五行流转": {
@@ -1100,7 +1100,7 @@
     "phase": 3,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•暗香": {
@@ -1108,7 +1108,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•玫刺": {
@@ -1116,7 +1116,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•瞬燃": {
@@ -1124,7 +1124,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•灼心": {
@@ -1132,7 +1132,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•绝壁": {
@@ -1140,7 +1140,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•流沙": {
@@ -1148,7 +1148,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•飞梭": {
@@ -1156,7 +1156,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•铁骨": {
@@ -1164,7 +1164,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "水灵•腾浪": {
@@ -1172,7 +1172,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•潜遁": {
@@ -1180,7 +1180,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "混元碎击": {
@@ -1188,7 +1188,7 @@
     "phase": 4,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•柳纷飞": {
@@ -1196,7 +1196,7 @@
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•烈燎原": {
@@ -1204,7 +1204,7 @@
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•合八荒": {
@@ -1212,7 +1212,7 @@
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•巨鼎落": {
@@ -1220,7 +1220,7 @@
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•纳百川": {
@@ -1228,7 +1228,7 @@
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "混元无极阵": {
@@ -1236,7 +1236,7 @@
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五行天髓诀": {
@@ -1244,7 +1244,7 @@
     "phase": 5,
     "type": "sect",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•戳": {
@@ -1252,7 +1252,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•封": {
@@ -1260,7 +1260,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•弹": {
@@ -1268,7 +1268,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锻拳": {
@@ -1276,7 +1276,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "劈山掌": {
@@ -1284,7 +1284,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "抱气法": {
@@ -1292,7 +1292,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "罗刹扑": {
@@ -1300,7 +1300,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "破空爪": {
@@ -1308,7 +1308,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "千斤坠": {
@@ -1316,7 +1316,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "起势": {
@@ -1324,7 +1324,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "朝气蓬勃": {
@@ -1332,7 +1332,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "血气方刚": {
@@ -1340,7 +1340,7 @@
     "phase": 1,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•撼": {
@@ -1348,7 +1348,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•缠": {
@@ -1356,7 +1356,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•突": {
@@ -1364,7 +1364,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锻筋": {
@@ -1372,7 +1372,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "探马掌": {
@@ -1380,7 +1380,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "风冥爪": {
@@ -1388,7 +1388,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "夜鬼啸": {
@@ -1396,7 +1396,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "岿然不动": {
@@ -1404,7 +1404,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "势大力沉": {
@@ -1412,7 +1412,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "气沉丹田": {
@@ -1420,7 +1420,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "浩然正气": {
@@ -1428,7 +1428,7 @@
     "phase": 2,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩天步": {
@@ -1436,7 +1436,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•截脉": {
@@ -1444,7 +1444,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•降龙": {
@@ -1452,7 +1452,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锻骨": {
@@ -1460,7 +1460,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "荷重前行": {
@@ -1468,7 +1468,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "迎风掌": {
@@ -1476,7 +1476,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "饿虎扑食": {
@@ -1484,7 +1484,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "双鬼拍门": {
@@ -1492,7 +1492,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "气若悬河": {
@@ -1500,7 +1500,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "踏破九霄": {
@@ -1508,7 +1508,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "势如破竹": {
@@ -1516,7 +1516,7 @@
     "phase": 3,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩灭心法": {
@@ -1524,7 +1524,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•寸劲": {
@@ -1532,7 +1532,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•连崩": {
@@ -1540,7 +1540,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锻髓": {
@@ -1548,7 +1548,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "鹤步": {
@@ -1556,7 +1556,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵玄迷踪步": {
@@ -1564,7 +1564,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "冥影身法": {
@@ -1572,7 +1572,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "玄手夺魂": {
@@ -1580,7 +1580,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "冲霄破浪": {
@@ -1588,7 +1588,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "磅礴之势": {
@@ -1596,7 +1596,7 @@
     "phase": 4,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•闪击": {
@@ -1604,7 +1604,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•惊触": {
@@ -1612,7 +1612,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锻神开海": {
@@ -1620,7 +1620,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "百杀破境掌": {
@@ -1628,7 +1628,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "修罗吼": {
@@ -1636,7 +1636,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "玄心斩魄": {
@@ -1644,7 +1644,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "威震四方": {
@@ -1652,7 +1652,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天地浩荡": {
@@ -1660,7 +1660,7 @@
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "地灵丹": {
@@ -1668,7 +1668,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "培元丹": {
@@ -1676,7 +1676,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "小还丹": {
@@ -1684,7 +1684,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锻体丹": {
@@ -1692,7 +1692,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "飞云丹": {
@@ -1700,7 +1700,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "驱邪丹": {
@@ -1708,7 +1708,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "还魂丹": {
@@ -1716,7 +1716,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "疗伤丹": {
@@ -1724,7 +1724,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "神力丹": {
@@ -1732,7 +1732,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "大还丹": {
@@ -1740,7 +1740,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "聚灵丹": {
@@ -1748,7 +1748,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "洗髓丹": {
@@ -1756,7 +1756,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "冰灵护体丹": {
@@ -1764,7 +1764,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "锻体玄丹": {
@@ -1772,7 +1772,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "悟道丹": {
@@ -1780,7 +1780,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "elixirist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "奔雷符": {
@@ -1788,7 +1788,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "护灵符": {
@@ -1796,7 +1796,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锐金符": {
@@ -1804,7 +1804,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火云符": {
@@ -1812,7 +1812,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "清心咒": {
@@ -1820,7 +1820,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水气符": {
@@ -1828,7 +1828,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "寒冰咒": {
@@ -1836,7 +1836,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "吸灵符": {
@@ -1844,7 +1844,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "瘴气符": {
@@ -1852,7 +1852,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "聚气咒": {
@@ -1860,7 +1860,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "扰心符": {
@@ -1868,7 +1868,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "弱体符": {
@@ -1876,7 +1876,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "镇魂封元符": {
@@ -1884,7 +1884,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "千里神行符": {
@@ -1892,7 +1892,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "万邪入体咒": {
@@ -1900,7 +1900,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fuluist",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "破音": {
@@ -1908,7 +1908,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土行曲": {
@@ -1916,7 +1916,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "逍遥曲": {
@@ -1924,7 +1924,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "慈念曲": {
@@ -1932,7 +1932,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "幻音曲": {
@@ -1940,7 +1940,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天灵曲": {
@@ -1948,7 +1948,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "断肠曲": {
@@ -1956,7 +1956,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂舞曲": {
@@ -1964,7 +1964,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "轮指连音": {
@@ -1972,7 +1972,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "回春曲": {
@@ -1980,7 +1980,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "九煞破灵曲": {
@@ -1988,7 +1988,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "同心曲": {
@@ -1996,7 +1996,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天音困仙曲": {
@@ -2004,7 +2004,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "幽绪乱心曲": {
@@ -2012,7 +2012,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "转弦合调": {
@@ -2020,7 +2020,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "musician",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "调色": {
@@ -2028,7 +2028,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "练笔": {
@@ -2036,7 +2036,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "研墨": {
@@ -2044,7 +2044,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "笔走龙蛇": {
@@ -2052,7 +2052,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "画饼充饥": {
@@ -2060,7 +2060,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "画蛇添足": {
@@ -2068,7 +2068,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "挥毫泼墨": {
@@ -2076,7 +2076,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵感迸发": {
@@ -2084,7 +2084,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "以画入道": {
@@ -2092,7 +2092,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "触类旁通": {
@@ -2100,7 +2100,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "神来之笔": {
@@ -2108,7 +2108,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "纸落云烟": {
@@ -2116,7 +2116,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "运笔如飞": {
@@ -2124,7 +2124,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "画龙点睛": {
@@ -2132,7 +2132,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "妙笔生花": {
@@ -2140,7 +2140,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "painter",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "引雷阵": {
@@ -2148,7 +2148,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "碎杀阵": {
@@ -2156,7 +2156,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "冲击阵纹": {
@@ -2164,7 +2164,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "龟甲阵": {
@@ -2172,7 +2172,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "邪蛊阵": {
@@ -2180,7 +2180,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "疗愈阵纹": {
@@ -2188,7 +2188,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "聚灵阵": {
@@ -2196,7 +2196,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "周天剑阵": {
@@ -2204,7 +2204,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "辟邪阵纹": {
@@ -2212,7 +2212,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天罡聚力阵": {
@@ -2220,7 +2220,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "八门金锁阵": {
@@ -2228,7 +2228,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "不动金刚阵": {
@@ -2236,7 +2236,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "万花迷魂阵": {
@@ -2244,7 +2244,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "回响阵纹": {
@@ -2252,7 +2252,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "须弥阵纹": {
@@ -2260,7 +2260,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "formation-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "归元草": {
@@ -2268,7 +2268,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "归岩草": {
@@ -2276,7 +2276,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金梭兰": {
@@ -2284,7 +2284,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火梭兰": {
@@ -2292,7 +2292,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "剑枝竹": {
@@ -2300,7 +2300,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "硬枝竹": {
@@ -2308,7 +2308,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "神力草": {
@@ -2316,7 +2316,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "失力草": {
@@ -2324,7 +2324,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "神秘种子": {
@@ -2332,7 +2332,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "叶盾花": {
@@ -2340,7 +2340,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "叶刃花": {
@@ -2348,7 +2348,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "愈甘菊": {
@@ -2356,7 +2356,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "清甘菊": {
@@ -2364,7 +2364,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵植浇灌": {
@@ -2372,7 +2372,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "向灵葵": {
@@ -2380,7 +2380,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "邪灵葵": {
@@ -2388,7 +2388,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "飞枭灵芝": {
@@ -2396,7 +2396,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "影枭灵芝": {
@@ -2404,7 +2404,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "穿肠紫蕨": {
@@ -2412,7 +2412,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "清肠紫蕨": {
@@ -2420,7 +2420,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "冰封雪莲": {
@@ -2428,7 +2428,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "冰封血莲": {
@@ -2436,7 +2436,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "玄韵道果": {
@@ -2444,7 +2444,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "魔韵道果": {
@@ -2452,7 +2452,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "空间灵田": {
@@ -2460,7 +2460,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "缚仙古藤": {
@@ -2468,7 +2468,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "噬仙古藤": {
@@ -2476,7 +2476,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "plant-master",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "卜命": {
@@ -2484,7 +2484,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "察体": {
@@ -2492,7 +2492,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天谕•守": {
@@ -2500,7 +2500,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天谕•攻": {
@@ -2508,7 +2508,7 @@
     "phase": 1,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "探灵": {
@@ -2516,7 +2516,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "凶相": {
@@ -2524,7 +2524,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天运•避凶": {
@@ -2532,7 +2532,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天运•趋吉": {
@@ -2540,7 +2540,7 @@
     "phase": 2,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "吉运初显": {
@@ -2548,7 +2548,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "血光之灾": {
@@ -2556,7 +2556,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天命•飞逝": {
@@ -2564,7 +2564,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天命•重现": {
@@ -2572,7 +2572,7 @@
     "phase": 3,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "万事如意": {
@@ -2580,7 +2580,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "诸事不宜": {
@@ -2588,7 +2588,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天星•牵引": {
@@ -2596,7 +2596,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天星•御心": {
@@ -2604,7 +2604,7 @@
     "phase": 4,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "厄劫缠身": {
@@ -2612,7 +2612,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "命运轮回": {
@@ -2620,7 +2620,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天机•顺应": {
@@ -2628,7 +2628,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天机•逆施": {
@@ -2636,7 +2636,7 @@
     "phase": 5,
     "type": "side-jobs",
     "category": "fortune-teller",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "玄银甲": {
@@ -2644,7 +2644,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "刺尖枪": {
@@ -2652,7 +2652,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "玉露瓶": {
@@ -2660,7 +2660,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "无名古剑": {
@@ -2668,7 +2668,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天火炼魂旗": {
@@ -2676,7 +2676,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "养魂玉莲": {
@@ -2684,7 +2684,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狼皇血晶": {
@@ -2692,7 +2692,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "混元封神珠": {
@@ -2700,7 +2700,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金元三尖枪": {
@@ -2708,7 +2708,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "逍遥古琴": {
@@ -2716,7 +2716,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "九冥镇魔印": {
@@ -2724,7 +2724,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "玄晶护心镜": {
@@ -2732,7 +2732,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "猎枭古弓": {
@@ -2740,7 +2740,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "talisman",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "裂虚界元枪": {
@@ -2748,7 +2748,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "奇门锁妖塔": {
@@ -2756,7 +2756,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "talisman",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "破空雕": {
@@ -2764,7 +2764,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "胖仙狸": {
@@ -2772,7 +2772,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "暗星蝙蝠": {
@@ -2780,7 +2780,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "孤夜狼": {
@@ -2788,7 +2788,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "地玄龟": {
@@ -2796,7 +2796,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锦毛鼠": {
@@ -2804,7 +2804,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "吞天赤眼兽": {
@@ -2812,7 +2812,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "浴火凤凰": {
@@ -2820,7 +2820,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "三尾讙": {
@@ -2828,7 +2828,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "七彩灵鹤": {
@@ -2836,7 +2836,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "影枭兔": {
@@ -2844,7 +2844,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "噬灵虚兽": {
@@ -2852,7 +2852,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "幽冥虚魂犬": {
@@ -2860,7 +2860,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "spiritual-pet",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "韵灵剑": {
@@ -2868,7 +2868,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "勤拙剑": {
@@ -2876,7 +2876,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•拂晓": {
@@ -2884,7 +2884,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "巨猿灵剑": {
@@ -2892,7 +2892,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂剑•盘龙": {
@@ -2900,7 +2900,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "一心一剑": {
@@ -2908,7 +2908,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "合势剑阵": {
@@ -2916,7 +2916,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "剑意流转": {
@@ -2924,7 +2924,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "溟空剑阵诀": {
@@ -2932,7 +2932,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "凌剑心法": {
@@ -2940,7 +2940,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "步月登云": {
@@ -2948,7 +2948,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂剑•双龙": {
@@ -2956,7 +2956,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "残云封天剑": {
@@ -2964,7 +2964,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "秘剑•灵云": {
@@ -2972,7 +2972,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "cloud-spirit",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "卦灵返生": {
@@ -2980,7 +2980,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "投石问路": {
@@ -2988,7 +2988,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "生机绽放": {
@@ -2996,7 +2996,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星衍诀": {
@@ -3004,7 +3004,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "日月争辉": {
@@ -3012,7 +3012,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "一掷乾坤": {
@@ -3020,7 +3020,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "落花流水": {
@@ -3028,7 +3028,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星弈•屠龙": {
@@ -3036,7 +3036,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "雷霆心法": {
@@ -3044,7 +3044,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "铁树开花": {
@@ -3052,7 +3052,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "先发制人": {
@@ -3060,7 +3060,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "流星天陨": {
@@ -3068,7 +3068,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天命劫": {
@@ -3076,7 +3076,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "移花接木": {
@@ -3084,7 +3084,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "heptastar",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵秘印": {
@@ -3092,7 +3092,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵秘印": {
@@ -3100,7 +3100,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵秘印": {
@@ -3108,7 +3108,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵秘印": {
@@ -3116,7 +3116,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵秘印": {
@@ -3124,7 +3124,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•封喉": {
@@ -3132,7 +3132,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•润木": {
@@ -3140,7 +3140,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•窑土": {
@@ -3148,7 +3148,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•藤蔓": {
@@ -3156,7 +3156,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•凝水": {
@@ -3164,7 +3164,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五行遁术": {
@@ -3172,7 +3172,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•撼地": {
@@ -3180,7 +3180,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•燃火": {
@@ -3188,7 +3188,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•韵金": {
@@ -3196,7 +3196,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "火灵•焚天焱": {
@@ -3204,7 +3204,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•海龙啸": {
@@ -3212,7 +3212,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五行灵爆术": {
@@ -3220,7 +3220,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五行绽放": {
@@ -3228,7 +3228,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "five-element",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "气势不绝": {
@@ -3236,7 +3236,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "死缠烂打": {
@@ -3244,7 +3244,7 @@
     "phase": 1,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "百毒不侵": {
@@ -3252,7 +3252,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "醉卧逍遥": {
@@ -3260,7 +3260,7 @@
     "phase": 2,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵草药浴": {
@@ -3268,7 +3268,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "破釜沉舟": {
@@ -3276,7 +3276,7 @@
     "phase": 3,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "力若疯魔": {
@@ -3284,7 +3284,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•双影": {
@@ -3292,7 +3292,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "幽冥三点手": {
@@ -3300,7 +3300,7 @@
     "phase": 4,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "破茧化蝶": {
@@ -3308,7 +3308,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "鬼音葬魂": {
@@ -3316,7 +3316,7 @@
     "phase": 5,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "无尽崩绝": {
@@ -3324,7 +3324,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "返璞归真": {
@@ -3332,7 +3332,7 @@
     "phase": 6,
     "type": "fortune",
     "category": "duan-xuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云泉道茶":{
@@ -3340,7 +3340,7 @@
     "phase": 5,
     "type": "personal",
     "category": "MuYifeng",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•崩雪":{
@@ -3348,7 +3348,7 @@
     "phase": 4,
     "type": "personal",
     "category": "YanXue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂剑•炎舞":{
@@ -3356,7 +3356,7 @@
     "phase": 5,
     "type": "personal",
     "category": "YanXue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•唤雨":{
@@ -3364,7 +3364,7 @@
     "phase": 4,
     "type": "personal",
     "category": "LongYao",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "九霄玲珑镯":{
@@ -3372,7 +3372,7 @@
     "phase": 5,
     "type": "personal",
     "category": "LongYao",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "小鱼干":{
@@ -3380,7 +3380,7 @@
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•飞砂":{
@@ -3388,7 +3388,7 @@
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": true,
+    "match-recommend": true,
     "deck-recommend": false
   },
   "猫薄荷":{
@@ -3396,7 +3396,7 @@
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "逗猫棒":{
@@ -3404,7 +3404,7 @@
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "青铜猫":{
@@ -3412,7 +3412,7 @@
     "phase": 1,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "云剑•猫爪":{
@@ -3420,7 +3420,7 @@
     "phase": 2,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灵猫乱剑":{
@@ -3428,7 +3428,7 @@
     "phase": 4,
     "type": "personal",
     "category": "LinXiaoyue",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "澄心剑胚":{
@@ -3436,7 +3436,7 @@
     "phase": 1,
     "type": "personal",
     "category": "LuJianxin",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "曳影剑阵":{
@@ -3444,7 +3444,7 @@
     "phase": 5,
     "type": "personal",
     "category": "LiChengyun",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "飞鸿踏雪":{
@@ -3452,7 +3452,7 @@
     "phase": 2,
     "type": "personal",
     "category": "TanShuyan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "无极卦盘":{
@@ -3460,7 +3460,7 @@
     "phase": 3,
     "type": "personal",
     "category": "YanChen",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "瓮中捉鳖":{
@@ -3468,7 +3468,7 @@
     "phase": 4,
     "type": "personal",
     "category": "YanChen",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "狂雷电闪":{
@@ -3476,7 +3476,7 @@
     "phase": 5,
     "type": "personal",
     "category": "YanChen",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "灯焰飞舞":{
@@ -3484,7 +3484,7 @@
     "phase": 3,
     "type": "personal",
     "category": "YaoLing",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "旋灯占卦":{
@@ -3492,7 +3492,7 @@
     "phase": 4,
     "type": "personal",
     "category": "YaoLing",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星爆术":{
@@ -3500,7 +3500,7 @@
     "phase": 3,
     "type": "personal",
     "category": "JiangXiming",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "七星定魂":{
@@ -3508,7 +3508,7 @@
     "phase": 4,
     "type": "personal",
     "category": "JiangXiming",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "算无遗策":{
@@ -3516,7 +3516,7 @@
     "phase": 1,
     "type": "personal",
     "category": "WuCe",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "星月折扇":{
@@ -3524,7 +3524,7 @@
     "phase": 5,
     "type": "personal",
     "category": "WuCe",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "悠然葫芦":{
@@ -3532,7 +3532,7 @@
     "phase": 3,
     "type": "personal",
     "category": "WuXingzhi",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "五行传承":{
@@ -3540,7 +3540,7 @@
     "phase": 5,
     "type": "personal",
     "category": "WuXingzhi",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "双鸳逆克":{
@@ -3548,7 +3548,7 @@
     "phase": 4,
     "type": "personal",
     "category": "DuLingyuan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "木灵•桃花印":{
@@ -3556,7 +3556,7 @@
     "phase": 2,
     "type": "personal",
     "category": "HuaQinrui",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "水灵•春雨":{
@@ -3564,7 +3564,7 @@
     "phase": 4,
     "type": "personal",
     "category": "HuaQinrui",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锟铻金环":{
@@ -3572,7 +3572,7 @@
     "phase": 3,
     "type": "personal",
     "category": "MuHu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "金灵•刚劲":{
@@ -3580,7 +3580,7 @@
     "phase": 4,
     "type": "personal",
     "category": "MuHu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "土灵•山崩":{
@@ -3588,7 +3588,7 @@
     "phase": 5,
     "type": "personal",
     "category": "MuHu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "锻体不息":{
@@ -3596,7 +3596,7 @@
     "phase": 2,
     "type": "personal",
     "category": "XiaoBu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "盛气凌人":{
@@ -3604,7 +3604,7 @@
     "phase": 2,
     "type": "personal",
     "category": "TuKui",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "疯魔":{
@@ -3612,7 +3612,7 @@
     "phase": 3,
     "type": "personal",
     "category": "YeMingming",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "崩拳•冥夜":{
@@ -3620,7 +3620,7 @@
     "phase": 4,
     "type": "personal",
     "category": "YeMingming",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "冥月蟾光":{
@@ -3628,7 +3628,7 @@
     "phase": 5,
     "type": "personal",
     "category": "YeMingming",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "冥心入玄":{
@@ -3636,7 +3636,7 @@
     "phase": 4,
     "type": "personal",
     "category": "JiFangsheng",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "万玄破魔掌":{
@@ -3644,7 +3644,7 @@
     "phase": 5,
     "type": "personal",
     "category": "JiFangsheng",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "双节棍":{
@@ -3652,7 +3652,7 @@
     "phase": 1,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "拆招":{
@@ -3660,7 +3660,7 @@
     "phase": 2,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "转势":{
@@ -3668,7 +3668,7 @@
     "phase": 4,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "赤金盘龙棍":{
@@ -3676,7 +3676,7 @@
     "phase": 5,
     "type": "personal",
     "category": "LiMan",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "天降甘霖":{
@@ -3684,7 +3684,7 @@
     "phase": 3,
     "type": "personal",
     "category": "QiWangyou",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "忘忧":{
@@ -3692,7 +3692,7 @@
     "phase": 5,
     "type": "personal",
     "category": "QiWangyou",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "阴符玉简":{
@@ -3700,7 +3700,7 @@
     "phase": 2,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "孤虚金书":{
@@ -3708,7 +3708,7 @@
     "phase": 5,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "背孤":{
@@ -3716,7 +3716,7 @@
     "phase": 5,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   },
   "击虚":{
@@ -3724,7 +3724,7 @@
     "phase": 5,
     "type": "personal",
     "category": "FengXu",
-    "recommend": false,
+    "match-recommend": false,
     "deck-recommend": false
   }
 }

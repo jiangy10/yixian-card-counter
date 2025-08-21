@@ -258,7 +258,7 @@ const CardLibraryContainer: React.FC = () => {
                     inHistory={false}
                     tail={
                       <div className="card-tail">
-                        {card.recommend && <RecommendLabel />}
+                        {card["match-recommend"] && <RecommendLabel />}
                         <TrackButton card={card} />
                       </div>
                     }
@@ -281,7 +281,7 @@ const CardLibraryContainer: React.FC = () => {
                       inHistory={false}
                       tail={
                         <div className="card-tail">
-                          {card.recommend && <RecommendLabel />}
+                          {card["match-recommend"] && <RecommendLabel />}
                           <TrackButton card={card} />
                         </div>
                       }
@@ -298,7 +298,7 @@ const CardLibraryContainer: React.FC = () => {
                 inHistory={false}
                 tail={
                   <div className="card-tail">
-                    {card.recommend && <RecommendLabel />}
+                    {card["match-recommend"] && <RecommendLabel />}
                     <TrackButton card={card} />
                   </div>
                 }

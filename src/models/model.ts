@@ -13,7 +13,7 @@ export interface CardLib {
   type: string;
   category: string;
   phase: number;
-  recommend: boolean;
+  "match-recommend": boolean;
 }
 
 export interface Player {
@@ -58,7 +58,7 @@ export interface Card {
   phase: number;
   type: string;
   category: string;
-  recommend: boolean;
+  "match-recommend": boolean;
   isTracking_match?: boolean;
   isTracking_deck?: boolean;
 }
@@ -69,7 +69,7 @@ export interface TrackingCard {
   phase: number;
   type: string;
   category: string;
-  recommend: boolean;
+  "match-recommend": boolean;
 }
 
 export interface MatchHistory {
