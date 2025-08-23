@@ -131,10 +131,11 @@ const CardLibraryContainer: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('cloud-spirit');
   const [activePhase, setActivePhase] = useState<string>('all');
   const [activeTracking, setActiveTracking] = useState<string>('match');
-  const { trackedCards } = useTracking();
+  const { trackedCards, deckTrackedCards, updateTracking, updateDeckTracking } = useTracking();
 
   const cards = useMemo(() => {
     const allCards: CardType[] = [];
+    const currentTrackedCards = activeTracking === 'match' ? trackedCards : deckTrackedCards;
     
     const processCardLibrary = (libData: Record<string, any>) => {
       Object.entries(libData).forEach(([name, card]) => {
@@ -144,7 +145,7 @@ const CardLibraryContainer: React.FC = () => {
               ...card,
               name,
               level: -1,
-              isTracking_match: trackedCards[name] || false
+              isTracking_match: currentTrackedCards[name] || false
             });
           }
         } else if (
@@ -156,7 +157,7 @@ const CardLibraryContainer: React.FC = () => {
             ...card,
             name,
             level: -1,
-            isTracking_match: trackedCards[name] || false
+            isTracking_match: currentTrackedCards[name] || false
           });
         }
       });
@@ -166,7 +167,7 @@ const CardLibraryContainer: React.FC = () => {
     processCardLibrary(specialCardLibData);
     
     return allCards;
-  }, [activeType, activeCategory, activePhase, trackedCards]);
+  }, [activeType, activeCategory, activePhase, activeTracking, trackedCards, deckTrackedCards]);
 
   return (
     <div className="card-library-container">
@@ -259,7 +260,11 @@ const CardLibraryContainer: React.FC = () => {
                     tail={
                       <div className="card-tail">
                         {card["match-recommend"] && <RecommendLabel />}
-                        <TrackButton card={card} />
+                        <TrackButton 
+                          card={card} 
+                          isTracking={activeTracking === 'match' ? (trackedCards[card.name] || false) : (deckTrackedCards[card.name] || false)}
+                          onTrackingClick={activeTracking === 'match' ? updateTracking : updateDeckTracking}
+                        />
                       </div>
                     }
                   />
@@ -282,7 +287,11 @@ const CardLibraryContainer: React.FC = () => {
                       tail={
                         <div className="card-tail">
                           {card["match-recommend"] && <RecommendLabel />}
-                          <TrackButton card={card} />
+                          <TrackButton 
+                            card={card} 
+                            isTracking={activeTracking === 'match' ? (trackedCards[card.name] || false) : (deckTrackedCards[card.name] || false)}
+                            onTrackingClick={activeTracking === 'match' ? updateTracking : updateDeckTracking}
+                          />
                         </div>
                       }
                     />
@@ -299,7 +308,11 @@ const CardLibraryContainer: React.FC = () => {
                 tail={
                   <div className="card-tail">
                     {card["match-recommend"] && <RecommendLabel />}
-                    <TrackButton card={card} />
+                    <TrackButton 
+                      card={card} 
+                      isTracking={activeTracking === 'match' ? (trackedCards[card.name] || false) : (deckTrackedCards[card.name] || false)}
+                      onTrackingClick={activeTracking === 'match' ? updateTracking : updateDeckTracking}
+                    />
                   </div>
                 }
               />

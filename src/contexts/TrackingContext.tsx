@@ -3,8 +3,11 @@ import { Card } from '../models/model';
 
 interface TrackingContextType {
   trackedCards: Record<string, boolean>;
+  deckTrackedCards: Record<string, boolean>;
   updateTracking: (cardName: string, isTracking_match: boolean) => Promise<void>;
+  updateDeckTracking: (cardName: string, isDeckTracking: boolean) => Promise<void>;
   refreshTracking: () => Promise<void>;
+  refreshDeckTracking: () => Promise<void>;
 }
 
 const TrackingContext = createContext<TrackingContextType | undefined>(undefined);
@@ -19,6 +22,7 @@ export const useTracking = () => {
 
 export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [trackedCards, setTrackedCards] = useState<Record<string, boolean>>({});
+  const [deckTrackedCards, setDeckTrackedCards] = useState<Record<string, boolean>>({});
 
   const loadTrackingCards = async () => {
     if (typeof window.electron === 'undefined') {
@@ -37,6 +41,23 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   };
 
+  const loadDeckTrackingCards = async () => {
+    if (typeof window.electron === 'undefined') {
+      console.error('Not running in Electron environment');
+      return {};
+    }
+
+    try {
+      const gamePath = await window.electron.getUserDataPath();
+      const deckTrackingFilePath = `${gamePath}/deck_tracking_cards.json`;
+      const content = await window.electron.readFile(deckTrackingFilePath);
+      return JSON.parse(content);
+    } catch (error) {
+      console.error('Failed to load deck tracking card data:', error);
+      return {};
+    }
+  };
+
   const refreshTracking = useCallback(async () => {
     const trackingCards = await loadTrackingCards();
     const trackedCardNames = Object.keys(trackingCards);
@@ -45,6 +66,16 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       newTrackedCards[name] = true;
     });
     setTrackedCards(newTrackedCards);
+  }, []);
+
+  const refreshDeckTracking = useCallback(async () => {
+    const deckTrackingCards = await loadDeckTrackingCards();
+    const deckTrackedCardNames = Object.keys(deckTrackingCards);
+    const newDeckTrackedCards: Record<string, boolean> = {};
+    deckTrackedCardNames.forEach(name => {
+      newDeckTrackedCards[name] = true;
+    });
+    setDeckTrackedCards(newDeckTrackedCards);
   }, []);
 
   const updateTracking = useCallback(async (cardName: string, isTracking_match: boolean) => {
@@ -74,14 +105,45 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   }, [refreshTracking]);
 
+  const updateDeckTracking = useCallback(async (cardName: string, isDeckTracking: boolean) => {
+    if (typeof window.electron === 'undefined') {
+      console.error('Not running in Electron environment');
+      return;
+    }
+
+    try {
+      const gamePath = await window.electron.getUserDataPath();
+      const deckTrackingFilePath = `${gamePath}/deck_tracking_cards.json`;
+      const deckTrackingCards = await loadDeckTrackingCards();
+
+      if (isDeckTracking) {
+        deckTrackingCards[cardName] = {
+          name: cardName,
+          tracking: true
+        };
+      } else {
+        delete deckTrackingCards[cardName];
+      }
+
+      await window.electron.writeFile(deckTrackingFilePath, JSON.stringify(deckTrackingCards, null, 2));
+      await refreshDeckTracking();
+    } catch (error) {
+      console.error('Error updating deck tracking card:', error);
+    }
+  }, [refreshDeckTracking]);
+
   React.useEffect(() => {
     refreshTracking();
-  }, [refreshTracking]);
+    refreshDeckTracking();
+  }, [refreshTracking, refreshDeckTracking]);
 
   const value = {
     trackedCards,
+    deckTrackedCards,
     updateTracking,
-    refreshTracking
+    updateDeckTracking,
+    refreshTracking,
+    refreshDeckTracking
   };
 
   return (
