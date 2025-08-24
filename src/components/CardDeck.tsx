@@ -4,6 +4,7 @@ import Card from './Card';
 import './CardDeck.css';
 import cardLibData from '../data/card_lib.json';
 import specialCardLibData from '../data/special_card_lib.json';
+import { useTracking } from '../contexts/TrackingContext';
 
 interface CardDeckProps {
   cardOperationLog: CardOperationLog;
@@ -36,6 +37,7 @@ const phaseTabs: Tab[] = [
 ];
 
 const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
+  const { deckTrackingCards } = useTracking();
   const initialTabs = useMemo(() => {
     const cardEntries = Object.entries(cardOperationLog.cards);
     if (cardEntries.length === 0) {
@@ -72,6 +74,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
   const [hideEmptyCards, setHideEmptyCards] = useState<boolean>(false);
+  const [showOnlyTracking, setShowOnlyTracking] = useState<boolean>(false);
 
   const handlePhaseClick = (phaseId: string) => {
     if (phaseId === 'all') {
@@ -109,9 +112,10 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
     return allCards.filter(card => 
       ((card.type === 'sect' && card.category === activeSect) ||
       (card.type === 'side-jobs' && card.category === activeSideJob)) &&
-      (activePhases.includes('all') || activePhases.includes(card.phase.toString()))
+      (activePhases.includes('all') || activePhases.includes(card.phase.toString())) &&
+      (!showOnlyTracking || deckTrackingCards[card.name])
     );
-  }, [activeSect, activeSideJob, activePhases, hideEmptyCards]);
+  }, [activeSect, activeSideJob, activePhases, hideEmptyCards, showOnlyTracking, deckTrackingCards]);
 
   const calculateRemainingCount = (cardName: string, phase: number): number => {
     const maxCount = cardName === '锻体丹' || cardName === '还魂丹' || cardName === '锻体玄丹' 
@@ -204,6 +208,14 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               onChange={(e) => setHideEmptyCards(e.target.checked)}
             />
             隐藏数量为0的卡牌
+          </label>
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={showOnlyTracking}
+              onChange={(e) => setShowOnlyTracking(e.target.checked)}
+            />
+            只显示追踪中的卡牌
           </label>
         </div>
       </div>
