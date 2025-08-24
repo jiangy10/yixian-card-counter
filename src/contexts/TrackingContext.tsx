@@ -2,8 +2,8 @@ import React, { createContext, useContext, useState, useCallback } from 'react';
 import { Card } from '../models/model';
 
 interface TrackingContextType {
-  trackedCards: Record<string, boolean>;
-  deckTrackedCards: Record<string, boolean>;
+  trackingCards: Record<string, boolean>;
+  deckTrackingCards: Record<string, boolean>;
   updateTracking: (cardName: string, isTracking_match: boolean) => Promise<void>;
   updateDeckTracking: (cardName: string, isDeckTracking: boolean) => Promise<void>;
   refreshTracking: () => Promise<void>;
@@ -21,8 +21,8 @@ export const useTracking = () => {
 };
 
 export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [trackedCards, setTrackedCards] = useState<Record<string, boolean>>({});
-  const [deckTrackedCards, setDeckTrackedCards] = useState<Record<string, boolean>>({});
+  const [trackingCards, setTrackingCards] = useState<Record<string, boolean>>({});
+  const [deckTrackingCards, setDeckTrackingCards] = useState<Record<string, boolean>>({});
 
   const loadTrackingCards = async () => {
     if (typeof window.electron === 'undefined') {
@@ -59,23 +59,23 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   const refreshTracking = useCallback(async () => {
-    const trackingCards = await loadTrackingCards();
-    const trackedCardNames = Object.keys(trackingCards);
-    const newTrackedCards: Record<string, boolean> = {};
-    trackedCardNames.forEach(name => {
-      newTrackedCards[name] = true;
+    const trackingCardsData = await loadTrackingCards();
+    const trackingCardNames = Object.keys(trackingCardsData);
+    const newTrackingCards: Record<string, boolean> = {};
+    trackingCardNames.forEach(name => {
+      newTrackingCards[name] = true;
     });
-    setTrackedCards(newTrackedCards);
+    setTrackingCards(newTrackingCards);
   }, []);
 
   const refreshDeckTracking = useCallback(async () => {
-    const deckTrackingCards = await loadDeckTrackingCards();
-    const deckTrackedCardNames = Object.keys(deckTrackingCards);
-    const newDeckTrackedCards: Record<string, boolean> = {};
-    deckTrackedCardNames.forEach(name => {
-      newDeckTrackedCards[name] = true;
+    const deckTrackingCardsData = await loadDeckTrackingCards();
+    const deckTrackingCardNames = Object.keys(deckTrackingCardsData);
+    const newDeckTrackingCards: Record<string, boolean> = {};
+    deckTrackingCardNames.forEach(name => {
+      newDeckTrackingCards[name] = true;
     });
-    setDeckTrackedCards(newDeckTrackedCards);
+    setDeckTrackingCards(newDeckTrackingCards);
   }, []);
 
   const updateTracking = useCallback(async (cardName: string, isTracking_match: boolean) => {
@@ -87,18 +87,18 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     try {
       const gamePath = await window.electron.getUserDataPath();
       const trackingFilePath = `${gamePath}/match_tracking_cards.json`;
-      const trackingCards = await loadTrackingCards();
+      const trackingCardsData = await loadTrackingCards();
 
       if (isTracking_match) {
-        trackingCards[cardName] = {
+        trackingCardsData[cardName] = {
           name: cardName,
           tracking: true
         };
       } else {
-        delete trackingCards[cardName];
+        delete trackingCardsData[cardName];
       }
 
-      await window.electron.writeFile(trackingFilePath, JSON.stringify(trackingCards, null, 2));
+      await window.electron.writeFile(trackingFilePath, JSON.stringify(trackingCardsData, null, 2));
       await refreshTracking();
     } catch (error) {
       console.error('Error updating tracking card:', error);
@@ -114,18 +114,18 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     try {
       const gamePath = await window.electron.getUserDataPath();
       const deckTrackingFilePath = `${gamePath}/deck_tracking_cards.json`;
-      const deckTrackingCards = await loadDeckTrackingCards();
+      const deckTrackingCardsData = await loadDeckTrackingCards();
 
       if (isDeckTracking) {
-        deckTrackingCards[cardName] = {
+        deckTrackingCardsData[cardName] = {
           name: cardName,
           tracking: true
         };
       } else {
-        delete deckTrackingCards[cardName];
+        delete deckTrackingCardsData[cardName];
       }
 
-      await window.electron.writeFile(deckTrackingFilePath, JSON.stringify(deckTrackingCards, null, 2));
+      await window.electron.writeFile(deckTrackingFilePath, JSON.stringify(deckTrackingCardsData, null, 2));
       await refreshDeckTracking();
     } catch (error) {
       console.error('Error updating deck tracking card:', error);
@@ -138,8 +138,8 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [refreshTracking, refreshDeckTracking]);
 
   const value = {
-    trackedCards,
-    deckTrackedCards,
+    trackingCards,
+    deckTrackingCards,
     updateTracking,
     updateDeckTracking,
     refreshTracking,

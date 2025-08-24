@@ -52,10 +52,10 @@ export const TrackButton: React.FC<{
   isTracking?: boolean; 
   onTrackingClick?: (cardName: string, isTracking: boolean) => Promise<void>;
 }> = ({ card, isTracking, onTrackingClick }) => {
-  const { trackedCards, updateTracking } = useTracking();
+  const { trackingCards, updateTracking } = useTracking();
   const [isUpdating, setIsUpdating] = useState(false);
   
-  const isTrackingStatus = isTracking !== undefined ? isTracking : (trackedCards[card.name] || false);
+  const isTrackingStatus = isTracking !== undefined ? isTracking : (trackingCards[card.name] || false);
   
   const handleTrackingClick = async () => {
     if (isUpdating) return;

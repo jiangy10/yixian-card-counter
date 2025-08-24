@@ -8,8 +8,8 @@ interface MatchHistoryCardProps {
 }
 
 const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
-  const { trackedCards, updateTracking } = useTracking();
-  const isTracking_match = trackedCards[card.name] || false;
+  const { trackingCards, updateTracking } = useTracking();
+  const isTracking_match = trackingCards[card.name] || false;
   const [isUpdating, setIsUpdating] = useState(false);
 
   const imageType = card.type === 'side job' ? 'side-jobs' : card.type.replace(/\s+/g, '_');

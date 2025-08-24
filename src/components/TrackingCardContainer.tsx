@@ -22,12 +22,12 @@ const tabs: Tab[] = [
 
 const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) => {
   const [activeTab, setActiveTab] = useState('all');
-  const { trackedCards } = useTracking();
+  const { trackingCards } = useTracking();
 
-  const trackedFilteredCards = useMemo(() => {
-    const tracked = cards.filter(card => trackedCards[card.name]);
+  const trackingFilteredCards = useMemo(() => {
+    const tracking = cards.filter(card => trackingCards[card.name]);
     
-    const cardGroups = tracked.reduce<Record<string, CardType>>((groups, card) => {
+    const cardGroups = tracking.reduce<Record<string, CardType>>((groups, card) => {
       if (!groups[card.name] || groups[card.name].level < card.level) {
         groups[card.name] = card;
       }
@@ -35,14 +35,14 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
     }, {});
 
     return Object.values(cardGroups);
-  }, [cards, trackedCards]);
+  }, [cards, trackingCards]);
 
   const filteredCards = useMemo(() => {
     if (activeTab === 'all') {
-      return trackedFilteredCards;
+      return trackingFilteredCards;
     }
 
-    return trackedFilteredCards.filter(card => {
+    return trackingFilteredCards.filter(card => {
       const cardType = card.type.toLowerCase();
       switch (activeTab) {
         case 'side-jobs':
@@ -55,7 +55,7 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
           return false;
       }
     });
-  }, [activeTab, trackedFilteredCards]);
+  }, [activeTab, trackingFilteredCards]);
 
   return (
     <div className="tracking-card-container">
