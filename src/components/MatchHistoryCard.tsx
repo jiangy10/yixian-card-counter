@@ -8,8 +8,8 @@ interface MatchHistoryCardProps {
 }
 
 const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
-  const { trackedCards, updateTracking } = useTracking();
-  const isTracking = trackedCards[card.name] || false;
+  const { trackingCards, updateTracking } = useTracking();
+  const isTracking_match = trackingCards[card.name] || false;
   const [isUpdating, setIsUpdating] = useState(false);
 
   const imageType = card.type === 'side job' ? 'side-jobs' : card.type.replace(/\s+/g, '_');
@@ -22,7 +22,7 @@ const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
     if (isUpdating) return;
     setIsUpdating(true);
     try {
-      await updateTracking(card.name, !isTracking);
+      await updateTracking(card.name, !isTracking_match);
     } catch (error) {
       console.error('Error updating tracking card:', error);
     } finally {
@@ -32,8 +32,8 @@ const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
 
   const buttonStyle = {
     backgroundColor: 'transparent',
-    color: isTracking ? '#3498db' : '#2ecc71',
-    border: `1.5px solid ${isTracking ? '#3498db' : '#2ecc71'}`,
+    color: isTracking_match ? '#3498db' : '#2ecc71',
+    border: `1.5px solid ${isTracking_match ? '#3498db' : '#2ecc71'}`,
     borderRadius: '5px',
     cursor: isUpdating ? 'wait' : 'pointer',
     fontSize: '12px',
@@ -54,7 +54,7 @@ const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
         style={buttonStyle}
         disabled={isUpdating}
       >
-        {isUpdating ? 'Updating...' : (isTracking ? '追踪中' : '追踪')}
+        {isUpdating ? 'Updating...' : (isTracking_match ? '追踪中' : '追踪')}
       </button>
     </div>
   );

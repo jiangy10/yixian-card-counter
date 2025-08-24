@@ -69,7 +69,7 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
             phase: 1,
             type: 'unknown',
             category: 'unknown',
-            recommend: false
+            "match-recommend": false
           } as Card;
         });
 

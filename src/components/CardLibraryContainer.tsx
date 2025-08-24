@@ -11,6 +11,11 @@ interface Tab {
   label: string;
 }
 
+const trackingFilters: Tab[] = [
+  { id: 'match', label: '对局' },
+  { id: 'deck', label: '牌库' }
+];
+
 const typeFilters: Tab[] = [
   { id: 'sect', label: '门派' },
   { id: 'side-jobs', label: '副职' },
@@ -125,10 +130,12 @@ const CardLibraryContainer: React.FC = () => {
   const [activeType, setActiveType] = useState<string>('sect');
   const [activeCategory, setActiveCategory] = useState<string>('cloud-spirit');
   const [activePhase, setActivePhase] = useState<string>('all');
-  const { trackedCards } = useTracking();
+  const [activeTracking, setActiveTracking] = useState<string>('match');
+  const { trackingCards, deckTrackingCards, updateTracking, updateDeckTracking } = useTracking();
 
   const cards = useMemo(() => {
     const allCards: CardType[] = [];
+    const currentTrackingCards = activeTracking === 'match' ? trackingCards : deckTrackingCards;
     
     const processCardLibrary = (libData: Record<string, any>) => {
       Object.entries(libData).forEach(([name, card]) => {
@@ -138,7 +145,7 @@ const CardLibraryContainer: React.FC = () => {
               ...card,
               name,
               level: -1,
-              isTracking: trackedCards[name] || false
+              isTracking_match: currentTrackingCards[name] || false
             });
           }
         } else if (
@@ -150,7 +157,7 @@ const CardLibraryContainer: React.FC = () => {
             ...card,
             name,
             level: -1,
-            isTracking: trackedCards[name] || false
+            isTracking_match: currentTrackingCards[name] || false
           });
         }
       });
@@ -160,11 +167,23 @@ const CardLibraryContainer: React.FC = () => {
     processCardLibrary(specialCardLibData);
     
     return allCards;
-  }, [activeType, activeCategory, activePhase, trackedCards]);
+  }, [activeType, activeCategory, activePhase, activeTracking, trackingCards, deckTrackingCards]);
 
   return (
     <div className="card-library-container">
       <div className="filters-container">
+        <div className="filter-group">
+          {trackingFilters.map(filter => (
+            <button
+              key={filter.id}
+              className={`filter-button ${activeTracking === filter.id ? 'active' : ''}`}
+              onClick={() => setActiveTracking(filter.id)}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+
         <div className="filter-group">
           {typeFilters.map(filter => (
             <button
@@ -240,8 +259,12 @@ const CardLibraryContainer: React.FC = () => {
                     inHistory={false}
                     tail={
                       <div className="card-tail">
-                        {card.recommend && <RecommendLabel />}
-                        <TrackButton card={card} />
+                        {card["match-recommend"] && <RecommendLabel />}
+                        <TrackButton 
+                          card={card} 
+                          isTracking={activeTracking === 'match' ? (trackingCards[card.name] || false) : (deckTrackingCards[card.name] || false)}
+                          onTrackingClick={activeTracking === 'match' ? updateTracking : updateDeckTracking}
+                        />
                       </div>
                     }
                   />
@@ -263,8 +286,12 @@ const CardLibraryContainer: React.FC = () => {
                       inHistory={false}
                       tail={
                         <div className="card-tail">
-                          {card.recommend && <RecommendLabel />}
-                          <TrackButton card={card} />
+                          {card["match-recommend"] && <RecommendLabel />}
+                          <TrackButton 
+                            card={card} 
+                            isTracking={activeTracking === 'match' ? (trackingCards[card.name] || false) : (deckTrackingCards[card.name] || false)}
+                            onTrackingClick={activeTracking === 'match' ? updateTracking : updateDeckTracking}
+                          />
                         </div>
                       }
                     />
@@ -280,8 +307,12 @@ const CardLibraryContainer: React.FC = () => {
                 inHistory={false}
                 tail={
                   <div className="card-tail">
-                    {card.recommend && <RecommendLabel />}
-                    <TrackButton card={card} />
+                    {card["match-recommend"] && <RecommendLabel />}
+                    <TrackButton 
+                      card={card} 
+                      isTracking={activeTracking === 'match' ? (trackingCards[card.name] || false) : (deckTrackingCards[card.name] || false)}
+                      onTrackingClick={activeTracking === 'match' ? updateTracking : updateDeckTracking}
+                    />
                   </div>
                 }
               />

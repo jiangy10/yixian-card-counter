@@ -6,14 +6,14 @@ import './Card.css';
 
 interface CardProps {
   card: CardType;
-  isTracked?: boolean;
+  isTracking?: boolean;
   inHistory?: boolean;
   tail?: React.ReactNode;
 }
 
 const Card: React.FC<CardProps> = ({ 
   card, 
-  isTracked = false, 
+  isTracking = false, 
   inHistory = false,
   tail
 }) => {
@@ -47,16 +47,25 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export const TrackButton: React.FC<{ card: CardType }> = ({ card }) => {
-  const { trackedCards, updateTracking } = useTracking();
-  const isTracking = trackedCards[card.name] || false;
+export const TrackButton: React.FC<{ 
+  card: CardType; 
+  isTracking?: boolean; 
+  onTrackingClick?: (cardName: string, isTracking: boolean) => Promise<void>;
+}> = ({ card, isTracking, onTrackingClick }) => {
+  const { trackingCards, updateTracking } = useTracking();
   const [isUpdating, setIsUpdating] = useState(false);
-
+  
+  const isTrackingStatus = isTracking !== undefined ? isTracking : (trackingCards[card.name] || false);
+  
   const handleTrackingClick = async () => {
     if (isUpdating) return;
     setIsUpdating(true);
     try {
-      await updateTracking(card.name, !isTracking);
+      if (onTrackingClick) {
+        await onTrackingClick(card.name, !isTrackingStatus);
+      } else {
+        await updateTracking(card.name, !isTrackingStatus);
+      }
     } catch (error) {
       console.error('Error updating tracking card:', error);
     } finally {
@@ -66,8 +75,8 @@ export const TrackButton: React.FC<{ card: CardType }> = ({ card }) => {
 
   const buttonStyle = {
     backgroundColor: 'transparent',
-    color: isTracking ? '#3498db' : '#2ecc71',
-    border: `1.5px solid ${isTracking ? '#3498db' : '#2ecc71'}`,
+    color: isTrackingStatus ? '#3498db' : '#2ecc71',
+    border: `1.5px solid ${isTrackingStatus ? '#3498db' : '#2ecc71'}`,
     borderRadius: '5px',
     cursor: isUpdating ? 'wait' : 'pointer',
     fontSize: '12px',
@@ -81,7 +90,7 @@ export const TrackButton: React.FC<{ card: CardType }> = ({ card }) => {
       style={buttonStyle}
       disabled={isUpdating}
     >
-      {isUpdating ? 'Updating...' : (isTracking ? '追踪中' : '追踪')}
+      {isUpdating ? 'Updating...' : (isTrackingStatus ? '追踪中' : '追踪')}
     </button>
   );
 };

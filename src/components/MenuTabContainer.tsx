@@ -8,8 +8,8 @@ interface MenuTabContainerProps {
 
 const tabs = [
   {id: 'match-record', label: '对战记录'},
-  {id: 'card-library', label: '管理追踪卡牌'},
-  {id: 'card-deck', label: '剩余牌库'}
+  {id: 'card-deck', label: '剩余牌库'},
+  {id: 'card-library', label: '管理追踪卡牌'}
 ]
 
 const MenuTabContainer: React.FC<MenuTabContainerProps> = ({ activeTab, onTabChange }) => {
