@@ -8,5 +8,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["main.ts", "preload.ts", "battleLogConverter.ts"]
+  "include": ["main.ts", "preload.ts", "battleLogConverter.ts", "cardOperationLogConverter.ts", "utils.ts"]
 }
