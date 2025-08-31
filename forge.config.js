@@ -4,13 +4,30 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: process.platform === 'darwin' ? './public/favicon.icns' : './public/favicon.ico'
+    icon: process.platform === 'darwin' ? './public/favicon.icns' : './public/favicon.ico',
+    out: './out',
+    ignore: [
+      /^\/src\//,
+      /^\/electron\/.*\.ts$/,
+      /^\/tsconfig\.json$/,
+      /^\/.git/,
+      /^\/.vscode/,
+      /^\/scripts/,
+      /^\/public\/(?!favicon\.)/,
+      /^\/assets/,
+      /node_modules\/@electron-forge/
+    ],
+    extraResource: ['./build/index.html', './build/favicon.ico']
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        setupExe: 'yixian-card-counter-setup.exe',
+        setupIcon: './public/favicon.ico',
+        noMsi: true
+      },
     },
     {
       name: '@electron-forge/maker-zip',

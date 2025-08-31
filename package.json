@@ -29,40 +29,15 @@
     "eject": "react-scripts eject",
     "electron:dev": "tsc -p electron/tsconfig.json && concurrently \"cross-env BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
     "mac:dev": "tsc -p electron/tsconfig.json && concurrently \"cross-env BROWSER=none mac=true react-scripts start\" \"wait-on http://localhost:3000 && cross-env mac=true electron .\"",
-    "electron:build": "npm run build && tsc -p electron/tsconfig.json && electron-builder",
+
     "electron:start": "tsc -p electron/tsconfig.json && electron .",
-    "electron:forge-start": "npm run build && tsc -p electron/tsconfig.json && electron-forge start",
+
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "forge:start": "npm run build && tsc -p electron/tsconfig.json && electron-forge start"
+    "forge:start": "npm run build && tsc -p electron/tsconfig.json && electron-forge start",
+    "rebuild": "npm run build && tsc -p electron/tsconfig.json"
   },
-  "build": {
-    "appId": "com.yixian.cardcounter",
-    "productName": "Yixian Card Counter",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*",
-      "!node_modules/@electron-forge/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    },
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        }
-      ]
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true
-    }
-  },
+
   "eslintConfig": {
     "extends": [
       "react-app",
