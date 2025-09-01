@@ -90,6 +90,13 @@
         "category": "heptastar",
         "match-recommend": false
     },
+    "幻•生机绽放": {
+        "name": "幻•生机绽放",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
     "幻•斗转星移": {
         "name": "幻•斗转星移",
         "phase": 5,
