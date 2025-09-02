@@ -27,6 +27,13 @@
         "category": "cloud-spirit",
         "match-recommend": false
     },
+    "幻•勤拙剑": {
+        "name": "幻•勤拙剑",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
     "幻•云剑探云": {
         "name": "幻•云剑探云",
         "phase": 5,
