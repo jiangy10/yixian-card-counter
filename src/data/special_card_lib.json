@@ -167,6 +167,13 @@
         "category": "five-element",
         "match-recommend": false
     },
+    "幻•火灵印": {
+        "name": "幻•火灵印",
+        "phase": 4,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
     "幻•水灵波澜": {
         "name": "幻•水灵波澜",
         "phase": 5,
