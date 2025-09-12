@@ -3,6 +3,7 @@ import { Card, Player } from '../models/model';
 import { usePlayer } from '../contexts/PlayerContext';
 import cardLibData from '../data/card_lib.json';
 import specialCardLibData from '../data/special_card_lib.json';
+import { findCardInfo } from '../utils/cardNameUtils';
 
 interface CardManagerProps {
   selectedPlayer: Player | undefined;
@@ -44,8 +45,11 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
 
       const cardsWithDetails = allUsedCards
         .map(usedCard => {
-          const cardInfo = (cardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name] ||
-                         (specialCardLibData as Record<string, Omit<Card, 'level'>>)[usedCard.name];
+          const cardInfo = findCardInfo(
+            usedCard.name,
+            cardLibData as Record<string, Omit<Card, 'level'>>,
+            specialCardLibData as Record<string, Omit<Card, 'level'>>
+          );
           if (cardInfo) {
             let type = cardInfo.type;
             if (type === 'side-jobs') {

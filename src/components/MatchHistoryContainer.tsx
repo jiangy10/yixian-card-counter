@@ -5,6 +5,7 @@ import cardLibData from '../data/card_lib.json';
 import specialCardLibData from '../data/special_card_lib.json';
 import { usePlayer } from '../contexts/PlayerContext';
 import MatchHistoryItem from './MatchHistory';
+import { findCardInfo } from '../utils/cardNameUtils';
 import './MatchHistoryContainer.css';
 
 interface MatchHistoryContainerProps {
@@ -16,8 +17,11 @@ const processCards = (history: MatchHistory) => {
   const detectedSideJobs = new Set<string>();
   
   const processedCards = history.used_card.map(usedCard => {
-    const cardInfo = (cardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name] || 
-                    (specialCardLibData as Record<string, Omit<CardType, 'level'>>)[usedCard.name];
+    const cardInfo = findCardInfo(
+      usedCard.name,
+      cardLibData as Record<string, Omit<CardType, 'level'>>,
+      specialCardLibData as Record<string, Omit<CardType, 'level'>>
+    );
     if (cardInfo) {
       const card: CardType = {
         ...cardInfo,
