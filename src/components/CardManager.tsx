@@ -55,7 +55,7 @@ const CardManager: React.FC<CardManagerProps> = ({ selectedPlayer, onDisplayCard
             if (type === 'side-jobs') {
               type = 'side job';
             } else if (type === 'fortune') {
-              type = 'opportunity';
+              type = 'fortune';
             }
             
             const card: Card = {

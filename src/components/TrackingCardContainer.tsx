@@ -17,7 +17,7 @@ const tabs: Tab[] = [
   { id: 'all', label: '全部' },
   { id: 'sect', label: '门派' },
   { id: 'side-jobs', label: '副职' },
-  { id: 'opportunity', label: '机缘' }
+  { id: 'fortune', label: '机缘' }
 ];
 
 const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) => {
@@ -47,8 +47,8 @@ const TrackingCardContainer: React.FC<TrackingCardContainerProps> = ({ cards }) 
       switch (activeTab) {
         case 'side-jobs':
           return cardType === 'side job' || cardType === 'side-jobs';
-        case 'opportunity':
-          return cardType === 'opportunity' || cardType === 'fortune';
+        case 'fortune':
+          return cardType === 'fortune' || cardType === 'fortune';
         case 'sect':
           return cardType === 'sect';
         default:
