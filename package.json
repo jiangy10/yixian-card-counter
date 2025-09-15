@@ -29,8 +29,8 @@
     "eject": "react-scripts eject",
     "electron:dev": "tsc -p electron/tsconfig.json && concurrently \"cross-env BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
     "mac:dev": "tsc -p electron/tsconfig.json && concurrently \"cross-env BROWSER=none mac=true react-scripts start\" \"wait-on http://localhost:3000 && cross-env mac=true electron .\"",
-
     "electron:start": "tsc -p electron/tsconfig.json && electron .",
+    "deploy": "npm run build && npx tsc -p electron/tsconfig.json && npm run make",
 
     "package": "electron-forge package",
     "make": "electron-forge make",
