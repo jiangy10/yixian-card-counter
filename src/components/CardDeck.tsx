@@ -74,6 +74,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
   const [hideEmptyCards, setHideEmptyCards] = useState<boolean>(false);
+  const [showOnlyOneCard, setShowOnlyOneCard] = useState<boolean>(false);
   const [showOnlyTracking, setShowOnlyTracking] = useState<boolean>(false);
 
   const handlePhaseClick = (phaseId: string) => {
@@ -128,7 +129,9 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
     return phases.map(phase => {
       const phaseCards = filteredCards.filter(card => {
         const remainingCount = calculateRemainingCount(card.name, card.phase);
-        return card.phase === phase && (!hideEmptyCards || remainingCount > 0);
+        return card.phase === phase && 
+               (!hideEmptyCards || remainingCount > 0) &&
+               (!showOnlyOneCard || remainingCount === 1);
       });
       
       if (phaseCards.length === 0) return null;
@@ -208,6 +211,14 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               onChange={(e) => setHideEmptyCards(e.target.checked)}
             />
             隐藏数量为0的卡牌
+          </label>
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={showOnlyOneCard}
+              onChange={(e) => setShowOnlyOneCard(e.target.checked)}
+            />
+            只显示数量为1的卡牌
           </label>
           <label className="multi-select-label">
             <input
