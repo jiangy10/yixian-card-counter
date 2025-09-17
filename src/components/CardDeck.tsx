@@ -131,7 +131,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
         const remainingCount = calculateRemainingCount(card.name, card.phase);
         return card.phase === phase && 
                (!hideEmptyCards || remainingCount > 0) &&
-               (!showOnlyOneCard || remainingCount === 1);
+               (!showOnlyOneCard || remainingCount <= 1);
       });
       
       if (phaseCards.length === 0) return null;
@@ -218,7 +218,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               checked={showOnlyOneCard}
               onChange={(e) => setShowOnlyOneCard(e.target.checked)}
             />
-            只显示数量为1的卡牌
+            只显示数量小于等于1的卡牌
           </label>
           <label className="multi-select-label">
             <input
