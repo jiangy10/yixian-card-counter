@@ -77,6 +77,8 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const [hideEmptyCards, setHideEmptyCards] = useState<boolean>(false);
   const [showOnlyOneCard, setShowOnlyOneCard] = useState<boolean>(false);
   const [showOnlyTracking, setShowOnlyTracking] = useState<boolean>(false);
+  const [showOnlySectCards, setShowOnlySectCards] = useState<boolean>(false);
+  const [showOnlySideJobCards, setShowOnlySideJobCards] = useState<boolean>(false);
 
   const handleSideJobClick = (sideJobId: string) => {
     if (!isSideJobMultiSelect) {
@@ -126,13 +128,22 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
       level: -1
     }));
 
-    return allCards.filter(card => 
-      ((card.type === 'sect' && card.category === activeSect) ||
-      (card.type === 'side-jobs' && activeSideJobs.includes(card.category))) &&
-      (activePhases.includes('all') || activePhases.includes(card.phase.toString())) &&
-      (!showOnlyTracking || deckTrackingCards[card.name])
-    );
-  }, [activeSect, activeSideJobs, activePhases, hideEmptyCards, showOnlyTracking, deckTrackingCards]);
+    return allCards.filter(card => {
+      const typeAllowed = showOnlySectCards
+        ? card.type === 'sect'
+        : showOnlySideJobCards
+        ? card.type === 'side-jobs'
+        : (card.type === 'sect' || card.type === 'side-jobs');
+
+      const categoryMatch =
+        (card.type === 'sect' && card.category === activeSect) ||
+        (card.type === 'side-jobs' && activeSideJobs.includes(card.category));
+
+      return typeAllowed && categoryMatch &&
+        (activePhases.includes('all') || activePhases.includes(card.phase.toString())) &&
+        (!showOnlyTracking || deckTrackingCards[card.name]);
+    });
+  }, [activeSect, activeSideJobs, activePhases, hideEmptyCards, showOnlyTracking, deckTrackingCards, showOnlySectCards, showOnlySideJobCards]);
 
   const calculateRemainingCount = (cardName: string, phase: number): number => {
     const maxCount = cardName === '锻体丹' || cardName === '还魂丹' || cardName === '锻体玄丹' 
@@ -190,6 +201,18 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               {tab.label}
             </button>
           ))}
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={showOnlySectCards}
+              onChange={(e) => {
+                const checked = e.target.checked;
+                setShowOnlySectCards(checked);
+                if (checked) setShowOnlySideJobCards(false);
+              }}
+            />
+            只显示门派牌
+          </label>
         </div>
         <div className="tab-row">
           {sideJobTabs.map(tab => (
@@ -208,6 +231,18 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
               onChange={(e) => setIsSideJobMultiSelect(e.target.checked)}
             />
             多选
+          </label>
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={showOnlySideJobCards}
+              onChange={(e) => {
+                const checked = e.target.checked;
+                setShowOnlySideJobCards(checked);
+                if (checked) setShowOnlySectCards(false);
+              }}
+            />
+            只显示副职牌
           </label>
         </div>
         <div className="tab-row">
