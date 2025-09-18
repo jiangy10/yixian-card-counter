@@ -70,12 +70,28 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   }, []);
 
   const [activeSect, setActiveSect] = useState<string>(initialTabs.sect);
-  const [activeSideJob, setActiveSideJob] = useState<string>(initialTabs.sideJob);
+  const [activeSideJobs, setActiveSideJobs] = useState<string[]>([initialTabs.sideJob]);
+  const [isSideJobMultiSelect, setIsSideJobMultiSelect] = useState<boolean>(false);
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
   const [hideEmptyCards, setHideEmptyCards] = useState<boolean>(false);
   const [showOnlyOneCard, setShowOnlyOneCard] = useState<boolean>(false);
   const [showOnlyTracking, setShowOnlyTracking] = useState<boolean>(false);
+
+  const handleSideJobClick = (sideJobId: string) => {
+    if (!isSideJobMultiSelect) {
+      setActiveSideJobs([sideJobId]);
+      return;
+    }
+
+    setActiveSideJobs(prev => {
+      if (prev.includes(sideJobId)) {
+        const result = prev.filter(id => id !== sideJobId);
+        return result.length === 0 ? [initialTabs.sideJob] : result;
+      }
+      return [...prev, sideJobId];
+    });
+  };
 
   const handlePhaseClick = (phaseId: string) => {
     if (phaseId === 'all') {
@@ -112,11 +128,11 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
 
     return allCards.filter(card => 
       ((card.type === 'sect' && card.category === activeSect) ||
-      (card.type === 'side-jobs' && card.category === activeSideJob)) &&
+      (card.type === 'side-jobs' && activeSideJobs.includes(card.category))) &&
       (activePhases.includes('all') || activePhases.includes(card.phase.toString())) &&
       (!showOnlyTracking || deckTrackingCards[card.name])
     );
-  }, [activeSect, activeSideJob, activePhases, hideEmptyCards, showOnlyTracking, deckTrackingCards]);
+  }, [activeSect, activeSideJobs, activePhases, hideEmptyCards, showOnlyTracking, deckTrackingCards]);
 
   const calculateRemainingCount = (cardName: string, phase: number): number => {
     const maxCount = cardName === '锻体丹' || cardName === '还魂丹' || cardName === '锻体玄丹' 
@@ -179,12 +195,20 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
           {sideJobTabs.map(tab => (
             <button
               key={tab.id}
-              className={`filter-button ${activeSideJob === tab.id ? 'active' : ''}`}
-              onClick={() => setActiveSideJob(tab.id)}
+              className={`filter-button ${activeSideJobs.includes(tab.id) ? 'active' : ''}`}
+              onClick={() => handleSideJobClick(tab.id)}
             >
               {tab.label}
             </button>
           ))}
+          <label className="multi-select-label">
+            <input
+              type="checkbox"
+              checked={isSideJobMultiSelect}
+              onChange={(e) => setIsSideJobMultiSelect(e.target.checked)}
+            />
+            多选
+          </label>
         </div>
         <div className="tab-row">
           {phaseTabs.map(tab => (
@@ -204,6 +228,8 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
             />
             多选
           </label>
+        </div>
+        <div className="tab-row">
           <label className="multi-select-label">
             <input
               type="checkbox"
