@@ -27,7 +27,7 @@ const PlayerInfoContainer: React.FC<PlayerInfoContainerProps> = ({ player }) => 
           <span className="username-label">{player.player_username}</span>
           <span className="player-info-label">修为：{player.cultivation}</span>
           <span className="player-info-label">生命上限：{player.health}</span>
-          {player.physique && <span className="player-info-label">体魄：{player.physique}</span>}
+          {player.physique? <span className="player-info-label">体魄：{player.physique}/{player.maxPhysique}</span> : null}
           <span className="player-info-label">命元：{player.destiny}</span>
           <span className="player-info-label">副职：{sideJobs && sideJobs.length > 0 ? sideJobs.map(job => SIDE_JOB_NAMES[job] || job).join('、') : '未知'}</span>
         </div>

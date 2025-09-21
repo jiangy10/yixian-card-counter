@@ -21,6 +21,8 @@ interface BattleLogPlayer {
   level: number;
   opponentUsername: string;
   usedCards: BattleLogCard[];
+  tiPo?: number;
+  maxTiPo?: number;
 }
 
 interface BattleLogRound {
@@ -41,6 +43,8 @@ interface SamplePlayer {
   cultivation: number;
   opponent_username: string;
   used_card: SampleCard[];
+  physique?: number;
+  maxPhysique?: number;
 }
 
 interface SampleData {
@@ -72,6 +76,8 @@ function convertBattleLogToSample(battleLogContent: string): SampleData | { roun
           destiny_diff: player.lifeDelta,
           health: player.maxHp,
           cultivation: player.exp,
+          physique: player.tiPo,
+          maxPhysique: player.maxTiPo,
           opponent_username: player.opponentUsername,
           used_card: player.usedCards.map((card) => ({
             name: card.name,
