@@ -1,0 +1,518 @@
+{
+    "固防": {
+        "name": "固防",
+        "category": "general"
+    },
+    "生命": {
+        "name": "生命",
+        "category": "general"
+    },
+    "强攻": {
+        "name": "强攻",
+        "category": "general"
+    },
+    "碎防": {
+        "name": "碎防",
+        "category": "general"
+    },
+    "逍遥": {
+        "name": "逍遥",
+        "category": "general"
+    },
+    "调息": {
+        "name": "调息",
+        "category": "general"
+    },
+    "扩生机": {
+        "name": "扩生机",
+        "category": "general"
+    },
+    "压制": {
+        "name": "压制",
+        "category": "general"
+    },
+    "机关组装": {
+        "name": "机关组装",
+        "category": "general"
+    },
+    "预防": {
+        "name": "预防",
+        "category": "general"
+    },
+    "汲取": {
+        "name": "汲取",
+        "category": "general"
+    },
+    "驱邪": {
+        "name": "驱邪",
+        "category": "general"
+    },
+    "涌神力": {
+        "name": "涌神力",
+        "category": "general"
+    },
+    "卸劲": {
+        "name": "卸劲",
+        "category": "general"
+    },
+    "机关盾": {
+        "name": "机关盾",
+        "category": "general"
+    },
+    "固本元": {
+        "name": "固本元",
+        "category": "general"
+    },
+    "淬毒": {
+        "name": "淬毒",
+        "category": "general"
+    },
+    "辟邪": {
+        "name": "辟邪",
+        "category": "general"
+    },
+    "刻印强化": {
+        "name": "刻印强化",
+        "category": "general"
+    },
+    "不动": {
+        "name": "不动",
+        "category": "general"
+    },
+    "灵纹机关": {
+        "name": "灵纹机关",
+        "category": "general"
+    },
+    "速度": {
+        "name": "速度",
+        "category": "general"
+    },
+    "承载": {
+        "name": "承载",
+        "category": "general"
+    },
+    "厄劫": {
+        "name": "厄劫",
+        "category": "general"
+    },
+    "机关引擎": {
+        "name": "机关引擎",
+        "category": "general"
+    },
+    "画龙": {
+        "name": "画龙",
+        "category": "general"
+    },
+    "困仙": {
+        "name": "困仙",
+        "category": "general"
+    },
+    "护体": {
+        "name": "护体",
+        "category": "general"
+    },
+    "溢灵": {
+        "name": "溢灵",
+        "category": "general"
+    },
+    "云起": {
+        "name": "云起",
+        "category": "cloud-spirit"
+    },
+    "灵斩": {
+        "name": "灵斩",
+        "category": "cloud-spirit"
+    },
+    "练剑": {
+        "name": "练剑",
+        "category": "cloud-spirit"
+    },
+    "云屯星聚": {
+        "name": "云屯星聚",
+        "category": "cloud-spirit"
+    },
+    "伤其体": {
+        "name": "伤其体",
+        "category": "cloud-spirit"
+    },
+    "机关剑•裂": {
+        "name": "机关剑•裂",
+        "category": "cloud-spirit"
+    },
+    "飞牙": {
+        "name": "飞牙",
+        "category": "cloud-spirit"
+    },
+    "狂念": {
+        "name": "狂念",
+        "category": "cloud-spirit"
+    },
+    "地煞": {
+        "name": "地煞",
+        "category": "cloud-spirit"
+    },
+    "机关剑•斩": {
+        "name": "机关剑•斩",
+        "category": "cloud-spirit"
+    },
+    "无妄": {
+        "name": "无妄",
+        "category": "cloud-spirit"
+    },
+    "凝剑意": {
+        "name": "凝剑意",
+        "category": "cloud-spirit"
+    },
+    "鲲鹏": {
+        "name": "鲲鹏",
+        "category": "cloud-spirit"
+    },
+    "百鸟": {
+        "name": "百鸟",
+        "category": "cloud-spirit"
+    },
+    "意守阵": {
+        "name": "意守阵",
+        "category": "cloud-spirit"
+    },
+    "机关龟": {
+        "name": "机关龟",
+        "category": "cloud-spirit"
+    },
+    "水中月": {
+        "name": "水中月",
+        "category": "cloud-spirit"
+    },
+    "柔心": {
+        "name": "柔心",
+        "category": "cloud-spirit"
+    },
+    "闪风": {
+        "name": "闪风",
+        "category": "cloud-spirit"
+    },
+    "零式": {
+        "name": "零式",
+        "category": "cloud-spirit"
+    },
+    "机关剑•震": {
+        "name": "机关剑•震",
+        "category": "cloud-spirit"
+    },
+    "灵与狂": {
+        "name": "灵与狂",
+        "category": "cloud-spirit"
+    },
+    "云海游龙": {
+        "name": "云海游龙",
+        "category": "cloud-spirit"
+    },
+    "御剑结阵": {
+        "name": "御剑结阵",
+        "category": "cloud-spirit"
+    },
+    "荡剑开天": {
+        "name": "荡剑开天",
+        "category": "cloud-spirit"
+    },
+    "移星": {
+        "name": "移星",
+        "category": "heptastar"
+    },
+    "落卦": {
+        "name": "落卦",
+        "category": "heptastar"
+    },
+    "霹雳": {
+        "name": "霹雳",
+        "category": "heptastar"
+    },
+    "聚星力": {
+        "name": "聚星力",
+        "category": "heptastar"
+    },
+    "黯星伤魂": {
+        "name": "黯星伤魂",
+        "category": "heptastar"
+    },
+    "占卦象": {
+        "name": "占卦象",
+        "category": "heptastar"
+    },
+    "机关星仪": {
+        "name": "机关星仪",
+        "category": "heptastar"
+    },
+    "化星灵": {
+        "name": "化星灵",
+        "category": "heptastar"
+    },
+    "惊雷破": {
+        "name": "惊雷破",
+        "category": "heptastar"
+    },
+    "机关猫": {
+        "name": "机关猫",
+        "category": "heptastar"
+    },
+    "两仪": {
+        "name": "两仪",
+        "category": "heptastar"
+    },
+    "衍星位": {
+        "name": "衍星位",
+        "category": "heptastar"
+    },
+    "捕蝉": {
+        "name": "捕蝉",
+        "category": "heptastar"
+    },
+    "机关鼠": {
+        "name": "机关鼠",
+        "category": "heptastar"
+    },
+    "逢春": {
+        "name": "逢春",
+        "category": "heptastar"
+    },
+    "无情": {
+        "name": "无情",
+        "category": "heptastar"
+    },
+    "底牌": {
+        "name": "底牌",
+        "category": "heptastar"
+    },
+    "震伤": {
+        "name": "震伤",
+        "category": "heptastar"
+    },
+    "祭雷": {
+        "name": "祭雷",
+        "category": "heptastar"
+    },
+    "血梅": {
+        "name": "血梅",
+        "category": "heptastar"
+    },
+    "机关蛇": {
+        "name": "机关蛇",
+        "category": "heptastar"
+    },
+    "续天命": {
+        "name": "续天命",
+        "category": "heptastar"
+    },
+    "天元映星": {
+        "name": "天元映星",
+        "category": "heptastar"
+    },
+    "引征": {
+        "name": "引征",
+        "category": "heptastar"
+    },
+    "溃其伤": {
+        "name": "溃其伤",
+        "category": "heptastar"
+    },
+    "锐之刺": {
+        "name": "锐之刺",
+        "category": "five-element"
+    },
+    "热砂": {
+        "name": "热砂",
+        "category": "five-element"
+    },
+    "滋养": {
+        "name": "滋养",
+        "category": "five-element"
+    },
+    "五行灵旋": {
+        "name": "五行灵旋",
+        "category": "five-element"
+    },
+    "穿心": {
+        "name": "穿心",
+        "category": "five-element"
+    },
+    "机关灵印": {
+        "name": "机关灵印",
+        "category": "five-element"
+    },
+    "初苗": {
+        "name": "初苗",
+        "category": "five-element"
+    },
+    "土之固": {
+        "name": "土之固",
+        "category": "five-element"
+    },
+    "金之锐": {
+        "name": "金之锐",
+        "category": "five-element"
+    },
+    "火之炽": {
+        "name": "火之炽",
+        "category": "five-element"
+    },
+    "混元机关": {
+        "name": "混元机关",
+        "category": "five-element"
+    },
+    "汹涌": {
+        "name": "汹涌",
+        "category": "five-element"
+    },
+    "混天克": {
+        "name": "混天克",
+        "category": "five-element"
+    },
+    "水之灵": {
+        "name": "水之灵",
+        "category": "five-element"
+    },
+    "融混元": {
+        "name": "融混元",
+        "category": "five-element"
+    },
+    "熔岩": {
+        "name": "熔岩",
+        "category": "five-element"
+    },
+    "机关鳄": {
+        "name": "机关鳄",
+        "category": "five-element"
+    },
+    "断崖": {
+        "name": "断崖",
+        "category": "five-element"
+    },
+    "火鞭": {
+        "name": "火鞭",
+        "category": "five-element"
+    },
+    "炼鼎": {
+        "name": "炼鼎",
+        "category": "five-element"
+    },
+    "机关鹿": {
+        "name": "机关鹿",
+        "category": "five-element"
+    },
+    "水刃": {
+        "name": "水刃",
+        "category": "five-element"
+    },
+    "筑城": {
+        "name": "筑城",
+        "category": "five-element"
+    },
+    "灵阵展开": {
+        "name": "灵阵展开",
+        "category": "five-element"
+    },
+    "滴天髓": {
+        "name": "滴天髓",
+        "category": "five-element"
+    },
+    "御玄": {
+        "name": "御玄",
+        "category": "duan-xuan"
+    },
+    "锻拳": {
+        "name": "锻拳",
+        "category": "duan-xuan"
+    },
+    "拳风": {
+        "name": "拳风",
+        "category": "duan-xuan"
+    },
+    "挣脱": {
+        "name": "挣脱",
+        "category": "duan-xuan"
+    },
+    "返生": {
+        "name": "返生",
+        "category": "duan-xuan"
+    },
+    "诱敌": {
+        "name": "诱敌",
+        "category": "duan-xuan"
+    },
+    "训练机关": {
+        "name": "训练机关",
+        "category": "duan-xuan"
+    },
+    "崩拳劲": {
+        "name": "崩拳劲",
+        "category": "duan-xuan"
+    },
+    "破限": {
+        "name": "破限",
+        "category": "duan-xuan"
+    },
+    "悬气势": {
+        "name": "悬气势",
+        "category": "duan-xuan"
+    },
+    "机关虎": {
+        "name": "机关虎",
+        "category": "duan-xuan"
+    },
+    "坚体魄": {
+        "name": "坚体魄",
+        "category": "duan-xuan"
+    },
+    "冥心": {
+        "name": "冥心",
+        "category": "duan-xuan"
+    },
+    "锻冥魄": {
+        "name": "锻冥魄",
+        "category": "duan-xuan"
+    },
+    "迷踪": {
+        "name": "迷踪",
+        "category": "duan-xuan"
+    },
+    "玄疗": {
+        "name": "玄疗",
+        "category": "duan-xuan"
+    },
+    "守势": {
+        "name": "守势",
+        "category": "duan-xuan"
+    },
+    "机关狮": {
+        "name": "机关狮",
+        "category": "duan-xuan"
+    },
+    "寸劲": {
+        "name": "寸劲",
+        "category": "duan-xuan"
+    },
+    "引冥灵": {
+        "name": "引冥灵",
+        "category": "duan-xuan"
+    },
+    "机关豹": {
+        "name": "机关豹",
+        "category": "duan-xuan"
+    },
+    "血影遁": {
+        "name": "血影遁",
+        "category": "duan-xuan"
+    },
+    "冥之势": {
+        "name": "冥之势",
+        "category": "duan-xuan"
+    },
+    "法天象地": {
+        "name": "法天象地",
+        "category": "duan-xuan"
+    },
+    "赤血怒": {
+        "name": "赤血怒",
+        "category": "duan-xuan"
+    }
+}
