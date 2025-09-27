@@ -64,6 +64,13 @@ export interface Card {
   isTracking_deck?: boolean;
 }
 
+// seasonal special
+export interface Sigil {
+  name: string;
+  level: number;
+  category: string;
+}
+
 export interface TrackingCard {
   name: string;
   level: number;
