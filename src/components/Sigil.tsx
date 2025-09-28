@@ -1,3 +1,4 @@
+// seasonal special
 import React from 'react';
 import './Sigil.css';
 import { Sigil as SigilType } from '../models/model';
