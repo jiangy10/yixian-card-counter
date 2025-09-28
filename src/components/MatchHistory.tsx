@@ -1,6 +1,7 @@
 import React from 'react';
 import { MatchHistory as MatchHistoryType, Card as CardType } from '../models/model';
 import MatchHistoryCard from './MatchHistoryCard';
+import Sigil from './Sigil';
 import './MatchHistory.css';
 
 interface MatchHistoryItemProps {
@@ -41,6 +42,10 @@ const MatchHistory: React.FC<MatchHistoryItemProps> = ({
       
       {isExpanded && (
         <div className="match-history-content">
+          <div className="used-cards-container">
+            <Sigil sigil={{name: '固防', level: 1, category: 'general'}} />
+          </div>
+          <hr/>
           <div className="used-cards-container">
             {history.processedCards.map((card, index) => (
               <MatchHistoryCard

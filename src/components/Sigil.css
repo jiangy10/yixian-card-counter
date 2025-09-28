@@ -1,0 +1,24 @@
+.sigil {
+    width: 10%;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    overflow: hidden;
+    gap: 4px;
+}
+
+.sigil-image {
+    width: 100%;
+    height: 40px;
+    object-fit: contain;
+    border: none;
+    background: transparent;
+}
+
+.sigil-name {
+    font-size: 12px;
+    font-weight: 500;
+}
