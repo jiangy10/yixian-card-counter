@@ -4,7 +4,9 @@ import { contextBridge, ipcRenderer } from 'electron';
 const validChannels = [
   'getUserDataPath',
   'readFile',
-  'writeFile'
+  'writeFile',
+  'close-floating-window',
+  'toggle-floating-window'
 ];
 
 // Expose safe electron APIs to the window object
@@ -22,6 +24,12 @@ try {
       ipcRenderer.on('card-operation-log-updated', callback);
       return () => ipcRenderer.removeListener('card-operation-log-updated', callback);
     }
+  });
+
+  // API for floating window
+  contextBridge.exposeInMainWorld('electronAPI', {
+    closeFloatingWindow: () => ipcRenderer.invoke('close-floating-window'),
+    toggleFloatingWindow: () => ipcRenderer.invoke('toggle-floating-window')
   });
 } catch (error) {
   console.error('Error in preload script:', error);

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>悬浮窗</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-family: Arial, sans-serif;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-app-region: drag;
+      width: 280px;
+      height: 180px;
+      box-sizing: border-box;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    .close-btn {
+      cursor: pointer;
+      font-size: 18px;
+      -webkit-app-region: no-drag;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: background 0.2s;
+    }
+    
+    .close-btn:hover {
+      background: rgba(255, 0, 0, 0.6);
+    }
+    
+    .content {
+      text-align: center;
+      font-size: 12px;
+    }
+    
+    .status {
+      margin: 10px 0;
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+    
+    .controls {
+      margin-top: 15px;
+      -webkit-app-region: no-drag;
+    }
+    
+    .btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 11px;
+      margin: 0 2px;
+      transition: background 0.2s;
+    }
+    
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">弈仙牌计牌器</div>
+    <div class="close-btn" onclick="closeWindow()">×</div>
+  </div>
+  
+  <div class="content">
+    <div class="status">
+      悬浮窗口运行中
+    </div>
+    
+    <div class="controls">
+      <button class="btn" onclick="openMainWindow()">打开主窗口</button>
+      <button class="btn" onclick="hideWindow()">隐藏</button>
+    </div>
+  </div>
+
+  <script>
+    // prevent text selection when dragging
+    document.addEventListener('selectstart', e => e.preventDefault());
+    
+    function closeWindow() {
+      if (window.electronAPI && window.electronAPI.closeFloatingWindow) {
+        window.electronAPI.closeFloatingWindow();
+      }
+    }
+    
+    function hideWindow() {
+      if (window.electronAPI && window.electronAPI.toggleFloatingWindow) {
+        window.electronAPI.toggleFloatingWindow();
+      }
+    }
+    
+    function openMainWindow() {
+      console.log('打开主窗口');
+    }
+    
+    // add keyboard shortcut support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        hideWindow();
+      }
+    });
+  </script>
+</body>
+</html>
