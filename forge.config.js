@@ -26,7 +26,8 @@ module.exports = {
       config: {
         setupExe: 'yixian-card-counter-setup.exe',
         setupIcon: './public/favicon.ico',
-        noMsi: true
+        noMsi: true,
+        skipUpdateIcon: true
       },
     },
     {

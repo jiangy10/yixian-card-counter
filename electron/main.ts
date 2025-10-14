@@ -6,10 +6,14 @@ import './battleLogConverter';
 import './cardOperationLogConverter';
 import { getGamePath } from './utils';
 
+// Handle Squirrel events on Windows
+if (require('electron-squirrel-startup')) {
+  app.quit();
+}
+
 const GAME_PATH = getGamePath();
 
 let mainWindow: BrowserWindow | null = null;
-let floatingWindow: BrowserWindow | null = null;
 
 // Ensure directory exists
 async function ensureDirectoryExists(dirPath: string) {
@@ -79,95 +83,11 @@ function createWindow() {
   });
 }
 
-function createFloatingWindow() {
-  const preloadPath = path.join(__dirname, 'preload.js');
-
-  floatingWindow = new BrowserWindow({
-    width: 300,
-    height: 200,
-    frame: false, // no frame
-    alwaysOnTop: true, // always on top
-    transparent: true, // transparent background
-    resizable: false, // not resizable
-    skipTaskbar: true, // not in taskbar
-    webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true,
-      preload: preloadPath,
-      sandbox: false
-    }
-  });
-
-  // load floating window HTML page
-  // FIXME: replace with card deck info
-  if (isDev) {
-    const floatingHTML = `
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <meta charset="UTF-8">
-        <title>悬浮窗</title>
-        <style>
-          body {
-            margin: 0;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            font-family: Arial, sans-serif;
-            border-radius: 10px;
-            user-select: none;
-            -webkit-app-region: drag;
-          }
-          .close-btn {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            -webkit-app-region: no-drag;
-          }
-          .content {
-            margin-top: 20px;
-            text-align: center;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="close-btn" onclick="window.electronAPI?.closeFloatingWindow()">×</div>
-        <div class="content">
-          <h3>弈仙牌计牌器</h3>
-          <p>悬浮窗口</p>
-        </div>
-        <script>
-          // 防止拖拽时选中文本
-          document.addEventListener('selectstart', e => e.preventDefault());
-        </script>
-      </body>
-      </html>
-    `;
-    floatingWindow.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(floatingHTML));
-  } else {
-    const floatingPath = path.join(__dirname, '..', 'floating.html');
-    floatingWindow.loadFile(floatingPath);
-  }
-
-  // set window position (top right)
-  const { screen } = require('electron');
-  const primaryDisplay = screen.getPrimaryDisplay();
-  const { width, height } = primaryDisplay.workAreaSize;
-  floatingWindow.setPosition(width - 320, 20);
-
-  floatingWindow.on('closed', () => {
-    floatingWindow = null;
-  });
-}
-
 // Initialize application
 app.whenReady().then(async () => {
   await ensureDirectoryExists(GAME_PATH);
   await initTrackingCardsFile();
   createWindow();
-  createFloatingWindow();
   require('./battleLogConverter');
 });
 
@@ -180,7 +100,6 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
-    createFloatingWindow();
   }
 });
 
@@ -248,25 +167,5 @@ ipcMain.handle('write-file', async (_, filePath, data) => {
   } catch (error) {
     console.error('Error writing file:', error);
     throw error;
-  }
-});
-
-// handle floating window close
-ipcMain.handle('close-floating-window', () => {
-  if (floatingWindow) {
-    floatingWindow.close();
-  }
-});
-
-// handle floating window show/hide
-ipcMain.handle('toggle-floating-window', () => {
-  if (floatingWindow) {
-    if (floatingWindow.isVisible()) {
-      floatingWindow.hide();
-    } else {
-      floatingWindow.show();
-    }
-  } else {
-    createFloatingWindow();
   }
 }); 
