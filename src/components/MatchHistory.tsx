@@ -43,11 +43,11 @@ const MatchHistory: React.FC<MatchHistoryItemProps> = ({
       {isExpanded && (
         <div className="match-history-content">
           {/* seasonal special */}
-          <div className="used-cards-container">
+          {/* <div className="used-cards-container">
             <Sigil sigil={{name: '固防', level: 1, category: 'general'}} />
             <Sigil sigil={{name: '生命', level: 1, category: 'general'}} />
           </div>
-          <hr/>
+          <hr/> */}
           <div className="used-cards-container">
             {history.processedCards.map((card, index) => (
               <MatchHistoryCard
