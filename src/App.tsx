@@ -22,6 +22,11 @@ declare global {
       onBattleLogUpdated: (callback: () => void) => void;
       onCardOperationLogUpdated: (callback: () => void) => void;
     };
+    electronAPI: {
+      closeFloatingWindow: () => Promise<void>;
+      toggleFloatingWindow: () => Promise<boolean>;
+      findAndCreateFloatingWindow: () => Promise<{ success: boolean; message: string }>;
+    };
   }
 }
 

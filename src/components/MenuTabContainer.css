@@ -6,6 +6,7 @@
   gap: 10px;
   border-radius: 8px;
   margin: 10px;
+  position: relative;
 }
 
 .menu-tab-button {
@@ -63,4 +64,36 @@
 .manage-tracking-button:hover {
   background-color: rgba(60, 60, 60, 0.8);
   border-color: rgba(255, 255, 255, 0.4);
+}
+
+.floating-window-btn {
+  background-color: rgba(0, 120, 215, 0.8) !important;
+  border-color: rgba(0, 120, 215, 0.6) !important;
+}
+
+.floating-window-btn:hover {
+  background-color: rgba(0, 140, 235, 0.8) !important;
+  border-color: rgba(0, 140, 235, 0.8) !important;
+}
+
+.floating-window-status {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 } 

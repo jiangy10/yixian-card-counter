@@ -6,7 +6,8 @@ const validChannels = [
   'readFile',
   'writeFile',
   'close-floating-window',
-  'toggle-floating-window'
+  'toggle-floating-window',
+  'find-and-create-floating-window'
 ];
 
 // Expose safe electron APIs to the window object
@@ -29,7 +30,8 @@ try {
   // API for floating window
   contextBridge.exposeInMainWorld('electronAPI', {
     closeFloatingWindow: () => ipcRenderer.invoke('close-floating-window'),
-    toggleFloatingWindow: () => ipcRenderer.invoke('toggle-floating-window')
+    toggleFloatingWindow: () => ipcRenderer.invoke('toggle-floating-window'),
+    findAndCreateFloatingWindow: () => ipcRenderer.invoke('find-and-create-floating-window')
   });
 } catch (error) {
   console.error('Error in preload script:', error);

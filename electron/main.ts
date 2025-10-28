@@ -1,10 +1,21 @@
-import { app, BrowserWindow, ipcMain, Menu } from 'electron';
+import { app, BrowserWindow, ipcMain, Menu, screen } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs/promises';
 import isDev from 'electron-is-dev';
 import './battleLogConverter';
 import './cardOperationLogConverter';
 import { getGamePath } from './utils';
+
+let windowManager: any = null;
+
+// Try to load node-window-manager
+try {
+  const nodeWindowManager = require('node-window-manager');
+  windowManager = nodeWindowManager.windowManager;
+  console.log('node-window-manager loaded successfully');
+} catch (error) {
+  console.error('Failed to load node-window-manager:', error);
+}
 
 // Handle Squirrel events on Windows
 if (require('electron-squirrel-startup')) {
@@ -14,6 +25,8 @@ if (require('electron-squirrel-startup')) {
 const GAME_PATH = getGamePath();
 
 let mainWindow: BrowserWindow | null = null;
+let floatingWindow: BrowserWindow | null = null;
+let gameWindowMonitorInterval: NodeJS.Timeout | null = null;
 
 // Ensure directory exists
 async function ensureDirectoryExists(dirPath: string) {
@@ -44,6 +57,383 @@ async function initTrackingCardsFile() {
     const content = await fs.readFile(filePath, 'utf-8');
   } catch {
     await fs.writeFile(filePath, '{}', 'utf-8');
+  }
+}
+
+// Find YiXianPai application window
+async function findYiXianPaiWindow() {
+  try {
+    if (!windowManager) {
+      console.error('node-window-manager not loaded correctly');
+      return null;
+    }
+
+    if (typeof windowManager.getWindows !== 'function') {
+      console.error('windowManager.getWindows is not a function');
+      console.log('windowManager object:', Object.keys(windowManager));
+      return null;
+    }
+
+    const windows = windowManager.getWindows();
+    console.log(`Found ${windows.length} windows in total`);
+    
+    // Get current process ID to exclude ourselves
+    const currentProcessId = process.pid;
+    console.log('Current process ID:', currentProcessId);
+    
+    // First try to get active window (might be fullscreen)
+    try {
+      const activeWindow = windowManager.getActiveWindow();
+      if (activeWindow) {
+        const activeTitle = activeWindow.getTitle() || '';
+        const activePath = activeWindow.path || '';
+        const activeProcessId = activeWindow.processId || 0;
+        
+        console.log('Current active window:', {
+          title: activeTitle,
+          processId: activeProcessId,
+          path: activePath
+        });
+        
+        // Check if active window is YiXianPai
+        if (activeProcessId !== currentProcessId && 
+            !activePath.includes('yixian-card-counter') &&
+            !activePath.includes('System/Library') &&
+            (activeTitle.includes('弈仙牌') || activeTitle.includes('YiXianPai') || 
+             activeTitle.toLowerCase().includes('yixianpai') ||
+             activePath.includes('弈仙牌') || activePath.includes('YiXianPai') || 
+             activePath.toLowerCase().includes('yixianpai'))) {
+          console.log('Found YiXianPai via active window (possibly fullscreen):', { 
+            title: activeTitle, 
+            processId: activeProcessId, 
+            path: activePath 
+          });
+          return activeWindow;
+        }
+      }
+    } catch (activeWindowError) {
+      console.log('Failed to get active window:', activeWindowError);
+    }
+    
+    // Iterate through all windows for exact match
+    for (let index = 0; index < windows.length; index++) {
+      const window = windows[index];
+      try {
+        const title = window.getTitle() || '';
+        const processName = window.processName || '';
+        const processId = window.processId || 0;
+        const path = window.path || '';
+        
+        console.log(`Window ${index + 1}:`, {
+          title,
+          processName,
+          processId,
+          path
+        });
+        
+        // Exclude own process and obviously non-game processes
+        if (processId === currentProcessId || 
+            path.includes('yixian-card-counter') ||
+            path.includes('Electron.app') ||
+            title === 'Electron' ||
+            path.includes('System/Library') ||
+            path.includes('CoreServices')) {
+          continue;
+        }
+        
+        // Check if window title or process name contains YiXianPai related info
+        const titleMatch = title.includes('弈仙牌') || title.includes('YiXianPai') || title.toLowerCase().includes('yixianpai');
+        const processMatch = processName.includes('弈仙牌') || processName.includes('YiXianPai') || processName.toLowerCase().includes('yixianpai');
+        const pathMatch = path.includes('弈仙牌') || path.includes('YiXianPai') || path.toLowerCase().includes('yixianpai');
+        
+        if (titleMatch || processMatch || pathMatch) {
+          console.log('Found YiXianPai window:', { title, processName, processId, path });
+          return window;
+        }
+      } catch (windowError) {
+        console.error(`Error getting window ${index + 1} info:`, windowError);
+      }
+    }
+    
+    // If not found, try broader search (but still exclude system processes)
+    for (const window of windows) {
+      try {
+        const title = window.getTitle() || '';
+        const processName = window.processName || '';
+        const processId = window.processId || 0;
+        const path = window.path || '';
+        
+        // Exclude own process and system processes
+        if (processId === currentProcessId || 
+            path.includes('yixian-card-counter') ||
+            path.includes('Electron.app') ||
+            title === 'Electron' ||
+            path.includes('System/Library') ||
+            path.includes('CoreServices') ||
+            path.includes('Applications/') === false) { // Only consider apps in Applications directory
+          continue;
+        }
+        
+        // Broader matching conditions
+        if (title.toLowerCase().includes('yixian') || 
+            processName.toLowerCase().includes('yixian') ||
+            path.toLowerCase().includes('yixian') ||
+            title.includes('弈仙') ||
+            processName.includes('弈仙') ||
+            path.includes('弈仙')) {
+          console.log('Found possible YiXianPai window via broad search:', { title, processName, processId, path });
+          return window;
+        }
+      } catch (windowError) {
+        console.error('Error during broad search:', windowError);
+      }
+    }
+    
+    // Last resort: Find YiXianPai process via process list (for fullscreen cases)
+    console.log('Trying to find YiXianPai via process list...');
+    try {
+      const { exec } = require('child_process');
+      return new Promise((resolve) => {
+        exec('ps aux | grep -i yixian', (error: any, stdout: string) => {
+          if (error) {
+            console.log('Process search failed:', error);
+            resolve(null);
+            return;
+          }
+          
+          const lines = stdout.split('\n');
+          for (const line of lines) {
+            if (line.includes('YiXianPai') && !line.includes('grep')) {
+              console.log('Found YiXianPai via process list:', line);
+              // If process found, create a mock window object
+              const mockWindow = {
+                getBounds: () => {
+                  const primaryDisplay = screen.getPrimaryDisplay();
+                  return {
+                    x: 0,
+                    y: 0,
+                    width: primaryDisplay.bounds.width,
+                    height: primaryDisplay.bounds.height
+                  };
+                },
+                getTitle: () => 'YiXianPai (Fullscreen)',
+                path: '/YiXianPai.app'
+              };
+              resolve(mockWindow);
+              return;
+            }
+          }
+          resolve(null);
+        });
+      });
+    } catch (processError) {
+      console.error('Error during process search:', processError);
+    }
+    
+    console.log('YiXianPai game window not found');
+    console.log('Please ensure YiXianPai is running and window title or app name contains "弈仙牌", "YiXianPai" or "弈仙"');
+    return null;
+  } catch (error) {
+    console.error('Error finding YiXianPai window:', error);
+    return null;
+  }
+}
+
+// Monitor game window state
+function startGameWindowMonitoring(targetWindow: any) {
+  // Clear previous monitoring
+  if (gameWindowMonitorInterval) {
+    clearInterval(gameWindowMonitorInterval);
+  }
+
+  let targetProcessId = 0;
+  try {
+    targetProcessId = targetWindow.processId || 0;
+  } catch (error) {
+    console.log('Unable to get target process ID:', error);
+  }
+
+  console.log('Started game window monitoring, target process ID:', targetProcessId);
+
+  let lastGameActiveState = true; // Initial state assumes game is active
+  let stateChangeTimer: NodeJS.Timeout | null = null;
+  
+  // Get floating window process ID
+  const floatingProcessId = process.pid;
+
+  // Check more frequently, but use debouncing to avoid flickering
+  gameWindowMonitorInterval = setInterval(() => {
+    if (!floatingWindow || floatingWindow.isDestroyed()) {
+      if (gameWindowMonitorInterval) {
+        clearInterval(gameWindowMonitorInterval);
+        gameWindowMonitorInterval = null;
+      }
+      if (stateChangeTimer) {
+        clearTimeout(stateChangeTimer);
+        stateChangeTimer = null;
+      }
+      return;
+    }
+
+    try {
+      if (!windowManager) return;
+
+      const activeWindow = windowManager.getActiveWindow();
+      if (activeWindow) {
+        const activeProcessId = activeWindow.processId || 0;
+        const activeTitle = activeWindow.getTitle() || '';
+        
+        // Check if active window is game window or floating window itself
+        const isGameActive = (targetProcessId > 0 && activeProcessId === targetProcessId) ||
+                            activeTitle.includes('YiXianPai') ||
+                            activeTitle.includes('弈仙牌');
+        
+        const isFloatingWindowActive = activeProcessId === floatingProcessId;
+        
+        // If floating window has focus, consider game still active (since floating window is on top of game)
+        const shouldShowFloating = isGameActive || isFloatingWindowActive;
+
+        // Only execute operation when state actually changes
+        if (shouldShowFloating !== lastGameActiveState) {
+          // Clear previous delayed operation
+          if (stateChangeTimer) {
+            clearTimeout(stateChangeTimer);
+          }
+
+          // Use delay to prevent flickering during rapid switching
+          stateChangeTimer = setTimeout(() => {
+            if (!floatingWindow || floatingWindow.isDestroyed()) return;
+
+            if (shouldShowFloating) {
+              // Game or floating window is active, show floating window
+              if (!floatingWindow.isVisible()) {
+                floatingWindow.show();
+                floatingWindow.setAlwaysOnTop(true, 'screen-saver' as any);
+                console.log('Game window activated, showing floating window');
+              }
+            } else {
+              // Other window is active, hide floating window
+              if (floatingWindow.isVisible()) {
+                floatingWindow.hide();
+                console.log('Game window lost focus, hiding floating window');
+              }
+            }
+
+            lastGameActiveState = shouldShowFloating;
+          }, 150); // 150ms delay, enough to handle rapid switching but imperceptible to user
+        }
+      }
+    } catch (error) {
+      console.error('Error monitoring game window:', error);
+    }
+  }, 300); // More frequent checks (every 300ms), with debouncing
+}
+
+// Create floating window
+function createFloatingWindow(targetWindow?: any) {
+  if (floatingWindow) {
+    floatingWindow.focus();
+    return;
+  }
+
+  const preloadPath = path.join(__dirname, 'preload.js');
+  
+  // Default position and size
+  let x = 100;
+  let y = 100;
+  const width = 300;
+  const height = 200;
+  let isFullscreen = false;
+
+  // If target window found, calculate floating window position
+  if (targetWindow) {
+    try {
+      const bounds = targetWindow.getBounds();
+      console.log('Target window position:', bounds);
+      
+      // Check if it's a fullscreen window (usually occupies entire screen)
+      const displays = screen.getAllDisplays();
+      const primaryDisplay = screen.getPrimaryDisplay();
+      
+      // If window size is close to screen size, consider it fullscreen
+      if (bounds.width >= primaryDisplay.bounds.width * 0.9 && 
+          bounds.height >= primaryDisplay.bounds.height * 0.9) {
+        isFullscreen = true;
+        console.log('Detected fullscreen window');
+        
+        // In fullscreen, place floating window at top-left of screen, accounting for menu bar
+        x = primaryDisplay.bounds.x + 20;
+        y = primaryDisplay.bounds.y + 50; // Leave space for menu bar
+      } else {
+        // In windowed mode, place at top-left of target window
+        x = bounds.x + 20;
+        y = bounds.y + 20;
+      }
+    } catch (error) {
+      console.error('Failed to get target window position:', error);
+    }
+  }
+
+  floatingWindow = new BrowserWindow({
+    width,
+    height,
+    x,
+    y,
+    frame: false,
+    alwaysOnTop: true,
+    transparent: true,
+    resizable: false,
+    skipTaskbar: true,
+    // Special settings for fullscreen mode
+    fullscreenable: false,
+    type: (isFullscreen ? 'panel' : 'toolbar') as any, // Use panel type in fullscreen
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+      preload: preloadPath,
+      sandbox: false
+    }
+  });
+
+  // Load floating window content
+  if (isDev) {
+    floatingWindow.loadURL('http://localhost:3000/floating.html');
+  } else {
+    const floatingPath = path.join(__dirname, '..', 'floating.html');
+    floatingWindow.loadFile(floatingPath);
+  }
+
+  floatingWindow.on('closed', () => {
+    floatingWindow = null;
+    // Clear window monitoring
+    if (gameWindowMonitorInterval) {
+      clearInterval(gameWindowMonitorInterval);
+      gameWindowMonitorInterval = null;
+      console.log('Stopped game window monitoring');
+    }
+  });
+
+  // If fullscreen mode, ensure floating window stays on top
+  if (isFullscreen) {
+    // On macOS, use multiple methods to ensure floating window stays above fullscreen app
+    floatingWindow.setAlwaysOnTop(true, 'screen-saver' as any);
+    
+    // Delay slightly before setting again to ensure it takes effect
+    setTimeout(() => {
+      if (floatingWindow && !floatingWindow.isDestroyed()) {
+        floatingWindow.setAlwaysOnTop(true, 'screen-saver' as any);
+        floatingWindow.focus();
+        floatingWindow.show();
+        console.log('Fullscreen mode floating window setup complete');
+      }
+    }, 500);
+    
+    // Monitor game window state, hide floating window if game loses focus
+    startGameWindowMonitoring(targetWindow);
+    
+    console.log('Floating window created (fullscreen mode, only visible in game window)');
+  } else {
+    console.log('Floating window created (windowed mode)');
   }
 }
 
@@ -146,7 +536,7 @@ process.on && process.on('message', (msg: any) => {
   }
 });
 
-// 添加IPC处理程序
+// Add IPC handlers
 ipcMain.handle('get-user-data-path', () => {
   return GAME_PATH;
 });
@@ -167,5 +557,58 @@ ipcMain.handle('write-file', async (_, filePath, data) => {
   } catch (error) {
     console.error('Error writing file:', error);
     throw error;
+  }
+});
+
+// Handle floating window related IPC calls
+ipcMain.handle('toggle-floating-window', () => {
+  if (floatingWindow) {
+    floatingWindow.close();
+    floatingWindow = null;
+    return false;
+  } else {
+    const targetWindow = findYiXianPaiWindow();
+    createFloatingWindow(targetWindow);
+    return true;
+  }
+});
+
+ipcMain.handle('close-floating-window', () => {
+  if (floatingWindow) {
+    floatingWindow.close();
+    floatingWindow = null;
+  }
+});
+
+// Automatically find YiXianPai window and create floating window
+ipcMain.handle('find-and-create-floating-window', async () => {
+  try {
+    const targetWindow = await findYiXianPaiWindow();
+    if (targetWindow) {
+      try {
+        const title = targetWindow.getTitle() || '';
+        const path = targetWindow.path || '';
+        createFloatingWindow(targetWindow);
+        return { 
+          success: true, 
+          message: `Found YiXianPai window and created floating window\nWindow: ${title}\nPath: ${path}` 
+        };
+      } catch (error) {
+        return { 
+          success: false, 
+          message: 'Found window but failed to create floating window: ' + error 
+        };
+      }
+    } else {
+      return { 
+        success: false, 
+        message: 'YiXianPai window not found\nPlease ensure YiXianPai is running\nSupports both windowed and fullscreen mode detection' 
+      };
+    }
+  } catch (error) {
+    return { 
+      success: false, 
+      message: 'Error finding window: ' + error 
+    };
   }
 }); 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MenuTabContainer.css';
 
 interface MenuTabContainerProps {
@@ -13,6 +13,33 @@ const tabs = [
 ]
 
 const MenuTabContainer: React.FC<MenuTabContainerProps> = ({ activeTab, onTabChange }) => {
+  const [floatingWindowStatus, setFloatingWindowStatus] = useState<string>('');
+
+  const handleFloatingWindow = async () => {
+    try {
+      if (window.electronAPI && window.electronAPI.findAndCreateFloatingWindow) {
+        const result = await window.electronAPI.findAndCreateFloatingWindow();
+        setFloatingWindowStatus(result.message);
+        
+        // clear status message
+        setTimeout(() => {
+          setFloatingWindowStatus('');
+        }, 3000);
+      } else {
+        setFloatingWindowStatus('floating window functionality unavailable');
+        setTimeout(() => {
+          setFloatingWindowStatus('');
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('error creating floating window:', error);
+      setFloatingWindowStatus('error creating floating window');
+      setTimeout(() => {
+        setFloatingWindowStatus('');
+      }, 3000);
+    }
+  };
+
   return (
     <div className="menu-tab-container">
       {tabs.map(tab => (
@@ -24,6 +51,18 @@ const MenuTabContainer: React.FC<MenuTabContainerProps> = ({ activeTab, onTabCha
           {tab.label}
         </button>
       ))}
+      {/* TODO： developing */}
+      <button
+        className="menu-tab-button floating-window-btn"
+        onClick={handleFloatingWindow}
+      >
+        悬浮窗
+      </button>
+      {floatingWindowStatus && (
+        <div className="floating-window-status">
+          {floatingWindowStatus}
+        </div>
+      )}
     </div>
   );
 };

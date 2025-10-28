@@ -84,47 +84,13 @@
 </head>
 <body>
   <div class="header">
-    <div class="title">弈仙牌计牌器</div>
+    <div class="title">弈仙牌记牌器</div>
     <div class="close-btn" onclick="closeWindow()">×</div>
   </div>
   
   <div class="content">
-    <div class="status">
-      悬浮窗口运行中
-    </div>
-    
-    <div class="controls">
-      <button class="btn" onclick="openMainWindow()">打开主窗口</button>
-      <button class="btn" onclick="hideWindow()">隐藏</button>
-    </div>
+    content here
   </div>
-
-  <script>
-    // prevent text selection when dragging
-    document.addEventListener('selectstart', e => e.preventDefault());
-    
-    function closeWindow() {
-      if (window.electronAPI && window.electronAPI.closeFloatingWindow) {
-        window.electronAPI.closeFloatingWindow();
-      }
-    }
-    
-    function hideWindow() {
-      if (window.electronAPI && window.electronAPI.toggleFloatingWindow) {
-        window.electronAPI.toggleFloatingWindow();
-      }
-    }
-    
-    function openMainWindow() {
-      console.log('打开主窗口');
-    }
-    
-    // add keyboard shortcut support
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        hideWindow();
-      }
-    });
-  </script>
+  
 </body>
 </html>

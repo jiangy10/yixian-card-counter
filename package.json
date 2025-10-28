@@ -17,6 +17,7 @@
     "chokidar": "^4.0.3",
     "electron-is-dev": "^2.0.0",
     "electron-squirrel-startup": "^1.0.1",
+    "node-window-manager": "^2.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
