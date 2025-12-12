@@ -330,7 +330,7 @@ function startGameWindowMonitoring(targetWindow: any) {
 }
 
 // Create floating window
-function createFloatingWindow(targetWindow?: any) {
+function createFloatingWindow() {
   if (floatingWindow) {
     floatingWindow.focus();
     return;
@@ -338,41 +338,16 @@ function createFloatingWindow(targetWindow?: any) {
 
   const preloadPath = path.join(__dirname, 'preload.js');
   
+  // Position at the top of the screen
+  const primaryDisplay = screen.getPrimaryDisplay();
+  const { x: screenX, y: screenY } = primaryDisplay.bounds;
+  
   // Default position and size
-  let x = 100;
-  let y = 100;
   const width = 300;
   const height = 200;
-  let isFullscreen = false;
-
-  // If target window found, calculate floating window position
-  if (targetWindow) {
-    try {
-      const bounds = targetWindow.getBounds();
-      console.log('Target window position:', bounds);
-      
-      // Check if it's a fullscreen window (usually occupies entire screen)
-      const displays = screen.getAllDisplays();
-      const primaryDisplay = screen.getPrimaryDisplay();
-      
-      // If window size is close to screen size, consider it fullscreen
-      if (bounds.width >= primaryDisplay.bounds.width * 0.9 && 
-          bounds.height >= primaryDisplay.bounds.height * 0.9) {
-        isFullscreen = true;
-        console.log('Detected fullscreen window');
-        
-        // In fullscreen, place floating window at top-left of screen, accounting for menu bar
-        x = primaryDisplay.bounds.x + 20;
-        y = primaryDisplay.bounds.y + 50; // Leave space for menu bar
-      } else {
-        // In windowed mode, place at top-left of target window
-        x = bounds.x + 20;
-        y = bounds.y + 20;
-      }
-    } catch (error) {
-      console.error('Failed to get target window position:', error);
-    }
-  }
+  // Position near top-left, but with some margin
+  const x = screenX + 50;
+  const y = screenY + 50;
 
   floatingWindow = new BrowserWindow({
     width,
@@ -384,9 +359,6 @@ function createFloatingWindow(targetWindow?: any) {
     transparent: true,
     resizable: false,
     skipTaskbar: true,
-    // Special settings for fullscreen mode
-    fullscreenable: false,
-    type: (isFullscreen ? 'panel' : 'toolbar') as any, // Use panel type in fullscreen
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -405,36 +377,11 @@ function createFloatingWindow(targetWindow?: any) {
 
   floatingWindow.on('closed', () => {
     floatingWindow = null;
-    // Clear window monitoring
-    if (gameWindowMonitorInterval) {
-      clearInterval(gameWindowMonitorInterval);
-      gameWindowMonitorInterval = null;
-      console.log('Stopped game window monitoring');
-    }
   });
-
-  // If fullscreen mode, ensure floating window stays on top
-  if (isFullscreen) {
-    // On macOS, use multiple methods to ensure floating window stays above fullscreen app
-    floatingWindow.setAlwaysOnTop(true, 'screen-saver' as any);
-    
-    // Delay slightly before setting again to ensure it takes effect
-    setTimeout(() => {
-      if (floatingWindow && !floatingWindow.isDestroyed()) {
-        floatingWindow.setAlwaysOnTop(true, 'screen-saver' as any);
-        floatingWindow.focus();
-        floatingWindow.show();
-        console.log('Fullscreen mode floating window setup complete');
-      }
-    }, 500);
-    
-    // Monitor game window state, hide floating window if game loses focus
-    startGameWindowMonitoring(targetWindow);
-    
-    console.log('Floating window created (fullscreen mode, only visible in game window)');
-  } else {
-    console.log('Floating window created (windowed mode)');
-  }
+  
+  // Ensure it stays on top
+  floatingWindow.setAlwaysOnTop(true, 'screen-saver');
+  console.log('Floating window created (always visible)');
 }
 
 function createWindow() {
@@ -567,8 +514,7 @@ ipcMain.handle('toggle-floating-window', () => {
     floatingWindow = null;
     return false;
   } else {
-    const targetWindow = findYiXianPaiWindow();
-    createFloatingWindow(targetWindow);
+    createFloatingWindow();
     return true;
   }
 });
@@ -580,35 +526,18 @@ ipcMain.handle('close-floating-window', () => {
   }
 });
 
-// Automatically find YiXianPai window and create floating window
+// Automatically open floating window (legacy name, now just opens it)
 ipcMain.handle('find-and-create-floating-window', async () => {
   try {
-    const targetWindow = await findYiXianPaiWindow();
-    if (targetWindow) {
-      try {
-        const title = targetWindow.getTitle() || '';
-        const path = targetWindow.path || '';
-        createFloatingWindow(targetWindow);
-        return { 
-          success: true, 
-          message: `Found YiXianPai window and created floating window\nWindow: ${title}\nPath: ${path}` 
-        };
-      } catch (error) {
-        return { 
-          success: false, 
-          message: 'Found window but failed to create floating window: ' + error 
-        };
-      }
-    } else {
-      return { 
-        success: false, 
-        message: 'YiXianPai window not found\nPlease ensure YiXianPai is running\nSupports both windowed and fullscreen mode detection' 
-      };
-    }
+    createFloatingWindow();
+    return { 
+      success: true, 
+      message: 'Floating window created' 
+    };
   } catch (error) {
     return { 
       success: false, 
-      message: 'Error finding window: ' + error 
+      message: 'Error creating floating window: ' + error 
     };
   }
 }); 
