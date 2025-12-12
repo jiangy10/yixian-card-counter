@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import FloatingWindow from './FloatingWindow';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+// Check if we are in the floating window
+const isFloatingWindow = window.location.hash === '#/floating' || window.location.search.includes('floating');
+
 root.render(
   <React.StrictMode>
-    <App />
+    {isFloatingWindow ? <FloatingWindow /> : <App />}
   </React.StrictMode>
 );
 

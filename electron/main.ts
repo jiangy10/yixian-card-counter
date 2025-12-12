@@ -359,6 +359,7 @@ function createFloatingWindow() {
     transparent: true,
     resizable: false,
     skipTaskbar: true,
+    type: 'panel', // 'panel' works better for floating windows over fullscreen apps
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -367,12 +368,18 @@ function createFloatingWindow() {
     }
   });
 
+  // Enable visibility on all workspaces/fullscreen apps on macOS (needs to be set after creation or cast to any if in options)
+  floatingWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+
   // Load floating window content
   if (isDev) {
-    floatingWindow.loadURL('http://localhost:3000/floating.html');
+    // Load from localhost with hash for routing
+    floatingWindow.loadURL('http://localhost:3000/#/floating');
   } else {
-    const floatingPath = path.join(__dirname, '..', 'floating.html');
-    floatingWindow.loadFile(floatingPath);
+    // Load from file but with hash for routing
+    // Note: loadFile with hash support requires a specific format or using loadURL with file:// protocol
+    const indexPath = path.join(__dirname, '..', 'index.html');
+    floatingWindow.loadURL(`file://${indexPath}#/floating`);
   }
 
   floatingWindow.on('closed', () => {
@@ -381,6 +388,7 @@ function createFloatingWindow() {
   
   // Ensure it stays on top
   floatingWindow.setAlwaysOnTop(true, 'screen-saver');
+  floatingWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
   console.log('Floating window created (always visible)');
 }
 

@@ -1,0 +1,50 @@
+.floating-window {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-app-region: drag;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.floating-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.floating-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.floating-close-btn {
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-app-region: no-drag;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.2s;
+}
+
+.floating-close-btn:hover {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.floating-content {
+  text-align: center;
+  font-size: 12px;
+}
+
