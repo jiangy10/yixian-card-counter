@@ -1,0 +1,55 @@
+.floating-match-container {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.player-selector-wrapper {
+  margin-bottom: 10px;
+}
+
+.player-dropdown {
+  width: 100%;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  outline: none;
+}
+
+.player-dropdown:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.player-dropdown option {
+  background: #333;
+  color: white;
+}
+
+.tracking-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  overflow-y: auto;
+  flex: 1;
+  align-content: flex-start;
+}
+
+.floating-card-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.no-cards-message {
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+}
+

@@ -24,6 +24,18 @@ try {
     onCardOperationLogUpdated: (callback: () => void) => {
       ipcRenderer.on('card-operation-log-updated', callback);
       return () => ipcRenderer.removeListener('card-operation-log-updated', callback);
+    },
+    onTrackingCardsUpdated: (callback: () => void) => {
+      console.log('Preload: Registering tracking-cards-updated listener');
+      const wrappedCallback = () => {
+        console.log('Preload: tracking-cards-updated event received!');
+        callback();
+      };
+      ipcRenderer.on('tracking-cards-updated', wrappedCallback);
+      return () => {
+        console.log('Preload: Removing tracking-cards-updated listener');
+        ipcRenderer.removeListener('tracking-cards-updated', wrappedCallback);
+      };
     }
   });
 

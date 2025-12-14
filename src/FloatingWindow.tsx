@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FloatingWindow.css';
+import FloatingMatch from './components/FloatingMatch';
+import FloatingDeck from './components/FloatingDeck';
 
 const FloatingWindow: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<'match' | 'deck'>('match');
+
   const handleClose = () => {
     if (window.electronAPI && window.electronAPI.closeFloatingWindow) {
       window.electronAPI.closeFloatingWindow();
@@ -17,12 +21,26 @@ const FloatingWindow: React.FC = () => {
         <div className="floating-close-btn" onClick={handleClose}>×</div>
       </div>
       
+      <div className="floating-tabs">
+        <div 
+          className={`floating-tab ${activeTab === 'match' ? 'active' : ''}`}
+          onClick={() => setActiveTab('match')}
+        >
+          对局
+        </div>
+        <div 
+          className={`floating-tab ${activeTab === 'deck' ? 'active' : ''}`}
+          onClick={() => setActiveTab('deck')}
+        >
+          牌库
+        </div>
+      </div>
+
       <div className="floating-content">
-        content here
+        {activeTab === 'match' ? <FloatingMatch /> : <FloatingDeck />}
       </div>
     </div>
   );
 };
 
 export default FloatingWindow;
-

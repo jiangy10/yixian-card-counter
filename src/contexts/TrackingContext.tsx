@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { Card } from '../models/model';
+import { normalizeCardName } from '../utils/cardNameUtils';
 
 interface TrackingContextType {
   trackingCards: Record<string, boolean>;
@@ -59,12 +60,29 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   const refreshTracking = useCallback(async () => {
+    console.log('TrackingContext: Refreshing tracking cards...');
     const trackingCardsData = await loadTrackingCards();
+    console.log('TrackingContext: Loaded tracking cards data:', trackingCardsData);
     const trackingCardNames = Object.keys(trackingCardsData);
     const newTrackingCards: Record<string, boolean> = {};
     trackingCardNames.forEach(name => {
+      console.log(`Processing card name: "${name}"`);
+      // Store both normalized and original names
       newTrackingCards[name] = true;
+      const normalized = normalizeCardName(name);
+      if (normalized !== name) {
+        console.log(`  - Normalized: "${normalized}"`);
+        newTrackingCards[normalized] = true;
+      }
+      // Also store with opposite normalization for compatibility
+      const denormalized = name.replace(/•/g, '·');
+      if (denormalized !== name) {
+        console.log(`  - Denormalized: "${denormalized}"`);
+        newTrackingCards[denormalized] = true;
+      }
     });
+    console.log('TrackingContext: New tracking cards state:', newTrackingCards);
+    console.log('TrackingContext: Keys in tracking cards:', Object.keys(newTrackingCards));
     setTrackingCards(newTrackingCards);
   }, []);
 
@@ -73,7 +91,17 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const deckTrackingCardNames = Object.keys(deckTrackingCardsData);
     const newDeckTrackingCards: Record<string, boolean> = {};
     deckTrackingCardNames.forEach(name => {
+      // Store both normalized and original names
       newDeckTrackingCards[name] = true;
+      const normalized = normalizeCardName(name);
+      if (normalized !== name) {
+        newDeckTrackingCards[normalized] = true;
+      }
+      // Also store with opposite normalization for compatibility
+      const denormalized = name.replace(/•/g, '·');
+      if (denormalized !== name) {
+        newDeckTrackingCards[denormalized] = true;
+      }
     });
     setDeckTrackingCards(newDeckTrackingCards);
   }, []);
@@ -133,8 +161,27 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [refreshDeckTracking]);
 
   React.useEffect(() => {
+    console.log('TrackingContext: Initial mount, loading tracking cards');
     refreshTracking();
     refreshDeckTracking();
+  }, []);
+
+  React.useEffect(() => {
+    // Listen for tracking cards updates from other windows
+    if (window.electron?.onTrackingCardsUpdated) {
+      console.log('TrackingContext: Registering onTrackingCardsUpdated listener');
+      const removeListener = window.electron.onTrackingCardsUpdated(() => {
+        console.log('TrackingContext: Received tracking-cards-updated event!');
+        refreshTracking();
+        refreshDeckTracking();
+      });
+      return () => {
+        console.log('TrackingContext: Cleaning up event listener');
+        removeListener();
+      };
+    } else {
+      console.warn('TrackingContext: window.electron.onTrackingCardsUpdated not available');
+    }
   }, [refreshTracking, refreshDeckTracking]);
 
   const value = {

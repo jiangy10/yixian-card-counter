@@ -19,8 +19,9 @@ declare global {
       ipcRenderer: {
         invoke: (channel: string, ...args: any[]) => Promise<any>;
       };
-      onBattleLogUpdated: (callback: () => void) => void;
-      onCardOperationLogUpdated: (callback: () => void) => void;
+      onBattleLogUpdated: (callback: () => void) => () => void;
+      onCardOperationLogUpdated: (callback: () => void) => () => void;
+      onTrackingCardsUpdated: (callback: () => void) => () => void;
     };
     electronAPI: {
       closeFloatingWindow: () => Promise<void>;

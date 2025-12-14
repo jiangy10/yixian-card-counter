@@ -11,13 +11,16 @@
   -webkit-app-region: drag;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .floating-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  flex-shrink: 0;
 }
 
 .floating-title {
@@ -43,8 +46,57 @@
   background: rgba(255, 0, 0, 0.6);
 }
 
+.floating-tabs {
+  display: flex;
+  margin-bottom: 10px;
+  -webkit-app-region: no-drag;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.floating-tab {
+  flex: 1;
+  text-align: center;
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.floating-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.floating-tab.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
 .floating-content {
   text-align: center;
   font-size: 12px;
+  flex: 1;
+  overflow-y: auto;
+  -webkit-app-region: no-drag;
 }
 
+/* Scrollbar styling for content */
+.floating-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.floating-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.floating-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.floating-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
