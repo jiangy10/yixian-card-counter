@@ -357,7 +357,9 @@ function createFloatingWindow() {
     frame: false,
     alwaysOnTop: true,
     transparent: true,
-    resizable: false,
+    resizable: true,
+    minWidth: 250,
+    minHeight: 150,
     skipTaskbar: true,
     type: 'panel', // 'panel' works better for floating windows over fullscreen apps
     webPreferences: {

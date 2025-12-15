@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './FloatingWindow.css';
 import FloatingMatch from './components/FloatingMatch';
 import FloatingDeck from './components/FloatingDeck';
+import { TrackingProvider } from './contexts/TrackingContext';
 
 const FloatingWindow: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'match' | 'deck'>('match');
@@ -15,31 +16,43 @@ const FloatingWindow: React.FC = () => {
   };
 
   return (
-    <div className="floating-window">
-      <div className="floating-header">
-        <div className="floating-title">弈仙牌记牌器</div>
-        <div className="floating-close-btn" onClick={handleClose}>×</div>
-      </div>
-      
-      <div className="floating-tabs">
-        <div 
-          className={`floating-tab ${activeTab === 'match' ? 'active' : ''}`}
-          onClick={() => setActiveTab('match')}
-        >
-          对局
+    <TrackingProvider>
+      <div className="floating-window">
+        <div className="floating-header">
+          <div className="floating-title">弈仙牌记牌器</div>
+          <div className="floating-close-btn" onClick={handleClose}>×</div>
         </div>
-        <div 
-          className={`floating-tab ${activeTab === 'deck' ? 'active' : ''}`}
-          onClick={() => setActiveTab('deck')}
-        >
-          牌库
+        
+        <div className="floating-tabs">
+          <div 
+            className={`floating-tab ${activeTab === 'match' ? 'active' : ''}`}
+            onClick={() => setActiveTab('match')}
+          >
+            对局
+          </div>
+          <div 
+            className={`floating-tab ${activeTab === 'deck' ? 'active' : ''}`}
+            onClick={() => setActiveTab('deck')}
+          >
+            牌库
+          </div>
         </div>
-      </div>
 
-      <div className="floating-content">
-        {activeTab === 'match' ? <FloatingMatch /> : <FloatingDeck />}
+        <div className="floating-content">
+          {activeTab === 'match' ? <FloatingMatch /> : <FloatingDeck />}
+        </div>
+        
+        {/* Resize handles */}
+        <div className="resize-handle resize-handle-top"></div>
+        <div className="resize-handle resize-handle-right"></div>
+        <div className="resize-handle resize-handle-bottom"></div>
+        <div className="resize-handle resize-handle-left"></div>
+        <div className="resize-handle resize-handle-corner-tl"></div>
+        <div className="resize-handle resize-handle-corner-tr"></div>
+        <div className="resize-handle resize-handle-corner-bl"></div>
+        <div className="resize-handle resize-handle-corner-br"></div>
       </div>
-    </div>
+    </TrackingProvider>
   );
 };
 

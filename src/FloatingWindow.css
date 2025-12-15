@@ -2,25 +2,39 @@
   height: 100vh;
   width: 100vw;
   margin: 0;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  background: rgba(0, 0, 0, 0.85);
   color: white;
   font-family: Arial, sans-serif;
   border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   user-select: none;
-  -webkit-app-region: drag;
+  -webkit-app-region: no-drag;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Inner container for content with drag region */
+.floating-window > * {
+  -webkit-app-region: no-drag;
+}
+
+/* Hover effect for borders to indicate resizability */
+.floating-window:hover {
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .floating-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin: 10px 10px 5px 10px;
   flex-shrink: 0;
+  -webkit-app-region: drag;
+  cursor: move;
 }
 
 .floating-title {
@@ -48,7 +62,7 @@
 
 .floating-tabs {
   display: flex;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 10px;
   -webkit-app-region: no-drag;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
@@ -81,6 +95,7 @@
   flex: 1;
   overflow-y: auto;
   -webkit-app-region: no-drag;
+  margin: 0 10px 10px 10px;
 }
 
 /* Scrollbar styling for content */
@@ -99,4 +114,94 @@
 
 .floating-content::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+/* Resize handles */
+.resize-handle {
+  position: absolute;
+  -webkit-app-region: no-drag;
+  z-index: 1001;
+}
+
+/* Edge handles */
+.resize-handle-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  cursor: ns-resize;
+}
+
+.resize-handle-right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: ew-resize;
+}
+
+.resize-handle-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  cursor: ns-resize;
+}
+
+.resize-handle-left {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: ew-resize;
+}
+
+/* Corner handles - larger hit area */
+.resize-handle-corner-tl {
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  cursor: nwse-resize;
+}
+
+.resize-handle-corner-tr {
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  cursor: nesw-resize;
+}
+
+.resize-handle-corner-bl {
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  cursor: nesw-resize;
+}
+
+.resize-handle-corner-br {
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  cursor: nwse-resize;
+}
+
+/* Visual indicator for bottom-right corner */
+.resize-handle-corner-br::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%);
+  border-bottom-right-radius: 8px;
+}
+
+/* Hover effects for visibility */
+.resize-handle-corner-br:hover::after {
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.6) 50%);
 }
