@@ -4,6 +4,7 @@ import * as fs from 'fs/promises';
 import isDev from 'electron-is-dev';
 import './battleLogConverter';
 import './cardOperationLogConverter';
+import './floatingMatchConverter';
 import { getGamePath } from './utils';
 
 let windowManager: any = null;
