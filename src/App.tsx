@@ -21,6 +21,7 @@ declare global {
       };
       onBattleLogUpdated: (callback: () => void) => () => void;
       onCardOperationLogUpdated: (callback: () => void) => () => void;
+      onFloatingMatchUpdated: (callback: () => void) => () => void;
       onTrackingCardsUpdated: (callback: () => void) => () => void;
     };
     electronAPI: {

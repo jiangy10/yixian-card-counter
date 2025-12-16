@@ -25,6 +25,10 @@ try {
       ipcRenderer.on('card-operation-log-updated', callback);
       return () => ipcRenderer.removeListener('card-operation-log-updated', callback);
     },
+    onFloatingMatchUpdated: (callback: () => void) => {
+      ipcRenderer.on('floating-match-updated', callback);
+      return () => ipcRenderer.removeListener('floating-match-updated', callback);
+    },
     onTrackingCardsUpdated: (callback: () => void) => {
       console.log('Preload: Registering tracking-cards-updated listener');
       const wrappedCallback = () => {
