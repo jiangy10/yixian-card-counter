@@ -60,18 +60,14 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   const refreshTracking = useCallback(async () => {
-    console.log('TrackingContext: Refreshing tracking cards...');
     const trackingCardsData = await loadTrackingCards();
-    console.log('TrackingContext: Loaded tracking cards data:', trackingCardsData);
     const trackingCardNames = Object.keys(trackingCardsData);
     const newTrackingCards: Record<string, boolean> = {};
     trackingCardNames.forEach(name => {
-      console.log(`Processing card name: "${name}"`);
       // Store both normalized and original names
       newTrackingCards[name] = true;
       const normalized = normalizeCardName(name);
       if (normalized !== name) {
-        console.log(`  - Normalized: "${normalized}"`);
         newTrackingCards[normalized] = true;
       }
       // Also store with opposite normalization for compatibility
@@ -81,8 +77,6 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         newTrackingCards[denormalized] = true;
       }
     });
-    console.log('TrackingContext: New tracking cards state:', newTrackingCards);
-    console.log('TrackingContext: Keys in tracking cards:', Object.keys(newTrackingCards));
     setTrackingCards(newTrackingCards);
   }, []);
 
