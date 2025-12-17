@@ -83,7 +83,13 @@ function processFloatingMatch() {
       if (!round || !Array.isArray(round.players)) return;
 
       round.players.forEach((player) => {
-        if (!player || !Array.isArray(player.used_card)) return;
+        if (!player) return;
+
+        if (!floatingData[player.player_username]) {
+          floatingData[player.player_username] = { cards: [] };
+        }
+
+        if (!Array.isArray(player.used_card)) return;
 
         player.used_card.forEach((card) => {
           const cardName = card?.name;
@@ -95,10 +101,6 @@ function processFloatingMatch() {
             trackingSet.has(denormalizeCardName(cardName));
 
           if (!isTracked) return;
-
-          if (!floatingData[player.player_username]) {
-            floatingData[player.player_username] = { cards: [] };
-          }
 
           const playerCards = floatingData[player.player_username].cards;
           if (!playerCards.includes(cardName)) {
