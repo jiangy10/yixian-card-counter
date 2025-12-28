@@ -5,6 +5,7 @@ import isDev from 'electron-is-dev';
 import './battleLogConverter';
 import './cardOperationLogConverter';
 import './floatingMatchConverter';
+import './floatingDeckConverter';
 import { getGamePath } from './utils';
 
 let windowManager: any = null;
