@@ -44,7 +44,7 @@ function convertOperationLogToSample(logContent: string): ConvertedData | { card
     const cardCounts: { [key: string]: CardCount } = {};
 
     operations.forEach((op) => {
-      if (op.operation === 0) {
+      if (op.operation === 0) { // observed
         if (op.cards) {
           op.cards.forEach(card => {
             if (card.name) {
@@ -57,7 +57,7 @@ function convertOperationLogToSample(logContent: string): ConvertedData | { card
         }
       }
       
-      if (op.operation === 1) {
+      if (op.operation === 1) { // replaced
         if (op.srcCard.name) {
           if (!cardCounts[op.srcCard.name]) {
             cardCounts[op.srcCard.name] = { count: 0 };
