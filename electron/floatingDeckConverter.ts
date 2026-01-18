@@ -27,27 +27,6 @@ const floatingDeckOnePath = path.join(GAME_PATH, 'FloatingDeck_one.json');
 
 const specialLimitedCards = new Set(['锻体丹', '还魂丹', '锻体玄丹']);
 
-// Find the correct resource path both in dev and production environment
-function getResourcePath(): string {
-  // Try several possible paths
-  const possiblePaths = [
-    path.join(__dirname, '../../src/data'),    // Dev: build/electron -> src/data
-    path.join(__dirname, '../../../src/data'), // Some bundle configs
-    path.join(process.cwd(), 'src/data'),      // From project root
-  ];
-  
-  for (const basePath of possiblePaths) {
-    const cardLibTestPath = path.join(basePath, 'card_lib.json');
-    if (fs.existsSync(cardLibTestPath)) {
-      return basePath;
-    }
-  }
-  
-  // Default to the most likely path
-  return path.join(process.cwd(), 'src/data');
-}
-
-// const dataPath = getResourcePath();
 const cardLibPath = 'src/data/card_lib.json';
 const specialCardLibPath = 'src/data/special_card_lib.json';
 
