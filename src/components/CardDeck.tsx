@@ -5,6 +5,7 @@ import './CardDeck.css';
 import cardLibData from '../data/card_lib.json';
 import specialCardLibData from '../data/special_card_lib.json';
 import { useTracking } from '../contexts/TrackingContext';
+import { calculateRemainingCount } from '../../electron/deckCalculation';
 
 interface CardDeckProps {
   cardOperationLog: CardOperationLog;
@@ -145,17 +146,11 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
     });
   }, [activeSect, activeSideJobs, activePhases, hideEmptyCards, showOnlyTracking, deckTrackingCards, showOnlySectCards, showOnlySideJobCards]);
 
-  const calculateRemainingCount = (cardName: string, phase: number): number => {
-    const maxCount = cardName === '锻体丹' || cardName === '还魂丹' || cardName === '锻体玄丹' 
-      ? 4 
-      : (phase === 5 ? 6 : 8);
-    return Math.max(0, maxCount - (cardOperationLog.cards[cardName]?.count || 0));
-  };
-
   const renderCardsByPhase = (phases: number[]) => {
     return phases.map(phase => {
       const phaseCards = filteredCards.filter(card => {
-        const remainingCount = calculateRemainingCount(card.name, card.phase);
+        const usedCount = cardOperationLog.cards[card.name]?.count || 0;
+        const remainingCount = calculateRemainingCount(card.name, card.phase, usedCount);
         return card.phase === phase && 
                (!hideEmptyCards || remainingCount > 0) &&
                (!showOnlyOneCard || remainingCount <= 1);
@@ -167,7 +162,8 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
         <React.Fragment key={phase}>
           <div className="phase-divider" />
           {phaseCards.map(card => {
-            const remainingCount = calculateRemainingCount(card.name, card.phase);
+            const usedCount = cardOperationLog.cards[card.name]?.count || 0;
+            const remainingCount = calculateRemainingCount(card.name, card.phase, usedCount);
             return (
               <Card
                 key={`${card.name}-${card.level}`}

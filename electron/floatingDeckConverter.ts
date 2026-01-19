@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { getGamePath } from './utils';
+import { calculateRemainingCount } from './deckCalculation';
 
 const GAME_PATH = getGamePath();
 
@@ -24,8 +25,6 @@ const convertedOperationLogPath = path.join(GAME_PATH, 'ConvertedCardOperationLo
 const deckTrackingPath = path.join(GAME_PATH, 'deck_tracking_cards.json');
 const floatingDeckTrackingPath = path.join(GAME_PATH, 'FloatingDeck_tracking.json');
 const floatingDeckOnePath = path.join(GAME_PATH, 'FloatingDeck_one.json');
-
-const specialLimitedCards = new Set(['锻体丹', '还魂丹', '锻体玄丹']);
 
 const cardLibPath = 'src/data/card_lib.json';
 const specialCardLibPath = 'src/data/special_card_lib.json';
@@ -120,16 +119,9 @@ function calculateRemainingDeck(
     
     if (!isSectCard && !isSideJobCard) return;
 
-    // Calculate initial count
-    const baseCount = specialLimitedCards.has(name) 
-      ? 4 
-      : info.phase === 5 
-      ? 6 
-      : 8;
-    
-    // Calculate remaining
-    const used = usedCards[name]?.count || 0;
-    const remaining = Math.max(0, baseCount - used);
+    // Calculate remaining using shared utility function
+    const usedCount = usedCards[name]?.count || 0;
+    const remaining = calculateRemainingCount(name, info.phase, usedCount);
     
     remainingCards[name] = { count: remaining };
   });
