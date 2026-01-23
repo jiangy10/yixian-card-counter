@@ -1,9 +1,16 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { getGamePath } from './utils';
-import { calculateRemainingCount } from './deckCalculation';
 
 const GAME_PATH = getGamePath();
+
+// Shared card calculation constants and utilities
+const SPECIAL_LIMITED_CARDS = new Set(['锻体丹', '还魂丹', '锻体玄丹']);
+
+function calculateRemainingCount(cardName: string, phase: number, usedCount: number = 0): number {
+  const baseCount = SPECIAL_LIMITED_CARDS.has(cardName) ? 4 : phase === 5 ? 6 : 8;
+  return Math.max(0, baseCount - usedCount);
+}
 
 interface CardCount {
   count: number;
