@@ -22,9 +22,10 @@ declare global {
       onBattleLogUpdated: (callback: () => void) => () => void;
       onCardOperationLogUpdated: (callback: () => void) => () => void;
       onFloatingMatchUpdated: (callback: () => void) => () => void;
+      onFloatingDeckUpdated?: (callback: () => void) => () => void;
       onTrackingCardsUpdated: (callback: () => void) => () => void;
     };
-    electronAPI: {
+    electronAPI?: {
       closeFloatingWindow: () => Promise<void>;
       toggleFloatingWindow: () => Promise<boolean>;
       findAndCreateFloatingWindow: () => Promise<{ success: boolean; message: string }>;

@@ -29,6 +29,10 @@ try {
       ipcRenderer.on('floating-match-updated', callback);
       return () => ipcRenderer.removeListener('floating-match-updated', callback);
     },
+    onFloatingDeckUpdated: (callback: () => void) => {
+      ipcRenderer.on('floating-deck-updated', callback);
+      return () => ipcRenderer.removeListener('floating-deck-updated', callback);
+    },
     onTrackingCardsUpdated: (callback: () => void) => {
       console.log('Preload: Registering tracking-cards-updated listener');
       const wrappedCallback = () => {
