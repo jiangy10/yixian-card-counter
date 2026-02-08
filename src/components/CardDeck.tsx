@@ -39,7 +39,14 @@ const phaseTabs: Tab[] = [
 
 const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const { deckTrackingCards } = useTracking();
+  
+  // Check if data is available
+  const isDataAvailable = cardOperationLog && cardOperationLog.cards && cardOperationLog.status !== 'waiting';
+  
   const initialTabs = useMemo(() => {
+    if (!isDataAvailable) {
+      return { sect: 'cloud-spirit', sideJob: 'elixirist' };
+    }
     const cardEntries = Object.entries(cardOperationLog.cards);
     if (cardEntries.length === 0) {
       return { sect: 'cloud-spirit', sideJob: 'elixirist' };
@@ -68,7 +75,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
         ? Object.entries(sideJobCounts).reduce((a, b) => a[1] > b[1] ? a : b)[0]
         : 'elixirist'
     };
-  }, []);
+  }, [isDataAvailable, cardOperationLog]);
 
   const [activeSect, setActiveSect] = useState<string>(initialTabs.sect);
   const [activeSideJobs, setActiveSideJobs] = useState<string[]>([initialTabs.sideJob]);
@@ -183,6 +190,10 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
       );
     });
   };
+
+  if (!isDataAvailable) {
+    return <div className="card-deck-loading">等待卡牌数据中...</div>;
+  }
 
   return (
     <div className="card-deck-container">
