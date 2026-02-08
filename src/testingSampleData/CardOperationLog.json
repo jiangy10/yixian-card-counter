@@ -1,0 +1,5 @@
+{"operation":0,"round":1,"srcCard":{"name":null,"level":0,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":[{"name":"云剑•飞刺","level":1,"rarity":0},{"name":"飓风剑","level":1,"rarity":0},{"name":"灵气灌注","level":1,"rarity":0},{"name":"云剑•探云","level":1,"rarity":0},{"name":"灵气灌注","level":1,"rarity":0},{"name":"云剑•厚土","level":1,"rarity":0},{"name":"云剑•探云","level":1,"rarity":0}]}
+{"operation":1,"round":1,"srcCard":{"name":"飓风剑","level":1,"rarity":0},"dstCard":{"name":"剑挡","level":1,"rarity":0},"cards":null}
+{"operation":2,"round":1,"srcCard":{"name":"剑挡","level":1,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":null}
+{"operation":0,"round":2,"srcCard":{"name":null,"level":0,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":[{"name":"护身灵气","level":1,"rarity":0},{"name":"云剑•探云","level":1,"rarity":0}]}
+{"operation":0,"round":2,"srcCard":{"name":null,"level":0,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":[{"name":"奔雷符","level":1,"rarity":0}]}

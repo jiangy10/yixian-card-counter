@@ -1,0 +1,58 @@
+{
+  "rounds": {
+    "1": {
+      "players": [
+        {
+          "player_username": "饭缸",
+          "character": "龙瑶",
+          "destiny": 100,
+          "destiny_diff": 0,
+          "health": 40,
+          "cultivation": 5,
+          "physique": 0,
+          "maxPhysique": 11,
+          "opponent_username": "旗鼓相当的傀儡",
+          "used_card": [
+            {
+              "name": "云剑•探云",
+              "level": 1
+            },
+            {
+              "name": "云剑•飞刺",
+              "level": 0
+            },
+            {
+              "name": "云剑•厚土",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "player_username": "旗鼓相当的傀儡",
+          "character": "龙瑶",
+          "destiny": 100,
+          "destiny_diff": -3,
+          "health": 40,
+          "cultivation": 5,
+          "physique": 0,
+          "maxPhysique": 0,
+          "opponent_username": "饭缸",
+          "used_card": [
+            {
+              "name": "云剑•厚土",
+              "level": 0
+            },
+            {
+              "name": "云剑•飞刺",
+              "level": 1
+            },
+            {
+              "name": "云剑•飞刺",
+              "level": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+28241940
+{"operation":0,"round":1,"srcCard":{"name":null,"level":0,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":[{"name":"\u4E91\u5251\u2022\u98DE\u523A","level":1,"rarity":0},{"name":"\u9AA4\u98CE\u5251","level":1,"rarity":0},{"name":"\u7075\u6C14\u704C\u6CE8","level":1,"rarity":0},{"name":"\u4E91\u5251\u2022\u63A2\u4E91","level":1,"rarity":0},{"name":"\u7075\u6C14\u704C\u6CE8","level":1,"rarity":0},{"name":"\u4E91\u5251\u2022\u539A\u571F","level":1,"rarity":0},{"name":"\u4E91\u5251\u2022\u63A2\u4E91","level":1,"rarity":0}]}
+{"operation":1,"round":1,"srcCard":{"name":"\u9AA4\u98CE\u5251","level":1,"rarity":0},"dstCard":{"name":"\u5251\u6321","level":1,"rarity":0},"cards":null}
+{"operation":2,"round":1,"srcCard":{"name":"\u5251\u6321","level":1,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":null}
+{"operation":0,"round":2,"srcCard":{"name":null,"level":0,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":[{"name":"\u62A4\u8EAB\u7075\u6C14","level":1,"rarity":0},{"name":"\u4E91\u5251\u2022\u63A2\u4E91","level":1,"rarity":0}]}
+{"operation":0,"round":2,"srcCard":{"name":null,"level":0,"rarity":0},"dstCard":{"name":null,"level":0,"rarity":0},"cards":[{"name":"\u5954\u96F7\u7B26","level":1,"rarity":0}]}
