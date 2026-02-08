@@ -5,7 +5,7 @@ import './CardDeck.css';
 import cardLibData from '../data/card_lib.json';
 import specialCardLibData from '../data/special_card_lib.json';
 import { useTracking } from '../contexts/TrackingContext';
-import { calculateRemainingCount } from '../utils/deckCalculation';
+import { calculateRemainingCount } from '../utils/cardCalculation';
 
 interface CardDeckProps {
   cardOperationLog: CardOperationLog;
