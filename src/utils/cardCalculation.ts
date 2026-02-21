@@ -76,21 +76,20 @@ export function calculateHandCards(operations: CardOperation[]): Record<string, 
     }
 
     if (op.operation === 1) {
-      // replace card: srcCard -1, dstCard +1
-      if (op.dstCard.name && !op.dstCard.name.includes('梦•')) { // SEASONAL EFFECT
-        if (op.srcCard.name) {
-          handCards[op.srcCard.name] = (handCards[op.srcCard.name] || 0) - 1;
-        }
-        if (op.dstCard.name) {
-          handCards[op.dstCard.name] = (handCards[op.dstCard.name] || 0) + 1;
-        }
+      // replace card: srcCard - 2 ** srcCard.rarity, dstCard + 2 ** dstCard.rarity
+      if (op.srcCard.name) {
+        handCards[op.srcCard.name] = (handCards[op.srcCard.name] || 0) - 2 ** op.srcCard.rarity;
       }
+      if (op.dstCard.name) {
+        handCards[op.dstCard.name] = (handCards[op.dstCard.name] || 0) + 2 ** op.dstCard.rarity;
+      }
+    
     }
 
     if (op.operation === 2) {
-      // use card: srcCard -1
+      // use card: srcCard - 2 ** srcCard.rarity
       if (op.srcCard.name) {
-        handCards[op.srcCard.name] = (handCards[op.srcCard.name] || 0) - 1;
+        handCards[op.srcCard.name] = (handCards[op.srcCard.name] || 0) - 2 ** op.srcCard.rarity;
       }
     }
   });
