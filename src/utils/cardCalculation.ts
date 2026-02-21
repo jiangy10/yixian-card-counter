@@ -77,11 +77,13 @@ export function calculateHandCards(operations: CardOperation[]): Record<string, 
 
     if (op.operation === 1) {
       // replace card: srcCard -1, dstCard +1
-      if (op.srcCard.name) {
-        handCards[op.srcCard.name] = (handCards[op.srcCard.name] || 0) - 1;
-      }
-      if (op.dstCard.name) {
-        handCards[op.dstCard.name] = (handCards[op.dstCard.name] || 0) + 1;
+      if (op.dstCard.name && !op.dstCard.name.includes('梦•')) { // SEASONAL EFFECT
+        if (op.srcCard.name) {
+          handCards[op.srcCard.name] = (handCards[op.srcCard.name] || 0) - 1;
+        }
+        if (op.dstCard.name) {
+          handCards[op.dstCard.name] = (handCards[op.dstCard.name] || 0) + 1;
+        }
       }
     }
 
