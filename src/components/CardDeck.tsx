@@ -3,7 +3,7 @@ import { Card as CardType, CardOperationLog, Tab, CardLib } from '../models/mode
 import Card from './Card';
 import './CardDeck.css';
 import cardLibData from '../data/card_lib.json';
-import specialCardLibData from '../data/special_card_lib.json';
+import specialCardLibData from '../data/seasonal_card_lib.json';
 import { useTracking } from '../contexts/TrackingContext';
 import { calculateRemainingCount } from '../utils/cardCalculation';
 

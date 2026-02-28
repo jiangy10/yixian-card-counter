@@ -1,0 +1,485 @@
+{
+    "梦•万法归灵剑": {
+        "name": "梦•万法归灵剑",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•灵气灌注": {
+        "name": "梦•灵气灌注",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•云剑厚土": {
+        "name": "梦•云剑厚土",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•云剑柔心": {
+        "name": "梦•云剑柔心",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•云剑点星": {
+        "name": "梦•云剑点星",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•云剑汇灵": {
+        "name": "梦•云剑汇灵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•凝意决": {
+        "name": "梦•凝意决",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•反身剑": {
+        "name": "梦•反身剑",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•地煞剑": {
+        "name": "梦•地煞剑",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•巨鹏灵剑": {
+        "name": "梦•巨鹏灵剑",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•御空剑阵": {
+        "name": "梦•御空剑阵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•灵犀剑阵": {
+        "name": "梦•灵犀剑阵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•狂剑一式": {
+        "name": "梦•狂剑一式",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•狂剑零式": {
+        "name": "梦•狂剑零式",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•百鸟灵剑诀": {
+        "name": "梦•百鸟灵剑诀",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
+    "梦•两仪阵": {
+        "name": "梦•两仪阵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•乾卦": {
+        "name": "梦•乾卦",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•反震心法": {
+        "name": "梦•反震心法",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•斗转星移": {
+        "name": "梦•斗转星移",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•星弈挡": {
+        "name": "梦•星弈挡",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•星罗棋布": {
+        "name": "梦•星罗棋布",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•星轨推衍": {
+        "name": "梦•星轨推衍",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•杯弓蛇影": {
+        "name": "梦•杯弓蛇影",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•枯木逢春": {
+        "name": "梦•枯木逢春",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•气疗术": {
+        "name": "梦•气疗术",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•海底捞月": {
+        "name": "梦•海底捞月",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•白蛇吐信": {
+        "name": "梦•白蛇吐信",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•离卦": {
+        "name": "梦•离卦",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•落花有意": {
+        "name": "梦•落花有意",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•落雷术": {
+        "name": "梦•落雷术",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•蜻蜓点水": {
+        "name": "梦•蜻蜓点水",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•轰雷掣电": {
+        "name": "梦•轰雷掣电",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•黄雀在后": {
+        "name": "梦•黄雀在后",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "heptastar",
+        "match-recommend": false
+    },
+    "梦•五行刺": {
+        "name": "梦•五行刺",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•五行天髓决": {
+        "name": "梦•五行天髓决",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•土灵断崖": {
+        "name": "梦•土灵断崖",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•土灵绝壁": {
+        "name": "梦•土灵绝壁",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•木灵柳纷飞": {
+        "name": "梦•木灵柳纷飞",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•木灵芽": {
+        "name": "梦•木灵芽",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•木灵阵": {
+        "name": "梦•木灵阵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•水灵泉涌": {
+        "name": "梦•水灵泉涌",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•水灵波澜": {
+        "name": "梦•水灵波澜",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•浑天印": {
+        "name": "梦•浑天印",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•混元无极阵": {
+        "name": "梦•混元无极阵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•火灵灼心": {
+        "name": "梦•火灵灼心",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•火灵瞬燃": {
+        "name": "梦•火灵瞬燃",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•火灵聚炎": {
+        "name": "梦•火灵聚炎",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•火灵阵": {
+        "name": "梦•火灵阵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•金灵铁骨": {
+        "name": "梦•金灵铁骨",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•金灵锋芒": {
+        "name": "梦•金灵锋芒",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•金灵阵": {
+        "name": "梦•金灵阵",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "five-element",
+        "match-recommend": false
+    },
+    "梦•修罗吼": {
+        "name": "梦•修罗吼",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•冥影身法": {
+        "name": "梦•冥影身法",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•冲霄破浪": {
+        "name": "梦•冲霄破浪",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•劈山掌": {
+        "name": "梦•劈山掌",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•威震四方": {
+        "name": "梦•威震四方",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•崩天步": {
+        "name": "梦•崩天步",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•崩拳封": {
+        "name": "梦•崩拳封",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•崩拳弹": {
+        "name": "梦•崩拳弹",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•崩拳突": {
+        "name": "梦•崩拳突",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•崩拳连崩": {
+        "name": "梦•崩拳连崩",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•朝气蓬勃": {
+        "name": "梦•朝气蓬勃",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•气若悬河": {
+        "name": "梦•气若悬河",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•灵玄迷踪步": {
+        "name": "梦•灵玄迷踪步",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•磅礴之势": {
+        "name": "梦•磅礴之势",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•荷重前行": {
+        "name": "梦•荷重前行",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•迎风掌": {
+        "name": "梦•迎风掌",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•锻神开海": {
+        "name": "梦•锻神开海",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    },
+    "梦•锻筋": {
+        "name": "梦•锻筋",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "duan-xuan",
+        "match-recommend": false
+    }
+}

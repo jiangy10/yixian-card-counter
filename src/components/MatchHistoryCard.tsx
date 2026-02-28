@@ -16,7 +16,9 @@ const MatchHistoryCard: React.FC<MatchHistoryCardProps> = ({ card }) => {
   const isNormalAttack = card.name === '普通攻击';
   const imageSrc = isNormalAttack
     ? `${process.env.PUBLIC_URL}/images/普通攻击1.png`
-    : `${process.env.PUBLIC_URL}/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}${card.level + 1}.png`;
+    : card.type === 'seasonal'
+      ? `${process.env.PUBLIC_URL}/images/seasonal/${card.category}/${card.name}1.png`
+      : `${process.env.PUBLIC_URL}/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}${card.level + 1}.png`;
 
   const handleTrackingClick = async () => {
     if (isUpdating) return;

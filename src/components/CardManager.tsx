@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from 'react';
 import { Card, Player } from '../models/model';
 import { usePlayer } from '../contexts/PlayerContext';
 import cardLibData from '../data/card_lib.json';
-import specialCardLibData from '../data/special_card_lib.json';
+import specialCardLibData from '../data/seasonal_card_lib.json';
 import { findCardInfo } from '../utils/cardNameUtils';
 
 interface CardManagerProps {
