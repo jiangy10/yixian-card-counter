@@ -13,6 +13,13 @@
         "category": "cloud-spirit",
         "match-recommend": false
     },
+    "梦•云舞诀": {
+        "name": "梦•云舞诀",
+        "phase": 0,
+        "type": "seasonal",
+        "category": "cloud-spirit",
+        "match-recommend": false
+    },
     "梦•云剑厚土": {
         "name": "梦•云剑厚土",
         "phase": 0,
