@@ -69,13 +69,13 @@ function calculateDeckCards(operations: CardOperation[]): { [key: string]: CardC
       }
     }
     
-    if (op.operation === 1) { // replace card: srcCard -2 from deck, dstCard -1 from deck
+    if (op.operation === 1) { // replace card: srcCard -3 from deck, dstCard -1 from deck
       if (op.dstCard.name && !op.dstCard.name.includes('梦•')) { // SEASONAL EFFECT
         if (op.srcCard.name) {
           if (!cardCounts[op.srcCard.name]) {
             cardCounts[op.srcCard.name] = { count: 0 };
           }
-          cardCounts[op.srcCard.name].count += 2;
+          cardCounts[op.srcCard.name].count += 3;
         }
         if (op.dstCard.name) {
           if (!cardCounts[op.dstCard.name]) {
