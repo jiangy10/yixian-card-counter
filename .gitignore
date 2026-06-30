@@ -25,3 +25,5 @@ yarn-error.log*
 package-lock.json
 
 out/
+
+.claude/settings.local.json
