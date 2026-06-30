@@ -191,6 +191,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "御灵心法": { 
+    "name": "御灵心法",
+    "phase": 2,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "云剑•柔心": {
     "name": "云剑•柔心",
     "phase": 3,
@@ -279,6 +287,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "丹雀灵剑": {
+    "name": "丹雀灵剑",
+    "phase": 3,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "云剑•闪风": {
     "name": "云剑•闪风",
     "phase": 4,
@@ -359,6 +375,22 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "云剑•裂空": {
+    "name": "云剑•裂空",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "飞豹灵剑": {
+    "name": "飞豹灵剑",
+    "phase": 4,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "云剑•游龙": {
     "name": "云剑•游龙",
     "phase": 5,
@@ -417,6 +449,38 @@
   },
   "狂剑•零式": {
     "name": "狂剑•零式",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "云剑•追风": {
+    "name": "云剑•追风",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "剑影结界": {
+    "name": "剑影结界",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "灵枢剑阵": {
+    "name": "灵枢剑阵",
+    "phase": 5,
+    "type": "sect",
+    "category": "cloud-spirit",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "迅影飞剑": {
+    "name": "迅影飞剑",
     "phase": 5,
     "type": "sect",
     "category": "cloud-spirit",
@@ -607,6 +671,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "望星诀": {
+    "name": "望星诀",
+    "phase": 2,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "众星拱月": {
     "name": "众星拱月",
     "phase": 3,
@@ -695,6 +767,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "犀牛望月": {
+    "name": "犀牛望月",
+    "phase": 3,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "星弈•飞": {
     "name": "星弈•飞",
     "phase": 4,
@@ -775,6 +855,22 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "伤魂咒阵": {
+    "name": "伤魂咒阵",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "星弈•长": {
+    "name": "星弈•长",
+    "phase": 4,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "天元心法": {
     "name": "天元心法",
     "phase": 5,
@@ -833,6 +929,38 @@
   },
   "紫气东来": {
     "name": "紫气东来",
+    "phase": 5,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "弯弓射虎": {
+    "name": "弯弓射虎",
+    "phase": 5,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "折枝点穴": {
+    "name": "折枝点穴",
+    "phase": 5,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "星弈•劫争": {
+    "name": "星弈•劫争",
+    "phase": 5,
+    "type": "sect",
+    "category": "heptastar",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "灵蛇绕柱": {
+    "name": "灵蛇绕柱",
     "phase": 5,
     "type": "sect",
     "category": "heptastar",
@@ -1015,6 +1143,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "镇印心法": {
+    "name": "镇印心法",
+    "phase": 2,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "木灵阵": {
     "name": "木灵阵",
     "phase": 3,
@@ -1097,6 +1233,14 @@
   },
   "五行流转": {
     "name": "五行流转",
+    "phase": 3,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "五行灵击": {
+    "name": "五行灵击",
     "phase": 3,
     "type": "sect",
     "category": "five-element",
@@ -1191,6 +1335,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "土灵•遁地": {
+    "name": "土灵•遁地",
+    "phase": 4,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "木灵•柳纷飞": {
     "name": "木灵•柳纷飞",
     "phase": 5,
@@ -1241,6 +1393,46 @@
   },
   "五行天髓诀": {
     "name": "五行天髓诀",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "木灵•春风拂": {
+    "name": "木灵•春风拂",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "水灵•乘风浪": {
+    "name": "水灵•乘风浪",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "混元化灵": {
+    "name": "混元化灵",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "火灵•焚脉诀": {
+    "name": "火灵•焚脉诀",
+    "phase": 5,
+    "type": "sect",
+    "category": "five-element",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "金灵•回锋刃": {
+    "name": "金灵•回锋刃",
     "phase": 5,
     "type": "sect",
     "category": "five-element",
@@ -1431,6 +1623,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "金刚捣碓": {
+    "name": "金刚捣碓",
+    "phase": 2,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "崩天步": {
     "name": "崩天步",
     "phase": 3,
@@ -1519,6 +1719,14 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "醉拳架势": {
+    "name": "醉拳架势",
+    "phase": 3,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "崩灭心法": {
     "name": "崩灭心法",
     "phase": 4,
@@ -1599,6 +1807,22 @@
     "match-recommend": false,
     "deck-recommend": false
   },
+  "凌空飞扫": {
+    "name": "凌空飞扫",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "玄灵愈体": {
+    "name": "玄灵愈体",
+    "phase": 4,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
   "崩拳•闪击": {
     "name": "崩拳•闪击",
     "phase": 5,
@@ -1657,6 +1881,38 @@
   },
   "天地浩荡": {
     "name": "天地浩荡",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "万魂破军": {
+    "name": "万魂破军",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "崩拳•碎骨": {
+    "name": "崩拳•碎骨",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "血影遁术": {
+    "name": "血影遁术",
+    "phase": 5,
+    "type": "sect",
+    "category": "duan-xuan",
+    "match-recommend": false,
+    "deck-recommend": false
+  },
+  "锻灵指": {
+    "name": "锻灵指",
     "phase": 5,
     "type": "sect",
     "category": "duan-xuan",
