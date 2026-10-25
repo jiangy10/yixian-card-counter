@@ -83,7 +83,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
   const [activePhases, setActivePhases] = useState<string[]>(['all']);
   const [isPhaseMultiSelect, setIsPhaseMultiSelect] = useState<boolean>(false);
   const [hideEmptyCards, setHideEmptyCards] = useState<boolean>(false);
-  const [showOnlyOneCard, setShowOnlyOneCard] = useState<boolean>(false);
+  const [showOnlyLowCount, setShowOnlyLowCount] = useState<boolean>(false);
   const [showOnlyTracking, setShowOnlyTracking] = useState<boolean>(false);
   const [showOnlySectCards, setShowOnlySectCards] = useState<boolean>(false);
   const [showOnlySideJobCards, setShowOnlySideJobCards] = useState<boolean>(false);
@@ -160,7 +160,7 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
         const remainingCount = calculateRemainingCount(card.name, card.phase, usedCount);
         return card.phase === phase && 
                (!hideEmptyCards || remainingCount > 0) &&
-               (!showOnlyOneCard || remainingCount <= 1);
+               (!showOnlyLowCount || remainingCount <= 2);
       });
       
       if (phaseCards.length === 0) return null;
@@ -283,10 +283,10 @@ const CardDeck: React.FC<CardDeckProps> = ({ cardOperationLog }) => {
           <label className="multi-select-label">
             <input
               type="checkbox"
-              checked={showOnlyOneCard}
-              onChange={(e) => setShowOnlyOneCard(e.target.checked)}
+              checked={showOnlyLowCount}
+              onChange={(e) => setShowOnlyLowCount(e.target.checked)}
             />
-            只显示数量小于等于1的卡牌
+            只显示数量小于等于2的卡牌
           </label>
           <label className="multi-select-label">
             <input
