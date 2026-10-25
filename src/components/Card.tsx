@@ -36,9 +36,7 @@ const Card: React.FC<CardProps> = ({
         style={{
           backgroundImage: isNormalAttack
             ? `url(${process.env.PUBLIC_URL}/images/普通攻击.png)`
-            : card.type === 'seasonal'
-              ? `url(${process.env.PUBLIC_URL}/images/seasonal/${card.category}/${card.name}.png)`
-              : `url(${process.env.PUBLIC_URL}/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}.png)`
+            : `url(${process.env.PUBLIC_URL}/images/${imageType}/${card.category}/${imageType === 'personal' ? '' : `${card.phase}/`}${card.name}.png)`
         }}
       />
       <div className="card-footer">

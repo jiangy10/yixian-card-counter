@@ -3,7 +3,6 @@ import './FloatingMatch.css';
 import { Card as CardType } from '../models/model';
 import Card from './Card';
 import cardLibData from '../data/card_lib.json';
-import specialCardLibData from '../data/seasonal_card_lib.json';
 
 declare global {
   interface Window {
@@ -51,7 +50,6 @@ const FloatingMatch: React.FC = () => {
     };
 
     addLib(cardLibData);
-    addLib(specialCardLibData);
 
     return map;
   }, []);

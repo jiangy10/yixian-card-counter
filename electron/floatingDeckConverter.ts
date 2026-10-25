@@ -34,7 +34,6 @@ const floatingDeckTrackingPath = path.join(GAME_PATH, 'FloatingDeck_tracking.jso
 const floatingDeckOnePath = path.join(GAME_PATH, 'FloatingDeck_one.json');
 
 const cardLibPath = 'src/data/card_lib.json';
-const specialCardLibPath = 'src/data/seasonal_card_lib.json';
 
 function loadJsonFile<T>(filePath: string): T | null {
   try {
@@ -48,11 +47,7 @@ function loadJsonFile<T>(filePath: string): T | null {
 
 function mergeCardLibs(): Record<string, CardLibEntry> {
   const cardLibData = loadJsonFile<Record<string, CardLibEntry>>(cardLibPath) || {};
-  const specialCardLibData = loadJsonFile<Record<string, CardLibEntry>>(specialCardLibPath) || {};
-  return {
-    ...cardLibData,
-    ...specialCardLibData
-  };
+  return cardLibData;
 }
 
 function normalizeCardName(name: string): string {

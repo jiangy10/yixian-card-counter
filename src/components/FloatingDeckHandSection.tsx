@@ -3,7 +3,6 @@ import './FloatingMatch.css';
 import { Card as CardType } from '../models/model';
 import Card from './Card';
 import cardLibData from '../data/card_lib.json';
-import specialCardLibData from '../data/seasonal_card_lib.json';
 import { calculateRemainingCount } from '../utils/cardCalculation';
 
 interface CardCountData {
@@ -35,7 +34,6 @@ const FloatingDeckHandSection: React.FC = () => {
     };
 
     addLib(cardLibData);
-    addLib(specialCardLibData);
 
     return map;
   }, []);
@@ -97,7 +95,7 @@ const FloatingDeckHandSection: React.FC = () => {
         };
       })
       .filter((item): item is { card: CardType; count: number } => 
-        item !== null && !item.card.name.startsWith('梦•')
+        item !== null
       )
       .sort((a, b) => {
         // Sort by phase first, then by name
